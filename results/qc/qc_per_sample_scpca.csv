@@ -1,0 +1,3 @@
+sample_id,study,assay,qc_assay_class,include_in_atlas,cells_before_qc,cells_after_qc,median_genes_before,median_genes,median_counts,median_pct_mito_before,median_pct_mito,median_pct_ribo,median_pct_hb,max_genes_threshold,n_fail_low_genes,n_fail_high_genes,n_fail_high_mito,scrublet_threshold,scrublet_threshold_source,doublet_rate_fixed025,doublet_rate_flagged,n_doublets_flagged,qc_metric_basis
+scpca__SCPCS000636,scpca,snRNA,nuclei,True,1054,0,110.0,,,0.8547008547008547,,,,285.4699999999998,1049,6,0,,,,,0,counts
+scpca__SCPCS000637,scpca,snRNA,nuclei,True,2931,441,191.0,362.0,436.0,2.2857142857142856,2.218430034129693,0.7633587786259542,0.0,630.3499999999999,2475,15,111,0.19027246315192725,auto,0.011337868480725623,0.05668934240362812,25,counts

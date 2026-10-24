@@ -1,0 +1,131 @@
+{
+ "figure1_cells_total_shown": {
+  "filbin": [
+   3037,
+   3037
+  ],
+  "labelle": [
+   8247,
+   8247
+  ],
+  "liu": [
+   12438,
+   12438
+  ],
+  "braun": [
+   100000,
+   30000
+  ],
+  "siletti": [
+   100000,
+   30000
+  ]
+ },
+ "figure2_sample_order": {
+  "filbin": [
+   "filbin__BCH869",
+   "filbin__BCH836",
+   "filbin__MUV5",
+   "filbin__BCH1126",
+   "filbin__MUV10",
+   "filbin__MUV1",
+   "filbin__MGH101",
+   "filbin__MGH104",
+   "filbin__MGH66"
+  ],
+  "labelle": [
+   "labelle__H3K27M_P9",
+   "labelle__H3K27M_P4",
+   "labelle__H3K27M_P5",
+   "labelle__H3K27M_P6",
+   "labelle__H3K27M_P1",
+   "labelle__H3K27M_P7",
+   "labelle__H3K27M_P2",
+   "labelle__H3K27M_P3",
+   "labelle__H3K27M_P8"
+  ],
+  "liu": [
+   "liu__SUDIPG31",
+   "liu__BT1179",
+   "liu__pTG4",
+   "liu__S1D2E3H7",
+   "liu__SUDIPG65",
+   "liu__ICGCGBM27",
+   "liu__ICGCGBM96",
+   "liu__XT9824",
+   "liu__MUV83",
+   "liu__XT8698",
+   "liu__MUV78",
+   "liu__MUV17",
+   "liu__MUV87",
+   "liu__BT869",
+   "liu__MUV5",
+   "liu__ICGCGBM60",
+   "liu__BT836",
+   "liu__MUV54",
+   "liu__MUV77",
+   "liu__BT1126",
+   "liu__AAA007653",
+   "liu__MUV10",
+   "liu__MUV86",
+   "liu__MUV91",
+   "liu__SUDIPG55",
+   "liu__R1E1E3G3",
+   "liu__MUV82",
+   "liu__MUV35",
+   "liu__MUV31",
+   "liu__MUV1",
+   "liu__MUV16",
+   "liu__pTG5",
+   "liu__BT1462",
+   "liu__SUDIPG50Bio",
+   "liu__MUV32",
+   "liu__pSCG1",
+   "liu__MGH6666410",
+   "liu__SUDIPGIII",
+   "liu__SUDIPG45",
+   "liu__SUDIPG54",
+   "liu__SUDIPG30",
+   "liu__SUDIPG50Aut"
+  ],
+  "braun": [
+   "braun__XDD:359",
+   "braun__XHU:307",
+   "braun__XDD:351",
+   "braun__BRC2191",
+   "braun__BRC2114",
+   "braun__BRC2073",
+   "braun__BRC2147",
+   "braun__XDD:326",
+   "braun__XDD:334",
+   "braun__XDD:342",
+   "braun__XDD:348",
+   "braun__BRC2061",
+   "braun__BRC2110",
+   "braun__BRC2106A",
+   "braun__XDD:358",
+   "braun__XDD:398",
+   "braun__XDD:400"
+  ],
+  "siletti": [
+   "siletti__H19.30.001__PnAN",
+   "siletti__H19.30.002__PnRF",
+   "siletti__H19.30.001__PnRF",
+   "siletti__H19.30.002__PB",
+   "siletti__H19.30.002__PnEN",
+   "siletti__H18.30.002__PnRF",
+   "siletti__H18.30.002__PN",
+   "siletti__H19.30.001__DTg",
+   "siletti__H19.30.002__PnAN",
+   "siletti__H19.30.001__PB",
+   "siletti__H19.30.002__PN",
+   "siletti__H19.30.001__PnEN",
+   "siletti__H19.30.002__DTg",
+   "siletti__H18.30.002__PnAN",
+   "siletti__H19.30.001__PN",
+   "siletti__H18.30.002__PB",
+   "siletti__H18.30.002__DTg",
+   "siletti__H18.30.002__PnEN"
+  ]
+ }
+}

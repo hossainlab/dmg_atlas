@@ -1,0 +1,12 @@
+c2l_class,n_cells,n_samples,n_studies,state_source
+T_NK,764,38,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+astrocyte,4112,50,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+malignant_AC_like,8000,53,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+malignant_MES_like,8000,53,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+malignant_OC_like,1420,47,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+malignant_OPC_like,8000,54,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+malignant_cycling,6227,54,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+myeloid,8000,51,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+neuron,4306,38,4,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+oligodendrocyte,8000,46,6,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"
+vascular,3111,48,5,"fallback: scanpy.score_genes with dmg_atlas.states gene sets (Filbin 2018 / Liu 2022), argmax"

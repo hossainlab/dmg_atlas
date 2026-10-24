@@ -1,0 +1,10 @@
+lineage_label_pre_audit,T_NK,Unknown,astrocyte,malignant,myeloid,neuron,oligodendrocyte,vascular,All
+T_NK,740,24,0,0,0,0,0,0,764
+Unknown,37,77871,593,10608,969,239,769,223,91309
+astrocyte,0,647,4398,0,0,0,0,0,5045
+malignant,0,9239,0,160332,0,0,0,0,169571
+myeloid,0,766,0,0,22286,0,0,0,23052
+neuron,0,177,0,0,0,4261,0,0,4438
+oligodendrocyte,0,1041,0,0,0,0,13100,0,14141
+vascular,0,159,0,0,0,0,0,3139,3298
+All,777,89924,4991,170940,23255,4500,13869,3362,311618

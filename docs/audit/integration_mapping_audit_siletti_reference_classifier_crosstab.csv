@@ -1,0 +1,24 @@
+author_supercluster_term,T_NK,astrocyte,malignant,myeloid,neuron,oligodendrocyte,vascular
+Amygdala excitatory,0,0,0,0,2,0,0
+Astrocyte,0,5121,26,0,0,0,1
+Bergmann glia,0,79,33,0,0,0,0
+CGE interneuron,0,1,0,0,24,0,0
+Cerebellar inhibitory,0,1,0,0,924,2,0
+Choroid plexus,0,7,13,0,0,0,0
+Committed oligodendrocyte precursor,0,7,62,0,5,81,0
+Deep-layer intratelencephalic,0,0,0,0,1,0,0
+Ependymal,0,270,31,0,0,0,0
+Fibroblast,0,252,12,1,2,2,373
+LAMP5-LHX6 and Chandelier,0,0,0,0,6,0,0
+Lower rhombic lip,0,4,0,0,23736,8,0
+MGE interneuron,0,0,0,0,3,0,0
+Mammillary body,0,0,0,0,1,0,0
+Microglia,0,0,0,3612,0,0,1
+Midbrain-derived inhibitory,0,0,0,0,1928,0,0
+Miscellaneous,95,3,0,265,14,1,0
+Oligodendrocyte,0,0,2,0,0,31144,0
+Oligodendrocyte precursor,0,2342,3360,3,32,55,0
+Splatter,0,20,2,0,16004,24,1
+Upper rhombic lip,0,1,0,0,9274,1,0
+Upper-layer intratelencephalic,0,1,0,0,19,0,0
+Vascular,0,15,0,1,0,0,689

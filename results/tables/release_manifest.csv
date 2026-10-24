@@ -1,0 +1,707 @@
+path,role,script,size_mb,md5
+data/processed/dmg_atlas_v1.h5ad,release atlas (CELLxGENE layout),27_package_release.py,1558.899,4a39f172e4db0a2b470de7b6ac7b81e3
+data/processed/atlas_core.h5ad,pipeline atlas (source of the release),09_assemble_atlas_core.py,5265.482,f14dd67c81ec90395c447c358f87c832
+data/processed/query_mapping.h5ad,query projections,11_map_queries.py,496.974,9b585728cc8dcb81c0566362ced87eec
+data/processed/sample_manifest.csv,sample metadata,02_build_sample_manifest.py,0.133,d847cca7340645392c092a5c8017591e
+data/processed/malignant_calls.csv,malignant calls,06_cnv_aggregate.py,210.86,894cfd569f2944bc2df3f6bfcc2a5de3
+data/processed/metaprogram_scores.parquet,per-cell metaprogram scores,19_metaprogram_scores.py,36.091,0c89994b5e13aa1e7acb85b59ce21506
+data/processed/tme_subcluster_labels_clean.csv.gz,per-cell TME subclusters,22_tme_scvi_clean.py,0.377,b2dac2279e75de3da98c0935aab1d95e
+data/processed/foundation_embeddings.npz,embeddings (methods note),26_foundation_embeddings.py,75.984,9791ce562f883f271c5c1afee4e1e707
+data/processed/spatial/spatial_deconvolution_brainstem.h5ad,spatial deconvolution,14_cell2location.py,87.207,6408d31b4c716341da87c60d5d2ce448
+data/processed/spatial/spatial_deconvolution_collot_st.h5ad,spatial deconvolution,14_cell2location.py,7.154,9144c86b7d886238a82ce5a5f56a3d72
+data/processed/spatial/spatial_deconvolution_huchede.h5ad,spatial deconvolution,14_cell2location.py,5.449,ebce56a41dc7c369a515c6d6b5f0cd5d
+data/processed/spatial/spatial_deconvolution_ren.h5ad,spatial deconvolution,14_cell2location.py,51.645,db44fbad4d55d4550eba407c712bb606
+models/c2l_regression/model.pt,reference model,modal/phase6_c2l.py,3.288,14a025ae9e22f3c723096c6fd083b064
+models/c2l_regression/signatures_history.csv,reference model,modal/phase6_c2l.py,0.004,8d0ed23c09929416e50ade6c4a1eab51
+models/c2l_regression/signatures_run.json,reference model,modal/phase6_c2l.py,0.0,92002baac9e9859ea655284d871f0876
+models/c2l_regression_mp/model.pt,reference model,modal/phase6_c2l.py,3.414,913062e806d788ef780b1bed9fb8d743
+models/harmony/latent_f16.npy,control,modal/phase4_train.py,31.162,7b42c43d7099ba779b1f80f0ed6601d0
+models/harmony/obs_names.txt,control,modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/harmony/run.json,control,modal/phase4_train.py,0.0,b3ce99a5c6d6ffc17eaa85a25168a788
+models/pca/latent_f16.npy,control,modal/phase4_train.py,31.162,bafac23ccabfd9be53850e57f71b4f36
+models/pca/obs_names.txt,control,modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/pca/run.json,control,modal/phase4_train.py,0.0,91fb9429867bf43b494e3cecd87fc3fc
+models/pca/variance_ratio.npy,control,modal/phase4_train.py,0.0,a5a10efd2ce7b33401e1f7deea1f177b
+models/scanvi/history.json,reference model,modal/phase4_train.py,0.004,2764fb427b7929266af1e0c9b80bad89
+models/scanvi/latent_f16.npy,reference model,modal/phase4_train.py,18.697,bd837e198423ad07c4a2a4e861d7e76b
+models/scanvi/maxprob.npy,reference model,modal/phase4_train.py,1.247,33d08573a8dc2a6932dec01e42dfbab9
+models/scanvi/model.pt,reference model,modal/phase4_train.py,17.024,baeee96e2b8652d281f5c61d6433fdee
+models/scanvi/obs_names.txt,reference model,modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/scanvi/per_class_recall.csv,reference model,modal/phase4_train.py,0.001,41504f3abd5ba108c6ac4b4190aaf67d
+models/scanvi/pre_audit_comparison.json,reference model,modal/phase4_train.py,0.0,3eb0fb27e7af6b82218b34d8365989a0
+models/scanvi/predicted_labels.txt,reference model,modal/phase4_train.py,3.141,66a1d87137c41355bd381353330dfab9
+models/scanvi/run.json,reference model,modal/phase4_train.py,0.001,c91a50fd4508744ef8184f867e483445
+models/scanvi/runs_job.jsonl,reference model,modal/phase4_train.py,0.001,34495158c0b090ae43c677aae5484f0e
+models/scanvi/soft_prob_columns.txt,reference model,modal/phase4_train.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi/soft_probs_f16.npy,reference model,modal/phase4_train.py,4.363,2a9127f07dbca246fc1af04b7d2c30b2
+models/scanvi/split.json,reference model,modal/phase4_train.py,0.001,e537d3f43e3e1351a19101aee31b7edb
+models/scanvi/split_cells.csv.gz,reference model,modal/phase4_train.py,1.515,d76060fd30b0bb48aa81181b6c247c21
+models/scanvi/validation_confusion.csv,reference model,modal/phase4_train.py,0.0,6cbafa82ececa86458e845cd0303b024
+models/scanvi/validation_metrics.json,reference model,modal/phase4_train.py,0.002,f23b3eaea0430485145bc87ddd45e5a6
+models/scanvi/validation_per_patient_accuracy.csv,reference model,modal/phase4_train.py,0.0,ed313c932797731c6f15ee7225e9d8a8
+models/scanvi_query_braun/history.json,query surgery model,11_map_queries.py,0.0,99914b932bd37a50b983c5e7c90ae93b
+models/scanvi_query_braun/latent_f16.npy,query surgery model,11_map_queries.py,6.0,095b497eac5b7de5e2b5789257368238
+models/scanvi_query_braun/maxprob.npy,query surgery model,11_map_queries.py,0.4,9e985f2627d6cfc0dcd9e483a554623b
+models/scanvi_query_braun/obs_names.txt,query surgery model,11_map_queries.py,4.11,9b70d51c6b5038313828069b1ca9ca64
+models/scanvi_query_braun/predicted_labels.txt,query surgery model,11_map_queries.py,0.973,7b8253eb6ee6a71587d6b4dc04a9c870
+models/scanvi_query_braun/run.json,query surgery model,11_map_queries.py,0.001,57e3c544347e5341051a496510835851
+models/scanvi_query_braun/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_braun/soft_probs_f16.npy,query surgery model,11_map_queries.py,1.4,8d7598017943c8b3a781d942d9718bf5
+models/scanvi_query_braun_pre_audit/history.json,query surgery model,11_map_queries.py,0.009,195a6be196946d05c2b2a2e1f8041c68
+models/scanvi_query_braun_pre_audit/latent_f16.npy,query surgery model,11_map_queries.py,6.0,83155aafac176baeaccbbf86de24408b
+models/scanvi_query_braun_pre_audit/maxprob.npy,query surgery model,11_map_queries.py,0.4,d4303f5fe2d67abc44b725d8367f9158
+models/scanvi_query_braun_pre_audit/model.pt,query surgery model,11_map_queries.py,15.099,2f68b81c8a5e5fd4facf31ef348b1c89
+models/scanvi_query_braun_pre_audit/obs_names.txt,query surgery model,11_map_queries.py,4.11,9b70d51c6b5038313828069b1ca9ca64
+models/scanvi_query_braun_pre_audit/predicted_labels.txt,query surgery model,11_map_queries.py,0.997,3045d024c291729e661e540fb350302f
+models/scanvi_query_braun_pre_audit/run.json,query surgery model,11_map_queries.py,0.001,43a584efd1b5165380915e742a09dac6
+models/scanvi_query_braun_pre_audit/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_braun_pre_audit/soft_probs_f16.npy,query surgery model,11_map_queries.py,1.4,d2c0887b92cbd137b59c8545cfd4d9d9
+models/scanvi_query_filbin/history.json,query surgery model,11_map_queries.py,0.0,99914b932bd37a50b983c5e7c90ae93b
+models/scanvi_query_filbin/latent_f16.npy,query surgery model,11_map_queries.py,0.182,94f403812c680a96e990973bd3701a8f
+models/scanvi_query_filbin/maxprob.npy,query surgery model,11_map_queries.py,0.012,0ad38253caf5b25150e3688ba0f0fdd1
+models/scanvi_query_filbin/obs_names.txt,query surgery model,11_map_queries.py,0.087,6e74c6a8f093c8bcec88429cf1b82c3c
+models/scanvi_query_filbin/predicted_labels.txt,query surgery model,11_map_queries.py,0.031,8aefe99820996394c013a4beded96779
+models/scanvi_query_filbin/run.json,query surgery model,11_map_queries.py,0.001,fb03295bc000332169376e82f19f4a36
+models/scanvi_query_filbin/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_filbin/soft_probs_f16.npy,query surgery model,11_map_queries.py,0.043,8d68c788471af68ee172168a9202cdd6
+models/scanvi_query_filbin_pre_audit/history.json,query surgery model,11_map_queries.py,0.008,d68e2b4a5d25d54870a0ff8597617e12
+models/scanvi_query_filbin_pre_audit/latent_f16.npy,query surgery model,11_map_queries.py,0.182,be11c2b110409f8b40d1bd61125be6ff
+models/scanvi_query_filbin_pre_audit/maxprob.npy,query surgery model,11_map_queries.py,0.012,ae575b9eea13b9df0ddd8baa3864e8e9
+models/scanvi_query_filbin_pre_audit/model.pt,query surgery model,11_map_queries.py,14.233,2475bbc689a0c4e71304072373539018
+models/scanvi_query_filbin_pre_audit/obs_names.txt,query surgery model,11_map_queries.py,0.087,6e74c6a8f093c8bcec88429cf1b82c3c
+models/scanvi_query_filbin_pre_audit/predicted_labels.txt,query surgery model,11_map_queries.py,0.031,ce9c35e392bf87c10d4582784dceed99
+models/scanvi_query_filbin_pre_audit/run.json,query surgery model,11_map_queries.py,0.001,fa5400aaa61d0e2c98280e76af1829a2
+models/scanvi_query_filbin_pre_audit/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_filbin_pre_audit/soft_probs_f16.npy,query surgery model,11_map_queries.py,0.043,2405120ae1af83d6b8ea729b27c3b681
+models/scanvi_query_labelle/history.json,query surgery model,11_map_queries.py,0.0,99914b932bd37a50b983c5e7c90ae93b
+models/scanvi_query_labelle/latent_f16.npy,query surgery model,11_map_queries.py,0.495,498ed2da9575184c4d45703ba42c22c3
+models/scanvi_query_labelle/maxprob.npy,query surgery model,11_map_queries.py,0.033,069a77a97270db9974eebd26ee806ef9
+models/scanvi_query_labelle/obs_names.txt,query surgery model,11_map_queries.py,0.378,7a2f45ac48220ee3fd63f60634b76628
+models/scanvi_query_labelle/predicted_labels.txt,query surgery model,11_map_queries.py,0.063,e08ff7566754395c01320c03fd3712b5
+models/scanvi_query_labelle/run.json,query surgery model,11_map_queries.py,0.001,cf2865cb782504f3892202268b9ade2c
+models/scanvi_query_labelle/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_labelle/soft_probs_f16.npy,query surgery model,11_map_queries.py,0.116,acd78841d23edc5235ace83d67a16277
+models/scanvi_query_labelle_pre_audit/history.json,query surgery model,11_map_queries.py,0.009,ddd1c62e49af6b984e790de20fdc89b1
+models/scanvi_query_labelle_pre_audit/latent_f16.npy,query surgery model,11_map_queries.py,0.495,589753475ee99596649a6a9f6a79f3ed
+models/scanvi_query_labelle_pre_audit/maxprob.npy,query surgery model,11_map_queries.py,0.033,35562c6262a056b3d5043bfc8e5547b9
+models/scanvi_query_labelle_pre_audit/model.pt,query surgery model,11_map_queries.py,14.277,acb68d8c00a3c81135c0e12d6ee3ec42
+models/scanvi_query_labelle_pre_audit/obs_names.txt,query surgery model,11_map_queries.py,0.377,a1f34b2797099b1943634947174b6297
+models/scanvi_query_labelle_pre_audit/predicted_labels.txt,query surgery model,11_map_queries.py,0.068,1312c778656f48aab62dae8e35d64c30
+models/scanvi_query_labelle_pre_audit/run.json,query surgery model,11_map_queries.py,0.001,423acf476f44ebbe328779fd1f55df38
+models/scanvi_query_labelle_pre_audit/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_labelle_pre_audit/soft_probs_f16.npy,query surgery model,11_map_queries.py,0.115,3c474a79ccf58514b7a7534986ad5a70
+models/scanvi_query_liu/history.json,query surgery model,11_map_queries.py,0.0,99914b932bd37a50b983c5e7c90ae93b
+models/scanvi_query_liu/latent_f16.npy,query surgery model,11_map_queries.py,0.746,0478a080d11e1879019b2ae42374bfc2
+models/scanvi_query_liu/maxprob.npy,query surgery model,11_map_queries.py,0.05,8cf6c43ba44035d12b803bc02c45d222
+models/scanvi_query_liu/obs_names.txt,query surgery model,11_map_queries.py,0.329,89bcb841629b3b507f270e56f8de5587
+models/scanvi_query_liu/predicted_labels.txt,query surgery model,11_map_queries.py,0.124,fd6d3631ce007adbe8b43e6c83a0d5a6
+models/scanvi_query_liu/run.json,query surgery model,11_map_queries.py,0.001,f8490c6cb955f9d1900eeda05b11d241
+models/scanvi_query_liu/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_liu/soft_probs_f16.npy,query surgery model,11_map_queries.py,0.174,50840e02319e79f7a6f24f6cdbc99b83
+models/scanvi_query_liu_pre_audit/history.json,query surgery model,11_map_queries.py,0.008,2218cf90783d0a0ca51677d66a958860
+models/scanvi_query_liu_pre_audit/latent_f16.npy,query surgery model,11_map_queries.py,0.786,53037ff5c3a67482a9b99d3ad63fb635
+models/scanvi_query_liu_pre_audit/maxprob.npy,query surgery model,11_map_queries.py,0.053,522a7f4c7ed7106d3b6ac0a000ccdc84
+models/scanvi_query_liu_pre_audit/model.pt,query surgery model,11_map_queries.py,14.353,2abbcb9d1e16144211d77e11a363bbe0
+models/scanvi_query_liu_pre_audit/obs_names.txt,query surgery model,11_map_queries.py,0.35,f689c8246eedd7e6de106c376b8dd31d
+models/scanvi_query_liu_pre_audit/predicted_labels.txt,query surgery model,11_map_queries.py,0.132,0cfe70a2caf3d43fb3c5602d02f91e40
+models/scanvi_query_liu_pre_audit/run.json,query surgery model,11_map_queries.py,0.001,623e193679b73a70617c6dd08445d5ec
+models/scanvi_query_liu_pre_audit/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_liu_pre_audit/soft_probs_f16.npy,query surgery model,11_map_queries.py,0.184,634c19438fbb5acdc545542d2629859e
+models/scanvi_query_siletti/history.json,query surgery model,11_map_queries.py,0.0,99914b932bd37a50b983c5e7c90ae93b
+models/scanvi_query_siletti/latent_f16.npy,query surgery model,11_map_queries.py,6.0,49ef9e37b66399ae27dcbc1085cb601f
+models/scanvi_query_siletti/maxprob.npy,query surgery model,11_map_queries.py,0.4,cefcdce0891c06612a6f768761063d14
+models/scanvi_query_siletti/obs_names.txt,query surgery model,11_map_queries.py,4.6,5906693fcb1a707199b54bcf6067e14a
+models/scanvi_query_siletti/predicted_labels.txt,query surgery model,11_map_queries.py,1.042,b379e61c090d0daaf76171b7bb5c9ab1
+models/scanvi_query_siletti/run.json,query surgery model,11_map_queries.py,0.001,1a2fea6a1bbe5a75dfb3607836da2326
+models/scanvi_query_siletti/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_siletti/soft_probs_f16.npy,query surgery model,11_map_queries.py,1.4,7c2e6ec280b964cef46386931bea713a
+models/scanvi_query_siletti_pre_audit/history.json,query surgery model,11_map_queries.py,0.009,f7b28d824295251d7415b79d47307cbb
+models/scanvi_query_siletti_pre_audit/latent_f16.npy,query surgery model,11_map_queries.py,6.0,0e305653aaaf51bea0fa50e08eee5bfe
+models/scanvi_query_siletti_pre_audit/maxprob.npy,query surgery model,11_map_queries.py,0.4,2dc6f50a79df22e2a71c8096189a6f50
+models/scanvi_query_siletti_pre_audit/model.pt,query surgery model,11_map_queries.py,15.1,89d25b9f7096feb6dfc3531bd78939e7
+models/scanvi_query_siletti_pre_audit/obs_names.txt,query surgery model,11_map_queries.py,4.6,5906693fcb1a707199b54bcf6067e14a
+models/scanvi_query_siletti_pre_audit/predicted_labels.txt,query surgery model,11_map_queries.py,1.023,2aa11ef48f4ef0dedea6c3895713e950
+models/scanvi_query_siletti_pre_audit/run.json,query surgery model,11_map_queries.py,0.001,72762f655042e1b049ed59c00102fafa
+models/scanvi_query_siletti_pre_audit/soft_prob_columns.txt,query surgery model,11_map_queries.py,0.0,a07d0154d19f3b0e5e3fe02ac3632572
+models/scanvi_query_siletti_pre_audit/soft_probs_f16.npy,query surgery model,11_map_queries.py,1.4,7054d94f849b4130b461a4e4677ff1a4
+models/scvi_malignant/history.json,reference model,modal/phase4_train.py,0.009,5932a31d26edb23281605c2fd746a199
+models/scvi_malignant/latent_f16.npy,reference model,modal/phase4_train.py,10.044,b7f0d5aca735bd5d832fbd568302554a
+models/scvi_malignant/model.pt,reference model,modal/phase4_train.py,9.603,f895995841dd839c75eafe25757ded44
+models/scvi_malignant/obs_names.txt,reference model,modal/phase4_train.py,7.812,09e7b11cdcdbd3a9b37778bc289bc92b
+models/scvi_malignant/run.json,reference model,modal/phase4_train.py,0.001,7690b0cc1ec1318a4ead5edb8bde5d5c
+models/scvi_malignant_seed0/history.json,control,modal/phase4_train.py,0.009,519eb65bbb076d226ed62eba7780a1f4
+models/scvi_malignant_seed0/latent_f16.npy,control,modal/phase4_train.py,10.174,7f2e66be4d36bcda7d4e36672aee39f3
+models/scvi_malignant_seed0/model.pt,control,modal/phase4_train.py,9.625,b3e94ed94e50e5033694cf3aed30cb4e
+models/scvi_malignant_seed0/obs_names.txt,control,modal/phase4_train.py,7.898,390348d6991b3dd2c57b0c0efa5fb725
+models/scvi_malignant_seed0/run.json,control,modal/phase4_train.py,0.001,06cd40e9ae4c8a6f98a8731ec0db1605
+models/scvi_seed0/history.json,control,modal/phase4_train.py,0.005,ee465abdffd6bdaf0f379c4926fdc2f4
+models/scvi_seed0/latent_f16.npy,control,modal/phase4_train.py,18.697,d1f9fd9f0be36f550fada3a48536f327
+models/scvi_seed0/model.pt,control,modal/phase4_train.py,10.907,58bd408251b643916c800da0146dbef8
+models/scvi_seed0/obs_names.txt,control,modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/scvi_seed0/run.json,control,modal/phase4_train.py,0.001,504d96b5125b404d261dc316869ac795
+models/scvi_seed0_e60/history.json,control,modal/phase4_train.py,0.011,5425cfc0a5dd6a5fd00718d10332df0f
+models/scvi_seed0_e60/latent_f16.npy,control,modal/phase4_train.py,18.697,3545f65032efd51a1e671220baf89acc
+models/scvi_seed0_e60/model.pt,control,modal/phase4_train.py,10.911,0b1d5ee3d69a4f7deb817b74e4cc257e
+models/scvi_seed0_e60/obs_names.txt,control,modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/scvi_seed0_e60/run.json,control,modal/phase4_train.py,0.001,c1ba9c3e64e745f683d823019fdd19fc
+models/scvi_seed1/history.json,"reference model (chosen scVI, uns phase4/chosen_scvi)",modal/phase4_train.py,0.005,7de5294d187da185fd7ca97d21ace302
+models/scvi_seed1/latent_f16.npy,"reference model (chosen scVI, uns phase4/chosen_scvi)",modal/phase4_train.py,18.697,9478b7181ad63e2af2979219c295b06e
+models/scvi_seed1/model.pt,"reference model (chosen scVI, uns phase4/chosen_scvi)",modal/phase4_train.py,10.907,7ab9772beeb590cc7c0f0aa326d5e5c7
+models/scvi_seed1/obs_names.txt,"reference model (chosen scVI, uns phase4/chosen_scvi)",modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/scvi_seed1/run.json,"reference model (chosen scVI, uns phase4/chosen_scvi)",modal/phase4_train.py,0.001,d8875c5dbce68feb3de129f04adf693e
+models/scvi_seed2/history.json,control,modal/phase4_train.py,0.005,fc8d67cf130b824b7e516460ca427092
+models/scvi_seed2/latent_f16.npy,control,modal/phase4_train.py,18.697,deb323b3588b222b7b24f8e2368dbbeb
+models/scvi_seed2/model.pt,control,modal/phase4_train.py,10.907,02376de984cf2eeaa662b50851ea1a68
+models/scvi_seed2/obs_names.txt,control,modal/phase4_train.py,14.667,8e106001a13537cf7fea613e815d9cf2
+models/scvi_seed2/run.json,control,modal/phase4_train.py,0.001,7b8b5f46deb7c69aa3a61463f22f67d1
+models/scvi_tme_T_NK/model.pt,TME scVI model,22_tme_scvi_clean.py,5.518,403ba741f3e32e7482a6af5959089cac
+models/scvi_tme_myeloid/model.pt,TME scVI model,22_tme_scvi_clean.py,5.829,a999ec2aeed30a4d42ab5f361f112aac
+models/scvi_tme_oligodendrocyte/model.pt,TME scVI model,22_tme_scvi_clean.py,5.701,7cdcf48679e882634159e805aa872529
+models/scvi_tme_vascular/model.pt,TME scVI model,22_tme_scvi_clean.py,5.59,fddcf4d034cb9acc751909411958810c
+docs/decisions.md,documentation,16_metaprograms.py,0.006,e908ed6889b934de2b038a10feb0f30f
+docs/build_plan.md,documentation,30_figures.py,0.008,75cdbbcd85fcc226b4e6210c816ea4ff
+docs/atlas_schema.md,documentation,,0.036,fad1f83384a2d11a7f4df10d00b31553
+docs/label_ontology.csv,documentation,,0.004,2eefac6e1c1c2d6ba6d4b76f9d37d207
+results/tables/release_ontology_map.csv,documentation,27_package_release.py,0.007,704f130ff337942b90bcb80361a0a4e0
+results/tables/release_genes_dropped.csv,documentation,27_package_release.py,0.002,94e33390ae16c262e2390dfd804930c9
+results/tables/assay_biased_genes.csv,results table,,1.818,d0cecd05676fcac12b9a3c8548e59bcd
+results/tables/assay_biased_genes.pre_audit.csv,results table,,1.836,a02b935663868be5cf48e84c02dff1a7
+results/tables/atac_family_da_peaks.csv,results table,24_atac_multiome.py,0.161,59b5f1d029e4ad79c8aec5fc0514b7cb
+results/tables/atac_family_da_peaks.pre_audit.csv,results table,24_atac_multiome.py,0.245,be6bcb1490c73f2e7be4533f2e7c3384
+results/tables/atac_label_correlation.csv,results table,,0.003,fcbf0935bfbf95349fdfb4651d1ffeed
+results/tables/atac_label_correlation.pre_audit.csv,results table,,0.003,f409cced8cb88c72df029ef0a6649e6c
+results/tables/atac_label_correlation_long.csv,results table,24_atac_multiome.py,0.014,1b4ea8c79082f48eafad714160ce7bd9
+results/tables/atac_label_correlation_n.csv,results table,24_atac_multiome.py,0.001,b36e91c00c53ff9dcaa167437e2d671e
+results/tables/atac_pseudobulk_cpm.csv.gz,results table,24_atac_multiome.py,50.48,9eebba5970b9285ea6967c47c5a8b49c
+results/tables/atac_pseudobulk_cpm.pre_audit.csv.gz,results table,24_atac_multiome.py,38.438,64937148881b3ec5708b244839dac586
+results/tables/atac_separability_per_sample.csv,results table,24_atac_multiome.py,0.02,8548e5deb95d72fedcd7332d66338ab1
+results/tables/atac_separability_per_sample.pre_audit.csv,results table,24_atac_multiome.py,0.019,df723e3d2151c70a2041e48bf4b4ab67
+results/tables/atac_separability_sample_z.csv,results table,24_atac_multiome.py,0.002,5cacbdb81068f9ba0addea518e98efec
+results/tables/atac_summary.csv,results table,,0.002,424e1da604268276862d9aa61052f16b
+results/tables/atac_summary.pre_audit.csv,results table,,0.002,e19658e276ae75d4a2b1f138b769e5f8
+results/tables/atac_union_peaks.csv.gz,results table,,3.444,19f3a9f92c55c0253727539cd5daab05
+results/tables/atac_union_peaks.pre_audit.csv.gz,results table,,3.444,c683f165a83214a611ab5632dffc5877
+results/tables/atlas_core_obs_labels.csv,results table,,61.706,cb33f1c0d3dd9f55b3319523594e1055
+results/tables/atlas_core_obs_labels.pre_audit.csv,results table,,38.941,fe35872658a2a925b36cd77ef2ddb424
+results/tables/atlas_core_umap.csv,results table,,20.952,135266974c7babd0e5cece65ec8140a6
+results/tables/atlas_core_umap.pre_audit.csv,results table,,20.787,f4bb3d3f9b9a35bc67e066ff9dbf473d
+results/tables/atlas_input_cells_per_sample.csv,results table,07_assemble_atlas_input.py,0.003,31fbfc779644b486fba916a3b5873312
+results/tables/atlas_input_hvg.csv,results table,,1.598,a534f659d76974a7dd6f34e407e960fe
+results/tables/atlas_malignant_hvg.csv,results table,,1.112,3ac720c3a714775a59dc2ab3135155ad
+results/tables/atlas_malignant_hvg.pre_audit.csv,results table,,1.118,c48dd5fd6305eaafc73f455403b4da33
+results/tables/atlas_v1_summary.csv,results table,,0.001,265450b7198b7ff87673c6c2bd0d46dc
+results/tables/atlas_v1_summary.pre_audit.csv,results table,,0.001,a69d5c76e2ea3e8d723d3460e77edfc5
+results/tables/brainstem_gradient.csv,results table,15_spatial_tests.py,0.019,65074a9d2709ef3078d58b28d6eaca2f
+results/tables/brainstem_gradient_mp.csv,results table,,0.022,e6b3ed2bdd193ec13f63995f8bacc462
+results/tables/brainstem_mp_vs_fallback.csv,results table,,0.001,a263d963bc3594c3496ce72f4414c2fc
+results/tables/brainstem_section_means.csv,results table,,0.005,708c667c77516ea860a24ec1fec4cd42
+results/tables/brainstem_section_means_mp.csv,results table,,0.006,672505fb698bc61969e9be8ca5abda03
+results/tables/c2l_deconvolution_runs.json,results table,14_cell2location.py,0.003,cb22d73abd0ee4ec8f5c53112e6c13c8
+results/tables/c2l_deconvolution_runs_mp.json,results table,21_brainstem_gradient_mp.py,0.001,0c8033b5d29a7ab95397ff8fc48bcb08
+results/tables/c2l_reference_classes.csv,results table,,0.001,9857f6cbd9e4af569357210b141c0bf1
+results/tables/c2l_reference_classes_mp.csv,results table,,0.001,6cabc30aad21b1c03742e9d8e82ef53f
+results/tables/c2l_reference_state_scores.csv.gz,results table,13_reference_signatures.py,4.982,7d6e986a6bae872f5c25402f17f49cb4
+results/tables/c2l_signatures.csv,results table,,0.486,370ae303cdb1ed7eaabe80627e342808
+results/tables/c2l_signatures_mp.csv,results table,,0.568,9d27ac1b0bfa063a2c46cf3f0735bf5f
+results/tables/c2l_signatures_mp_history.csv,results table,,0.004,b6b981fee4979d375320e4c4f44fc3cd
+results/tables/c2l_signatures_mp_run.json,results table,,0.001,39cec85bf35d0a33b66ccc0c61c36960
+results/tables/cnmf/collot__DMG-PMC-9_core_kselection.csv,results table,,0.001,6ba3c48c02b9e94d7ec8b98c5c6a0c14
+results/tables/cnmf/collot__DMG-PMC-9_core_programs.csv,results table,,0.047,d1ff378631ac7766efadeda9f1524099
+results/tables/cnmf/collot__DMG-PMC-9_edge_kselection.csv,results table,,0.001,cb26198c5123d91a4a755b10ff139894
+results/tables/cnmf/collot__DMG-PMC-9_edge_programs.csv,results table,,0.021,76e588cb5bfd852d5e9649d37937cd2f
+results/tables/cnmf/collot__PMC-DMG-6_kselection.csv,results table,,0.001,648a1fe7e9922514d1cc208cfd340303
+results/tables/cnmf/collot__PMC-DMG-6_programs.csv,results table,,0.033,c2e06aa82d7a6ec52d8ac69d33b3d123
+results/tables/cnmf/collot__PMC-DMG-7_kselection.csv,results table,,0.001,e82830d157302c797e92c0e475aab151
+results/tables/cnmf/collot__PMC-DMG-7_programs.csv,results table,,0.038,be4649d3d9c22c2af8a5f3dcbcf37bc1
+results/tables/cnmf/collot__PMC-DMG-8_kselection.csv,results table,,0.001,9a14d70ad76414e9780982c280e23875
+results/tables/cnmf/collot__PMC-DMG-8_programs.csv,results table,,0.033,95d97fbc3b39aef826d5389ad9a62df4
+results/tables/cnmf/desisto__1196_kselection.csv,results table,,0.001,c00f93f412cc029ae5cbeb35d6e061e7
+results/tables/cnmf/desisto__1196_programs.csv,results table,,0.038,a8e32fed3d8379001cc75395013b6202
+results/tables/cnmf/jessa_multiome__P-1694_S-1694_kselection.csv,results table,,0.001,65650e904dd3697025488f3be7276b90
+results/tables/cnmf/jessa_multiome__P-1694_S-1694_programs.csv,results table,,0.053,4368b4fda724d7afb8c812dcb36f7aff
+results/tables/cnmf/jessa_multiome__P-1701_S-1701_kselection.csv,results table,,0.001,7ff7aefe650436f04b56a14e9aa638cd
+results/tables/cnmf/jessa_multiome__P-1701_S-1701_programs.csv,results table,,0.053,0ce99a2ed6a7f1424c39ec538c9eff90
+results/tables/cnmf/jessa_multiome__P-1709_S-1709_kselection.csv,results table,,0.001,0dda83284e278ffa54725528a43a2880
+results/tables/cnmf/jessa_multiome__P-1709_S-1709_programs.csv,results table,,0.053,ba3a47aef3f028f984f8561a55d06c62
+results/tables/cnmf/jessa_multiome__P-1764_S-1766_kselection.csv,results table,,0.001,ce560cbe777702268113a4edf0b18626
+results/tables/cnmf/jessa_multiome__P-1764_S-1766_programs.csv,results table,,0.053,ece5723fa47ace874aee5b24f19cf790
+results/tables/cnmf/jessa_multiome__P-1779_S-1781_kselection.csv,results table,,0.001,b5481d9ebaa2c4369f10914f074ac54f
+results/tables/cnmf/jessa_multiome__P-1779_S-1781_programs.csv,results table,,0.047,326afc737f06341eebeaa0c7dd2bd9ee
+results/tables/cnmf/jessa_multiome__P-1780_S-1780_kselection.csv,results table,,0.001,06ded68efc93cc020c4c5c6098165b11
+results/tables/cnmf/jessa_multiome__P-1780_S-1780_programs.csv,results table,,0.047,5209b412e455c799637aaa64cb6dd66a
+results/tables/cnmf/jessa_multiome__P-6253_S-8498_kselection.csv,results table,,0.001,c5b98df8a612c7e62274dc039d053bd2
+results/tables/cnmf/jessa_multiome__P-6253_S-8498_programs.csv,results table,,0.047,77e52dc37a4a13fcfbe2ea58d897d57a
+results/tables/cnmf/jessa_multiome__P-6337_S-8821_kselection.csv,results table,,0.001,a687fec8b0fea0cc72d514ddc0dda22f
+results/tables/cnmf/jessa_multiome__P-6337_S-8821_programs.csv,results table,,0.047,5e4ad5230347a1af4131a9f1f0e80ecc
+results/tables/cnmf/jessa_multiome__P-6640_S-9581_kselection.csv,results table,,0.001,0b071864b3bae81fd4b33141b7b214b8
+results/tables/cnmf/jessa_multiome__P-6640_S-9581_programs.csv,results table,,0.053,51437ad4210f88f0be3f08f90069e507
+results/tables/cnmf/jessa_multiome__P-6774_S-10146_kselection.csv,results table,,0.001,572824f1b443529652ee0286ed3a1f32
+results/tables/cnmf/jessa_multiome__P-6774_S-10146_programs.csv,results table,,0.054,49174c683c88f3881514bae5b8ef0de8
+results/tables/cnmf/jessa_scrna__P-1713_S-1713_kselection.csv,results table,,0.001,aceb0ab6c3959757d49af5a04c0ce13c
+results/tables/cnmf/jessa_scrna__P-1713_S-1713_programs.csv,results table,,0.045,59e4f4a24b3c965ca04cd0184c95f2c4
+results/tables/cnmf/jessa_scrna__P-1741_S-2756_kselection.csv,results table,,0.001,bebdf045c0e3801b17e187771b86727a
+results/tables/cnmf/jessa_scrna__P-1741_S-2756_programs.csv,results table,,0.05,17b59d7bcd9de1d5b4ab319d829da499
+results/tables/cnmf/jessa_scrna__P-1764_S-1766_kselection.csv,results table,,0.001,b77a4ad4ba56e64399094797bb27ffa9
+results/tables/cnmf/jessa_scrna__P-1764_S-1766_programs.csv,results table,,0.05,0ac242ce1fb3af04d8b08e2638aaabf6
+results/tables/cnmf/jessa_scrna__P-1775_S-1775_kselection.csv,results table,,0.001,9eab735a494c573134912a81216e6546
+results/tables/cnmf/jessa_scrna__P-1775_S-1775_programs.csv,results table,,0.039,1714f784ab6523f8a8ade88fc2985aef
+results/tables/cnmf/jessa_scrna__P-2687_S-2688_kselection.csv,results table,,0.001,4bdff5779dc2bafa45d47e39acf1ff79
+results/tables/cnmf/jessa_scrna__P-2687_S-2688_programs.csv,results table,,0.045,ff73bfc5cc402b7ea6de6d8522039d3f
+results/tables/cnmf/jessa_scrna__P-3407_S-3447_kselection.csv,results table,,0.001,0f03b57370aefadb471b5c99adfd53ee
+results/tables/cnmf/jessa_scrna__P-3407_S-3447_programs.csv,results table,,0.045,96f8a346fd46efb5a191080eea4a0413
+results/tables/cnmf/jessa_scrna__P-4198_S-4459_kselection.csv,results table,,0.001,b4ece6cbc43410452db3725ce82c7389
+results/tables/cnmf/jessa_scrna__P-4198_S-4459_programs.csv,results table,,0.039,5345a6782d230a1b6ae3f0a4b1e5e429
+results/tables/cnmf/jessa_scrna__P-4504_S-4916_kselection.csv,results table,,0.001,67516fe4a8ff723decec97daa964b653
+results/tables/cnmf/jessa_scrna__P-4504_S-4916_programs.csv,results table,,0.034,6ecd2d3d57cc1a340818c63d77eba618
+results/tables/cnmf/jessa_scrna__P-6117_S-8370_kselection.csv,results table,,0.001,cb3ad00150f8577e01a1fedff121c93a
+results/tables/cnmf/jessa_scrna__P-6117_S-8370_programs.csv,results table,,0.05,8fdaaf6a3b38bf4e233e93c37df07200
+results/tables/cnmf/jessa_scrna__P-6251_S-8496_kselection.csv,results table,,0.001,b18dca58656507a8cd34205d27cf6919
+results/tables/cnmf/jessa_scrna__P-6251_S-8496_programs.csv,results table,,0.045,8d1687c794d9a4db4a6654a785ad75cf
+results/tables/cnmf/jessa_scrna__P-6255_S-8500_kselection.csv,results table,,0.001,baecc62db30b23e92b337be9ecdf5df8
+results/tables/cnmf/jessa_scrna__P-6255_S-8500_programs.csv,results table,,0.034,20287454553e93cd1eeca38c7edc3640
+results/tables/cnmf/jessa_scrna__P-6328_S-8672_kselection.csv,results table,,0.001,1cd44d562c643b68419459e6058ab40f
+results/tables/cnmf/jessa_scrna__P-6328_S-8672_programs.csv,results table,,0.039,f73c422c9b91b27eaeac7bd13e2dbbfa
+results/tables/cnmf/jessa_scrna__P-6337_S-8821_kselection.csv,results table,,0.001,14cb0850b2f4744d61dccae11822b316
+results/tables/cnmf/jessa_scrna__P-6337_S-8821_programs.csv,results table,,0.05,000f52fadcc0194e8b8454273477a3bb
+results/tables/cnmf/jessa_scrna__P-6519_S-9084_kselection.csv,results table,,0.001,b227ed477ddcb8c4647310e6d0382cc4
+results/tables/cnmf/jessa_scrna__P-6519_S-9084_programs.csv,results table,,0.028,229d57198df1ef7cb56b3080b62ef765
+results/tables/cnmf/jessa_scrna__P-6640_S-9581_kselection.csv,results table,,0.001,aa4acadcdc299cb1fce3e7b77decc158
+results/tables/cnmf/jessa_scrna__P-6640_S-9581_programs.csv,results table,,0.05,f0965c268e2463297f5325a367183d7a
+results/tables/cnmf/k_selection.csv,results table,13_cnmf_per_sample.py,0.045,1622e0f29b26713104f1e52af8893cdc
+results/tables/cnmf/okada__1277_pons_kselection.csv,results table,,0.001,7deb4053e69f00e74b8d77d3b25e0cc0
+results/tables/cnmf/okada__1277_pons_programs.csv,results table,,0.037,795681a5808e61b9e712b4f96c195049
+results/tables/cnmf/okada__1368_pons_kselection.csv,results table,,0.001,599a9e8f383b5981b9f50ddb24602ec9
+results/tables/cnmf/okada__1368_pons_programs.csv,results table,,0.037,5617a50eaecf012f50e88c6fa8ef34b1
+results/tables/cnmf/okada__1428_pons_kselection.csv,results table,,0.001,bc03ab32cf27482d5137aeeec4cb6775
+results/tables/cnmf/okada__1428_pons_programs.csv,results table,,0.041,6d28aa083a435a019bebcabf3b6be511
+results/tables/cnmf/okada__1549_thalamus_kselection.csv,results table,,0.001,269d4712b2d8f42a9dc0838187f051da
+results/tables/cnmf/okada__1549_thalamus_programs.csv,results table,,0.03,7ca48d39e07c2eba0b770674828ba502
+results/tables/cnmf/okada__1578_pons_kselection.csv,results table,,0.001,6e9ed9125ca5caf6ce0a2693bdff1f2c
+results/tables/cnmf/okada__1578_pons_programs.csv,results table,,0.037,6e9847c7bc53edeeb4ee0b79e3ecab56
+results/tables/cnmf/okada__1656_pons_kselection.csv,results table,,0.001,06be76e2e48dc0f9b8ca1ac2b7d955f0
+results/tables/cnmf/okada__1656_pons_programs.csv,results table,,0.041,cd0436220b62e6cc079098711f4d140b
+results/tables/cnmf/okada__1689_thalamus_kselection.csv,results table,,0.001,249c3a080d4905d26b8e7428563e46ff
+results/tables/cnmf/okada__1689_thalamus_programs.csv,results table,,0.045,6c8f51f8602bf7f5bcf23e0a7af9ab19
+results/tables/cnmf/okada__1712_pons_kselection.csv,results table,,0.001,81b50204a18779c6290593237e258021
+results/tables/cnmf/okada__1712_pons_programs.csv,results table,,0.032,cdd47103aa24dc21ead80758cc52a85f
+results/tables/cnmf/okada__1855_pons_kselection.csv,results table,,0.001,9dbcc235211750ebf1a4ba62de716830
+results/tables/cnmf/okada__1855_pons_programs.csv,results table,,0.037,18985dd1e25febcdc3733c2c2f0bf447
+results/tables/cnmf/okada__1890_pons_kselection.csv,results table,,0.001,376fd7e774c4ee45f36759c96f88fa6a
+results/tables/cnmf/okada__1890_pons_programs.csv,results table,,0.037,2caa06961eb7a6e02a8a65ad1d49ffc1
+results/tables/cnmf/okada__1944_pons_kselection.csv,results table,,0.001,33179a7d059e12f0db2bbaa426de9bc7
+results/tables/cnmf/okada__1944_pons_programs.csv,results table,,0.037,4988db4303922a9c3dd368c2028d27fd
+results/tables/cnmf/okada__1958_pons_kselection.csv,results table,,0.001,97b94451d0b9533b08b50deed8f47842
+results/tables/cnmf/okada__1958_pons_programs.csv,results table,,0.037,2e90539d4ee12a7850fad292702499f3
+results/tables/cnmf/okada__1963_pons_kselection.csv,results table,,0.001,763954e334b8575ec981a7675a499821
+results/tables/cnmf/okada__1963_pons_programs.csv,results table,,0.041,58aca323971de7ef89e3bc546f2cc4ee
+results/tables/cnmf/okada__2054_thalamus_kselection.csv,results table,,0.001,962da94b24fc5b3dad426ba8b49210e3
+results/tables/cnmf/okada__2054_thalamus_programs.csv,results table,,0.045,56c263d89c8c5d6ef07f61e6654e4f16
+results/tables/cnmf/okada__586_pons_kselection.csv,results table,,0.001,3a591ad53d01c3305b5d8b4544388045
+results/tables/cnmf/okada__586_pons_programs.csv,results table,,0.04,07e02291292260d588d990ac8b2ea4a6
+results/tables/cnmf/okada__874_pons_kselection.csv,results table,,0.001,9b1fb6ab6e8600e07047a46ad5a52540
+results/tables/cnmf/okada__874_pons_programs.csv,results table,,0.04,8862f57ade0577aa2712b5501d067006
+results/tables/cnmf/okada__916_thalamus_kselection.csv,results table,,0.001,e048d4eb3471bf47ace73750dadcd6a9
+results/tables/cnmf/okada__916_thalamus_programs.csv,results table,,0.034,bd52624c1fc832d7c572f3d005d36c9e
+results/tables/cnmf/okada__933_pons_kselection.csv,results table,,0.001,c01f954d130f268db5338e22362a3602
+results/tables/cnmf/okada__933_pons_programs.csv,results table,,0.031,40e853f2473d4b3fb69e6d4acf12b9a4
+results/tables/cnmf/sample_rerun_plan.csv,results table,13a_malignant_selection.py,0.008,e98d73a153282ba2ce7afa157d22a996
+results/tables/cnmf/samples_analysed.csv,results table,,0.004,a262082e9eb8ce54dd2df766c509e9ed
+results/tables/cnmf/zang__GSM7846769_kselection.csv,results table,,0.001,47f5e1f18218c250a0f9abf35970edb3
+results/tables/cnmf/zang__GSM7846769_programs.csv,results table,,0.041,c6602f0aa94bdc83ede420c823d24a0c
+results/tables/cnmf.pre_audit/collot__DMG-PMC-9_core_kselection.csv,results table,,0.001,a6ab3d9ea540364617388c3cd465ab15
+results/tables/cnmf.pre_audit/collot__DMG-PMC-9_core_programs.csv,results table,,0.042,47fade6435a3b7121381692344e3c7d4
+results/tables/cnmf.pre_audit/collot__DMG-PMC-9_edge_kselection.csv,results table,,0.001,305ce0a66838f917fce642b2a124db90
+results/tables/cnmf.pre_audit/collot__DMG-PMC-9_edge_programs.csv,results table,,0.042,d25ebd48ee7d20071e6d31c469f4f995
+results/tables/cnmf.pre_audit/collot__PMC-DMG-6_kselection.csv,results table,,0.001,48da99a4fa656ef09e99a57b800eda28
+results/tables/cnmf.pre_audit/collot__PMC-DMG-6_programs.csv,results table,,0.033,8b6b77a104765424f370dc5cace0e1cc
+results/tables/cnmf.pre_audit/collot__PMC-DMG-7_kselection.csv,results table,,0.001,0ce2cbe1be2ee94b47b27079599f6501
+results/tables/cnmf.pre_audit/collot__PMC-DMG-7_programs.csv,results table,,0.038,38c6e15fdc449ed6a5da44d0cf66effd
+results/tables/cnmf.pre_audit/collot__PMC-DMG-8_kselection.csv,results table,,0.001,c7a3540203e3e269245f8de3e0762341
+results/tables/cnmf.pre_audit/collot__PMC-DMG-8_programs.csv,results table,,0.038,6e00d588a1f737051fe2513d871df6dc
+results/tables/cnmf.pre_audit/desisto__1196_kselection.csv,results table,,0.001,c00f93f412cc029ae5cbeb35d6e061e7
+results/tables/cnmf.pre_audit/desisto__1196_programs.csv,results table,,0.038,a8e32fed3d8379001cc75395013b6202
+results/tables/cnmf.pre_audit/jessa_multiome__P-1694_S-1694_kselection.csv,results table,,0.001,a119d5fc4be24066cbeb0499b2f68ba6
+results/tables/cnmf.pre_audit/jessa_multiome__P-1694_S-1694_programs.csv,results table,,0.053,08172708c23290a91d5f201b56db414b
+results/tables/cnmf.pre_audit/jessa_multiome__P-1701_S-1701_kselection.csv,results table,,0.001,7da70201a93e4236bc0f7c3af15b3c46
+results/tables/cnmf.pre_audit/jessa_multiome__P-1701_S-1701_programs.csv,results table,,0.053,1c13198706a55c6057463a456734256c
+results/tables/cnmf.pre_audit/jessa_multiome__P-1709_S-1709_kselection.csv,results table,,0.001,8506f29255e09362d8d167814b38ab7b
+results/tables/cnmf.pre_audit/jessa_multiome__P-1709_S-1709_programs.csv,results table,,0.053,1af9dab2594a09527b3e3d4d4561ccdc
+results/tables/cnmf.pre_audit/jessa_multiome__P-1764_S-1766_kselection.csv,results table,,0.001,8ffc1402008e40ba77f413a3b910fd99
+results/tables/cnmf.pre_audit/jessa_multiome__P-1764_S-1766_programs.csv,results table,,0.047,7f006f2df3e9ee8eba710783d23f8f7a
+results/tables/cnmf.pre_audit/jessa_multiome__P-1779_S-1781_kselection.csv,results table,,0.001,b2d7b59018a479b8b1be4140c652f6c7
+results/tables/cnmf.pre_audit/jessa_multiome__P-1779_S-1781_programs.csv,results table,,0.053,1e0dbafebf7117fa7a20b177ba8f7d3e
+results/tables/cnmf.pre_audit/jessa_multiome__P-1780_S-1780_kselection.csv,results table,,0.001,1d59c9c8f75ed3998240c15e7d20e776
+results/tables/cnmf.pre_audit/jessa_multiome__P-1780_S-1780_programs.csv,results table,,0.047,19938983bfe7cee320ef82c28ced80a0
+results/tables/cnmf.pre_audit/jessa_multiome__P-6253_S-8498_kselection.csv,results table,,0.001,3f1f4c542f6ec3f1a73fe1346944ec98
+results/tables/cnmf.pre_audit/jessa_multiome__P-6253_S-8498_programs.csv,results table,,0.047,5f3dbe1fda56a141ac3e68244bf47eb1
+results/tables/cnmf.pre_audit/jessa_multiome__P-6337_S-8821_kselection.csv,results table,,0.001,19149661194174f49b53dc17e02374d5
+results/tables/cnmf.pre_audit/jessa_multiome__P-6337_S-8821_programs.csv,results table,,0.053,fd28fe8dd9fa691ba8d2316f98fac4ff
+results/tables/cnmf.pre_audit/jessa_multiome__P-6640_S-9581_kselection.csv,results table,,0.001,0b071864b3bae81fd4b33141b7b214b8
+results/tables/cnmf.pre_audit/jessa_multiome__P-6640_S-9581_programs.csv,results table,,0.053,51437ad4210f88f0be3f08f90069e507
+results/tables/cnmf.pre_audit/jessa_multiome__P-6774_S-10146_kselection.csv,results table,,0.001,d784000f1069d3b849587a2701086159
+results/tables/cnmf.pre_audit/jessa_multiome__P-6774_S-10146_programs.csv,results table,,0.054,ace19187a55476497309d1a30cf8b61d
+results/tables/cnmf.pre_audit/jessa_scrna__P-1713_S-1713_kselection.csv,results table,,0.001,f7d00cfe2a7ef10b94bb557c2e189a6e
+results/tables/cnmf.pre_audit/jessa_scrna__P-1713_S-1713_programs.csv,results table,,0.05,6021c730e633d98ef6aaac27474fab40
+results/tables/cnmf.pre_audit/jessa_scrna__P-1741_S-2756_kselection.csv,results table,,0.001,f998987ae9bd5e0c0cf74e770d8c9862
+results/tables/cnmf.pre_audit/jessa_scrna__P-1741_S-2756_programs.csv,results table,,0.039,97c4a5f4954e5fb64138cc4fc6cb8581
+results/tables/cnmf.pre_audit/jessa_scrna__P-1764_S-1766_kselection.csv,results table,,0.001,51e29953fbe37d2363666473d53306fb
+results/tables/cnmf.pre_audit/jessa_scrna__P-1764_S-1766_programs.csv,results table,,0.039,8a0dc3009fb738ec48a5a0da6e6bc9f3
+results/tables/cnmf.pre_audit/jessa_scrna__P-1775_S-1775_kselection.csv,results table,,0.001,4ce56c80890616743e48a896119f0702
+results/tables/cnmf.pre_audit/jessa_scrna__P-1775_S-1775_programs.csv,results table,,0.034,8e19c44a50947cb8d8cb30b844cd26aa
+results/tables/cnmf.pre_audit/jessa_scrna__P-2687_S-2688_kselection.csv,results table,,0.001,3f99f5f8de05441c5beeea4877409bb5
+results/tables/cnmf.pre_audit/jessa_scrna__P-2687_S-2688_programs.csv,results table,,0.045,e7b1ad8a8fafde24e44d7afbac405282
+results/tables/cnmf.pre_audit/jessa_scrna__P-3407_S-3447_kselection.csv,results table,,0.001,6f2a51155ac945741069196e49583d69
+results/tables/cnmf.pre_audit/jessa_scrna__P-3407_S-3447_programs.csv,results table,,0.05,878a605c79ead9113e6607377a75e7bf
+results/tables/cnmf.pre_audit/jessa_scrna__P-4198_S-4459_kselection.csv,results table,,0.001,3c561471c83d8ff8714bbe1c5c6b9907
+results/tables/cnmf.pre_audit/jessa_scrna__P-4198_S-4459_programs.csv,results table,,0.045,c5d2a57469bfbc11e7a8acb8d69aa515
+results/tables/cnmf.pre_audit/jessa_scrna__P-4504_S-4916_kselection.csv,results table,,0.001,983e5f0603aa327a26d9b255688034a8
+results/tables/cnmf.pre_audit/jessa_scrna__P-4504_S-4916_programs.csv,results table,,0.039,35cd3daa9d6e321eee627af44e5d659f
+results/tables/cnmf.pre_audit/jessa_scrna__P-6117_S-8370_kselection.csv,results table,,0.001,cb3ad00150f8577e01a1fedff121c93a
+results/tables/cnmf.pre_audit/jessa_scrna__P-6117_S-8370_programs.csv,results table,,0.05,8fdaaf6a3b38bf4e233e93c37df07200
+results/tables/cnmf.pre_audit/jessa_scrna__P-6251_S-8496_kselection.csv,results table,,0.001,728380736868320f7404392ffa9aaa50
+results/tables/cnmf.pre_audit/jessa_scrna__P-6251_S-8496_programs.csv,results table,,0.045,459a654560808a3331813a0cdaef2197
+results/tables/cnmf.pre_audit/jessa_scrna__P-6254_S-8499_kselection.csv,results table,,0.001,e75d779d184b9238cbd136297d91271a
+results/tables/cnmf.pre_audit/jessa_scrna__P-6254_S-8499_programs.csv,results table,,0.028,9d05f9f90f4623b427048597f4722155
+results/tables/cnmf.pre_audit/jessa_scrna__P-6255_S-8500_kselection.csv,results table,,0.001,01a999289f012bea3af3558c65aca52b
+results/tables/cnmf.pre_audit/jessa_scrna__P-6255_S-8500_programs.csv,results table,,0.039,8a8e9f2dca9e48343741036ea66bcae7
+results/tables/cnmf.pre_audit/jessa_scrna__P-6328_S-8672_kselection.csv,results table,,0.001,cc8a7dee40313183053789a7f50782c1
+results/tables/cnmf.pre_audit/jessa_scrna__P-6328_S-8672_programs.csv,results table,,0.039,087f0122816635be5918359ca7762144
+results/tables/cnmf.pre_audit/jessa_scrna__P-6337_S-8821_kselection.csv,results table,,0.001,7fac11cda06f8ae87bd0ce0d915de279
+results/tables/cnmf.pre_audit/jessa_scrna__P-6337_S-8821_programs.csv,results table,,0.05,76f9b83112034ce710adb90c8b2d7576
+results/tables/cnmf.pre_audit/jessa_scrna__P-6519_S-9084_kselection.csv,results table,,0.001,f3752427ed54e767eea99524a7c20e1b
+results/tables/cnmf.pre_audit/jessa_scrna__P-6519_S-9084_programs.csv,results table,,0.039,99f05d454a5d2a9e832a94eefefb8f21
+results/tables/cnmf.pre_audit/jessa_scrna__P-6640_S-9581_kselection.csv,results table,,0.001,aa4acadcdc299cb1fce3e7b77decc158
+results/tables/cnmf.pre_audit/jessa_scrna__P-6640_S-9581_programs.csv,results table,,0.05,f0965c268e2463297f5325a367183d7a
+results/tables/cnmf.pre_audit/k_selection.csv,results table,13_cnmf_per_sample.py,0.049,482c076a58d4aa3101f520cf5d7c73e3
+results/tables/cnmf.pre_audit/okada__1006_thalamus_kselection.csv,results table,,0.001,d1afa424ff433de1f21246e64bb7a22c
+results/tables/cnmf.pre_audit/okada__1006_thalamus_programs.csv,results table,,0.03,5591e5ecd3f4ee70cacc1e6ad96c3974
+results/tables/cnmf.pre_audit/okada__1277_pons_kselection.csv,results table,,0.001,ab644fc485d1346b826ca041c22803d6
+results/tables/cnmf.pre_audit/okada__1277_pons_programs.csv,results table,,0.037,61259746e56c8cce0977b22b4d2dd845
+results/tables/cnmf.pre_audit/okada__1368_pons_kselection.csv,results table,,0.001,bda626c24d0cdf7e5ffbaf42ff4b336d
+results/tables/cnmf.pre_audit/okada__1368_pons_programs.csv,results table,,0.041,940e08a6b165de054b622fef7ee4ad8b
+results/tables/cnmf.pre_audit/okada__1428_pons_kselection.csv,results table,,0.001,f37fc5b3bbcba73b164f472801c02207
+results/tables/cnmf.pre_audit/okada__1428_pons_programs.csv,results table,,0.032,0dbb38772e68860a9d3e2dab567e0aac
+results/tables/cnmf.pre_audit/okada__1549_thalamus_kselection.csv,results table,,0.001,c80397f0b5f34b660123eb79c0ddc1ce
+results/tables/cnmf.pre_audit/okada__1549_thalamus_programs.csv,results table,,0.03,d91e8310f530d69c6d3eef121ff6c9b1
+results/tables/cnmf.pre_audit/okada__1578_pons_kselection.csv,results table,,0.001,d2c4e98be204627253396fa4d8b7e7ec
+results/tables/cnmf.pre_audit/okada__1578_pons_programs.csv,results table,,0.032,0b10736c552b080e9403edb4bc0f0586
+results/tables/cnmf.pre_audit/okada__1656_pons_kselection.csv,results table,,0.001,f6734080b7ad4bfe691db3055cf2677c
+results/tables/cnmf.pre_audit/okada__1656_pons_programs.csv,results table,,0.041,1898531fdb72fde5179cd8b997f729b5
+results/tables/cnmf.pre_audit/okada__1689_thalamus_kselection.csv,results table,,0.001,37badf4393260312d14a5178db8f0138
+results/tables/cnmf.pre_audit/okada__1689_thalamus_programs.csv,results table,,0.045,19e86a3e2a0fdd4a9b6bde74bcf52b2c
+results/tables/cnmf.pre_audit/okada__1712_pons_kselection.csv,results table,,0.001,a0b116eb9c1d17a6005e069f2fb2a50f
+results/tables/cnmf.pre_audit/okada__1712_pons_programs.csv,results table,,0.041,5a8bd2b2366d2c7e61a22d1c7d63fb98
+results/tables/cnmf.pre_audit/okada__1734_pons_kselection.csv,results table,,0.001,f1e366b24dd63867e95b1ceba77915b3
+results/tables/cnmf.pre_audit/okada__1734_pons_programs.csv,results table,,0.042,28107c5fbab3d64b2e1df5ee8e51b1ed
+results/tables/cnmf.pre_audit/okada__1855_pons_kselection.csv,results table,,0.001,19499cebe6bee4db784e7ad3a9418dab
+results/tables/cnmf.pre_audit/okada__1855_pons_programs.csv,results table,,0.041,8d29b2b70336ea10b5880feb5025bb3f
+results/tables/cnmf.pre_audit/okada__1890_pons_kselection.csv,results table,,0.001,8d619f68ad051ae42b6acaad3e4f21af
+results/tables/cnmf.pre_audit/okada__1890_pons_programs.csv,results table,,0.041,1127e97e5fca8dea1af2079a2f615a32
+results/tables/cnmf.pre_audit/okada__1934_thalamus_kselection.csv,results table,,0.001,dc0857375b43d00aa8e0fcd53ec2bdb1
+results/tables/cnmf.pre_audit/okada__1934_thalamus_programs.csv,results table,,0.035,7a2af783a024cd5bc5119d46a91c94fd
+results/tables/cnmf.pre_audit/okada__1944_pons_kselection.csv,results table,,0.001,cb941992e126234c82b365d3eaf61296
+results/tables/cnmf.pre_audit/okada__1944_pons_programs.csv,results table,,0.028,80ce2e604265822084ce43bc53bbf978
+results/tables/cnmf.pre_audit/okada__1958_pons_kselection.csv,results table,,0.001,802d2a14f9bcff81e9b0fff063f25f86
+results/tables/cnmf.pre_audit/okada__1958_pons_programs.csv,results table,,0.032,80c4837c77d7f364c4125d9f16401e6d
+results/tables/cnmf.pre_audit/okada__1963_pons_kselection.csv,results table,,0.001,486a77df8d6cb4ac64fb7f6d3365b31f
+results/tables/cnmf.pre_audit/okada__1963_pons_programs.csv,results table,,0.041,e1fca06111d158072d2aca3457facc48
+results/tables/cnmf.pre_audit/okada__2054_thalamus_kselection.csv,results table,,0.001,3af9c43553291b377033020ec4f21d24
+results/tables/cnmf.pre_audit/okada__2054_thalamus_programs.csv,results table,,0.035,b3029475b67ec71e76fcefe1fc6bf690
+results/tables/cnmf.pre_audit/okada__586_pons_kselection.csv,results table,,0.001,3706524e3fde7b676625b769fceacbe6
+results/tables/cnmf.pre_audit/okada__586_pons_programs.csv,results table,,0.031,302ec1e0ae1a61c61b3bd8844100fc46
+results/tables/cnmf.pre_audit/okada__874_pons_kselection.csv,results table,,0.001,bdb6bc443543a230e32f3c4a632a5401
+results/tables/cnmf.pre_audit/okada__874_pons_programs.csv,results table,,0.04,6f2ebd2f3ea0a5870c3352a4c89e741f
+results/tables/cnmf.pre_audit/okada__916_thalamus_kselection.csv,results table,,0.001,b854713a52c0320abe36c91b04d1f98c
+results/tables/cnmf.pre_audit/okada__916_thalamus_programs.csv,results table,,0.029,c0c19417982e329384a6d2dc437b6057
+results/tables/cnmf.pre_audit/okada__933_pons_kselection.csv,results table,,0.001,009b24df1b264f583958d304aedc3fc0
+results/tables/cnmf.pre_audit/okada__933_pons_programs.csv,results table,,0.031,ca98ccca031b46fd8138c50390b41633
+results/tables/cnmf.pre_audit/samples_analysed.csv,results table,,0.004,33d54c0649acd2d6376811645dcc7211
+results/tables/cnmf.pre_audit/zang__GSM7846769_kselection.csv,results table,,0.001,e20d5f3f7691a6c10d79a8ab429fbdac
+results/tables/cnmf.pre_audit/zang__GSM7846769_programs.csv,results table,,0.032,3070224ff64a786f9a3c966deeb79858
+results/tables/cnmf_eventtrust/collot__DMG-PMC-9_core_kselection.csv,results table,,0.001,e1d4998ec2f00e7065a9a57a856482d9
+results/tables/cnmf_eventtrust/collot__DMG-PMC-9_core_programs.csv,results table,,0.047,16268380471559103c21dbcd2d480f6f
+results/tables/cnmf_eventtrust/collot__DMG-PMC-9_edge_kselection.csv,results table,,0.001,86af4b009e68538022a8f37dc172da18
+results/tables/cnmf_eventtrust/collot__DMG-PMC-9_edge_programs.csv,results table,,0.031,cededb89963001e81d877c905c8a8434
+results/tables/cnmf_eventtrust/collot__PMC-DMG-6_kselection.csv,results table,,0.001,a169fa42af6a8ce6d82b6318a9051bcf
+results/tables/cnmf_eventtrust/collot__PMC-DMG-6_programs.csv,results table,,0.033,757923d7adf2747e498be03ed4dfa474
+results/tables/cnmf_eventtrust/collot__PMC-DMG-7_kselection.csv,results table,,0.001,48c161c593659ca025e2c50dee84a2e7
+results/tables/cnmf_eventtrust/collot__PMC-DMG-7_programs.csv,results table,,0.038,ca8c6a46a26266b02ecb5b5096172f91
+results/tables/cnmf_eventtrust/collot__PMC-DMG-8_kselection.csv,results table,,0.001,99385ed437b92efc45687b0f208abdea
+results/tables/cnmf_eventtrust/collot__PMC-DMG-8_programs.csv,results table,,0.038,ceea6c88bd932e0f76fbbb170ff4a70d
+results/tables/cnmf_eventtrust/desisto__1196_kselection.csv,results table,,0.001,b6e2734368d07450e00980db6bdf4d53
+results/tables/cnmf_eventtrust/desisto__1196_programs.csv,results table,,0.03,065bd1c698919a1d13220a1971810718
+results/tables/cnmf_eventtrust/jessa_multiome__P-1694_S-1694_kselection.csv,results table,,0.001,904b8f80a199cc11bb72a94f7f274e4e
+results/tables/cnmf_eventtrust/jessa_multiome__P-1694_S-1694_programs.csv,results table,,0.053,f72fadce53126e5ae3dd61385c501a8d
+results/tables/cnmf_eventtrust/jessa_multiome__P-1701_S-1701_kselection.csv,results table,,0.001,e31ed6a104bb9e439bb13684ee27b0cd
+results/tables/cnmf_eventtrust/jessa_multiome__P-1701_S-1701_programs.csv,results table,,0.053,baea31063816969b135849b31bdbd1b4
+results/tables/cnmf_eventtrust/jessa_multiome__P-1709_S-1709_kselection.csv,results table,,0.001,3ea15d24ac40c3f049aab642a806f35c
+results/tables/cnmf_eventtrust/jessa_multiome__P-1709_S-1709_programs.csv,results table,,0.053,0068e85abc906a4bb1680a3cf1ad8fde
+results/tables/cnmf_eventtrust/jessa_multiome__P-1764_S-1766_kselection.csv,results table,,0.001,d71e74f8c32d4d87febbf14824480ea2
+results/tables/cnmf_eventtrust/jessa_multiome__P-1764_S-1766_programs.csv,results table,,0.041,bdf4c7d5d39103cffb91c2996ee2b737
+results/tables/cnmf_eventtrust/jessa_multiome__P-1779_S-1781_kselection.csv,results table,,0.001,a95421543622cc1ab5ad3dc92bf6d635
+results/tables/cnmf_eventtrust/jessa_multiome__P-1779_S-1781_programs.csv,results table,,0.047,23f6294e9f8a6b94f1d0fb67e7b4d1f2
+results/tables/cnmf_eventtrust/jessa_multiome__P-1780_S-1780_kselection.csv,results table,,0.001,55312fd68f8fe00bf03abfdd6cccab2b
+results/tables/cnmf_eventtrust/jessa_multiome__P-1780_S-1780_programs.csv,results table,,0.047,2c43afa93dd2f8a316c35f470497122e
+results/tables/cnmf_eventtrust/jessa_multiome__P-6253_S-8498_kselection.csv,results table,,0.001,58f65288fdef12b63b7c743da7d17d49
+results/tables/cnmf_eventtrust/jessa_multiome__P-6253_S-8498_programs.csv,results table,,0.047,d4c046ae33f11c97e398c2a07ea5d1de
+results/tables/cnmf_eventtrust/jessa_multiome__P-6337_S-8821_kselection.csv,results table,,0.001,dbac9beb9e0f284cd018ad533cb4e896
+results/tables/cnmf_eventtrust/jessa_multiome__P-6337_S-8821_programs.csv,results table,,0.053,f04aaff8efe6e8a6d3e4e096ecb4d376
+results/tables/cnmf_eventtrust/jessa_multiome__P-6640_S-9581_kselection.csv,results table,,0.001,bb098c611c6ced949eaa2bb5170e7555
+results/tables/cnmf_eventtrust/jessa_multiome__P-6640_S-9581_programs.csv,results table,,0.047,992a2e75bc0e8f059ead51eb30654c8a
+results/tables/cnmf_eventtrust/jessa_multiome__P-6774_S-10146_kselection.csv,results table,,0.001,30b041d53c7b62f446b4f4b57874da1f
+results/tables/cnmf_eventtrust/jessa_multiome__P-6774_S-10146_programs.csv,results table,,0.054,f14e312385626f3f6b76387abb8cd2c2
+results/tables/cnmf_eventtrust/jessa_scrna__P-1713_S-1713_kselection.csv,results table,,0.001,512efc72c7b58bcfe19bd264b30871e2
+results/tables/cnmf_eventtrust/jessa_scrna__P-1713_S-1713_programs.csv,results table,,0.05,b015455a9592e6f02ae624b8ee733d4e
+results/tables/cnmf_eventtrust/jessa_scrna__P-1741_S-2756_kselection.csv,results table,,0.001,8b961c988fb67c32ffca5c1087d911a2
+results/tables/cnmf_eventtrust/jessa_scrna__P-1741_S-2756_programs.csv,results table,,0.045,47f0ad971e0c84b1bf492bc2a684d8f0
+results/tables/cnmf_eventtrust/jessa_scrna__P-1764_S-1766_kselection.csv,results table,,0.001,b9ce1d5aaac4e1f68350f4fb8b2a5bed
+results/tables/cnmf_eventtrust/jessa_scrna__P-1764_S-1766_programs.csv,results table,,0.039,0fe37a76aa7357b71427d06cb16cb21e
+results/tables/cnmf_eventtrust/jessa_scrna__P-1775_S-1775_kselection.csv,results table,,0.001,07df414f92f3888792131d0b506273b5
+results/tables/cnmf_eventtrust/jessa_scrna__P-1775_S-1775_programs.csv,results table,,0.039,f5927196ff7366393b2c3a5990b4cd7c
+results/tables/cnmf_eventtrust/jessa_scrna__P-2687_S-2688_kselection.csv,results table,,0.001,e65c4a4311c6abbb3116930b7951bfbe
+results/tables/cnmf_eventtrust/jessa_scrna__P-2687_S-2688_programs.csv,results table,,0.05,73430091f5c527f877a159e9d5b67b0c
+results/tables/cnmf_eventtrust/jessa_scrna__P-3407_S-3447_kselection.csv,results table,,0.001,a5a58a35416450e43e20443a7b65e3d0
+results/tables/cnmf_eventtrust/jessa_scrna__P-3407_S-3447_programs.csv,results table,,0.034,0f46a3a3801367415a8665255262196b
+results/tables/cnmf_eventtrust/jessa_scrna__P-4198_S-4459_kselection.csv,results table,,0.001,0166df94c474f9b891faf0160c3acf35
+results/tables/cnmf_eventtrust/jessa_scrna__P-4198_S-4459_programs.csv,results table,,0.045,d5766c434767687d179d4876eae6b884
+results/tables/cnmf_eventtrust/jessa_scrna__P-4504_S-4916_kselection.csv,results table,,0.001,17f0964f7db0b6be37956fccd34f9c0b
+results/tables/cnmf_eventtrust/jessa_scrna__P-4504_S-4916_programs.csv,results table,,0.05,8cf3074f953bea9eac2647c4af4e7b99
+results/tables/cnmf_eventtrust/jessa_scrna__P-6117_S-8370_kselection.csv,results table,,0.001,aab4530e1caf947761eee41a0127fca8
+results/tables/cnmf_eventtrust/jessa_scrna__P-6117_S-8370_programs.csv,results table,,0.05,a308805584ad3e06c85567b012895149
+results/tables/cnmf_eventtrust/jessa_scrna__P-6251_S-8496_kselection.csv,results table,,0.001,8a4917a96caf962692b1fd793a4c164d
+results/tables/cnmf_eventtrust/jessa_scrna__P-6251_S-8496_programs.csv,results table,,0.05,feaf00cc847f1a601d9cec4df62e205b
+results/tables/cnmf_eventtrust/jessa_scrna__P-6255_S-8500_kselection.csv,results table,,0.001,681c87ede7fdbcc04bbe278c7e7e8790
+results/tables/cnmf_eventtrust/jessa_scrna__P-6255_S-8500_programs.csv,results table,,0.039,58b8262ecee27659bf775c2bcac6ad6d
+results/tables/cnmf_eventtrust/jessa_scrna__P-6328_S-8672_kselection.csv,results table,,0.001,d2948a905274a6d0ec01dbf44b7a2f8c
+results/tables/cnmf_eventtrust/jessa_scrna__P-6328_S-8672_programs.csv,results table,,0.045,62f4d785f1f27c9657b1a223937f1d11
+results/tables/cnmf_eventtrust/jessa_scrna__P-6337_S-8821_kselection.csv,results table,,0.001,7b536887a1c5a463d1689d0a0c7ef185
+results/tables/cnmf_eventtrust/jessa_scrna__P-6337_S-8821_programs.csv,results table,,0.045,beaf36029516e5d7cd85dd3a35dd79cd
+results/tables/cnmf_eventtrust/jessa_scrna__P-6519_S-9084_kselection.csv,results table,,0.001,fd1de797a587d71d17e56663f20daf7b
+results/tables/cnmf_eventtrust/jessa_scrna__P-6519_S-9084_programs.csv,results table,,0.028,24e48b74152e07b32384276b4f0186c9
+results/tables/cnmf_eventtrust/jessa_scrna__P-6640_S-9581_kselection.csv,results table,,0.001,1d4df60e84f043804c30da711f81c51c
+results/tables/cnmf_eventtrust/jessa_scrna__P-6640_S-9581_programs.csv,results table,,0.05,b1d308e516b78b5f9932e29302a9a70f
+results/tables/cnmf_eventtrust/k_selection.csv,results table,13_cnmf_per_sample.py,0.046,130952679c6f325c61e025e3708c3c23
+results/tables/cnmf_eventtrust/okada__1006_thalamus_kselection.csv,results table,,0.001,93a607ba18d352ed3cb7622a609bf1d6
+results/tables/cnmf_eventtrust/okada__1006_thalamus_programs.csv,results table,,0.045,76f31edc5320d20ed11547056e19ad16
+results/tables/cnmf_eventtrust/okada__1277_pons_kselection.csv,results table,,0.001,c5d0a6a9baec0671e35b9e3d86cc85c8
+results/tables/cnmf_eventtrust/okada__1277_pons_programs.csv,results table,,0.041,d5bae2f8a6190b5c6b25658f114afef0
+results/tables/cnmf_eventtrust/okada__1368_pons_kselection.csv,results table,,0.001,fcdafdc03c6ed52a78edd132982bb061
+results/tables/cnmf_eventtrust/okada__1368_pons_programs.csv,results table,,0.037,182969175c483bc2fc9602bdc27c5d83
+results/tables/cnmf_eventtrust/okada__1428_pons_kselection.csv,results table,,0.001,fad3575cb01f77697ee9c2d6b44c1eeb
+results/tables/cnmf_eventtrust/okada__1428_pons_programs.csv,results table,,0.041,b32e794af202cebc76b834067377151e
+results/tables/cnmf_eventtrust/okada__1549_thalamus_kselection.csv,results table,,0.001,79fa90a8db3fdeea6530bb0e22442775
+results/tables/cnmf_eventtrust/okada__1549_thalamus_programs.csv,results table,,0.03,dccd93ac0eabf6c1a98150e095aa035f
+results/tables/cnmf_eventtrust/okada__1578_pons_kselection.csv,results table,,0.001,723e0ece590e549d344bfceb6dfe23b2
+results/tables/cnmf_eventtrust/okada__1578_pons_programs.csv,results table,,0.041,2de53f011838af8077f586a0f2d2faac
+results/tables/cnmf_eventtrust/okada__1656_pons_kselection.csv,results table,,0.001,cb6391c48f00a0a17c7aba7ea9cf66f3
+results/tables/cnmf_eventtrust/okada__1656_pons_programs.csv,results table,,0.041,05332cddce0c6acb883fbdfe33e0b89a
+results/tables/cnmf_eventtrust/okada__1689_thalamus_kselection.csv,results table,,0.001,6a6f093e06a99e462794409d3adb4282
+results/tables/cnmf_eventtrust/okada__1689_thalamus_programs.csv,results table,,0.045,46ad24d45d4da794b53c08fea7e7dabc
+results/tables/cnmf_eventtrust/okada__1712_pons_kselection.csv,results table,,0.001,286f24683283272094bfadd7f8ad4371
+results/tables/cnmf_eventtrust/okada__1712_pons_programs.csv,results table,,0.041,2b2bc2c5dcfa922044614dd15f8a6bbb
+results/tables/cnmf_eventtrust/okada__1855_pons_kselection.csv,results table,,0.001,78550bb112102ecdd12e222b07a430ff
+results/tables/cnmf_eventtrust/okada__1855_pons_programs.csv,results table,,0.041,8c38c6223687d3728e6385f561603080
+results/tables/cnmf_eventtrust/okada__1890_pons_kselection.csv,results table,,0.001,f5224f69ddcdf683a5933b0bbe537183
+results/tables/cnmf_eventtrust/okada__1890_pons_programs.csv,results table,,0.041,deae2b2e7a6a815339aba93f4f90aca0
+results/tables/cnmf_eventtrust/okada__1944_pons_kselection.csv,results table,,0.001,196eda7aa3f85d8b636fb8ba9f1cf3ec
+results/tables/cnmf_eventtrust/okada__1944_pons_programs.csv,results table,,0.028,8f292c4bc91ed673743562ecda92c403
+results/tables/cnmf_eventtrust/okada__1958_pons_kselection.csv,results table,,0.001,b6953520cce7e368b4d9a9b1d54ef5b5
+results/tables/cnmf_eventtrust/okada__1958_pons_programs.csv,results table,,0.041,6015a935d0844b2b04889a83fb8e6eaf
+results/tables/cnmf_eventtrust/okada__1963_pons_kselection.csv,results table,,0.001,3fe44b36711d44e6f3c543b796c6265e
+results/tables/cnmf_eventtrust/okada__1963_pons_programs.csv,results table,,0.028,6c407cb763c6495639211c3cdbbec9d5
+results/tables/cnmf_eventtrust/okada__2054_thalamus_kselection.csv,results table,,0.001,17e467d6c50a1b76777eb59c32de2e7c
+results/tables/cnmf_eventtrust/okada__2054_thalamus_programs.csv,results table,,0.045,938f1937a606295f819ec04d4c05d224
+results/tables/cnmf_eventtrust/okada__586_pons_kselection.csv,results table,,0.001,8b7d6ed5d65aa23de36bb740bdf6d17d
+results/tables/cnmf_eventtrust/okada__586_pons_programs.csv,results table,,0.036,da7d7d8f86c14210f80ad8e63493142e
+results/tables/cnmf_eventtrust/okada__874_pons_kselection.csv,results table,,0.001,b0d860f2e0d73d18d2ec02263d92d031
+results/tables/cnmf_eventtrust/okada__874_pons_programs.csv,results table,,0.031,03378da54763d896338043d3a875847f
+results/tables/cnmf_eventtrust/okada__916_thalamus_kselection.csv,results table,,0.001,7e560ae99415030da066ba0b3da815ab
+results/tables/cnmf_eventtrust/okada__916_thalamus_programs.csv,results table,,0.039,089c8df7c214fbd74d8edd99e7783efb
+results/tables/cnmf_eventtrust/okada__933_pons_kselection.csv,results table,,0.001,61596ea12c41c33191598aca7c1c30ff
+results/tables/cnmf_eventtrust/okada__933_pons_programs.csv,results table,,0.031,11fcb17782ed35d9f19f58d2003204a2
+results/tables/cnmf_eventtrust/samples_analysed.csv,results table,,0.004,08a59c0442e83cc00e02fb1b25d3499c
+results/tables/cnmf_eventtrust/zang__GSM7846769_kselection.csv,results table,,0.001,f67f3bdff846faf9de532fec1c367d66
+results/tables/cnmf_eventtrust/zang__GSM7846769_programs.csv,results table,,0.037,612d6d09b162f98d65cd7d2a2cfc1e17
+results/tables/cnv_audit_call_changes.csv,results table,06_cnv_aggregate.py,0.001,682b9a171cbac96e103d9609a848825c
+results/tables/cnv_audit_call_changes_by_author_label.csv,results table,06_cnv_aggregate.py,0.006,fc7268445fcc121d54b7635b43d1d306
+results/tables/cnv_event_frequencies.csv,results table,,0.003,06b96d7ed95e7aaf985d8eaffeb31276
+results/tables/cnv_event_frequencies.pre_audit.csv,results table,,0.003,dd8f08aaa19415d6953f2c819b169b62
+results/tables/cnv_score_floor_sensitivity.csv,results table,06_cnv_aggregate.py,0.004,345be84108e3597f0b09918f8623c378
+results/tables/composition_estimability.csv,results table,18_composition.py,0.001,9d8c885716bfe5501241b6283b10d0ee
+results/tables/composition_estimability.pre_audit.csv,results table,18_composition.py,0.001,725dc5552c1d08a267aaf9e06caf1475
+results/tables/composition_per_sample.csv,results table,18_composition.py,0.455,40af15c7be319f57a1bfc7abb5bfdc9c
+results/tables/composition_per_sample.pre_audit.csv,results table,18_composition.py,0.394,0d4a46620ad995ff85d7282d223b7188
+results/tables/composition_results.csv,results table,,0.109,42399b11730bb6e2d7717c73857860ed
+results/tables/composition_results.pre_audit.csv,results table,,0.082,d001ac26ae6b8366797ffc76e6525d20
+results/tables/composition_results_vs_pre_audit.csv,results table,18_composition.py,0.01,f9089584d9d8db77835bc1dcb545fc68
+results/tables/consensus_ambiguous_composition.csv,results table,06_cnv_aggregate.py,0.023,0e9768652b104e1041c0fe5bc698a2b3
+results/tables/foundation_eval_cells.csv,results table,26b_foundation_comparison_rebuild.py,1.939,ae399a947e4a5f4fb663f02aa9dec5bc
+results/tables/foundation_model_comparison.csv,results table,,0.001,97993d9d04690fc36cc0f01c8d37ee54
+results/tables/foundation_model_comparison.pre_audit.csv,results table,,0.001,9216bd7d2f9b419be64cc4db5e9df1c4
+results/tables/genesets/phase6_curated_gene_sets.csv,results table,,0.023,6abe31807d889e62d2eccf39df2b4b41
+results/tables/genesets/phase6_curated_gene_sets.sha256,results table,16a_curated_gene_sets.py,0.0,fb057f50d00520a7fea90b517d79a659
+results/tables/genesets/phase6_gene_sets.pre_audit.csv,results table,,0.031,46aea5155d6e199971f07c14d6eee927
+results/tables/genesets/reference_gene_sets_overlap.csv,results table,01d_reference_gene_sets.py,0.157,fceb7640efa401f47f13fda065b1726a
+results/tables/genesets/reference_gene_sets_provenance.csv,results table,,0.001,b404a0a71dd00ce472ed8a46c4d5caf3
+results/tables/genesets/reference_gene_sets_scripted.csv,results table,,0.069,9de6ef9c9508aa12cdda5c328ed1ce36
+results/tables/integration_metrics.csv,results table,08_integration_metrics.py,0.007,cf14596807c89e0aecc439cc561346e0
+results/tables/integration_metrics_summary.csv,results table,,0.004,00ee137cfa0376f1e9c8c9b10bd80d59
+results/tables/integration_model_choice.json,results table,,0.001,ae543e82cf7a3c4534bf86ec8e566d25
+results/tables/jessa_author_celltype_vs_cnv_call.csv,results table,06_cnv_aggregate.py,0.0,3a694154a7e07b86f970f5e91b2e772d
+results/tables/jessa_author_celltype_vs_consensus_coarse.csv,results table,06_cnv_aggregate.py,0.001,ea0b054a994af22f90d9159a00e0a2c6
+results/tables/jessa_author_celltype_vs_consensus_coarse.pre_audit.csv,results table,06_cnv_aggregate.py,0.001,ab8c546519468c6ef2f8cb0cf60f96f5
+results/tables/jessa_cnmf_recovery.csv,results table,,0.029,a85d815f60d5ad9604378826ccd20ce0
+results/tables/jessa_cnmf_recovery.pre_audit.csv,results table,,0.026,6307f28cf41be4874b5d7f0f994d23f3
+results/tables/jessa_cnmf_vs_metaprograms.csv,results table,19_metaprogram_scores.py,0.151,6abd35e32e3beaa490788001fecbfd51
+results/tables/jessa_cnmf_vs_metaprograms.pre_audit.csv,results table,19_metaprogram_scores.py,0.21,aeb18f2fff1dfa0e834da23b6415b6b1
+results/tables/liu_author_vs_cnv_call_crosstab.csv,results table,06_cnv_aggregate.py,0.0,3289a1400a3d63661bce3651404ac096
+results/tables/liu_author_vs_consensus_crosstab.csv,results table,,0.0,dc4b3a343fa5a87dbc1acbff8ec228de
+results/tables/liu_author_vs_consensus_crosstab.pre_audit.csv,results table,,0.0,dc4b3a343fa5a87dbc1acbff8ec228de
+results/tables/malignant_call_validation.csv,results table,,0.14,2b4571abb24cb3a1014a7248f8c85f2f
+results/tables/malignant_call_validation.pre_audit.csv,results table,,0.036,a9b505b04a8bdb0d1b9da5fd5135c447
+results/tables/malignant_call_validation_summary.csv,results table,06_cnv_aggregate.py,0.002,031a956ab14952b6ccb49624c379fd4e
+results/tables/malignant_calls_per_sample.csv,results table,,0.088,ab7f21aeacccb9385a9682ec10f6e083
+results/tables/malignant_calls_per_sample.pre_audit.csv,results table,,0.063,4af2316404d9786b7f13070ce521a70a
+results/tables/malignant_nearest_fetal_class.csv,results table,,0.01,d8f91291386da269ce9a4059545939a3
+results/tables/malignant_nearest_fetal_class.pre_audit.csv,results table,,0.006,a88748607b37c1d2b6844078a4bf819c
+results/tables/malignant_nearest_fetal_class_per_cell.csv.gz,results table,11b_mapping_summaries.py,2.5,9ec2e3b9e67735d8aeb491c16d747a98
+results/tables/malignant_nearest_fetal_class_per_cell.pre_audit.csv.gz,results table,11b_mapping_summaries.py,2.478,6194a478cc399961d906b00ac1c6fc57
+results/tables/malignant_nearest_fetal_class_per_sample_dispersion.csv,results table,11b_mapping_summaries.py,0.0,e38d9aafbed654344619140f3b24d184
+results/tables/malignant_selection_by_assay.csv,results table,13a_malignant_selection.py,0.001,fabc8552e954cba281f50e9cd27a2aa2
+results/tables/malignant_state_assignment.csv.gz,results table,18_composition.py,17.374,039ef7cff066c2a6b2d4a38e82a752bc
+results/tables/malignant_state_assignment.pre_audit.csv.gz,results table,18_composition.py,13.289,e88647962f0e3da8836e8db01e18b1fb
+results/tables/mapping_agreement_sample_level.csv,results table,11b_mapping_summaries.py,0.004,72a85dcb94b28445b55e954ba88419a8
+results/tables/mapping_author_agreement.json,results table,11b_mapping_summaries.py,0.004,1781eed8cd5ebb635e27461a60a77944
+results/tables/mapping_author_agreement.pre_audit.json,results table,11b_mapping_summaries.py,0.004,fb8f58e6bb1e16517870d79b20c7e419
+results/tables/mapping_filbin_author_vs_predicted.csv,results table,,0.001,e4893679b2ac6d944eaf9e0785fab1a3
+results/tables/mapping_filbin_author_vs_predicted.pre_audit.csv,results table,,0.001,9ee28564bda38dd072abdc137f4bf5d7
+results/tables/mapping_labelle_author_vs_predicted.csv,results table,,0.0,508601041a96aeb0be511e5d51dffbb5
+results/tables/mapping_labelle_author_vs_predicted.pre_audit.csv,results table,,0.0,db83d11abb569d8a59e7140baab231d3
+results/tables/mapping_liu_author_vs_predicted.csv,results table,30_figures.py,0.001,e1e48ce7e1e7421d154e57269b083800
+results/tables/mapping_liu_author_vs_predicted.pre_audit.csv,results table,30_figures.py,0.001,4c9a1f7255529318c35459a4d3ee7b89
+results/tables/mapping_liu_by_group.csv,results table,11b_mapping_summaries.py,0.003,fd6755023669a59775b7c7362fb2b91a
+results/tables/mapping_liu_by_group.pre_audit.csv,results table,11b_mapping_summaries.py,0.003,bdcf44a18faddf84137e9e5b70ee3293
+results/tables/mapping_normal_reference_specificity.csv,results table,,0.01,8de3766762a18b780eb30e9fabd9a3e7
+results/tables/mapping_normal_reference_specificity.pre_audit.csv,results table,,0.008,3979cd097d7dd82e59484395d07ab1cf
+results/tables/mapping_summary.csv,results table,,0.025,ac358770e5cb82dbdb2c1db8244a99f7
+results/tables/mapping_summary.pre_audit.csv,results table,,0.023,5538a42805b6d9eb34f38a64947afa8e
+results/tables/mapping_uncertainty.csv,results table,,0.016,df6c99e6b9482e757e1ab29cb1a46202
+results/tables/mapping_uncertainty.pre_audit.csv,results table,,0.014,ef891fb9333e1d8b5cc5179843edf23d
+results/tables/metaprogram_cell_vs_nucleus.csv,results table,,0.001,4699c2073c8ec6a68393b97f2d630231
+results/tables/metaprogram_cell_vs_nucleus.pre_audit.csv,results table,,0.002,7f2ac2c04bea3b483f97cc98b4f3b949
+results/tables/metaprogram_cut_sensitivity.csv,results table,31_supp_figures.py,0.001,63dbcc33b8491efa6d0bd27316dea66e
+results/tables/metaprogram_cut_sensitivity.pre_audit.csv,results table,31_supp_figures.py,0.0,8ff5873deebb56bfde6620722921b84a
+results/tables/metaprogram_cut_sensitivity_eventtrust.csv,results table,,0.001,c7cc7c31526c9c644aa9ec3e8bec948b
+results/tables/metaprogram_families.csv,results table,,0.005,c03f81a2b40db0f177c38dacf6259c4a
+results/tables/metaprogram_families.pre_audit.csv,results table,,0.005,8cf574439438ae43b2f54fbdd7a6fb57
+results/tables/metaprogram_family_by_assay.csv,results table,19_metaprogram_scores.py,0.003,ef4a9df197b78cacb1287f0624621558
+results/tables/metaprogram_family_composition.csv,results table,,0.011,e31a5d236bc2f5347f2c1696420ab615
+results/tables/metaprogram_family_composition.pre_audit.csv,results table,,0.011,dabfa4974d10333a7089d905d4448e91
+results/tables/metaprogram_family_composition_assayz.csv,results table,19_metaprogram_scores.py,0.011,51622529cabe87cf42f44e8493263485
+results/tables/metaprogram_family_reference_classes.csv,results table,,18.954,7c95a287ac24af7c025fa0e92932c286
+results/tables/metaprogram_genes.csv,results table,,0.033,a6cb7aedda33c44cde87d8f26bd34597
+results/tables/metaprogram_genes.pre_audit.csv,results table,,0.046,2a83f85164fef4bb43e490ee92127889
+results/tables/metaprogram_genes_eventtrust.csv,results table,,0.035,63e28fed6090e20220b9ed07b5003ef6
+results/tables/metaprogram_masking_random_control.csv,results table,20_assay_masked_metaprograms.py,0.007,59df4006270c09ab807866cc58f7951b
+results/tables/metaprogram_masking_summary.csv,results table,,0.003,c04cf20372576ead79f58e1a18fa804c
+results/tables/metaprogram_masking_summary.pre_audit.csv,results table,,0.0,92f6cc81051b87329491f2f70e593894
+results/tables/metaprogram_members.csv,results table,20_assay_masked_metaprograms.py,0.049,73919bac352c08276e132dee51a7df03
+results/tables/metaprogram_members.pre_audit.csv,results table,20_assay_masked_metaprograms.py,0.044,eebd58d37ae78fce7544cbf1bc3fba74
+results/tables/metaprogram_members_assay_masked.csv,results table,20_assay_masked_metaprograms.py,0.04,6180ac474b32fb31c0069462e2f537cc
+results/tables/metaprogram_members_assay_masked.pre_audit.csv,results table,20_assay_masked_metaprograms.py,0.042,c9adeef9442a8a5ae91b032c3545165c
+results/tables/metaprogram_members_eventtrust.csv,results table,,0.05,38317ddf8ff7212ab2e3747055c1a660
+results/tables/metaprogram_reference_overlap.csv,results table,31_supp_figures.py,0.039,67ab797dec7faa7b8ffbbffec3e3cb96
+results/tables/metaprogram_reference_overlap.pre_audit.csv,results table,31_supp_figures.py,0.028,3cdc18132f005b3a6dfe854fd051a4b1
+results/tables/metaprogram_reference_overlap_eventtrust.csv,results table,,0.038,ec2e737ade76a936081474122496c5ab
+results/tables/metaprograms.csv,results table,,0.006,234ee013edaa1fa25502833790dd62f7
+results/tables/metaprograms.pre_audit.csv,results table,,0.005,5fff40087c544298dbefdd6a1617ccaf
+results/tables/metaprograms_assay_masked.csv,results table,,0.002,e26fd87b95637435518d2e60d3ca4e4b
+results/tables/metaprograms_assay_masked.pre_audit.csv,results table,,0.003,0e57d99ea57038b93b40c0a6f08f5ac9
+results/tables/metaprograms_eventtrust.csv,results table,,0.006,9f45f3c637244a0d417c015efce33ee7
+results/tables/openpedcan_deconvolution.csv,results table,,0.112,57795c47d007fc82770c043e07aba5e5
+results/tables/openpedcan_dmg_cohort.csv,results table,,0.017,027a105a4a52c9badd8028c202468d3c
+results/tables/openpedcan_rankscore_audit.csv,results table,25b_survival_rankscore_audit.py,0.019,8931823317267d929738837e880e37a6
+results/tables/phase3_summary.json,results table,06_cnv_aggregate.py,0.003,b0caecf90aaf87faad520b076d27b6d9
+results/tables/phase3_summary.pre_audit.json,results table,06_cnv_aggregate.py,0.001,1d060a845214c4cce7fd2bebe2e7d721
+results/tables/phase5_filbin_m_sensitivity.csv,results table,11e_filbin_m_sensitivity.py,0.001,a7bb4c0d33cf7cd552be95a8020b47cc
+results/tables/phase5_reference_knn_distances.csv,results table,,2.847,9202ca9cbbccf0b65582cf0483e5193f
+results/tables/phase5_state_dict_diff.csv,results table,11c_fix_reference_classifier.py,0.047,e1c9c3b22c86180430ba4692a6afcdb7
+results/tables/phase5_umap_reference_fit.csv,results table,11_map_queries.py,6.735,483214de2b15c658ef59d749be0f62cc
+results/tables/phase5_wave1_snapshot/atlas_v1_summary.csv,results table,,0.001,5abb63240303398e0ba7e224cbce241d
+results/tables/phase5_wave1_snapshot/malignant_nearest_fetal_class.csv,results table,,0.009,a93f0aa63d9ce9b3d910a19304131b03
+results/tables/phase5_wave1_snapshot/malignant_nearest_fetal_class_per_cell.csv.gz,results table,11b_mapping_summaries.py,2.478,3d0c51063652f151c5e302ea90ae3f9d
+results/tables/phase5_wave1_snapshot/malignant_nearest_fetal_class_per_sample_dispersion.csv,results table,11b_mapping_summaries.py,0.0,7f593e572696e65762065b2c56074b49
+results/tables/phase5_wave1_snapshot/mapping_agreement_sample_level.csv,results table,11b_mapping_summaries.py,0.004,b89fa4d5ea65dbecc2ec7836736c46ea
+results/tables/phase5_wave1_snapshot/mapping_author_agreement.json,results table,11b_mapping_summaries.py,0.004,8686a4387aa7a6f91b64f30913833cc5
+results/tables/phase5_wave1_snapshot/mapping_filbin_author_vs_predicted.csv,results table,,0.001,4a37e28800e3cf55d5c80a2652334748
+results/tables/phase5_wave1_snapshot/mapping_labelle_author_vs_predicted.csv,results table,,0.0,064cae8f8c0cfabacd9b2c19934ed83e
+results/tables/phase5_wave1_snapshot/mapping_liu_author_vs_predicted.csv,results table,30_figures.py,0.001,e8a0b030bc98a9c1c827b5765877a95f
+results/tables/phase5_wave1_snapshot/mapping_liu_by_group.csv,results table,11b_mapping_summaries.py,0.003,581eb6b3cf88bba10e9e483a88462025
+results/tables/phase5_wave1_snapshot/mapping_normal_reference_specificity.csv,results table,,0.009,b722d877573414acf6c64cd4f73f09d7
+results/tables/phase5_wave1_snapshot/mapping_summary.csv,results table,,0.025,963a12a0d68257e0e6f04e8deebffcf3
+results/tables/phase5_wave1_snapshot/mapping_uncertainty.csv,results table,,0.016,7d7d5184a95ef4e5e878021fbf6c97cf
+results/tables/phase5_wave1_snapshot/phase5_reference_knn_distances.csv,results table,,2.851,1d88d6241f78c188d8b3189fb4c8e0ad
+results/tables/phase5_wave1_snapshot/phase5_umap_reference_fit.csv,results table,11_map_queries.py,6.703,e1b53b727a42313684d1a887aa254638
+results/tables/phase6_output_checksums.csv,results table,,0.084,8d1d3cb3105c282688e8dca039fc96be
+results/tables/query_preparation.csv,results table,,0.002,7473e85ba12927a8ac7e846accc4a910
+results/tables/query_preparation.pre_audit.csv,results table,,0.002,2d70df077016a3879aafccd9de60cdff
+results/tables/reflabels/lineage_label_change_by_sample.csv,results table,07c_rebuild_lineage_labels.py,0.006,8e4452e9af873221df47de97778116af
+results/tables/reflabels/lineage_label_change_crosstab.csv,results table,07c_rebuild_lineage_labels.py,0.0,f354cb9420bc6ee877c0cefa3e509d5e
+results/tables/reflabels/lineage_label_counts.csv,results table,07c_rebuild_lineage_labels.py,0.0,af65390960c9317400d6b9b5a2980607
+results/tables/reflabels/reference_labels_corrected.csv.gz,results table,,2.23,06b05a00ac53e7a5fd297d6dcc08f56f
+results/tables/reflabels/scanvi_heldout_comparison.csv,results table,11f_scanvi_heldout_comparison.py,0.001,292373ab367d7d11e6e8ed8b1e40c937
+results/tables/reflabels/scanvi_heldout_per_class.csv,results table,11f_scanvi_heldout_comparison.py,0.001,f2e596d52f169c52a25d96897997f357
+results/tables/reflabels/scanvi_label_change_crosstab.csv,results table,11f_scanvi_heldout_comparison.py,0.0,a6ead71989bbf9423f99da78f9fcaa33
+results/tables/reflabels/scanvi_label_change_summary.json,results table,11f_scanvi_heldout_comparison.py,0.0,d0bcc51e12956b4734b5a9ca30599086
+results/tables/ren_dmg_vs_gbm_composition.csv,results table,,0.002,269fde77d51b17b0fac722d24548faf4
+results/tables/ren_section_composition.csv,results table,,0.004,1415be617e893d85756132dcb9c0d713
+results/tables/replication_matrix.csv,results table,30_figures.py,0.0,9f5ba50500743aefdd89af2f877c2cb2
+results/tables/replication_matrix.pre_audit.csv,results table,30_figures.py,0.0,a596da26770cdce914aeca3565d4c607
+results/tables/replication_matrix_eventtrust.csv,results table,,0.0,d1a4568db93d95c1b1fbe6abe437bb4c
+results/tables/scanvi_patient_grouped_cv.csv,results table,11d_scanvi_validation.py,0.005,4a5b25316ea988464280baf7b175fe97
+results/tables/scanvi_patient_grouped_cv_summary.csv,results table,11d_scanvi_validation.py,0.002,c84d1c1e5107f873f769762014f472f3
+results/tables/scanvi_training_history.csv,results table,11d_scanvi_validation.py,0.003,b75d772509399449db63659bd27d7d50
+results/tables/scanvi_validation_split.csv,results table,11d_scanvi_validation.py,0.001,3d10d7541ebbcfa283a5189231621f7c
+results/tables/spatial_abundance_long.csv,results table,,105.771,9857eefa6436313940937ced2f084a44
+results/tables/spatial_colocalisation.csv,results table,,0.03,1fe57d069fe86a5b09d965aa16889572
+results/tables/spatial_colocalisation_per_section.csv,results table,,0.107,b0bf0cfd54a4e9c6a1853a5c7b36aeec
+results/tables/spatial_niches.csv,results table,,0.004,8373ff1ddedf81142a0eced378838ffc
+results/tables/spatial_niches_by_section.csv,results table,15_spatial_tests.py,0.005,49d98d48a748726bf6833fa666b88621
+results/tables/survival_rankscore_audit.csv,results table,,0.004,431fbacc8dc371e99bee188d81b269d8
+results/tables/survival_results.csv,results table,,0.014,083bb6ab7a0ecd8fa1d006f2de4134cb
+results/tables/tier3_excluded_author_composition.csv,results table,06_cnv_aggregate.py,0.015,695f8de84620080ebdd7d2df0a216c1e
+results/tables/tme_assay_purity.csv,results table,,0.0,33e798f840c7922b8f046ec338b07d91
+results/tables/tme_clean_exclusions.csv,results table,22_tme_scvi_clean.py,0.006,b68e1765ec0279c31eb68c552750d7af
+results/tables/tme_subcluster_marker_scores.csv,results table,17_tme_subclusters.py,0.008,faef6c9fe5a076bca6cdb237038bce65
+results/tables/tme_subcluster_markers.csv,results table,17_tme_subclusters.py,0.125,2bcc902ad9d431a6f7ce1311a07c39c5
+results/tables/tme_subcluster_markers_clean.csv,results table,,0.063,54993f6830ea170ccfa84f142de9bf32
+results/tables/tme_subclusters.csv,results table,,0.017,50396271b11b2e2771722d941a81cf0e
+results/tables/tme_subclusters_clean.csv,results table,,0.007,1e830ae0cf60e48150b4d7027a5de2bf
+results/figures/phase4_umap_overview.png,figure,,1.934,fa1f68c538f0d4552a2081a36067f4b4
+results/figures/phase4_umap_overview.pre_audit.png,figure,,2.572,8df54c905ec5ee59c3a4ba90a938bdf1
+results/figures/phase5_mapping_uncertainty.png,figure,,0.411,de715533a64f5d9f5aeecc28f6b3c3b2
+results/figures/phase5_mapping_uncertainty.pre_audit.png,figure,,0.452,c40f74fee1f1c224951c808656aa4c94
+results/figures/phase5_query_mapping.png,figure,,0.952,1119769242861e91c7528713e100a21a
+results/figures/phase5_query_mapping.pre_audit.png,figure,,0.674,d1fac612f6be828de973d2e925ca451c
+results/figures/phase6_brainstem_gradient.png,figure,15_spatial_tests.py,0.243,caad66c46efd122dc2ec267a7212d0db
+results/figures/phase6_brainstem_gradient_mp.png,figure,21_brainstem_gradient_mp.py,0.148,c2c1993b6fa4b295de261611562d26bd
+results/figures/phase6_colocalisation_matrix.png,figure,15_spatial_tests.py,0.129,d55b9282162ad2216c478bc0ec9e937b
+results/figures/phase6_composition_effects.png,figure,18_composition.py,0.116,6c7d9880d1b6ed4d0efa95d525570f49
+results/figures/phase6_composition_effects.pre_audit.png,figure,18_composition.py,0.119,f68c07178d2a8140318ab9280990f510
+results/figures/phase6_jessa_cnmf_vs_metaprograms.png,figure,19_metaprogram_scores.py,0.097,3fd767dbc296d9638674dd59de74c0b3
+results/figures/phase6_jessa_cnmf_vs_metaprograms.pre_audit.png,figure,19_metaprogram_scores.py,0.111,c6726b25fa27b78533b98d96d8c8b156
+results/figures/phase6_metaprogram_jaccard.png,figure,16_metaprograms.py,0.22,1e52238edc5de3eca5596c93debbeedb
+results/figures/phase6_metaprogram_jaccard.pre_audit.png,figure,16_metaprograms.py,0.244,b7737ae858b93778557a7f7ec4e41ae6
+results/figures/phase6_metaprogram_masked_replication.png,figure,20_assay_masked_metaprograms.py,0.103,c963347565572417a673ba73bfa6981f
+results/figures/phase6_metaprogram_masked_replication.pre_audit.png,figure,20_assay_masked_metaprograms.py,0.08,dd7e1ef9e5c7d40983e70dd391a5fe91
+results/figures/phase6_replication_matrix.png,figure,16_metaprograms.py,0.143,b361538bd7dc6b0b75cd32dd4e0cd6a5
+results/figures/phase6_replication_matrix.pre_audit.png,figure,16_metaprograms.py,0.176,c5e27919906e57ae0e9aa3f146a36bac
+results/figures/phase6_spatial_abundance_maps.png,figure,15_spatial_tests.py,0.219,3e8f363cdb5e4f21fbba73c69cca323e
+results/figures/phase6_tme_marker_scores.png,figure,17_tme_subclusters.py,0.205,898380ced7531246351def6ff4bcdf3e
+results/figures/phase6_tme_marker_scores.pre_audit.png,figure,17_tme_subclusters.py,0.181,ab2738036d7c2e991e88bf16ebfd6199
+results/figures/phase6_tme_umap.png,figure,17_tme_subclusters.py,0.391,f57efb564199b9b1c8ea1c0ca3825acf
+results/figures/phase6_tme_umap_clean.png,figure,22_tme_scvi_clean.py,1.065,8653b53dc5138ae547cddaa906364193
+results/figures/phase7_atac_separability.png,figure,24_atac_multiome.py,0.187,fb1d53b22d7f8d982ebcd3eaac9ec36c
+results/figures/phase7_atac_separability.pre_audit.png,figure,24_atac_multiome.py,0.134,c693533671b8bb06489242d230cb7d5e
+results/figures/phase7_foundation_models.png,figure,,0.079,a56e162fe9de624f419e1a872f022405
+results/figures/phase7_survival_forest.png,figure,25_openpedcan_survival.py,0.059,7737625a21ecadfd666476e34eda594c

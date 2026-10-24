@@ -218,3 +218,44 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- dmg_atlas project ----
+# macOS
+.DS_Store
+
+# Claude / AI assistant files
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.claude-science/
+**/.claude/
+
+# Large data and models (not for GitHub; regenerate via scripts/ or fetch from source)
+data/
+models/
+modal/inputs/
+modal/out/
+out/
+
+# Large binary/data formats anywhere
+*.h5ad
+*.h5
+*.hdf5
+*.loom
+*.mtx
+*.mtx.gz
+*.zarr/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.npz
+
+# Individual large result tables (>20 MB; GitHub hard limit is 100 MB)
+results/tables/atac_pseudobulk_cpm.csv.gz
+results/tables/atac_pseudobulk_cpm.pre_audit.csv.gz
+results/tables/atlas_core_obs_labels.csv
+results/tables/atlas_core_obs_labels.pre_audit.csv
+results/tables/spatial_abundance_long.csv
+results/tables/spatial_abundance_long.pre_audit.csv

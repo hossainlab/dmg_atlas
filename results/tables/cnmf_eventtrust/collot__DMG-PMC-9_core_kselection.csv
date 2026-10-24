@@ -1,0 +1,7 @@
+sample_id,k,chosen,rule,sil,coph,full,min_restart_frac,n_clusters,err_mean,err_sd
+collot__DMG-PMC-9_core,4,False,largest_k_with_sil>=0.90_and_full,0.9999907019694415,0.9537861411193577,True,1.0,4,541.6474609375,5.7903031120076776e-05
+collot__DMG-PMC-9_core,5,False,largest_k_with_sil>=0.90_and_full,0.768131866438909,0.9503779138407602,False,0.1,5,537.7095947265625,0.04440513625741005
+collot__DMG-PMC-9_core,6,False,largest_k_with_sil>=0.90_and_full,0.9087906771559591,0.9469928043482129,True,0.8,6,534.474609375,0.7090169787406921
+collot__DMG-PMC-9_core,7,False,largest_k_with_sil>=0.90_and_full,0.8712606667085875,0.9562013434443521,False,0.6,7,531.4025268554688,0.5323449969291687
+collot__DMG-PMC-9_core,8,False,largest_k_with_sil>=0.90_and_full,0.9484155961938641,0.9688913114455537,True,0.8,8,528.6611938476562,0.06876833736896515
+collot__DMG-PMC-9_core,9,True,largest_k_with_sil>=0.90_and_full,0.9465883651755419,0.9619350825130647,True,0.8,9,526.3924560546875,0.07309070229530334

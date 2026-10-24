@@ -1,0 +1,34 @@
+# Phase 2 QC thresholds for the DMG atlas (applied per sample; cells are flagged, never removed here).
+# assay_class is resolved from manifest.assay: nuclei = {snRNA, multiome_RNA}; cells = {scRNA}; smartseq2 = {smartseq2}.
+# Collot/ScPCA/Okada/Jessa-snRNA are nuclei; DeSisto/Zang/Jessa-scRNA/LaBelle-10x are whole cells.
+mito_gene_prefix: "MT-"
+ribo_gene_prefixes: ["RPS", "RPL"]
+hb_gene_regex: "^HB[ABDEGMQZ]\\d?$"   # haemoglobin genes (HBA1/2, HBB, HBD, HBE1, HBG1/2, HBM, HBQ1, HBZ); excludes HBP1/HBS1L/HBEGF
+thresholds:
+  nuclei:
+    pct_mito_max: 5.0
+    min_genes: 300
+  cells:
+    pct_mito_max: 20.0
+    min_genes: 300
+  smartseq2:
+    pct_mito_max: 20.0
+    min_genes: 1000
+# sample-level gate (audit DQ-03, 2026-10-19): a sample whose qc_pass cells have median n_genes below this value is flagged
+# sample_qc_pass = False (flag only; nothing is dropped here). okada__1734_pons (median 427 genes) is the motivating case.
+sample_gate:
+  min_median_genes_pass: 500
+# audit DQ-04 (2026-10-19): Smart-seq2 samples whose manifest chemistry says 'frozen nuclei' (Liu 2022) use the nuclei pct_mito_max
+# when the sample's annotation carries MT- genes (16 Liu samples were quantified on a 23,686-gene annotation without MT- genes;
+# there the mito rule is inoperative and obs['mt_genes_present'] is False). min_genes stays the smartseq2 value.
+author_prep_aware: true
+# per-sample upper bound on detected genes: cells above this quantile of n_genes within the sample fail QC
+max_genes_quantile: 0.995
+# scrublet (per 10x sample with UMI counts; TPM cohorts are skipped; samples below min_cells are skipped)
+scrublet:
+  expected_doublet_rate: 0.06
+  min_cells: 100
+  random_state: 0
+  n_hvg: 3000          # genes pre-selected (seurat_v3 on counts) before scrublet; memory guard, scrublet re-filters internally
+  fixed_threshold: 0.25  # used when the automatic threshold fails; also stored as predicted_doublet_fixed for every sample
+  flag_only: true   # doublets are flagged (predicted_doublet) but NOT removed in Phase 2

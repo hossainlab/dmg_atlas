@@ -1,0 +1,113 @@
+{
+ "liu": {
+  "n_author_malignant": 7335,
+  "frac_author_malignant_pred_malignant": 0.9555555555555556,
+  "frac_author_malignant_knn_malignant": 0.9597818677573279,
+  "frac_author_normal_knn_matching": 0.808029197080292,
+  "per_type_frac_knn_matching": {
+   "Endothelia": 0.5076923076923077,
+   "Microglia": 0.8529411764705882,
+   "Myeloid": 0.8333333333333334,
+   "Oligodendrocyte": 0.9042553191489362,
+   "T cell": 0.5416666666666666
+  },
+  "per_state_frac_pred_malignant": {
+   "AC-like": 0.9287622439893143,
+   "G2M": 0.9807692307692307,
+   "MES-like": 0.9631336405529954,
+   "OC-like": 0.8408644400785854,
+   "OPC-like-1": 0.9604666234607907,
+   "OPC-like-2": 0.9962928637627433,
+   "OPC-like-3": 0.9751082251082251,
+   "S": 0.977112676056338,
+   "frozen-OPC-like-b": 0.921311475409836
+  },
+  "n_author_normal": 1370,
+  "frac_author_normal_pred_matching": 0.8,
+  "per_type_frac_matching": {
+   "Endothelia": 0.4461538461538462,
+   "Microglia": 0.9117647058823529,
+   "Myeloid": 0.8333333333333334,
+   "Oligodendrocyte": 0.9202127659574468,
+   "T cell": 0.3333333333333333
+  },
+  "frac_author_normal_pred_malignant": 0.08759124087591241,
+  "n_unannotated": 4296,
+  "unannotated_frac_pred_malignant": 0.6038175046554934
+ },
+ "filbin": {
+  "note": "Filbin deposit has no per-cell author states; Phase-3 consensus_call (CNV + marker) used instead",
+  "n_consensus_malignant": 2325,
+  "frac_consensus_malignant_pred_malignant": 0.9780645161290322,
+  "frac_consensus_malignant_knn_malignant": 0.978494623655914,
+  "n_consensus_normal": 74,
+  "frac_consensus_normal_pred_matching": 0.9594594594594594,
+  "per_type_frac_matching": {
+   "astrocyte": 0.0,
+   "myeloid": 0.9852941176470589,
+   "oligodendrocyte": 0.5,
+   "vascular": 1.0
+  },
+  "n_ambiguous": 638,
+  "ambiguous_frac_pred_malignant": 0.7836990595611285,
+  "cnv_call_malignant_frac_pred_malignant": 0.9380081300813008
+ },
+ "labelle": {
+  "n_author_immune": 6366,
+  "frac_author_immune_pred_matching": 0.9231856738925542,
+  "frac_author_immune_knn_matching": 0.9813069431354069,
+  "per_type_frac_knn_matching": {
+   "Myeloid": 0.9967692892436336,
+   "Tcell": 0.907608695652174
+  },
+  "per_type_frac_matching": {
+   "Myeloid": 0.999619916381604,
+   "Tcell": 0.5588768115942029
+  },
+  "frac_author_immune_pred_myeloid_or_T_NK": 0.9985862393967955,
+  "n_tumour_table_consensus_malignant": 752,
+  "frac_tumour_table_consensus_malignant_pred_malignant": 0.9986702127659575
+ },
+ "normal_reference_false_malignant": {
+  "braun": {
+   "n_cells": 100000,
+   "frac_false_malignant_maxprob_ge_0.8_all": 0.77511,
+   "frac_pred_malignant_all": 0.8291,
+   "frac_knn_malignant_all": 0.93363,
+   "frac_knn_malignant_vote_ge_0.8_all": 0.90201,
+   "frac_knn_malignant_expected_lineage_classes": 0.8995857391916317,
+   "frac_knn_expected_lineage": 0.09296076518289854,
+   "n_cells_with_expected_lineage": 62521,
+   "frac_false_malignant_maxprob_ge_0.8_expected_lineage_classes": 0.6565953839509925,
+   "frac_pred_expected_lineage": 0.2593528574399002,
+   "classes_without_reference_counterpart": [
+    "Radial glia",
+    "Glioblast",
+    "Erythrocyte",
+    "Placodes",
+    "Neural crest"
+   ]
+  },
+  "siletti": {
+   "n_cells": 100000,
+   "frac_false_malignant_maxprob_ge_0.8_all": 0.0257,
+   "frac_pred_malignant_all": 0.03541,
+   "frac_knn_malignant_all": 0.02971,
+   "frac_knn_malignant_vote_ge_0.8_all": 0.01504,
+   "frac_knn_malignant_expected_lineage_classes": 0.0021500697492865097,
+   "frac_knn_expected_lineage": 0.9874579264624953,
+   "n_cells_with_expected_lineage": 78137,
+   "frac_false_malignant_maxprob_ge_0.8_expected_lineage_classes": 0.001279803422194351,
+   "frac_pred_expected_lineage": 0.9893008433904552,
+   "classes_without_reference_counterpart": [
+    "Oligodendrocyte precursor",
+    "Choroid plexus",
+    "Splatter"
+   ]
+  }
+ },
+ "_provenance": {
+  "predicted_lineage": "reference scANVI classifier (models/scanvi) applied to the zero-shot query latent; audit fix IM-01, scripts/11c_fix_reference_classifier.py",
+  "previous_values": "results/tables/mapping_author_agreement.pre_audit.json"
+ }
+}

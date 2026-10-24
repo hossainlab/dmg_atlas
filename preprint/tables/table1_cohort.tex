@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{\textbf{Reference cohort.} Samples, patients and cells per contributing study after quality control, with
+assay, anatomical site and reported H3 variant (sample counts), and the fraction of cells called malignant by the
+consensus rule. Counts are cells for whole-cell and nuclei for single-nucleus and multiome assays.}
+\label{tab:cohort}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrlllr}
+\toprule
+Study & Samples & Patients & Cells & Assay (cells) & Site (samples) & H3 variant (samples) & Malignant \\
+\midrule
+Okada 2026 & 22 & 22 & 156,936 & snRNA:156936 & thalamus:6;pons:16 & unknown:22 & 0.516 \\
+Jessa 2022 (sc/snRNA) & 17 & 17 & 83,076 & snRNA:54545;scRNA:28531 & pons:13;thalamus:4 & H3.1:6;H3.2:1;H3.3:10 & 0.566 \\
+Jessa 2022 (multiome) & 10 & 10 & 46,288 & multiome\_RNA:46288 & pons:9;thalamus:1 & H3.1:2;H3.3:8 & 0.595 \\
+Collot 2026 & 5 & 4 & 17,562 & snRNA:17562 & pons:3;thalamus:2 & H3.3:5 & 0.570 \\
+Zang 2024 & 1 & 1 & 6,546 & scRNA:6546 & pons:1 & unknown:1 & 0.710 \\
+DeSisto 2024 & 2 & 2 & 1,210 & scRNA:1210 & thalamus:2 & unknown:2 & 0.631 \\
+\midrule
+Total & 57 & 56 & 311,618 & \multicolumn{4}{l}{18,882 genes shared by all studies} \\
+\bottomrule
+\end{tabular}}
+\end{table}

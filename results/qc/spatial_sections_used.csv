@@ -1,0 +1,28 @@
+study,section_id,region_or_diagnosis,n_spots_matrix,n_spots_in_tissue,n_ref_genes,n_ref_genes_present,median_counts,median_genes,hires_scalef,spot_diameter_fullres
+brainstem,Midbrain,Midbrain; DIPG-infiltrated brainstem (autopsy),3658,3658,3594,3480,10882.0,4963.0,0.24573043,46.55950162322211
+brainstem,Pons_A,Pons; DIPG-infiltrated brainstem (autopsy),4919,4919,3594,3480,18427.0,6892.0,0.19751136,55.04289827227077
+brainstem,Pons_B,Pons; DIPG-infiltrated brainstem (autopsy),4235,4235,3594,3480,30068.0,8568.0,0.18934014,80.12398446504596
+brainstem,Pons_C,Pons; DIPG-infiltrated brainstem (autopsy),4992,4992,3594,3480,14044.0,6270.0,0.19489378,70.46571306425929
+brainstem,Pons_D,Pons; DIPG-infiltrated brainstem (autopsy),3127,3127,3594,3480,15933.0,6419.0,0.14567703,73.15718323165001
+brainstem,Medulla_A,Medulla; DIPG-infiltrated brainstem (autopsy),1958,1958,3594,3451,1293.0,1005.5,0.56899005,29.460662117863844
+brainstem,Medulla_B,Medulla; DIPG-infiltrated brainstem (autopsy),2712,2712,3594,3451,6169.5,3268.0,0.54392165,30.939631079595376
+brainstem,Medulla_C,Medulla; DIPG-infiltrated brainstem (autopsy),3171,3171,3594,3480,14044.0,6057.0,0.29090908,47.25424961785293
+brainstem,Spinal_Cord_A,Spinal cord; DIPG-infiltrated brainstem (autopsy),3423,3423,3594,3480,10526.0,4852.0,0.26943284,47.28375377149175
+brainstem,Spinal_Cord_B,Spinal cord; DIPG-infiltrated brainstem (autopsy),2744,2744,3594,3480,12685.5,5243.5,0.2891427,47.255529205088976
+collot_st,BT01_192_core_HE,"DMG, primary human; tumour core",1720,1720,3594,3594,3451.0,1819.0,0.14040999,99.81022394594197
+collot_st,VUMC_11_pons_HE,"DMG, primary human; pons",1338,1338,3594,3594,3635.0,1879.5,0.1403115,99.83906082928262
+collot_st,VUMC_17_pons_HE,"DMG, primary human; pons",2238,2238,3594,3594,6834.5,2663.0,0.14041986,99.7788994179537
+huchede,pDMG_Sample-1,Diffusion Midline Glioma (DMG); H3.3 K27M; Midline,577,577,3594,3451,4933.0,3137.0,0.65295464,25.036701144851996
+huchede,pDMG_Sample-2,Diffusion Midline Glioma (DMG); H3.3 K27M; Midline,856,856,3594,3451,5050.5,3241.5,0.6525285,25.043930955792145
+huchede,pDMG_Sample-3,Diffusion Midline Glioma (DMG); H3.3 K27M; Midline,217,217,3594,3451,14702.0,6084.0,0.6684492,25.037279737364702
+ren,DMG1,"Diffuse midline glioma, H3K27M-mutant; Recurrent; H3F3A=Yes; HIST1H3B=No; IDH1=No",4337,4337,3594,3594,12506.0,4926.0,0.07303535,215.72846999999996
+ren,DMG2,"Diffuse midline glioma, H3K27M-mutant; Primary; H3F3A=Yes; HIST1H3B=No; IDH1=No",2305,2305,3594,3594,16697.0,5161.0,0.93240094,18.082222
+ren,DMG3,"Diffuse midline glioma, H3K27M-mutant; Primary; H3F3A=Yes; HIST1H3B=No; IDH1=No",1063,1063,3594,3594,34390.0,7221.0,0.29651594,54.525127
+ren,DMG4,"Diffuse midline glioma, H3K27M-mutant; Recurrent; H3F3A=Yes; HIST1H3B=No; IDH1=No",1056,1056,3594,3594,16713.5,5220.5,0.286574,56.82092699999999
+ren,DMG5,"Diffuse midline glioma, H3K27M-mutant; Primary; H3F3A=Yes; HIST1H3B=No; IDH1=No",2128,2128,3594,3594,11658.0,4075.0,0.29420418,55.380287
+ren,GBM1,Secondary glioblastoma; Primary; H3F3A=No; HIST1H3B=No; IDH1=Yes,4764,4764,3594,3594,6614.5,3060.0,0.07302468,215.23140000000006
+ren,GBM2,"Glioblastoma, IDH-wt; Recurrent; H3F3A=No; HIST1H3B=No; IDH1=No",2891,2891,3594,3594,7269.0,3103.0,0.07303535,213.58088999999998
+ren,GBM3,"Glioblastoma, IDH-wt; Primary; H3F3A=No; HIST1H3B=No; IDH1=No",1775,1775,3594,3594,21580.0,5187.0,0.29686806,54.41226
+ren,GBM4,Secondary glioblastoma; Primary; H3F3A=No; HIST1H3B=No; IDH1=Yes,2540,2540,3594,3594,17013.5,5215.5,0.9045681,18.664763999999998
+ren,GBM5_1,"Glioblastoma, IDH-wt; Primary; H3F3A=No; HIST1H3B=No; IDH1=No",2203,2203,3594,3594,21663.0,6437.0,0.7889546,21.166536000000004
+ren,GBM5_2,Peritumor tissue; Primary; H3F3A=NA; HIST1H3B=NA; IDH1=NA,2171,2171,3594,3594,5438.0,2445.0,0.84674007,19.662113

@@ -1,0 +1,7 @@
+sample_id,k,chosen,rule,sil,coph,full,min_restart_frac,n_clusters,err_mean,err_sd
+collot__DMG-PMC-9_edge,4,False,largest_k_with_sil>=0.90_and_full,0.9825599008731342,0.9948618188191289,True,0.9,4,364.82574462890625,0.0895182341337204
+collot__DMG-PMC-9_edge,5,False,largest_k_with_sil>=0.90_and_full,0.925562834249202,0.9915466485532377,False,0.5,5,361.26806640625,0.0528259351849556
+collot__DMG-PMC-9_edge,6,True,largest_k_with_sil>=0.90_and_full,0.9999995999691407,0.9971654836763442,True,1.0,6,357.71826171875,1.6715166566427797e-05
+collot__DMG-PMC-9_edge,7,False,largest_k_with_sil>=0.90_and_full,0.8790839609319727,0.9915416441535378,False,0.5,7,354.86773681640625,0.3177642524242401
+collot__DMG-PMC-9_edge,8,False,largest_k_with_sil>=0.90_and_full,0.942950871506833,0.9917097599989714,False,0.7,8,352.15789794921875,0.20783309638500214
+collot__DMG-PMC-9_edge,9,False,largest_k_with_sil>=0.90_and_full,0.8903164151903441,0.9877169236538385,False,0.6,9,350.06060791015625,0.1335042268037796

@@ -1,0 +1,9 @@
+scanvi_label_pre_audit,T_NK,astrocyte,malignant,myeloid,neuron,oligodendrocyte,vascular,All
+T_NK,455,0,0,0,0,0,0,455
+astrocyte,53,7157,476,20,128,262,179,8275
+malignant,0,559,239310,150,57,533,83,240692
+myeloid,1030,1650,253,30531,23,1931,74,35492
+neuron,0,64,103,7,5224,50,16,5464
+oligodendrocyte,7,41,175,28,6,16408,10,16675
+vascular,0,13,4,6,2,27,4513,4565
+All,1545,9484,240321,30742,5440,19211,4875,311618

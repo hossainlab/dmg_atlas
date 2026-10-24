@@ -1,0 +1,10 @@
+sample_id,study,assay,qc_assay_class,include_in_atlas,cells_before_qc,cells_after_qc,median_genes_before,median_genes,median_counts,median_pct_mito_before,median_pct_mito,median_pct_ribo,median_pct_hb,max_genes_threshold,n_fail_low_genes,n_fail_high_genes,n_fail_high_mito,scrublet_threshold,scrublet_threshold_source,doublet_rate_fixed025,doublet_rate_flagged,n_doublets_flagged,qc_metric_basis
+filbin__BCH1126,filbin,smartseq2,smartseq2,True,299,297,5133.0,5125.0,1000000.0,0.0,0.0,23.70571303678587,0.0,7332.089999999996,0,2,0,,,,,0,tpm
+filbin__BCH836,filbin,smartseq2,smartseq2,True,527,524,6650.0,6644.5,1000000.0,0.0,0.0,12.025048490513583,0.0,10021.51,0,3,0,,,,,0,tpm
+filbin__BCH869,filbin,smartseq2,smartseq2,True,492,489,4951.0,4942.0,1000000.0,0.0,0.0,9.134695570918474,0.0,9380.655000000002,0,3,0,,,,,0,tpm
+filbin__MGH101,filbin,smartseq2,smartseq2,True,92,91,4354.5,4343.0,1000000.0,0.0,0.0,4.415409,0.0,5494.81,0,1,0,,,,,0,tpm
+filbin__MGH104,filbin,smartseq2,smartseq2,True,65,64,7112.0,7107.5,1000000.03125,0.0,0.0,8.354063157407168,0.0,9343.119999999999,0,1,0,,,,,0,tpm
+filbin__MGH66,filbin,smartseq2,smartseq2,True,442,439,6656.0,6635.0,999999.9375,0.0,0.0,6.2331747791468475,0.0,9098.795000000004,0,3,0,,,,,0,tpm
+filbin__MUV1,filbin,smartseq2,smartseq2,True,146,145,5108.5,5103.0,1000000.0,0.0,0.0,7.061898296423722,0.0,7442.350000000003,0,1,0,,,,,0,tpm
+filbin__MUV10,filbin,smartseq2,smartseq2,True,286,284,4496.5,4472.5,1000000.0,0.0,0.0,6.903168088867454,0.0,7987.274999999998,0,2,0,,,,,0,tpm
+filbin__MUV5,filbin,smartseq2,smartseq2,True,708,704,4823.0,4806.5,1000000.0,0.0,0.0,23.052575440840826,0.0,8585.855000000001,0,4,0,,,,,0,tpm

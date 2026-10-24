@@ -1,0 +1,55 @@
+{
+ "n_cells": 342213,
+ "per_study": {
+  "collot": {
+   "ambiguous": 3773,
+   "malignant": 10090,
+   "normal": 3887
+  },
+  "desisto": {
+   "ambiguous": 108,
+   "malignant": 763,
+   "normal": 340
+  },
+  "filbin": {
+   "ambiguous": 638,
+   "malignant": 2325,
+   "normal": 74
+  },
+  "jessa_multiome": {
+   "ambiguous": 10425,
+   "malignant": 27578,
+   "normal": 8615
+  },
+  "jessa_scrna": {
+   "ambiguous": 22490,
+   "malignant": 50352,
+   "normal": 11352
+  },
+  "labelle": {
+   "ambiguous": 1693,
+   "malignant": 826,
+   "normal": 5721
+  },
+  "liu": {
+   "ambiguous": 4102,
+   "malignant": 6975,
+   "normal": 2023
+  },
+  "okada": {
+   "ambiguous": 55680,
+   "malignant": 78365,
+   "normal": 26998
+  },
+  "scpca": {
+   "ambiguous": 441,
+   "malignant": 0,
+   "normal": 0
+  },
+  "zang": {
+   "ambiguous": 1530,
+   "malignant": 4666,
+   "normal": 383
+  }
+ }
+}

@@ -1,0 +1,4 @@
+cohort,n_sections,epochs,elbo_first,elbo_last,pct_of_total_reduction_in_last_5pct,history_file
+brainstem,10,20000,219843504.0,95368144.0,0.014602086710173,results/tables/c2l_histories/brainstem_history.csv
+collot_st,3,20000,21827906.0,7592626.5,0.04813042132400702,results/tables/c2l_histories/collot_st_history.csv
+huchede,3,20000,6270353.0,3046219.75,0.019772755980231278,results/tables/c2l_histories/huchede_history.csv

@@ -1,0 +1,7 @@
+contrast,column,reference,test,n_ref,n_test,publications_ref,publications_test,publications_with_both,estimable
+site_thalamus_vs_pons,site,pons,thalamus,42,15,collot;jessa2022;okada;zang,collot;desisto;jessa2022;okada,collot;jessa2022;okada,True
+age_adult_vs_pediatric,age_group,pediatric,adult,50,7,collot;desisto;jessa2022;okada;zang,collot;jessa2022;okada,collot;jessa2022;okada,True
+h3_H3.1_vs_H3.3,h3_variant,H3.3,H3.1,23,8,collot;jessa2022,jessa2022,jessa2022,True
+treatment_ONC201_vs_standard,treatment,"standard care, no imipridone",imipridone (ONC201) + standard care,11,10,okada,okada,okada,True
+timing_autopsy_vs_resection,tissue_timing,resection,autopsy,3,22,desisto;zang,okada,,False
+assay_nuclei_vs_cells,assay_class,cells,nuclei,7,50,desisto;jessa2022;zang,collot;jessa2022;okada,jessa2022,True

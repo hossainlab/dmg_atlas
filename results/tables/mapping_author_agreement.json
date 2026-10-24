@@ -1,0 +1,116 @@
+{
+ "liu": {
+  "n_author_malignant": 7237,
+  "frac_author_malignant_pred_malignant": 0.9509465248030952,
+  "frac_author_malignant_knn_malignant": 0.9534337432637834,
+  "frac_author_normal_knn_matching": 0.8076347305389222,
+  "per_type_frac_knn_matching": {
+   "Endothelia": 0.5396825396825397,
+   "Microglia": 0.7745098039215687,
+   "Myeloid": 0.7970149253731343,
+   "Oligodendrocyte": 0.9262295081967213,
+   "T cell": 0.8194444444444444
+  },
+  "per_state_frac_pred_malignant": {
+   "AC-like": 0.9234923492349235,
+   "G2M": 0.9855072463768116,
+   "MES-like": 0.9767441860465116,
+   "OC-like": 0.7915831663326653,
+   "OPC-like-1": 0.9402597402597402,
+   "OPC-like-2": 1.0,
+   "OPC-like-3": 0.9780701754385965,
+   "S": 0.9805309734513274,
+   "frozen-OPC-like-b": 0.933852140077821
+  },
+  "n_author_normal": 1336,
+  "frac_author_normal_pred_matching": 0.7911676646706587,
+  "per_type_frac_matching": {
+   "Endothelia": 0.5158730158730159,
+   "Microglia": 0.7745098039215687,
+   "Myeloid": 0.7671641791044777,
+   "Oligodendrocyte": 0.9562841530054644,
+   "T cell": 0.6805555555555556
+  },
+  "frac_author_normal_pred_malignant": 0.07110778443113773,
+  "n_unannotated": 3772,
+  "unannotated_frac_pred_malignant": 0.6683457051961824
+ },
+ "filbin": {
+  "note": "Filbin deposit has no per-cell author states; Phase-3 consensus_call (CNV + marker) used instead",
+  "n_consensus_malignant": 2225,
+  "frac_consensus_malignant_pred_malignant": 0.9550561797752809,
+  "frac_consensus_malignant_knn_malignant": 0.9667415730337079,
+  "n_consensus_normal": 119,
+  "frac_consensus_normal_pred_matching": 0.8991596638655462,
+  "per_type_frac_matching": {
+   "T_NK": 1.0,
+   "astrocyte": 0.1,
+   "myeloid": 0.987012987012987,
+   "neuron": 1.0,
+   "oligodendrocyte": 0.9130434782608695,
+   "vascular": 1.0
+  },
+  "n_ambiguous": 693,
+  "ambiguous_frac_pred_malignant": 0.8383838383838383,
+  "cnv_call_malignant_frac_pred_malignant": 0.9298063623789765
+ },
+ "labelle": {
+  "n_author_immune": 7343,
+  "frac_author_immune_pred_matching": 0.9852921149393981,
+  "frac_author_immune_knn_matching": 0.9794361977393435,
+  "per_type_frac_knn_matching": {
+   "Myeloid": 0.9760605527195916,
+   "Tcell": 0.9909747292418772
+  },
+  "per_type_frac_matching": {
+   "Myeloid": 0.9841577187114945,
+   "Tcell": 0.9891696750902527
+  },
+  "frac_author_immune_pred_myeloid_or_T_NK": 0.9963230287348496,
+  "n_tumour_table_consensus_malignant": 750,
+  "frac_tumour_table_consensus_malignant_pred_malignant": 0.9986666666666667
+ },
+ "normal_reference_false_malignant": {
+  "braun": {
+   "n_cells": 100000,
+   "frac_false_malignant_maxprob_ge_0.8_all": 0.81732,
+   "frac_pred_malignant_all": 0.8769,
+   "frac_knn_malignant_all": 0.91179,
+   "frac_knn_malignant_vote_ge_0.8_all": 0.89638,
+   "frac_knn_malignant_expected_lineage_classes": 0.8749380208250028,
+   "frac_knn_expected_lineage": 0.11911197837526591,
+   "n_cells_with_expected_lineage": 62521,
+   "frac_false_malignant_maxprob_ge_0.8_expected_lineage_classes": 0.7307624638121591,
+   "frac_pred_expected_lineage": 0.1739575502631116,
+   "classes_without_reference_counterpart": [
+    "Radial glia",
+    "Glioblast",
+    "Erythrocyte",
+    "Placodes",
+    "Neural crest"
+   ]
+  },
+  "siletti": {
+   "n_cells": 100000,
+   "frac_false_malignant_maxprob_ge_0.8_all": 0.0068,
+   "frac_pred_malignant_all": 0.0183,
+   "frac_knn_malignant_all": 0.01491,
+   "frac_knn_malignant_vote_ge_0.8_all": 0.00494,
+   "frac_knn_malignant_expected_lineage_classes": 0.0024444245363912103,
+   "frac_knn_expected_lineage": 0.9919884305770633,
+   "n_cells_with_expected_lineage": 78137,
+   "frac_false_malignant_maxprob_ge_0.8_expected_lineage_classes": 0.0010110447035335372,
+   "frac_pred_expected_lineage": 0.9924619578432753,
+   "classes_without_reference_counterpart": [
+    "Oligodendrocyte precursor",
+    "Choroid plexus",
+    "Splatter"
+   ]
+  }
+ },
+ "_provenance": {
+  "predicted_lineage": "reference scANVI classifier (models/scanvi, retrained 2026-10-19 with corrected labels) applied to the zero-shot query latent; audit fixes IM-01 (11c) and reference-labels wave 2 (scripts/11g_remap_queries_zeroshot.py)",
+  "previous_values": "results/tables/mapping_author_agreement.pre_audit.json",
+  "wave1_values": "results/tables/phase5_wave1_snapshot/mapping_author_agreement.json"
+ }
+}

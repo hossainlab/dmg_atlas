@@ -1,0 +1,48 @@
+{
+ "brainstem_mp": {
+  "cohort": "brainstem_mp",
+  "n_spots": 34939,
+  "n_genes": 3523,
+  "n_sections": 10,
+  "sections": [
+   "Medulla_A",
+   "Medulla_B",
+   "Medulla_C",
+   "Midbrain",
+   "Pons_A",
+   "Pons_B",
+   "Pons_C",
+   "Pons_D",
+   "Spinal_Cord_A",
+   "Spinal_Cord_B"
+  ],
+  "classes": [
+   "T_NK",
+   "astrocyte",
+   "malignant_AC_like",
+   "malignant_MES_like",
+   "malignant_OC_like",
+   "malignant_OPC_like",
+   "malignant_cycling",
+   "malignant_hypoxia",
+   "malignant_novel_MP15",
+   "myeloid",
+   "neuron",
+   "oligodendrocyte",
+   "vascular"
+  ],
+  "N_cells_per_location": 5,
+  "detection_alpha": 20,
+  "probe_ms_per_epoch": 236.3,
+  "max_epochs": 10154,
+  "target_epochs": 20000,
+  "train_s": 2208.7,
+  "posterior_s": 459.2,
+  "num_samples": 1000,
+  "total_s": 2717.9,
+  "final_elbo": 98770360.0,
+  "device": "NVIDIA A10G",
+  "max_mem_alloc_gb": 9.735,
+  "peak_rss_gb": 31.38
+ }
+}

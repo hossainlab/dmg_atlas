@@ -1,0 +1,45 @@
+field,term_id,label_step27,n_cells,ols_label,found,obsolete,ancestor_ok,label_match,ols_version
+assay_ontology_term_id,EFO:0009899,10x 3' v2,22767,10x 3' v2,True,False,True,True,3.94.0
+assay_ontology_term_id,EFO:0009922,10x 3' v3,61519,10x 3' v3,True,False,True,True,3.94.0
+assay_ontology_term_id,EFO:0030059,10x multiome,46288,10x multiome,True,False,True,True,3.94.0
+assay_ontology_term_id,EFO:0030080,10x transcription profiling,181044,10x transcription profiling,True,False,True,True,3.94.0
+cell_type_ontology_term_id,CL:0000000,cell,69322,cell,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000084,T cell,303,T cell,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000115,endothelial cell,3472,endothelial cell,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000127,astrocyte,8857,astrocyte,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000128,oligodendrocyte,16866,oligodendrocyte,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000129,microglial cell,11003,microglial cell,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000235,macrophage,16272,macrophage,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000540,neuron,5403,neuron,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000542,lymphocyte,796,lymphocyte,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000623,natural killer cell,179,natural killer cell,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000624,"CD4-positive, alpha-beta T cell",211,"CD4-positive, alpha-beta T cell",True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000625,"CD8-positive, alpha-beta T cell",99,"CD8-positive, alpha-beta T cell",True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000669,pericyte,783,pericyte,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0000766,myeloid leukocyte,4892,myeloid leukocyte,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0001064,malignant cell,170869,malignant cell,True,False,True,True,2026-06-08
+cell_type_ontology_term_id,CL:0002453,oligodendrocyte precursor cell,1667,oligodendrocyte precursor cell,True,False,True,True,2026-06-08
+development_stage_ontology_term_id,HsapDv:0000097,3-year-old stage,839,3-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000098,4-year-old stage,33097,4-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000099,5-year-old stage,34623,5-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000100,6-year-old stage,14299,6-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000101,7-year-old stage,7836,7-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000102,8-year-old stage,8915,8-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000103,9-year-old stage,47636,9-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000104,10-year-old stage,37516,10-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000105,11-year-old stage,19418,11-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000106,12-year-old stage,18353,12-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000107,13-year-old stage,5739,13-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000108,14-year-old stage,24664,14-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000110,16-year-old stage,14674,16-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000112,18-year-old stage,6921,18-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000114,20-year-old stage,1595,20-year-old stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000258,adult stage,18858,adult stage,True,False,True,True,2025-01-23
+development_stage_ontology_term_id,HsapDv:0000264,pediatric stage,16635,pediatric stage,True,False,True,True,2025-01-23
+disease_ontology_term_id,MONDO:0957196,"diffuse midline glioma, H3 K27M-mutant",154682,"diffuse midline glioma, H3 K27M-mutant",True,False,True,True,2026-10-06
+disease_ontology_term_id,MONDO:1060171,"diffuse midline glioma, H3 K27-altered",156936,"diffuse midline glioma, H3 K27-altered",True,False,True,True,2026-10-06
+sex_ontology_term_id,PATO:0000383,female,137884,female,True,False,True,True,2026-10-01
+sex_ontology_term_id,PATO:0000384,male,154876,male,True,False,True,True,2026-10-01
+tissue_ontology_term_id,UBERON:0000988,pons,224022,pons,True,False,True,True,http://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon.owl
+tissue_ontology_term_id,UBERON:0001897,dorsal plus ventral thalamus,87596,dorsal plus ventral thalamus,True,False,True,True,http://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon.owl
+uns.organism_ontology_term_id,NCBITaxon:9606,Homo sapiens,311618,Homo sapiens,True,False,True,True,2026-07-12

@@ -1,0 +1,146 @@
+{
+ "n_cells": 342213,
+ "per_study": {
+  "collot": {
+   "ambiguous": 3676,
+   "malignant": 10128,
+   "normal": 3946
+  },
+  "desisto": {
+   "ambiguous": 108,
+   "malignant": 763,
+   "normal": 340
+  },
+  "filbin": {
+   "ambiguous": 693,
+   "malignant": 2225,
+   "normal": 119
+  },
+  "jessa_multiome": {
+   "ambiguous": 10003,
+   "malignant": 27648,
+   "normal": 8967
+  },
+  "jessa_scrna": {
+   "ambiguous": 25024,
+   "malignant": 47520,
+   "normal": 11650
+  },
+  "labelle": {
+   "ambiguous": 1317,
+   "malignant": 751,
+   "normal": 6172
+  },
+  "liu": {
+   "ambiguous": 4193,
+   "malignant": 6783,
+   "normal": 2124
+  },
+  "okada": {
+   "ambiguous": 52278,
+   "malignant": 82440,
+   "normal": 26325
+  },
+  "scpca": {
+   "ambiguous": 441,
+   "malignant": 0,
+   "normal": 0
+  },
+  "zang": {
+   "ambiguous": 1530,
+   "malignant": 4666,
+   "normal": 383
+  }
+ },
+ "per_study_cnv_confidence": {
+  "collot": {
+   "event_backed": 12530,
+   "score_only": 496,
+   "nan": 4724
+  },
+  "desisto": {
+   "event_backed": 760,
+   "score_only": 54,
+   "nan": 397
+  },
+  "filbin": {
+   "event_backed": 2811,
+   "score_only": 81,
+   "nan": 145
+  },
+  "jessa_multiome": {
+   "event_backed": 34454,
+   "score_only": 1022,
+   "nan": 11142
+  },
+  "jessa_scrna": {
+   "event_backed": 49142,
+   "score_only": 16051,
+   "nan": 19001
+  },
+  "labelle": {
+   "event_backed": 898,
+   "score_only": 0,
+   "nan": 7342
+  },
+  "liu": {
+   "event_backed": 7727,
+   "score_only": 731,
+   "nan": 4642
+  },
+  "okada": {
+   "event_backed": 88392,
+   "score_only": 28902,
+   "nan": 43749
+  },
+  "scpca": {
+   "event_backed": 0,
+   "score_only": 0,
+   "nan": 441
+  },
+  "zang": {
+   "event_backed": 6170,
+   "score_only": 0,
+   "nan": 409
+  }
+ },
+ "tuning_samples": [
+  "jessa_scrna__P-1713_S-1713",
+  "jessa_scrna__P-3407_S-3447",
+  "jessa_scrna__P-4198_S-4459",
+  "jessa_scrna__P-4504_S-4916",
+  "jessa_scrna__P-6254_S-8499",
+  "jessa_scrna__P-6328_S-8672",
+  "jessa_scrna__P-6337_S-8821",
+  "jessa_scrna__P-6519_S-9084",
+  "jessa_scrna__P-6640_S-9581",
+  "okada__1006_thalamus",
+  "okada__1428_pons",
+  "okada__1734_pons",
+  "okada__1890_pons",
+  "okada__1963_pons",
+  "okada__2054_thalamus",
+  "okada__586_pons",
+  "jessa_multiome__P-1694_S-1694",
+  "jessa_multiome__P-1701_S-1701",
+  "jessa_multiome__P-1779_S-1781",
+  "jessa_multiome__P-6253_S-8498",
+  "collot__DMG-PMC-9_edge",
+  "collot__PMC-DMG-7"
+ ],
+ "n_low_confidence_samples": 2,
+ "low_confidence_samples": [
+  "okada__1734_pons",
+  "labelle__H3K27M_P9"
+ ],
+ "cluster_stats_percentiles": {
+  "normal_cluster_score_rel_p90": 0.005228268727660222,
+  "tumour_cluster_score_rel_p10": 0.00661437297239902,
+  "n_clusters_labelled": 1027
+ },
+ "changes_vs_pre_audit": {
+  "n_cnv_call_changed": 21359,
+  "n_consensus_changed": 27507,
+  "n_cells_compared": 342213
+ }
+}

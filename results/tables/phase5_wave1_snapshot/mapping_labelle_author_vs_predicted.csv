@@ -1,0 +1,6 @@
+author_or_table,T_NK,astrocyte,malignant,myeloid,neuron,vascular,n,knn_T_NK,knn_astrocyte,knn_malignant,knn_myeloid,knn_neuron,knn_oligodendrocyte,knn_vascular
+immune: Myeloid,1,0,1,5260,0,0,5262,16,1,0,5245,0,0,0
+immune: Tcell,617,7,0,479,0,1,1104,1002,1,0,101,0,0,0
+"tumour SS2 table, consensus ambiguous",32,0,147,382,2,1,564,328,0,150,83,1,1,1
+"tumour SS2 table, consensus malignant",5,1,751,68,1,0,826,61,0,750,13,2,0,0
+"tumour SS2 table, consensus normal",1,5,2,476,0,0,484,69,0,3,412,0,0,0

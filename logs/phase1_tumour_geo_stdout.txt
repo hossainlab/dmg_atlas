@@ -1,0 +1,76 @@
+nice: setpriority: Operation not permitted
+2026-10-17T07:03:28Z  QUEUE jessa_scrna start
+2026-10-17T07:06:06Z  DL jessa_scrna GSE210567_RAW.tar 1481144320 bytes 158s 9.4 MB/s sha256=25b8570a997d
+2026-10-17T07:06:06Z  QUEUE jessa_scrna done in 158s
+2026-10-17T07:06:06Z  QUEUE desisto start
+2026-10-17T07:06:34Z  DL desisto GSE231859_RAW.tar 202721280 bytes 28s 7.2 MB/s sha256=854ef1bfb81d
+2026-10-17T07:06:34Z  QUEUE desisto done in 28s
+2026-10-17T07:06:34Z  QUEUE zang start
+2026-10-17T07:06:34Z  DL zang GSM7846769_barcodes.tsv.gz 36964 bytes 1s 0.0 MB/s sha256=3a56fb33c347
+2026-10-17T07:06:35Z  DL zang GSM7846769_features.tsv.gz 333437 bytes 1s 0.3 MB/s sha256=cec559aa6d99
+2026-10-17T07:06:49Z  DL zang GSM7846769_matrix1.mtx.gz 65203449 bytes 14s 4.7 MB/s sha256=d4190425b037
+2026-10-17T07:06:49Z  QUEUE zang done in 15s
+2026-10-17T07:06:49Z  QUEUE filbin start
+2026-10-17T07:07:07Z  DL filbin GSE102130_K27Mproject.RSEM.vh20170621.txt.gz 68391394 bytes 18s 3.7 MB/s sha256=dbd5bb54d9c6
+2026-10-17T07:07:07Z  QUEUE filbin done in 18s
+2026-10-17T07:07:07Z  QUEUE liu start
+2026-10-17T07:07:24Z  DL liu GSE184357_DMG_raw_counts.tar.gz 197466983 bytes 17s 11.5 MB/s sha256=81d59d2ab6ce
+2026-10-17T07:07:25Z  DL liu GSE184357_metadata_fresh_postFilter.txt.gz 20287 bytes 1s 0.0 MB/s sha256=f4a49163398f
+2026-10-17T07:07:26Z  DL liu GSE184357_metadata_frozen_postFilter.txt.gz 16489 bytes 1s 0.0 MB/s sha256=9e7a097facf2
+2026-10-17T07:07:26Z  QUEUE liu done in 18s
+2026-10-17T07:07:26Z  QUEUE labelle start
+2026-10-17T07:07:26Z    retry 1 GSE227983_tumor_ss2_tpm.csv.gz.part3: HTTPSConnectionPool(host='ftp.ncbi.nlm.nih.gov', port=443): Max retries exceeded with url: /geo/series/GSE227nnn/GSE227983/suppl/GSE227983_tumor_ss2_tpm.csv.gz (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-10-17T07:07:45Z  DL labelle GSE227983_tumor_ss2_tpm.csv.gz 140624957 bytes 19s 7.4 MB/s sha256=8edb9c2c668d
+2026-10-17T07:07:45Z  DL labelle GSE227983_tumor_ss2_meta.csv.gz 44798 bytes 1s 0.0 MB/s sha256=f1c6dc168514
+2026-10-17T07:07:56Z  DL labelle GSE227983_immune_ss2_tpm.csv.gz 92169910 bytes 11s 8.2 MB/s sha256=6bb036004a42
+2026-10-17T07:07:57Z  DL labelle GSE227983_immune_ss2_meta.csv.gz 65064 bytes 1s 0.1 MB/s sha256=f59724714a76
+2026-10-17T07:08:49Z  DL labelle GSE227983_immune_tenx_tpm.csv.gz 398568053 bytes 52s 7.6 MB/s sha256=78a3a880b523
+2026-10-17T07:08:50Z  DL labelle GSE227983_immune_tenx_meta.csv.gz 394087 bytes 1s 0.4 MB/s sha256=9a95ed1d716c
+2026-10-17T07:08:50Z  QUEUE labelle done in 84s
+2026-10-17T07:08:50Z  QUEUE labelle2025 start
+2026-10-17T07:08:51Z  DL labelle GSM8389375_H3K27M_P6_Region_1-barcodes.tsv.gz 412290 bytes 1s 0.4 MB/s sha256=d0318a02d3de
+2026-10-17T07:08:51Z  DL labelle GSM8389375_H3K27M_P6_Region_1-features.tsv.gz 4173 bytes 1s 0.0 MB/s sha256=316503510ec3
+2026-10-17T07:08:56Z  DL labelle GSM8389375_H3K27M_P6_Region_1-matrix.mtx.gz 21029333 bytes 4s 5.1 MB/s sha256=4d3a1930a4a7
+2026-10-17T07:08:56Z  QUEUE labelle2025 done in 5s
+2026-10-17T07:08:56Z  QUEUE jessa_multiome start
+2026-10-17T07:08:56Z  DL jessa_multiome GSM6432683_P-1694_S-1694_barcodes.tsv.gz 28821 bytes 1s 0.0 MB/s sha256=4cf7b3bdb1ef
+2026-10-17T07:08:58Z  DL jessa_multiome GSM6432683_P-1694_S-1694_features.tsv.gz 3369233 bytes 1s 2.5 MB/s sha256=0e8965cd8fdf
+2026-10-17T07:09:13Z  DL jessa_multiome GSM6432683_P-1694_S-1694_matrix.mtx.gz 187436347 bytes 16s 12.1 MB/s sha256=bc16ba526d82
+2026-10-17T07:09:14Z  DL jessa_multiome GSM6432683_P-1694_S-1694_metadata.NG2022.tsv.gz 791720 bytes 1s 0.8 MB/s sha256=255a9ee4e75d
+2026-10-17T07:09:14Z  DL jessa_multiome GSM6432684_P-1701_S-1701_barcodes.tsv.gz 61017 bytes 1s 0.1 MB/s sha256=f5c0f69a84fb
+2026-10-17T07:09:17Z  DL jessa_multiome GSM6432684_P-1701_S-1701_features.tsv.gz 3432956 bytes 3s 1.2 MB/s sha256=d381f3624ece
+2026-10-17T07:09:45Z  DL jessa_multiome GSM6432684_P-1701_S-1701_matrix.mtx.gz 290575054 bytes 28s 10.5 MB/s sha256=44f3ae4e0a68
+2026-10-17T07:09:47Z  DL jessa_multiome GSM6432684_P-1701_S-1701_metadata.NG2022.tsv.gz 1706799 bytes 2s 0.8 MB/s sha256=3a0c204640fa
+2026-10-17T07:09:48Z  DL jessa_multiome GSM6432685_P-1709_S-1709_barcodes.tsv.gz 94881 bytes 1s 0.1 MB/s sha256=3a13f32c3090
+2026-10-17T07:09:50Z  DL jessa_multiome GSM6432685_P-1709_S-1709_features.tsv.gz 4639024 bytes 2s 2.7 MB/s sha256=a6bd76e23abf
+2026-10-17T07:10:32Z  DL jessa_multiome GSM6432685_P-1709_S-1709_matrix.mtx.gz 450938632 bytes 42s 10.6 MB/s sha256=80c0a4f6d461
+2026-10-17T07:10:33Z  DL jessa_multiome GSM6432685_P-1709_S-1709_metadata.NG2022.tsv.gz 1098222 bytes 1s 1.1 MB/s sha256=d21382096718
+2026-10-17T07:10:34Z  DL jessa_multiome GSM6432686_P-1764_S-1766_barcodes.tsv.gz 33740 bytes 1s 0.0 MB/s sha256=1803a3cfc34c
+2026-10-17T07:10:35Z  DL jessa_multiome GSM6432686_P-1764_S-1766_features.tsv.gz 3198926 bytes 1s 3.0 MB/s sha256=01333771351f
+2026-10-17T07:10:54Z  DL jessa_multiome GSM6432686_P-1764_S-1766_matrix.mtx.gz 161952712 bytes 19s 8.6 MB/s sha256=48a4a1fc551e
+2026-10-17T07:10:54Z  FAIL jessa_multiome GSM6432686_P-1764_S-1766_metadata.NG2022.tsv.gz: HTTPSConnectionPool(host='ftp.ncbi.nlm.nih.gov', port=443): Max retries exceeded with url: /geo/samples/GSM6432nnn/GSM6432686/suppl/GSM6432686_P-1764_S-1766_metadata.NG2022.tsv.gz (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-10-17T07:10:55Z  DL jessa_multiome GSM6432687_P-1779_S-1781_barcodes.tsv.gz 50846 bytes 2s 0.0 MB/s sha256=fd125cf43fb6
+2026-10-17T07:10:58Z  DL jessa_multiome GSM6432687_P-1779_S-1781_features.tsv.gz 3454046 bytes 3s 1.3 MB/s sha256=fe4f20fd6263
+2026-10-17T07:11:26Z  DL jessa_multiome GSM6432687_P-1779_S-1781_matrix.mtx.gz 234974120 bytes 28s 8.5 MB/s sha256=addbb67895a3
+2026-10-17T07:11:26Z  DL jessa_multiome GSM6432687_P-1779_S-1781_metadata.NG2022.tsv.gz 544899 bytes 1s 0.5 MB/s sha256=40ab9159b8dd
+2026-10-17T07:11:27Z  DL jessa_multiome GSM6432688_P-1780_S-1780_barcodes.tsv.gz 43680 bytes 1s 0.0 MB/s sha256=141bfe67c033
+2026-10-17T07:11:29Z  DL jessa_multiome GSM6432688_P-1780_S-1780_features.tsv.gz 3572006 bytes 2s 1.9 MB/s sha256=e8e4f64e18d9
+2026-10-17T07:12:07Z  DL jessa_multiome GSM6432688_P-1780_S-1780_matrix.mtx.gz 287141011 bytes 38s 7.6 MB/s sha256=a697241af0a7
+2026-10-17T07:12:08Z  DL jessa_multiome GSM6432688_P-1780_S-1780_metadata.NG2022.tsv.gz 1399887 bytes 2s 0.9 MB/s sha256=a88451f78270
+2026-10-17T07:12:09Z  DL jessa_multiome GSM6432689_P-6253_S-8498_barcodes.tsv.gz 29974 bytes 1s 0.0 MB/s sha256=09cd641c4b0b
+2026-10-17T07:12:11Z  DL jessa_multiome GSM6432689_P-6253_S-8498_features.tsv.gz 3014722 bytes 2s 1.4 MB/s sha256=c6e6fea4c7da
+2026-10-17T07:12:23Z  DL jessa_multiome GSM6432689_P-6253_S-8498_matrix.mtx.gz 116792512 bytes 12s 9.5 MB/s sha256=a2655b35181d
+2026-10-17T07:12:24Z  DL jessa_multiome GSM6432689_P-6253_S-8498_metadata.NG2022.tsv.gz 384815 bytes 1s 0.4 MB/s sha256=480fb8f26a1e
+2026-10-17T07:12:25Z  DL jessa_multiome GSM6432690_P-6337_S-8821_barcodes.tsv.gz 30630 bytes 1s 0.0 MB/s sha256=41423ac8613d
+2026-10-17T07:12:26Z  DL jessa_multiome GSM6432690_P-6337_S-8821_features.tsv.gz 2467774 bytes 1s 2.0 MB/s sha256=7b63de4d1e84
+2026-10-17T07:12:41Z  DL jessa_multiome GSM6432690_P-6337_S-8821_matrix.mtx.gz 124276906 bytes 15s 8.4 MB/s sha256=a12dab89fe2d
+2026-10-17T07:12:42Z  DL jessa_multiome GSM6432690_P-6337_S-8821_metadata.NG2022.tsv.gz 687236 bytes 1s 0.7 MB/s sha256=ff774f7f3a73
+2026-10-17T07:12:43Z  DL jessa_multiome GSM6432691_P-6640_S-9581_barcodes.tsv.gz 34791 bytes 1s 0.0 MB/s sha256=ff904fe2e0e6
+2026-10-17T07:12:45Z  DL jessa_multiome GSM6432691_P-6640_S-9581_features.tsv.gz 3445322 bytes 2s 1.6 MB/s sha256=e506c180f815
+2026-10-17T07:13:20Z  DL jessa_multiome GSM6432691_P-6640_S-9581_matrix.mtx.gz 315969362 bytes 36s 8.9 MB/s sha256=d06e5b95f69c
+2026-10-17T07:13:21Z  DL jessa_multiome GSM6432691_P-6640_S-9581_metadata.NG2022.tsv.gz 1127332 bytes 1s 1.1 MB/s sha256=5004ad8ae0ac
+2026-10-17T07:13:22Z  DL jessa_multiome GSM6432692_P-6774_S-10146_barcodes.tsv.gz 27437 bytes 1s 0.0 MB/s sha256=59fe174d7cbb
+2026-10-17T07:13:23Z  DL jessa_multiome GSM6432692_P-6774_S-10146_features.tsv.gz 1957749 bytes 1s 2.0 MB/s sha256=390171bd1ce4
+2026-10-17T07:13:32Z  DL jessa_multiome GSM6432692_P-6774_S-10146_matrix.mtx.gz 90335689 bytes 9s 10.5 MB/s sha256=0fc93c94478f
+2026-10-17T07:13:32Z  DL jessa_multiome GSM6432692_P-6774_S-10146_metadata.NG2022.tsv.gz 774340 bytes 1s 0.8 MB/s sha256=40dafdbdf961
+2026-10-17T07:13:32Z  QUEUE jessa_multiome done in 277s

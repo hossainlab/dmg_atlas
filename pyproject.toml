@@ -1,0 +1,21 @@
+[project]
+name = "dmg-atlas"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jubayer Hossain", email = "work.jubayer@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "ipywidgets>=8.1.9",
+    "scanpy>=1.11.5",
+    "scvi-tools>=1.4.2",
+]
+
+[project.scripts]
+dmg-atlas = "dmg_atlas:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"

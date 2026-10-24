@@ -1,0 +1,13 @@
+study,role,samples,patients,cells,assay,site,h3_variants,age_groups,malignant_fraction_consensus,malignant_fraction_scanvi,ambiguous_fraction_consensus
+collot,reference,5,4,17562,snRNA:17562,pons:3;thalamus:2,H3.3:5,adult:2;pediatric:3,0.5678,0.6822,0.2118
+desisto,reference,2,2,1210,scRNA:1210,thalamus:2,unknown:2,pediatric:2,0.6306,0.619,0.0884
+jessa_multiome,reference,10,10,46288,multiome_RNA:46288,pons:9;thalamus:1,H3.1:2;H3.3:8,pediatric:7;adult:3,0.5935,0.7632,0.2219
+jessa_scrna,reference,17,17,83076,snRNA:54545;scRNA:28531,pons:13;thalamus:4,H3.1:6;H3.2:1;H3.3:10,pediatric:16;adult:1,0.5995,0.8246,0.2652
+okada,reference,22,22,156936,snRNA:156936,thalamus:6;pons:16,unknown:22,adult:1;pediatric:21,0.4901,0.7523,0.3419
+zang,reference,1,1,6546,scRNA:6546,pons:1,unknown:1,pediatric:1,0.7096,0.9287,0.2322
+braun2023,query (projection only),17,17,100000,scRNA:100000,normal brain,n/a,n/a,,0.0,
+filbin,query (projection only),9,9,3037,smartseq2:3037,unknown:9,unknown:9,unknown:9,0.7656,0.9335,0.2101
+labelle,query (projection only),9,9,8240,scRNA:6366;smartseq2:1874,unknown (midline):9,unknown:9,pediatric:9,0.1002,0.1097,0.2055
+liu,query (projection only),42,41,13100,smartseq2:13100,pons:23;thalamus:17;spinal:2,unknown:42,pediatric:30;adult:12,0.5324,0.8734,0.3131
+siletti2023,query (projection only),18,3,100000,snRNA:100000,normal brain,n/a,n/a,,0.0,
+TOTAL reference,reference,57,52,311618,snRNA:229043;multiome_RNA:46288;scRNA:36287,,,,0.5442,0.7724,0.293

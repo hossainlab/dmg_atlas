@@ -1,0 +1,172 @@
+#!/usr/bin/env python
+"""Phase 2 report: merge per-study QC tables, run sanity checks, write results/qc/qc_report.md + qc_per_sample.csv
+and optional violin figures (results/qc/qc_violin_<study>.png). Reads only obs/var from the .qc.h5ad files (no matrices)."""
+import sys
+import re
+import json
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from dmg_atlas import utils  # noqa: E402
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+import h5py  # noqa: E402
+import anndata as ad  # noqa: E402
+import matplotlib  # noqa: E402
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
+from anndata.io import read_elem  # noqa: E402
+
+from dmg_atlas import INTERIM, RESULTS, LOGS  # noqa: E402
+
+QC = RESULTS / "qc"
+STUDIES = ["jessa_scrna", "jessa_multiome", "collot", "desisto", "zang", "scpca", "okada", "filbin", "liu", "labelle"]
+UMI_STUDIES = ["jessa_scrna", "jessa_multiome", "collot", "desisto", "zang", "scpca", "okada"]
+
+
+def read_obs_var(path):
+    with h5py.File(path) as f:
+        obs = read_elem(f["obs"]); var = read_elem(f["var"])
+        layers = list(f["layers"].keys())
+    return obs, var, layers
+
+
+def main():
+    log = utils.StepLogger(LOGS / "phase2_qc.log", context="report")
+    t0 = time.time()
+    per_sample = pd.concat([pd.read_csv(QC / f"qc_per_sample_{s}.csv") for s in STUDIES if (QC / f"qc_per_sample_{s}.csv").exists()], ignore_index=True)
+    per_sample.to_csv(QC / "qc_per_sample.csv", index=False)
+    harm = pd.read_csv(QC / "gene_harmonisation.csv")
+
+    obs_all, var_sets, layer_info = {}, {}, {}
+    for s in STUDIES:
+        for suffix in ("", "outgroup."):
+            p = INTERIM / f"{s}.{suffix}qc.h5ad"
+            if p.exists():
+                obs, var, layers = read_obs_var(p)
+                obs_all[(s, suffix)] = obs
+                layer_info[(s, suffix)] = (len(var), layers, p.stat().st_size / 1e9)
+                if suffix == "":
+                    var_sets[s] = set(var.index[var.get("measured_in_all_samples", pd.Series(True, index=var.index)).astype(bool)])
+
+    # ---- sanity (c): genes shared by all UMI studies
+    umi_present = [s for s in UMI_STUDIES if s in var_sets]
+    shared_umi = set.intersection(*[var_sets[s] for s in umi_present])
+    shared_all = set.intersection(*[var_sets[s] for s in var_sets])
+    log.write(f"harmonised genes shared by all {len(umi_present)} UMI studies: {len(shared_umi)}; by all {len(var_sets)} studies: {len(shared_all)}")
+    pd.Series(sorted(shared_umi), name="symbol").to_csv(QC / "genes_shared_all_umi_studies.csv", index=False)
+
+    # ---- sanity (a): Jessa malignant fraction passing QC
+    jessa_lines = []
+    for s in ("jessa_scrna", "jessa_multiome"):
+        for suffix in ("", "outgroup."):
+            o = obs_all.get((s, suffix))
+            if o is None:
+                continue
+            mal = o["author_Malignant_normal_consensus_Jessa2022"].astype(str) == "Malignant"
+            nor = o["author_Malignant_normal_consensus_Jessa2022"].astype(str) == "Normal"
+            aq = o["author_qc_pass"].astype(bool)
+            jessa_lines.append({
+                "file": f"{s}.{suffix}qc.h5ad", "author_malignant": int(mal.sum()), "malignant_pass_qc": int((mal & o.qc_pass).sum()),
+                "frac_malignant_pass": float((mal & o.qc_pass).sum() / max(mal.sum(), 1)),
+                "author_normal": int(nor.sum()), "frac_normal_pass": float((nor & o.qc_pass).sum() / max(nor.sum(), 1)),
+                "author_qc_cells": int(aq.sum()), "frac_author_qc_pass_ours": float((aq & o.qc_pass).sum() / max(aq.sum(), 1)),
+                "cells_not_in_author_metadata": int((~aq).sum()), "frac_non_author_cells_passing_ours": float(((~aq) & o.qc_pass).sum() / max((~aq).sum(), 1)),
+                "malignant_flagged_doublet": float(o.loc[mal & o.qc_pass, "predicted_doublet"].astype("boolean").mean()) if (mal & o.qc_pass).any() else np.nan,
+            })
+    jessa_df = pd.DataFrame(jessa_lines)
+    jessa_df.to_csv(QC / "sanity_jessa_malignant_qc.csv", index=False)
+
+    # ---- sanity (b): assay label vs median pct_mito (atlas + outgroup samples, UMI studies only; TPM tables lack MT genes)
+    ps = per_sample.copy()
+    ps["mt_genes_present"] = ps.qc_metric_basis.eq("counts")
+    contradictions = []
+    for _, r in ps[ps.mt_genes_present].iterrows():
+        if r.qc_assay_class == "nuclei" and r.median_pct_mito_before > 5:
+            contradictions.append(f"{r.sample_id} labelled {r.assay} but median pct_mito before QC = {r.median_pct_mito_before:.2f}% (>5%)")
+        if r.qc_assay_class == "cells" and r.median_pct_mito_before < 1:
+            contradictions.append(f"{r.sample_id} labelled {r.assay} but median pct_mito before QC = {r.median_pct_mito_before:.2f}% (<1%, nucleus-like)")
+    assay_tab = ps[ps.mt_genes_present].groupby("qc_assay_class").median_pct_mito_before.describe()[["count", "min", "25%", "50%", "75%", "max"]]
+
+    # ---- per-study totals
+    tot = ps.groupby(["study", "include_in_atlas"]).agg(samples=("sample_id", "count"), cells_before=("cells_before_qc", "sum"),
+                                                        cells_after=("cells_after_qc", "sum")).reset_index()
+    tot["pct_retained"] = 100 * tot.cells_after / tot.cells_before
+    # weighted median genes: use per-sample medians -> report median of medians plus pooled from obs
+    pooled = []
+    for (s, suffix), o in obs_all.items():
+        p = o[o.qc_pass]
+        pooled.append({"study": s, "include_in_atlas": suffix == "", "median_genes_pooled": float(np.median(p.n_genes)) if len(p) else np.nan,
+                       "median_counts_pooled": float(np.median(p.n_counts)) if len(p) else np.nan,
+                       "median_pct_mito_pooled": float(np.nanmedian(p.pct_mito)) if len(p) else np.nan,
+                       "doublet_rate_pooled": float(p.predicted_doublet.astype("boolean").mean()) if p.predicted_doublet.notna().any() else np.nan,
+                       "doublet_rate_fixed_pooled": float(p.predicted_doublet_fixed.astype("boolean").mean()) if "predicted_doublet_fixed" in p and p.predicted_doublet_fixed.notna().any() else np.nan,
+                       "n_genes_var": layer_info[(s, suffix)][0], "layers": ",".join(layer_info[(s, suffix)][1]), "file_gb": round(layer_info[(s, suffix)][2], 2)})
+    tot = tot.merge(pd.DataFrame(pooled), on=["study", "include_in_atlas"], how="left")
+    tot.to_csv(QC / "qc_per_study.csv", index=False)
+
+    # ---- violin figures (plain, no titles in panels)
+    for (s, suffix), o in obs_all.items():
+        if suffix:
+            continue
+        fig, axes = plt.subplots(1, 3, figsize=(max(6, 0.35 * o.sample_id.nunique() + 3), 3.2), sharey=False)
+        samples = sorted(o.sample_id.unique())
+        for ax, col, ylab in zip(axes, ["n_genes", "n_counts", "pct_mito"], ["genes detected", "counts", "% mitochondrial"]):
+            data = [o.loc[o.sample_id == sm, col].dropna().values for sm in samples]
+            data = [d if len(d) else np.array([np.nan]) for d in data]
+            ax.violinplot([np.log10(d + 1) if col != "pct_mito" else d for d in data], showmedians=True, widths=0.8)
+            ax.set_ylabel(f"log10({ylab}+1)" if col != "pct_mito" else ylab)
+            ax.set_xticks(range(1, len(samples) + 1)); ax.set_xticklabels([sm.split("__", 1)[1] for sm in samples], rotation=90, fontsize=6)
+            ax.spines[["top", "right"]].set_visible(False)
+        fig.tight_layout(); fig.savefig(QC / f"qc_violin_{s}.png", dpi=150); plt.close(fig)
+
+    # ---- log-derived peak RSS and wall time
+    peak, wall = {}, {}
+    for line in open(LOGS / "phase2_qc.log"):
+        m = re.search(r"\[(\w+)\] DONE \w+ \| total wall ([\d.]+) min \| peak RSS ([\d.]+) GB", line)
+        if m:
+            wall[m.group(1)] = float(m.group(2)); peak[m.group(1)] = float(m.group(3))
+
+    # ---- report
+    L = ["# Phase 2 QC report — DMG atlas", "", f"Generated {time.strftime('%Y-%m-%d %H:%M')} by scripts/04_qc_report.py from data/interim/*.qc.h5ad. "
+         "Thresholds: configs/qc.yaml (nuclei: pct_mito < 5 %, cells: < 20 %, min genes 300 for 10x / 1000 for Smart-seq2, per-sample max genes = 99.5th percentile; "
+         "scrublet expected rate 0.06 on 10x samples, flagged only). Cells are flagged (`obs['qc_pass']`), none removed. Doublets are not removed.", ""]
+    L += ["## Per-study totals", "", "| study | set | samples | cells before | cells after | % retained | median genes (pooled) | median counts | median % mito | doublet rate (auto thr) | doublet rate (score>0.25) | genes in var | layers | file GB | wall min | peak RSS GB |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for _, r in tot.sort_values(["include_in_atlas", "study"], ascending=[False, True]).iterrows():
+        L.append(f"| {r.study} | {'atlas' if r.include_in_atlas else 'out-group'} | {r.samples} | {r.cells_before:,} | {r.cells_after:,} | {r.pct_retained:.1f} | {r.median_genes_pooled:.0f} | {r.median_counts_pooled:.0f} | {r.median_pct_mito_pooled:.2f} | "
+                 f"{'' if pd.isna(r.doublet_rate_pooled) else f'{r.doublet_rate_pooled:.3f}'} | {'' if pd.isna(r.doublet_rate_fixed_pooled) else f'{r.doublet_rate_fixed_pooled:.3f}'} | {r.n_genes_var:,} | {r.layers} | {r.file_gb} | {wall.get(r.study, float('nan')):.1f} | {peak.get(r.study, float('nan')):.2f} |")
+    atlas = tot[tot.include_in_atlas]
+    L += ["", f"Atlas (included) samples: **{int(atlas.samples.sum())} samples, {int(atlas.cells_before.sum()):,} cells before QC, {int(atlas.cells_after.sum()):,} after QC ({100 * atlas.cells_after.sum() / atlas.cells_before.sum():.1f} %)**. "
+          f"Out-group files: {int(tot[~tot.include_in_atlas].cells_before.sum()):,} cells before / {int(tot[~tot.include_in_atlas].cells_after.sum()):,} after.", ""]
+    L += ["## Sanity checks", "", f"**(a) Jessa author-labelled malignant cells passing our QC** (`results/qc/sanity_jessa_malignant_qc.csv`):", "",
+          "| file | author malignant | pass QC | fraction | author normal pass fraction | author-QC cells passing ours | barcodes not in author metadata | of which pass ours | malignant flagged doublet |", "|---|---|---|---|---|---|---|---|---|"]
+    for _, r in jessa_df.iterrows():
+        L.append(f"| {r.file} | {r.author_malignant:,} | {r.malignant_pass_qc:,} | {r.frac_malignant_pass:.3f} | {r.frac_normal_pass:.3f} | {r.frac_author_qc_pass_ours:.3f} | {r.cells_not_in_author_metadata:,} | {r.frac_non_author_cells_passing_ours:.3f} | {r.malignant_flagged_doublet:.3f} |")
+    L += ["", "**(b) Assay label vs median pct_mito before QC** (UMI studies; TPM tables of Filbin/LaBelle carry no MT- genes so pct_mito is 0 there and not informative):", "", "```", assay_tab.round(2).to_string(), "```", ""]
+    if contradictions:
+        L += [f"Samples whose median pct_mito contradicts the manifest assay label ({len(contradictions)}):", ""] + [f"- {c}" for c in contradictions]
+    else:
+        L += ["No sample contradicts its assay label."]
+    L += ["", f"**(c) Gene overlap:** {len(shared_umi):,} harmonised symbols are measured in every sample of all {len(umi_present)} UMI studies ({', '.join(umi_present)}); "
+          f"{len(shared_all):,} are shared by all {len(var_sets)} studies including the Smart-seq2/TPM cohorts. Gene universe = GRCh38-2020-A symbols (36,591 unique). Per-study losses: `results/qc/gene_harmonisation.csv`.", ""]
+    L += ["## Gene harmonisation per study", "", "| study | input genes | mapped by Ensembl | exact symbol | alias | ambiguous dropped | unmapped dropped | duplicates collapsed | output genes |", "|---|---|---|---|---|---|---|---|---|"]
+    hs = harm.groupby("study").first().reset_index()
+    for _, r in hs.iterrows():
+        L.append(f"| {r.study} | {r.n_input_genes:,} | {r.mapped_ensembl:,} | {r.mapped_exact_symbol:,} | {r.mapped_alias:,} | {r.ambiguous_dropped} | {r.unmapped_dropped:,} | {r.duplicate_symbols_collapsed} | {r.n_output_genes:,} |")
+    L += ["", "## Per-sample QC (`results/qc/qc_per_sample.csv`)", "", "| sample | study | assay | set | before | after | median genes | median counts | median % mito | doublet rate (auto thr) | doublet rate (score>0.25) | fail low genes | fail high genes | fail mito |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for _, r in ps.sort_values(["include_in_atlas", "study", "sample_id"], ascending=[False, True, True]).iterrows():
+        dr = "" if pd.isna(r.doublet_rate_flagged) else f"{r.doublet_rate_flagged:.3f}"
+        df_ = "" if pd.isna(r.get("doublet_rate_fixed025", np.nan)) else f"{r.doublet_rate_fixed025:.3f}"
+        L.append(f"| {r.sample_id} | {r.study} | {r.assay} | {'atlas' if r.include_in_atlas else 'out-group'} | {r.cells_before_qc:,} | {r.cells_after_qc:,} | {r.median_genes:.0f} | {r.median_counts:.0f} | {r.median_pct_mito:.2f} | {dr} | {df_} | {r.n_fail_low_genes} | {r.n_fail_high_genes} | {r.n_fail_high_mito} |")
+    L += ["", "## Figures", ""] + [f"- results/qc/qc_violin_{s}.png — per-sample violins of log10 genes, log10 counts, % mito (all cells before QC)" for s in STUDIES if (QC / f"qc_violin_{s}.png").exists()]
+    (QC / "qc_report.md").write_text("\n".join(L) + "\n")
+    summary = {"per_study": tot.to_dict(orient="records"), "assay_contradictions": contradictions, "shared_umi_genes": len(shared_umi), "shared_all_genes": len(shared_all),
+               "peak_rss_gb_by_study": peak, "wall_min_by_study": wall, "jessa": jessa_df.to_dict(orient="records")}
+    (QC / "qc_summary.json").write_text(json.dumps(summary, indent=1, default=str))
+    log.write(f"report written in {time.time() - t0:.0f}s; contradictions: {len(contradictions)}")
+
+
+if __name__ == "__main__":
+    main()

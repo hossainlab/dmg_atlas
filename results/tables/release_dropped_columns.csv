@@ -1,0 +1,13 @@
+column,kind
+lineage_label_pre_audit,pre_audit
+scanvi_label_pre_audit,pre_audit
+scanvi_maxprob_pre_audit,pre_audit
+leiden_scanvi_r1_pre_audit,pre_audit
+consensus_call_pre_audit,pre_audit
+consensus_celltype_coarse_pre_audit,pre_audit
+cnv_call_pre_audit,pre_audit
+marker_call_pre_audit,pre_audit
+marker_type_pre_audit,pre_audit
+chr4q12_gain_pre_audit,pre_audit
+author_gex_umis_count,sample_level_author
+author_gex_genes_count,sample_level_author

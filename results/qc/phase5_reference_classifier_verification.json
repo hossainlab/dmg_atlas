@@ -1,0 +1,196 @@
+{
+ "versions": {
+  "scvi_tools": "1.4.2",
+  "torch": "2.14.1",
+  "anndata": "0.12.19"
+ },
+ "init_params_reference": {
+  "n_hidden": 128,
+  "n_latent": 30,
+  "n_layers": 2,
+  "dropout_rate": 0.1,
+  "dispersion": "gene",
+  "gene_likelihood": "nb",
+  "use_observed_lib_size": true,
+  "linear_classifier": false,
+  "datamodule": null
+ },
+ "state_dict_block_max_abs_diff": {
+  "filbin": {
+   "classifier": 0.4805,
+   "decoder": 0.6736,
+   "decoder_z1_z2": 0.6781,
+   "encoder_z2_z1": 0.0,
+   "l_encoder": 0.0,
+   "px_r": 0.0,
+   "y_prior": 0.0,
+   "z_encoder": 0.0
+  },
+  "labelle": {
+   "classifier": 0.5679,
+   "decoder": 0.9475,
+   "decoder_z1_z2": 0.8354,
+   "encoder_z2_z1": 0.0,
+   "l_encoder": 0.0,
+   "px_r": 0.0,
+   "y_prior": 0.0,
+   "z_encoder": 0.0
+  },
+  "liu": {
+   "classifier": 0.8226,
+   "decoder": 0.778,
+   "decoder_z1_z2": 1.0915,
+   "encoder_z2_z1": 0.0,
+   "l_encoder": 0.0,
+   "px_r": 0.0,
+   "y_prior": 0.0,
+   "z_encoder": 0.0
+  },
+  "braun": {
+   "classifier": 1.3624,
+   "decoder": 3.0077,
+   "decoder_z1_z2": 1.9644,
+   "encoder_z2_z1": 0.0,
+   "l_encoder": 0.0,
+   "px_r": 0.0,
+   "y_prior": 0.0,
+   "z_encoder": 0.0
+  },
+  "siletti": {
+   "classifier": 1.5199,
+   "decoder": 1.2523,
+   "decoder_z1_z2": 1.5581,
+   "encoder_z2_z1": 0.0,
+   "l_encoder": 0.0,
+   "px_r": 0.0,
+   "y_prior": 0.0,
+   "z_encoder": 0.0
+  }
+ },
+ "classifier_tensors_changed": [
+  "classifier.classifier.0.fc_layers.Layer 0.1.bias",
+  "classifier.classifier.0.fc_layers.Layer 0.1.weight",
+  "classifier.classifier.0.fc_layers.Layer 1.1.bias",
+  "classifier.classifier.0.fc_layers.Layer 1.1.weight"
+ ],
+ "reference_classifier_reproduces_reference_predictions": {
+  "label_agreement": 0.9999935818855137,
+  "max_abs_prob_diff": 0.0024945735931396484
+ },
+ "per_query": {
+  "filbin": {
+   "n": 3037,
+   "drifted_classifier_reproduces_saved_labels": 1.0,
+   "reference_classifier_counts": {
+    "malignant": 2776,
+    "oligodendrocyte": 113,
+    "myeloid": 85,
+    "astrocyte": 46,
+    "vascular": 7,
+    "T_NK": 6,
+    "neuron": 4
+   },
+   "pre_audit_counts": {
+    "malignant": 2835,
+    "oligodendrocyte": 101,
+    "myeloid": 93,
+    "vascular": 5,
+    "neuron": 2,
+    "astrocyte": 1
+   }
+  },
+  "labelle": {
+   "n": 8240,
+   "drifted_classifier_reproduces_saved_labels": 1.0,
+   "reference_classifier_counts": {
+    "myeloid": 6665,
+    "malignant": 901,
+    "T_NK": 656,
+    "astrocyte": 13,
+    "neuron": 3,
+    "vascular": 2
+   },
+   "pre_audit_counts": {
+    "myeloid": 7335,
+    "malignant": 904,
+    "vascular": 1
+   }
+  },
+  "liu": {
+   "n": 13100,
+   "drifted_classifier_reproduces_saved_labels": 1.0,
+   "reference_classifier_counts": {
+    "malignant": 9816,
+    "neuron": 1182,
+    "myeloid": 998,
+    "oligodendrocyte": 642,
+    "astrocyte": 322,
+    "vascular": 106,
+    "T_NK": 34
+   },
+   "pre_audit_counts": {
+    "malignant": 11442,
+    "myeloid": 935,
+    "oligodendrocyte": 512,
+    "neuron": 116,
+    "vascular": 70,
+    "astrocyte": 25
+   }
+  },
+  "braun": {
+   "n": 100000,
+   "drifted_classifier_reproduces_saved_labels": 1.0,
+   "reference_classifier_counts": {
+    "malignant": 82910,
+    "neuron": 13137,
+    "vascular": 2105,
+    "myeloid": 1338,
+    "astrocyte": 385,
+    "oligodendrocyte": 124,
+    "T_NK": 1
+   },
+   "pre_audit_counts": {
+    "astrocyte": 97822,
+    "myeloid": 1136,
+    "vascular": 1042
+   }
+  },
+  "siletti": {
+   "n": 100000,
+   "drifted_classifier_reproduces_saved_labels": 1.0,
+   "reference_classifier_counts": {
+    "neuron": 51975,
+    "oligodendrocyte": 31318,
+    "astrocyte": 8124,
+    "myeloid": 3882,
+    "malignant": 3541,
+    "vascular": 1065,
+    "T_NK": 95
+   },
+   "pre_audit_counts": {
+    "neuron": 51934,
+    "oligodendrocyte": 31231,
+    "astrocyte": 11823,
+    "myeloid": 3978,
+    "vascular": 1034
+   }
+  }
+ },
+ "zero_shot_check_filbin": {
+  "classifier_params_requires_grad_after_load_query_data": [
+   "classifier.classifier.0.fc_layers.Layer 0.0.weight",
+   "classifier.classifier.0.fc_layers.Layer 0.0.bias",
+   "classifier.classifier.0.fc_layers.Layer 0.1.weight",
+   "classifier.classifier.0.fc_layers.Layer 0.1.bias",
+   "classifier.classifier.0.fc_layers.Layer 1.0.weight",
+   "classifier.classifier.0.fc_layers.Layer 1.0.bias",
+   "classifier.classifier.0.fc_layers.Layer 1.1.weight",
+   "classifier.classifier.0.fc_layers.Layer 1.1.bias"
+  ],
+  "untrained_query_model_equals_reference_on_shared_tensors": true,
+  "max_abs_latent_diff_vs_saved_X_scanvi": 0.0038671493530273438,
+  "pearson_r_latent": 0.9999999782565454,
+  "label_agreement_with_reference_classifier_on_saved_latent": 1.0,
+  "max_abs_prob_diff": 0.0009891390800476074
+ }
+}

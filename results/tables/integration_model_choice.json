@@ -1,0 +1,45 @@
+{
+ "chosen": "scvi_seed1",
+ "rule": "highest 0.4*batch+0.6*bio scaled score among scVI seeds 0/1/2 (26-epoch protocol); tie-break lower best validation ELBO; scvi_seed0_e60 is a sensitivity row only",
+ "n_sub": 60023,
+ "n_sub_fine": 30014,
+ "k": 90,
+ "scores": {
+  "scvi_seed0": {
+   "batch_score": 0.4933,
+   "bio_score": 0.8412,
+   "fine_bio_score": 0.6537,
+   "total_score": 0.702
+  },
+  "scvi_seed1": {
+   "batch_score": 0.5373,
+   "bio_score": 0.8743,
+   "fine_bio_score": 0.6592,
+   "total_score": 0.7395
+  },
+  "scvi_seed2": {
+   "batch_score": 0.5231,
+   "bio_score": 0.8254,
+   "fine_bio_score": 0.5825,
+   "total_score": 0.7045
+  },
+  "harmony": {
+   "batch_score": 0.7355,
+   "bio_score": 0.4778,
+   "fine_bio_score": 0.1976,
+   "total_score": 0.5809
+  },
+  "pca": {
+   "batch_score": 0.1269,
+   "bio_score": 0.125,
+   "fine_bio_score": 0.2567,
+   "total_score": 0.1258
+  },
+  "scvi_seed0_e60": {
+   "batch_score": 0.6612,
+   "bio_score": 0.7062,
+   "fine_bio_score": 0.8725,
+   "total_score": 0.6882
+  }
+ }
+}

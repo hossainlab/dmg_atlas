@@ -1,0 +1,1 @@
+{"image": "im-gl8KES0WsH7PoFjf83hK6v", "spec_sha": "4acd5d12af46b77b", "volumes": {}, "env": {}, "gpu_default": "A100", "packages": ["scvi", "scgpt", "scanpy", "anndata", "cell2location", "torch"], "egress_domains": [], "hydrate_defined": false, "hydrated": false}

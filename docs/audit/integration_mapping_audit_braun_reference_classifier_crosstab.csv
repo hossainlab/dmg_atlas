@@ -1,0 +1,13 @@
+author_CellClass,T_NK,astrocyte,malignant,myeloid,neuron,oligodendrocyte,vascular
+Erythrocyte,0,64,732,148,2,48,125
+Fibroblast,0,286,348,0,2,0,293
+Glioblast,0,0,11477,0,2,0,0
+Immune,1,5,2,1190,0,1,1
+Neural crest,0,1,342,0,1,4,0
+Neuroblast,0,2,21428,0,1970,1,0
+Neuron,0,17,20610,0,11011,0,1
+Neuronal IPC,0,0,2524,0,0,0,0
+Oligo,0,0,1065,0,0,70,0
+Placodes,0,1,85,0,117,0,0
+Radial glia,0,3,24291,0,32,0,4
+Vascular,0,6,6,0,0,0,1681

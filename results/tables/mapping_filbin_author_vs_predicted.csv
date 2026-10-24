@@ -1,0 +1,9 @@
+phase3_call,T_NK,astrocyte,malignant,myeloid,neuron,oligodendrocyte,vascular,n,knn_T_NK,knn_astrocyte,knn_malignant,knn_myeloid,knn_neuron,knn_oligodendrocyte,knn_vascular
+consensus ambiguous,5,2,581,1,1,101,2,693,3,4,586,1,1,97,1
+consensus malignant,0,61,2125,0,0,38,1,2225,0,40,2151,0,0,34,0
+consensus normal: T_NK,4,0,0,0,0,0,0,4,4,0,0,0,0,0,0
+consensus normal: astrocyte,0,1,9,0,0,0,0,10,0,1,8,0,0,1,0
+consensus normal: myeloid,0,0,1,76,0,0,0,77,0,0,1,76,0,0,0
+consensus normal: neuron,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0
+consensus normal: oligodendrocyte,0,0,2,0,0,21,0,23,0,0,1,0,0,22,0
+consensus normal: vascular,0,0,0,0,0,0,4,4,0,0,0,0,0,0,4

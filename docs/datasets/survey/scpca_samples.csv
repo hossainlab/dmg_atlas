@@ -1,0 +1,120 @@
+project,sample,diagnosis,subdiagnosis,age,sex,tissue,timing,seq_units,tech,cells,xeno,cellline,extra
+SCPCP000001,SCPCS000001,Anaplastic glioma,NA,14,F,Right thalamus/midbrain,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",3428.0,False,False,{}
+SCPCP000001,SCPCS000002,Glioblastoma,NA,7,F,Right thalamus,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",1572.0,False,False,{}
+SCPCP000001,SCPCS000003,Glioblastoma,Gliomatosis cerebri,10,M,Left frontal with right frontal and left basal ganglia involvement,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",1238.0,False,False,{}
+SCPCP000001,SCPCS000004,High-grade glioma,"Poorly differentiated, RIG",15,M,Pons/Cerebellum,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",843.0,False,False,{}
+SCPCP000001,SCPCS000005,Diffuse midline glioma,NA,8,M,Right thalamus,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",385.0,False,False,{}
+SCPCP000001,SCPCS000006,Glioblastoma,RIG,15,M,Left cerebral hemisphere,Initial diagnosis,['cell'],['10xv3'],2282.0,False,False,{}
+SCPCP000001,SCPCS000007,Glioblastoma,RIG,11,F,Left frontal (with satellite lesions in same lobe),Initial diagnosis,"['bulk', 'cell']","['10xv3', 'single_end']",1843.0,False,False,{}
+SCPCP000001,SCPCS000008,Glioblastoma,RIG,12,M,Cerebellum (multiple masses),Initial diagnosis,"['bulk', 'cell']","['10xv3', 'single_end']",5996.0,False,False,{}
+SCPCP000001,SCPCS000009,Glioblastoma,NA,15,M,Right frontotemporal,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",708.0,False,False,{}
+SCPCP000001,SCPCS000010,Glioblastoma,RIG,21,M,Right parietal,Initial diagnosis of 2nd primary RIG,"['bulk', 'cell']","['10xv3', 'paired_end']",241.0,False,False,{}
+SCPCP000001,SCPCS000011,Non-cancerous,Normal margin,21,M,NA,NA,['cell'],['10xv3'],879.0,False,False,{}
+SCPCP000001,SCPCS000012,Pleomorphic xanthoastrocytoma,Glioblastoma treatment induced,6,M,Right cerebellum,First recurrence after treatment for glioblastoma,['cell'],['10xv3'],2299.0,False,False,{}
+SCPCP000001,SCPCS000013,Glioblastoma,Epithelioid,15,F,Left temporal/occipital,Recurrence as glioblastoma after multiple resections for pleomorphic xanthoastrocytoma,"['bulk', 'cell']","['10xv3', 'paired_end']",3356.0,False,False,{}
+SCPCP000001,SCPCS000014,Glioblastoma,Epithelioid/giant cell,18,M,Left frontal,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",1029.0,False,False,{}
+SCPCP000001,SCPCS000015,Glioblastoma,NA,18,F,Right thalamus,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",1656.0,False,False,{}
+SCPCP000001,SCPCS000016,Anaplastic astrocytoma,NA,11,M,Right cerebral hemisphere (centered in right parietal lobe),Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",3316.0,False,False,{}
+SCPCP000001,SCPCS000017,Glioblastoma,NA,4,F,C/T-spine,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",1003.0,False,False,{}
+SCPCP000001,SCPCS000018,Glioblastoma,NA,7,F,Pons and surrounding areas,Autopsy,['cell'],['10xv3'],1634.0,False,False,{}
+SCPCP000001,SCPCS000019,Glioblastoma,NA,11,M,Left thalamus,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",1716.0,False,False,{}
+SCPCP000001,SCPCS000020,Glioblastoma,NA,17,F,Left frontal,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",619.0,False,False,{}
+SCPCP000001,SCPCS000021,High-grade glioma,NA,7,M,Left temporal,Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",960.0,False,False,{}
+SCPCP000001,SCPCS000022,Glioblastoma,Epithelioid/giant cell,15,F,"3rd/lateral ventricles, pineal",Initial diagnosis,"['bulk', 'cell']","['10xv3', 'paired_end']",729.0,False,False,{}
+SCPCP000001,SCPCS000023,Glioblastoma,Epithelioid,24,F,Right frontal leptomeninges,Metastatic recurrence of anaplastic pleomorphic xanthoastrocytoma,['cell'],['10xv3'],2097.0,False,False,{}
+SCPCP000021,SCPCS000632,High-grade glioma,WHO grade III/IV,5.16,F,Optic pathway,Initial diagnosis,['nucleus'],['10xv3.1'],1295.0,False,False,"{""mutation_status"": ""HGG, To be classified""}"
+SCPCP000021,SCPCS000633,Glioblastoma,IDH-mutant,39.23,M,Cerebrum,Recurrence,['nucleus'],['10xv3.1'],2336.0,False,False,"{""mutation_status"": ""HGG, IDH, TP53""}"
+SCPCP000021,SCPCS000634,Glioblastoma,IDH-wildtype and H3-wildtype,38.91,M,Cerebrum,Initial diagnosis,['nucleus'],['10xv3.1'],1327.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000021,SCPCS000635,High-grade glioma,IDH-wildtype and H3-wildtype;WHO grade III/IV,5.16,F,Pons,Deceased,['nucleus'],['10xv3.1'],3603.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype, TP53""}"
+SCPCP000021,SCPCS000636,Diffuse midline glioma,H3 K28-mutant;WHO grade IV,7.85,M,Thalamus,Progressive,['nucleus'],['10xv3.1'],1054.0,False,False,"{""mutation_status"": ""DMG, H3 K28, TP53""}"
+SCPCP000021,SCPCS000637,Diffuse midline glioma,H3 K28-mutant;WHO grade IV,12.97,M,Thalamus,Initial diagnosis,['nucleus'],['10xv3.1'],2931.0,False,False,"{""mutation_status"": ""DMG, H3 K28, TP53""}"
+SCPCP000021,SCPCS000638,High-grade glioma,IDH-wildtype and H3-wildtype;WHO grade IV,5.16,M,Parietal lobe,Recurrence,['nucleus'],['10xv3.1'],3056.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000021,SCPCS000639,Infant-type hemispheric glioma,NTRK-altered;WHO grade IV,2.66,F,Parietal lobe,Progressive,['nucleus'],['10xv3.1'],1943.0,False,False,"{""mutation_status"": ""IHG, NTRK-altered, TP53""}"
+SCPCP000021,SCPCS000640,Infant-type hemispheric glioma,NTRK-altered;WHO grade III/IV,0.74,M,Frontal lobe,Initial diagnosis,['nucleus'],['10xv3.1'],2862.0,False,False,"{""mutation_status"": ""IHG, NTRK-altered""}"
+SCPCP000021,SCPCS000641,High-grade glioma,IDH-wildtype and H3-wildtype;WHO grade III/IV,2.68,F,Parietal lobe,Recurrence,['nucleus'],['10xv3.1'],806.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000021,SCPCS000642,High-grade glioma,IDH-wildtype and H3-wildtype;WHO grade III/IV,2.68,F,Posterior fossa,Progressive,['nucleus'],['10xv3.1'],3555.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000021,SCPCS000643,Infant-type hemispheric glioma,NTRK-altered;WHO grade III/IV,0.74,M,Frontal lobe,Initial diagnosis,['nucleus'],['10xv3.1'],1554.0,False,False,"{""mutation_status"": ""IHG, NTRK-altered""}"
+SCPCP000021,SCPCS000644,High-grade glioma,IDH-wildtype and H3-wildtype;WHO grade IV,5.16,M,Temporal lobe,Deceased,['nucleus'],['10xv3.1'],1777.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000021,SCPCS000645,High-grade glioma,IDH-wildtype and H3-wildtype;WHO grade III/IV,2.68,F,Cerebellum,Deceased,['nucleus'],['10xv3.1'],1844.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000021,SCPCS000646,Glioblastoma,IDH-wildtype and H3-wildtype,38.91,M,Cerebrum,Recurrence,['nucleus'],['10xv3.1'],2430.0,False,False,"{""mutation_status"": ""HGG, H3 wildtype""}"
+SCPCP000010,SCPCS000298,Ganglioglioma,NA,3.94,F,Temporal lobe,Recurrence,['nucleus'],"['10xv2_5prime', '10xv3.1']",10850.0,False,False,{}
+SCPCP000010,SCPCS000299,Low-grade glioma,WHO grade I/II,16.58,F,Cerebellum/posterior fossa,Progressive,['nucleus'],['10xv3.1'],11057.0,False,False,{}
+SCPCP000010,SCPCS000300,Low-grade glioma,WHO grade I/II,13.02,F,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],"['10xv2_5prime', '10xv3.1']",15406.0,False,False,{}
+SCPCP000010,SCPCS000393,Ganglioglioma,NA,0.74,F,Frontal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],4937.0,False,False,{}
+SCPCP000010,SCPCS000394,Ganglioglioma,NA,22.52,F,Frontal lobe,Progressive,['nucleus'],['10xv2_5prime'],3071.0,False,False,{}
+SCPCP000010,SCPCS000395,Low-grade glioma,WHO grade I/II,2.18,M,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],['10xv2_5prime'],2702.0,False,False,{}
+SCPCP000010,SCPCS000396,Low-grade glioma,WHO grade I/II,12.3,F,Temporal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],4891.0,False,False,{}
+SCPCP000010,SCPCS000397,Low-grade glioma,WHO grade I/II,3.72,M,Ventricles,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5103.0,False,False,{}
+SCPCP000010,SCPCS000398,Low-grade glioma,WHO grade I/II,2.79,M,Cerebellum/posterior fossa,Recurrence,['nucleus'],['10xv2_5prime'],4952.0,False,False,{}
+SCPCP000010,SCPCS000399,Ganglioglioma,NA,7.71,F,Frontal lobe,Recurrence,['nucleus'],['10xv2_5prime'],4327.0,False,False,{}
+SCPCP000010,SCPCS000400,Low-grade glioma,WHO grade I/II,4.7,M,Cerebellum/posterior fossa,Recurrence,['nucleus'],['10xv2_5prime'],5746.0,False,False,{}
+SCPCP000010,SCPCS000401,Low-grade glioma,WHO grade I/II,10.19,M,Suprasellar/hypothalamic/pituitary,Progressive,['nucleus'],['10xv2_5prime'],5323.0,False,False,{}
+SCPCP000010,SCPCS000402,Low-grade glioma,WHO grade I/II,7.91,F,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],['10xv2_5prime'],8394.0,False,False,{}
+SCPCP000010,SCPCS000403,Low-grade glioma,WHO grade I/II,7.93,F,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],['10xv2_5prime'],6838.0,False,False,{}
+SCPCP000010,SCPCS000404,Ganglioglioma,NA,2.38,F,Frontal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],1664.0,False,False,{}
+SCPCP000010,SCPCS000405,Low-grade glioma,WHO grade I/II,6.58,M,Cerebellum/posterior fossa,Progressive,['nucleus'],['10xv2_5prime'],4257.0,False,False,{}
+SCPCP000010,SCPCS000406,Low-grade glioma,WHO grade I/II,6.09,M,Suprasellar/hypothalamic/pituitary,Initial CNS tumor,['nucleus'],['10xv2_5prime'],4594.0,False,False,{}
+SCPCP000010,SCPCS000407,Ganglioglioma,NA,17.02,F,Frontal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],3903.0,False,False,{}
+SCPCP000010,SCPCS000408,Low-grade glioma,WHO grade I/II,16.3,F,Hippocampus,Recurrence,['nucleus'],['10xv2_5prime'],4565.0,False,False,{}
+SCPCP000010,SCPCS000457,Atypical teratoid rhabdoid tumor,NA,3.3,F,Other locations NOS,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5532.0,False,False,{}
+SCPCP000010,SCPCS000458,Atypical teratoid rhabdoid tumor,NA,4.42,F,Other locations NOS,Progressive,['nucleus'],['10xv2_5prime'],5084.0,False,False,{}
+SCPCP000010,SCPCS000459,Atypical teratoid rhabdoid tumor,NA,4.48,M,Frontal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],6824.0,False,False,{}
+SCPCP000010,SCPCS000460,Atypical teratoid rhabdoid tumor,NA,5.3,M,Frontal lobe,Recurrence,['nucleus'],['10xv2_5prime'],4601.0,False,False,{}
+SCPCP000010,SCPCS000461,Atypical teratoid rhabdoid tumor,NA,0.95,F,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],['10xv2_5prime'],4699.0,False,False,{}
+SCPCP000010,SCPCS000462,Atypical teratoid rhabdoid tumor,NA,2.66,F,Cerebellum/posterior fossa,Progressive,['nucleus'],['10xv2_5prime'],6464.0,False,False,{}
+SCPCP000010,SCPCS000464,Low-grade glioma,WHO grade I/II,11.76,F,Cerebellum/posterior fossa,Recurrence,['nucleus'],['10xv2_5prime'],5921.0,False,False,{}
+SCPCP000010,SCPCS000465,Low-grade glioma,WHO grade I/II,8.49,NA,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5465.0,False,False,{}
+SCPCP000010,SCPCS000466,Low-grade glioma,WHO grade I/II,12.82,M,Cerebellum/posterior fossa,Recurrence,['nucleus'],['10xv2_5prime'],7393.0,False,False,{}
+SCPCP000010,SCPCS000467,Glial-neuronal tumor,NA,16.22,M,Cerebellum/posterior fossa,Recurrence,['nucleus'],['10xv2_5prime'],4837.0,False,False,{}
+SCPCP000010,SCPCS000468,Ganglioglioma,NA,13.08,F,"Parietal lobe,temporal lobe",Progressive,['nucleus'],['10xv2_5prime'],5551.0,False,False,{}
+SCPCP000010,SCPCS000469,Ganglioglioma,NA,0.42,F,"Parietal lobe,temporal lobe",Progressive,['nucleus'],['10xv2_5prime'],4885.0,False,False,{}
+SCPCP000010,SCPCS000470,Focal cortical dysplasia,Type IIb,2.51,M,Frontal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5395.0,False,False,{}
+SCPCP000010,SCPCS000471,Low-grade glioma,WHO grade I/II,0.93,M,"Basal ganglia,ventricles",Initial CNS tumor,['nucleus'],['10xv2_5prime'],4697.0,False,False,{}
+SCPCP000010,SCPCS000472,Low-grade glioma,WHO grade I/II,1.35,M,Ventricles,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5629.0,False,False,{}
+SCPCP000010,SCPCS000473,Glial-neuronal tumor,NA,0.1,M,"Parietal lobe,temporal lobe",Initial CNS tumor,['nucleus'],['10xv2_5prime'],5742.0,False,False,{}
+SCPCP000010,SCPCS000474,High-grade glioma,WHO grade III/IV,2.77,M,"Parietal lobe,temporal lobe",Recurrence,['nucleus'],['10xv2_5prime'],4384.0,False,False,{}
+SCPCP000010,SCPCS000475,Low-grade glioma,WHO grade I/II,8.05,F,Cerebellum/posterior fossa,Initial CNS tumor,['nucleus'],['10xv2_5prime'],7974.0,False,False,{}
+SCPCP000010,SCPCS000476,Low-grade glioma,WHO grade I/II,8.96,F,Cerebellum/posterior fossa,Progressive,['nucleus'],['10xv2_5prime'],5822.0,False,False,{}
+SCPCP000010,SCPCS000477,Low-grade glioma,WHO grade I/II,12.1,F,Parietal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5871.0,False,False,{}
+SCPCP000010,SCPCS000478,Low-grade glioma,WHO grade I/II,12.41,F,Temporal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],6722.0,False,False,{}
+SCPCP000010,SCPCS000479,Atypical teratoid rhabdoid tumor,NA,0.99,F,Frontal lobe,Initial CNS tumor,['nucleus'],['10xv2_5prime'],5808.0,False,False,{}
+SCPCP000010,SCPCS000480,Atypical teratoid rhabdoid tumor,NA,1.81,F,"Frontal lobe,parietal lobe",Recurrence,['nucleus'],['10xv2_5prime'],6929.0,False,False,{}
+SCPCP000009,SCPCS000129,Medulloblastoma,NA,7.0,F,Posterior fossa,Initial diagnosis,['bulk'],['single_end'],0.0,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000130,Ependymoma,NA,7.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",2564.0,False,False,"{""WHO_grade"": ""3"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000131,Pilocytic astrocytoma,NA,1.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000132,Dysplastic gangliocytoma,NA,16.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",2311.0,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000133,Primitive neuroectodermal tumor,NA,6.0,F,Parieto-temporal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000134,Ependymoma,NA,7.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""2"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000135,Pilocytic astrocytoma,NA,7.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000136,Medulloblastoma,NA,12.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000137,Pilocytic astrocytoma,NA,1.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000138,Ependymoma,NA,16.0,F,Occipital lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""2"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000139,Medulloblastoma,NA,14.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000140,Desmoplastic ganglioglioma,NA,16.0,M,Occipital lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000141,Anaplastic ganglioglioma,NA,9.0,F,Temporal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""3"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000142,Desmoplastic ganglioglioma,NA,4.0,M,Frontal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000143,Ependymoma,NA,9.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""2"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000144,Dysembryoplastic neuroepithelial tumor,NA,3.0,M,Temporal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",3986.0,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000145,Primitive neuroectodermal tumor,NA,1.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000146,Subependymoma,NA,16.0,F,4th ventricle,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000147,Pilocytic astrocytoma,NA,5.0,M,Suprasellar,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000148,Low-grade glioma,NA,13.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""2"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000149,Ependymoma,NA,8.0,M,4th ventricle,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""2"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000150,Primitive neuroectodermal tumor,NA,7.0,M,4th ventricle,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000151,Pilocytic astrocytoma,NA,10.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000152,Medulloblastoma,NA,15.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000153,Dysembryoplastic neuroepithelial tumor,NA,18.0,M,Lateral ventricle,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000154,Myxopapillary ependymoma,NA,13.0,F,Spinal cord,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000155,Non-cancerous,Epilepsy,7.0,M,Left temporal resection,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""NA"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000156,Non-cancerous,Epilepsy,11.0,F,Hippocampus,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""NA"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000157,Non-cancerous,Epilepsy,0.58,F,Unknown,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""NA"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000158,Glioblastoma,NA,18.0,M,Frontal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",34556.0,False,False,"{""WHO_grade"": ""4"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000159,Anaplastic ependymoma,NA,5.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""3"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000160,Pilomyxoid astrocytoma,NA,7.0,M,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""2"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000161,Pilocytic astrocytoma,NA,0.75,M,Temporal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000162,Anaplastic ependymoma,NA,15.0,F,Parietal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""3"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000163,Anaplastic ependymoma,NA,3.0,M,4th ventricle,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""3"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000164,Anaplastic ependymoma,NA,12.0,F,Posterior fossa,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""3"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000165,Dysembryoplastic neuroepithelial tumor,NA,3.0,M,Left temporal lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"
+SCPCP000009,SCPCS000166,Schwannoma,NA,11.0,M,Vestibular,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Subtentorial""}"
+SCPCP000009,SCPCS000167,Ganglioglioma,NA,15.0,M,Occipital lobe,Initial diagnosis,"['bulk', 'nucleus']","['10xv3.1', 'single_end']",,False,False,"{""WHO_grade"": ""1"", ""location_class"": ""Supratentorial""}"

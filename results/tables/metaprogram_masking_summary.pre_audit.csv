@@ -1,0 +1,9 @@
+cut,genes,n_metaprograms,n_replicated,n_mixed_assay,n_programmes_assigned,primary
+0.75,unmasked,5,1,1,67,False
+0.75,masked,5,1,2,63,False
+0.8,unmasked,14,1,2,123,False
+0.8,masked,9,2,2,95,False
+0.85,unmasked,20,2,3,196,True
+0.85,masked,17,4,5,166,True
+0.9,unmasked,19,5,6,271,False
+0.9,masked,20,8,8,266,False

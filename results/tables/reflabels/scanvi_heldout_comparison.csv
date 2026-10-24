@@ -1,0 +1,13 @@
+classifier,labels,cells,n_labelled,accuracy,balanced_accuracy,note
+new_scanvi,corrected,heldout_patients,23827,0.9751122675955849,0.9166477810853445,
+new_scanvi,corrected,train_patients,197867,0.9930761572167163,0.9571341119481411,
+new_scanvi,corrected,all,221694,0.9911454527411657,0.9520894440765978,
+new_scanvi,pre_audit,heldout_patients,20550,0.9700729927007299,0.9066956904559766,
+new_scanvi,pre_audit,train_patients,199759,0.9923758128544896,0.9546156724603392,
+new_scanvi,pre_audit,all,220309,0.9902954486652837,0.9490290556692499,
+pre_audit_scanvi,corrected,heldout_patients,23827,0.9773366349099761,0.814746892904374,pre-audit model trained on these patients (random cell split): NOT a held-out estimate
+pre_audit_scanvi,corrected,train_patients,197867,0.9872338489995806,0.8746897176850006,
+pre_audit_scanvi,corrected,all,221694,0.98617012639043,0.8693231348308645,
+pre_audit_scanvi,pre_audit,heldout_patients,20550,0.9739659367396594,0.8110983172028933,pre-audit model trained on these patients (random cell split): NOT a held-out estimate
+pre_audit_scanvi,pre_audit,train_patients,199759,0.9887214092982043,0.8813756837245251,
+pre_audit_scanvi,pre_audit,all,220309,0.9873450471837283,0.8745713968247143,

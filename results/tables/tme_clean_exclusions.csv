@@ -1,0 +1,47 @@
+compartment,subcluster,n_cells,label_17,own_lineage_score,top_other_lineage,top_other_score,hsp_score,reasons,excluded
+myeloid,myeloid_0,3375,border_associated_macrophage|low_confidence,0.15106204740783316,astrocyte,0.03644143153401298,-0.25075843751783394,,False
+myeloid,myeloid_1,2914,lipid_phagocytic_TAM,0.16898585007873068,neuron,0.0014011548669384123,0.40777674619631854,,False
+myeloid,myeloid_10,796,proliferating_myeloid|low_confidence,-0.06703850554261774,T_NK,0.29684553169379646,0.16869194023698383,other_lineage:T_NK,True
+myeloid,myeloid_11,2172,lipid_phagocytic_TAM,1.2528775172997575,T_NK,0.00816278333117656,0.679294787242331,stress_hsp(flag only),False
+myeloid,myeloid_12,819,proliferating_myeloid,0.5425633529128221,T_NK,-0.005101901563370895,0.3737552637072248,,False
+myeloid,myeloid_13,2927,activated_microglia,1.4277878686228072,T_NK,0.0388646571306217,0.8280057494595494,stress_hsp(flag only),False
+myeloid,myeloid_14,940,lipid_phagocytic_TAM,0.34137772832610086,astrocyte,0.0903029551521847,-0.12964132857414312,,False
+myeloid,myeloid_15,1818,activated_microglia,1.2387761096443761,astrocyte,0.013352713212637361,0.845295218530782,stress_hsp(flag only),False
+myeloid,myeloid_16,284,lipid_phagocytic_TAM,0.9919357943814685,astrocyte,0.08357797279332767,0.03003917379656975,,False
+myeloid,myeloid_2,4081,lipid_phagocytic_TAM,0.012947063199700477,oligodendrocyte,0.01163046363735378,0.46762840254878674,,False
+myeloid,myeloid_3,2784,activated_microglia|low_confidence,1.6190361540944411,vascular,-0.006528562485119588,0.5768656926609323,stress_hsp(flag only),False
+myeloid,myeloid_4,847,lipid_phagocytic_TAM,1.1906521774548708,astrocyte,0.018458067438450007,0.17691367806081862,,False
+myeloid,myeloid_5,949,lipid_phagocytic_TAM|low_confidence,0.06829235637401504,oligodendrocyte,0.10794081933619572,-0.4019372418197608,other_lineage:oligodendrocyte,True
+myeloid,myeloid_6,1815,lipid_phagocytic_TAM,0.08605373532056151,oligodendrocyte,0.019940081527066424,-0.33994036384215204,,False
+myeloid,myeloid_7,2489,activated_microglia,0.23595715522718216,vascular,-0.004724761545948899,-0.33438080863456965,,False
+myeloid,myeloid_8,751,lipid_phagocytic_TAM|low_confidence,-0.1534402829988025,astrocyte,0.00948172817121807,-0.18273356218136022,other_lineage:astrocyte,True
+myeloid,myeloid_9,1747,border_associated_macrophage|low_confidence,0.1021788147145886,oligodendrocyte,0.0270278891560933,0.49184683138941365,,False
+T_NK,T_NK_0,102,CD4_T|low_confidence,0.11425119780247509,myeloid,0.05946336963064732,0.27018794891600945,,False
+T_NK,T_NK_1,92,CD8_T,0.12754862326354796,myeloid,0.11926673143926057,-0.030653430730779193,,False
+T_NK,T_NK_2,110,CD4_T|low_confidence,0.0016041372520755029,myeloid,0.05171694833092131,0.7735453480125023,other_lineage:myeloid;stress_hsp(flag only),False
+T_NK,T_NK_3,28,proliferating_T_NK,-0.21702911414797343,myeloid,0.06919029861552704,0.3159770577498531,other_lineage:myeloid;small,False
+T_NK,T_NK_4,126,exhausted_T|low_confidence,-0.04885421895055755,myeloid,0.044384096633574475,-0.17740662194634224,other_lineage:myeloid,False
+T_NK,T_NK_5,157,NK|low_confidence,1.0227812706183983,myeloid,0.14458773547821024,0.5840729414697662,stress_hsp(flag only),False
+T_NK,T_NK_6,56,CD4_T,0.42822623638879687,myeloid,0.0471078343610424,0.5711034685079011,stress_hsp(flag only),False
+T_NK,T_NK_7,121,CD8_T,0.8888982711876062,myeloid,0.09470338705450738,0.3375345023637153,,False
+vascular,vascular_0,628,endothelial_capillary,0.37417375134727976,neuron,0.06202509627751038,0.02456778679553078,,False
+vascular,vascular_1,533,endothelial_capillary,0.29653231974928435,astrocyte,0.07592307171723184,0.7807033409631394,stress_hsp(flag only),False
+vascular,vascular_10,199,fibroblast|low_confidence,-0.07969607497737764,myeloid,0.22474407872177274,0.22529598985628954,other_lineage:myeloid,True
+vascular,vascular_2,37,endothelial_capillary,0.2989236449781534,oligodendrocyte,0.010328693577521097,0.09941641557936082,small,True
+vascular,vascular_3,701,endothelial_capillary,0.6063642286718686,T_NK,0.0006708523836306866,-0.08555754260710526,,False
+vascular,vascular_4,233,endothelial_capillary,0.45731626543874215,astrocyte,0.07844435003591708,0.5958409816963113,stress_hsp(flag only),False
+vascular,vascular_5,945,endothelial_tip_angiogenic,0.3662688617274191,neuron,0.05567186782305413,0.42013926453067807,,False
+vascular,vascular_6,684,pericyte,0.47460689928256805,T_NK,-0.01067996541459342,0.40463788047601246,,False
+vascular,vascular_7,16,fibroblast,0.1801207906227048,oligodendrocyte,0.16484864379707026,0.04104255650205851,small,True
+vascular,vascular_8,418,endothelial_capillary,0.4691467811335993,T_NK,0.0029132382621728002,0.1036201748418889,,False
+vascular,vascular_9,113,endothelial_capillary,0.8514785359214655,astrocyte,0.01986686299543465,0.30945314105186905,,False
+oligodendrocyte,oligodendrocyte_0,1848,stressed_oligodendrocyte,-0.07367293851036878,myeloid,0.2599168214223788,0.36676451537346133,other_lineage:myeloid,True
+oligodendrocyte,oligodendrocyte_1,3049,mature_oligodendrocyte,1.1245417183249393,astrocyte,0.0014466956496077443,0.8012478477014032,stress_hsp(flag only),False
+oligodendrocyte,oligodendrocyte_2,2811,mature_oligodendrocyte,0.95224014431614,vascular,0.001646000068834862,-0.07684705554162644,,False
+oligodendrocyte,oligodendrocyte_3,2301,mature_oligodendrocyte,0.8480392373572758,neuron,0.017500513745295994,0.09197828728826432,,False
+oligodendrocyte,oligodendrocyte_4,2729,mature_oligodendrocyte,0.7046572925338039,T_NK,-0.0011244720321469932,0.4853634555777844,,False
+oligodendrocyte,oligodendrocyte_5,86,mature_oligodendrocyte,1.8117758505537886,astrocyte,0.08709475628031706,0.6133838264696989,stress_hsp(flag only),False
+oligodendrocyte,oligodendrocyte_6,1244,mature_oligodendrocyte,0.7822168357721644,astrocyte,0.11305905810872004,0.0008174409819372753,,False
+oligodendrocyte,oligodendrocyte_7,1885,committed_OPC_newly_formed,0.6541185962316863,neuron,0.08212521336957092,-0.004743039606747618,,False
+oligodendrocyte,oligodendrocyte_8,448,mature_oligodendrocyte,1.2755987100715889,vascular,0.007600984133932056,0.878329511686055,stress_hsp(flag only),False
+oligodendrocyte,oligodendrocyte_9,57,stressed_oligodendrocyte,0.00557601878688278,T_NK,0.29241939975229964,0.5920015201922861,other_lineage:T_NK;stress_hsp(flag only),True

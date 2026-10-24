@@ -1,0 +1,28 @@
+{
+ "before": {
+  "n_obs_cols": 199,
+  "obsm": [
+   "X_scanvi",
+   "X_scanvi_pre_audit",
+   "X_scvi",
+   "X_scvi_malignant",
+   "X_scvi_malignant_pre_audit",
+   "X_umap",
+   "X_umap_pre_audit"
+  ]
+ },
+ "after": {
+  "n_obs_cols": 187,
+  "obsm": [
+   "X_scanvi",
+   "X_scvi",
+   "X_scvi_malignant",
+   "X_umap"
+  ]
+ },
+ "dropped_pre_audit_obs": 10,
+ "dropped_pre_audit_obsm": 3,
+ "dropped_sample_level_author_obs": 2,
+ "md5": "4a39f172e4db0a2b470de7b6ac7b81e3",
+ "size_bytes": 1558899179
+}

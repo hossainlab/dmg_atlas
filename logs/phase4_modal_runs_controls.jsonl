@@ -1,0 +1,2 @@
+{"tag": "pca", "model": "PCA", "n_comps": 50, "input": "log1p(normalize_total 1e4) on HVG counts, unscaled", "wall_s": 40.6, "peak_rss_gb": 8.13}
+{"tag": "harmony", "model": "Harmony", "harmonypy_version": "2.1.0", "batch": "sample_id", "max_iter_harmony": 20, "wall_s": 2.0, "gpu": {"device": "NVIDIA A10", "max_mem_alloc_gb": 0.0, "max_mem_reserved_gb": 0.0}, "peak_rss_gb": 8.13}

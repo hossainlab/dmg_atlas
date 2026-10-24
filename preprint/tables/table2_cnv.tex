@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{\textbf{Agreement of malignant calls with published annotations.} Tier-2 comparison of the copy-number call
+against each study's own annotation, for every annotated cell. Pooled values weight cells equally; the sample median
+(with interquartile range) and unweighted sample mean weight samples equally.}
+\label{tab:cnv}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrlr}
+\toprule
+Study & Cells & Samples & Agreement & Precision & Recall & Sample median (IQR) & Sample mean \\
+\midrule
+Jessa 2022 (sc/snRNA) & 84,194 & 17 & 0.915 & 0.982 & 0.914 & 0.898 (0.835--0.964) & 0.846 \\
+Jessa 2022 (multiome) & 46,618 & 10 & 0.935 & 0.948 & 0.967 & 0.948 (0.897--0.988) & 0.930 \\
+Collot 2026 & 17,750 & 5 & 0.907 & 0.896 & 0.975 & 0.960 (0.919--0.964) & 0.929 \\
+Okada 2026 & 161,043 & 22 & 0.850 & 0.906 & 0.890 & 0.868 (0.763--0.895) & 0.800 \\
+Liu 2022 (query) & 8,705 & 42 & 0.799 & 0.975 & 0.782 & 0.945 (0.770--0.990) & 0.813 \\
+LaBelle (query) & 6,366 & 1 & 1.000 & nan & nan & 1.000 (1.000--1.000) & 1.000 \\
+\textbf{\textbf{All}} & \textbf{324,676} & \textbf{97} & \textbf{0.884} & \textbf{0.934} & \textbf{0.909} & \textbf{0.898 (0.793--0.978)} & \textbf{0.836} \\
+\bottomrule
+\end{tabular}}
+\end{table}

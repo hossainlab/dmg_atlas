@@ -1,0 +1,6 @@
+class,braun_subsample_frequency,pooled_frac,enrichment_pooled,per_sample_median,per_sample_q25,per_sample_q75,n_samples_ge50_cells
+Glioblast,0.1148,0.5087,4.43,0.4599,0.3743,0.5516,55
+Oligo,0.0114,0.3586,31.46,0.3989,0.1617,0.5666,55
+Radial glia,0.2433,0.1068,0.44,0.0746,0.0211,0.165,55
+Neuroblast,0.234,0.0026,0.01,0.0,0.0,0.0009,55
+Neuron,0.3164,0.0015,0.0,0.0,0.0,0.0006,55

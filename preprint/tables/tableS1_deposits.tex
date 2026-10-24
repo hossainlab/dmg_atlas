@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption{\textbf{Supplementary Table 1 $\vert$ Public deposits screened and their role in this study.} Accession,
+repository, access status and deposited cell or spot count for every deposit screened, with an explicit column
+for whether it entered the released results. The final column is the role proposed at screening, which is not the
+inclusion record: deposits marked ``no'' were dropped before or during quality control (the mouse developmental
+reference and the adult Paired-Tag reference were never used, and the ScPCA samples failed quality control), and
+the Phase~7 bulk cohort is outside the scope of this paper.}
+\label{tab:deposits}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{2.6cm}p{2.4cm}p{1.5cm}p{1.5cm}p{1.2cm}p{0.9cm}p{2.1cm}}
+\toprule
+Dataset & Accession & Repository & Access & Cells/spots & Used here & Role at screening \\
+\midrule
+Jessa\_2022\_scRNA\_snRNA & GSE210567 & GEO & open & 176,912 QC-\ldots & yes & CORE integrated (scVI/\ldots \\
+Jessa\_2022\_multiome & GSE210566 & GEO & open & not stated \ldots & yes & CORE integrated + chro\ldots \\
+Collot\_2026\_scRNA\_snRNA & 10.5281/zenodo.17922773 (s\ldots & Zenodo & open & 73,579 & yes & CORE integrated \\
+DeSisto\_2024 & GSE231859 & GEO & open & 15,617 & yes & CORE integrated (after\ldots \\
+Filbin\_2018 & GSE102130 & GEO & open & 4,039 cells & yes & PROJECTION (scANVI que\ldots \\
+Liu\_2022 & GSE184357 & GEO & open & 9,248 post-\ldots & yes & PROJECTION (or integra\ldots \\
+LaBelle\_2025 & GSE227983 (+GSE271936, 4 e\ldots & GEO & open (processed \ldots & 30,892 & yes & PROJECTION (TPM only, \ldots \\
+Huchede\_2024 & GSE268577 & GEO & open & 1,618 spots & yes & SPATIAL validation \\
+Ren\_2023\_DMG\_Visium & GSE194329 (5 DMG + 5 GBM +\ldots & GEO & open & not stated \ldots & yes & SPATIAL validation \\
+Collot\_2026\_Visium & 10.5281/zenodo.17922773 (S\ldots & Zenodo & open & not stated & yes & SPATIAL validation \\
+Xie\_2026\_adult\_brain\_PairedTag & GSE327101 & GEO & open & 36,646 pons\ldots & no & NORMAL reference (adul\ldots \\
+Siletti\_2023\_adult\_human\_brain & 10.1126/science.add7046; C\ldots & cellxgene & open & pons subset\ldots & yes & NORMAL reference (adul\ldots \\
+Braun\_2023\_first\_trimester\_bra\ldots & 10.1126/science.adf1226; C\ldots & cellxgene / Li\ldots & open & hindbrain s\ldots & yes & NORMAL reference (deve\ldots \\
+OpenPedCan\_PBTA\_v14\_DMG & PBTA/OpenPedCan v14 & D3b open-acces\ldots & open & nan & no & BULK survival validati\ldots \\
+Zang\_2024\_DMG\_sample & GSE245674 (GSM7846769 only\ldots & GEO & open & ~half of 10\ldots & yes & CORE integrated (minor\ldots \\
+ScPCA\_SCPCP000021\_DMG & SCPCP000021 (SCPCS000636, \ldots & ScPCA portal (\ldots & open (accept por\ldots & 3,985 (1,05\ldots & no & CORE integrated (minor\ldots \\
+Okada\_2026\_postmortem\_DMG & EGAS50000001447 (raw); UCS\ldots & EGA (controlle\ldots & raw controlled; \ldots & not stated & yes & CONDITIONAL integrated\ldots \\
+Whole\_brainstem\_DIPG\_2025 & GSE280990 & GEO & open & not stated & yes & SPATIAL validation (in\ldots \\
+Jessa\_mouse\_developing\_pons\_fo\ldots & GSE188625 (superseries; mo\ldots & GEO & open & not stated & no & NORMAL reference (mous\ldots \\
+ScPCA\_SCPCP000001\_midline\_pHGG & SCPCP000001 (8 midline-loc\ldots & ScPCA portal & open (accept por\ldots & ~12,000 acr\ldots & no & CONDITIONAL integrated \\
+Sussman\_2026\_longitudinal\_pHGG & dbGaP phs002371 (HTAN) [UN\ldots & dbGaP & controlled & nan & no & WATCH (controlled acce\ldots \\
+Stanford\_DIPG\_CAR-T\_autopsy\_sn\ldots & abstract DMG-48, Neuro-Onc\ldots & none yet & not released & ~320,000 & no & WATCH (unreleased) \\
+Acta\_Neuropathol\_2026\_DIPG\_scR\ldots & EGA 'upon request' (not ye\ldots & EGA & on request & nan & no & EXCLUDE \\
+Cell-line\_PDX\_series & GSE212782, GSE268775/6, GS\ldots & GEO & open & nan & no & EXCLUDE (models / in v\ldots \\
+CSF\_and\_PBMC\_immune\_series & GSE261235, GSE186802, GSE2\ldots & GEO & open & nan & no & EXCLUDE (not tumour ti\ldots \\
+\bottomrule
+\end{tabular}}
+\end{table}

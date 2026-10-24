@@ -1,0 +1,55 @@
+cut,genes,seed,n_metaprograms,n_replicated,n_replicated_strict,n_mixed_assay,n_programmes_assigned,primary,n_metaprograms_min,n_metaprograms_max,n_replicated_min,n_replicated_max
+0.75,masked,,3.0,1.0,1.0,1.0,51.0,False,,,,
+0.75,random_mask,median of 10,1.0,1.0,1.0,1.0,31.0,False,1.0,1.0,1.0,1.0
+0.75,unmasked,,5.0,1.0,1.0,1.0,62.0,False,,,,
+0.76,masked,,4.0,2.0,2.0,2.0,57.0,False,,,,
+0.76,random_mask,median of 10,1.0,1.0,1.0,1.0,31.0,False,1.0,1.0,1.0,1.0
+0.76,unmasked,,5.0,1.0,1.0,1.0,62.0,False,,,,
+0.77,masked,,6.0,2.0,2.0,2.0,68.0,False,,,,
+0.77,random_mask,median of 10,1.0,1.0,1.0,1.0,31.0,False,1.0,1.0,1.0,1.0
+0.77,unmasked,,6.0,1.0,1.0,1.0,69.0,False,,,,
+0.78,masked,,5.0,2.0,2.0,2.0,72.0,False,,,,
+0.78,random_mask,median of 10,1.0,1.0,1.0,1.0,31.0,False,1.0,1.0,1.0,1.0
+0.78,unmasked,,6.0,1.0,1.0,1.0,73.0,False,,,,
+0.79,masked,,6.0,2.0,2.0,2.0,77.0,False,,,,
+0.79,random_mask,median of 10,1.0,1.0,1.0,1.0,31.0,False,1.0,1.0,1.0,1.0
+0.79,unmasked,,6.0,1.0,1.0,1.0,75.0,False,,,,
+0.8,masked,,6.0,2.0,2.0,2.0,78.0,False,,,,
+0.8,random_mask,median of 10,1.0,1.0,1.0,1.0,32.0,False,1.0,2.0,1.0,1.0
+0.8,unmasked,,8.0,1.0,1.0,2.0,90.0,False,,,,
+0.81,masked,,8.0,2.0,2.0,2.0,91.0,False,,,,
+0.81,random_mask,median of 10,1.5,1.0,1.0,1.0,34.0,False,1.0,2.0,1.0,1.0
+0.81,unmasked,,10.0,1.0,1.0,2.0,103.0,False,,,,
+0.82,masked,,9.0,2.0,2.0,2.0,101.0,False,,,,
+0.82,random_mask,median of 10,1.5,1.0,1.0,1.0,34.0,False,1.0,2.0,1.0,1.0
+0.82,unmasked,,11.0,1.0,1.0,2.0,115.0,False,,,,
+0.83,masked,,9.0,2.0,2.0,2.0,104.0,False,,,,
+0.83,random_mask,median of 10,2.0,1.0,1.0,1.5,37.0,False,1.0,2.0,1.0,2.0
+0.83,unmasked,,13.0,1.0,1.0,2.0,129.0,False,,,,
+0.84,masked,,10.0,2.0,2.0,3.0,113.0,False,,,,
+0.84,random_mask,median of 10,2.0,1.0,1.0,2.0,38.0,False,1.0,3.0,1.0,2.0
+0.84,unmasked,,13.0,2.0,2.0,3.0,137.0,False,,,,
+0.85,masked,,12.0,3.0,2.0,4.0,133.0,True,,,,
+0.85,random_mask,median of 10,2.5,1.0,1.0,2.0,41.5,True,1.0,3.0,1.0,2.0
+0.85,unmasked,,15.0,2.0,2.0,3.0,161.0,True,,,,
+0.86,masked,,13.0,4.0,2.0,5.0,155.0,False,,,,
+0.86,random_mask,median of 10,3.0,1.5,1.5,2.0,44.5,False,2.0,4.0,1.0,2.0
+0.86,unmasked,,16.0,2.0,2.0,3.0,172.0,False,,,,
+0.87,masked,,13.0,4.0,2.0,5.0,160.0,False,,,,
+0.87,random_mask,median of 10,4.0,2.0,2.0,2.0,53.0,False,2.0,5.0,1.0,2.0
+0.87,unmasked,,17.0,2.0,2.0,4.0,184.0,False,,,,
+0.88,masked,,15.0,5.0,3.0,5.0,178.0,False,,,,
+0.88,random_mask,median of 10,4.0,2.0,2.0,2.0,56.5,False,3.0,6.0,1.0,2.0
+0.88,unmasked,,16.0,2.0,2.0,4.0,194.0,False,,,,
+0.89,masked,,17.0,5.0,3.0,5.0,188.0,False,,,,
+0.89,random_mask,median of 10,4.5,2.0,2.0,2.0,61.5,False,3.0,6.0,2.0,3.0
+0.89,unmasked,,21.0,2.0,2.0,4.0,229.0,False,,,,
+0.9,masked,,20.0,6.0,4.0,7.0,226.0,False,,,,
+0.9,random_mask,median of 10,6.0,2.0,2.0,2.0,71.5,False,4.0,8.0,2.0,3.0
+0.9,unmasked,,20.0,2.0,2.0,4.0,243.0,False,,,,
+0.91,masked,,18.0,6.0,4.0,7.0,241.0,False,,,,
+0.91,random_mask,median of 10,7.0,2.0,2.0,2.0,81.0,False,5.0,8.0,2.0,3.0
+0.91,unmasked,,20.0,3.0,3.0,5.0,259.0,False,,,,
+0.92,masked,,15.0,8.0,5.0,9.0,251.0,False,,,,
+0.92,random_mask,median of 10,8.0,2.0,2.0,3.0,92.0,False,7.0,10.0,2.0,3.0
+0.92,unmasked,,19.0,5.0,3.0,7.0,277.0,False,,,,

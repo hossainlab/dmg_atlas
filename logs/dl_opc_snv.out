@@ -1,0 +1,12 @@
+2026-10-17T07:25:47Z  START openpedcan_v14 snv-consensus-plus-hotspots.maf.tsv.gz size=2077192289 ranges=True chunks=2
+2026-10-17T07:26:17Z    openpedcan_v14: 203.4/2077.2 MB  6.78 MB/s
+2026-10-17T07:26:47Z    openpedcan_v14: 392.2/2077.2 MB  6.29 MB/s
+2026-10-17T07:27:17Z    openpedcan_v14: 643.8/2077.2 MB  8.39 MB/s
+2026-10-17T07:27:47Z    openpedcan_v14: 881.9/2077.2 MB  7.93 MB/s
+2026-10-17T07:28:17Z    openpedcan_v14: 1071.6/2077.2 MB  6.33 MB/s
+2026-10-17T07:28:47Z    openpedcan_v14: 1309.7/2077.2 MB  7.93 MB/s
+2026-10-17T07:29:17Z    openpedcan_v14: 1515.2/2077.2 MB  6.85 MB/s
+2026-10-17T07:29:47Z    openpedcan_v14: 1826.6/2077.2 MB  10.38 MB/s
+2026-10-17T07:30:17Z    openpedcan_v14: 2073.5/2077.2 MB  8.23 MB/s
+2026-10-17T07:30:47Z    openpedcan_v14: 2077.2/2077.2 MB  0.12 MB/s
+2026-10-17T07:30:50Z  DONE openpedcan_v14 snv-consensus-plus-hotspots.maf.tsv.gz bytes=2077192289 sha256=d433be682d39.. wall=304s

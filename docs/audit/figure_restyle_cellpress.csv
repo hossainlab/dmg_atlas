@@ -1,0 +1,16 @@
+figure,n_panels,panel_letters_case,titles_added,umap_panels_stripped,collisions_found,collisions_fixed,notes
+fig1_atlas,6,upper,6,3,0,0,"panels B-D are the reference UMAPs: axis box, ticks and 'UMAP 1/2' labels removed via figstyle.umap_ax; panel B's lineage legend still prints 'T_NK' rather than 'T/NK' (pre-existing, names=None at that call site; not touched)"
+fig2_mapping,4,upper,4,0,0,0,no embedding panel
+fig3_metaprograms,4,upper,4,0,1,1,panel C title overlapped its 5-entry two-column legend (3 rows) above the axes; title pad raised 18 -> 34 pt
+fig4_tme,3,upper,3,0,0,0,"panel A spans two axes (subcluster size + fraction nuclei); the companion axes carries no letter and no title, it is part of panel A"
+fig5_spatial,6,upper,6,0,1,1,"panels A-C are spatial maps, already axis-free (ax.axis('off')); panel E title overlapped its 4-entry legend (2 rows); title pad raised 16 -> 26 pt"
+fig6_multimodal,4,upper,4,0,1,1,"Phase 7 figure, dropped from the current preprint - restyled but not otherwise worked on; panel D title abutted its 2-row legend, title pad raised 18 -> 24 pt"
+figS1_malignant_calls,3,upper,3,0,2,2,"three narrow panels across the page: titles of B and C ran over the neighbouring panel letter, shortened to 'Agreement with author label' and 'Consensus-malignant fraction'"
+figS2_integration_metrics,1,"n/a (single panel, no letter)",1,0,0,0,"single-panel figure: title set directly (ax.set_title), no panel letter"
+figS3_mapping_origin,2,upper,2,0,1,1,"panel A title abutted the letter B, shortened to 'Classifier vs kNN agreement'"
+figS4_metaprogram_detail,4,upper,4,0,0,0,panel A is a frameless gene-list block; title renders above it
+figS5_masked_metaprograms,2,upper,2,0,0,0,
+figS6_tme_markers,1,"n/a (single panel, no letter)",1,0,0,0,"single-panel figure: title set directly (ax.set_title), no panel letter"
+figS7_spatial_detail,3,upper,3,0,0,0,
+figS8_bulk_survival,2,upper,2,0,0,0,"Phase 7 figure, dropped from the current preprint - restyled only; pre-audit NNLS rows (P7-07) left untouched as instructed"
+graphical_abstract,5,n/a (no panel letters),0,1,0,0,"flow diagram: panel titles deliberately not added; its UMAP already had the stripped style and now routes through figstyle.umap_ax(arrows=True, aspect=False), keeping the corner arrow pair - render unchanged"

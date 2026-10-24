@@ -1,0 +1,12 @@
+cell_mp,cell_label,nucleus_mp,nucleus_label,jaccard,jaccard_masked,shared_masked
+MP13,technical:IEG_dissociation_stress,MP12,technical:mitochondrial,0.075,0.125,GFAP;RHOB;SOX4;SOX9;ZFP36L2
+MP13,technical:IEG_dissociation_stress,MP15,published:Liu2022_TableS2a_AC-like,0.021505376344086023,0.043478260869565216,GFAP;ZFP36L1
+MP13,technical:IEG_dissociation_stress,MP14,published:Liu2022_TableS2a_AC-like,0.010638297872340425,0.022727272727272728,GFAP
+MP13,technical:IEG_dissociation_stress,MP8,curated:MES_like_markers,0.021505376344086023,0.015625,KLF6
+MP13,technical:IEG_dissociation_stress,MP3,curated:OPC_like_markers,0.0,0.0,
+MP13,technical:IEG_dissociation_stress,MP5,published:Liu2022_TableS2a_OC-like,0.0,0.0,
+MP13,technical:IEG_dissociation_stress,MP6,published:Liu2022_TableS2a_OPC-like-1,0.0,0.0,
+MP13,technical:IEG_dissociation_stress,MP7,inhouseDE:Liu2022_DE_author_states_rederived_AC-like,0.0,0.0,
+MP13,technical:IEG_dissociation_stress,MP9,novel:ADGB/CFAP43/DNAH9,0.0,0.0,
+MP13,technical:IEG_dissociation_stress,MP10,published:Liu2022_TableS2a_AC-like,0.0,0.0,
+MP13,technical:IEG_dissociation_stress,MP11,published:Liu2022_TableS2a_S,0.0,0.0,

@@ -1,0 +1,21 @@
+field,label,definition,marker_genes,source_tier
+lineage_label / scanvi_label / predicted_lineage,malignant,"H3K27M DMG tumour cell (any state: OPC-, AC-, OC-, MES-like, cycling)","CNV-defined; states: PDGFRA OLIG1 OLIG2 SOX10 CSPG4 (OPC-like), GFAP AQP4 APOE CLU (AC-like), CD44 VIM CHI3L1 ANXA1 (MES-like), MKI67 TOP2A (cycling)",tier 3 consensus (author label + own CNV + marker agreement); Phase 3
+lineage_label / scanvi_label / predicted_lineage,myeloid,microglia / macrophage / monocyte,PTPRC CSF1R CX3CR1 P2RY12 C1QA C1QB CD74,tier 3 consensus; Phase 3
+lineage_label / scanvi_label / predicted_lineage,T_NK,T and NK lymphocytes (smallest class; scANVI recall 0.47 — frequently absorbed by myeloid),CD3D CD3E CD2 NKG7,tier 3 consensus; Phase 3
+lineage_label / scanvi_label / predicted_lineage,oligodendrocyte,"mature oligodendrocyte (normal, no CNV)",MBP PLP1 MOG MAG ST18,tier 3 consensus; Phase 3
+lineage_label / scanvi_label / predicted_lineage,astrocyte,normal astrocyte (no hallmark CNV; AC-like tumour cells are 'malignant'),AQP4 GFAP,tier 3 consensus (CNV-negative astrocyte-like); Phase 3
+lineage_label / scanvi_label / predicted_lineage,neuron,neuron,RBFOX3 SYT1 SNAP25 GAD1 SLC17A7,tier 3 consensus; Phase 3
+lineage_label / scanvi_label / predicted_lineage,vascular,"endothelial cell, pericyte, vascular smooth muscle, perivascular fibroblast",CLDN5 FLT1 VWF PDGFRB RGS5,tier 3 consensus; Phase 3
+lineage_label,Unknown,"scANVI unlabelled category: consensus ambiguous / unassigned cells (91,309 in the reference); queries enter with this label",,Phase 4
+consensus_call,malignant,"tier-3 malignant: author malignant where available, else CNV-malignant with marker agreement",,Phase 3 tier 3
+consensus_call,normal,tier-3 normal,,Phase 3 tier 3
+consensus_call,ambiguous,CNV and marker calls disagree or no reference available,,Phase 3 tier 3
+consensus_call,unassigned,sample without usable CNV reference (scpca SCPCS000637),,Phase 3 tier 3
+cnv_call,malignant | normal,"tier-2 own inferCNV cluster call (hallmark events chr1q/2/7 gain, 13q/14q/10q/17p loss; score elevation). chr4q12 gain was removed from the hallmark set by audit CNV-03 and is exported only as the exploratory arm_4q12 / gene_dev_PDGFRA / gene_dev_KIT columns",,Phase 3 tier 2
+author_call,malignant | normal,"tier-1 author label mapped to malignant/normal (Jessa, Okada, Collot, Liu; immune-only for LaBelle)",,Phase 3 tier 1
+marker_call,normal | astrocyte_like | malignant_candidate,marker-score call used to pick CNV references and to arbitrate tier 3,see lineage marker sets,Phase 3
+consensus_celltype_coarse,malignant | myeloid | T_NK | oligodendrocyte | astrocyte | neuron | vascular | other | ambiguous,coarse type behind lineage_label,,Phase 3
+author_annotation (Liu 2022),"OPC-like-1/2/3, AC-like, MES-like, OC-like, S, G2M, frozen-OPC-like-b | Myeloid, Microglia, Oligodendrocyte, Endothelia, T cell | score-too-low","Liu 2022 malignant states and TME types (author vocabulary, not modified)",,author tier 1
+author_Cell_type_consensus_Jessa2022,"OPC, Proliferating OPC, Astrocytes, Oligodendrocytes, Glial progenitors, Ependymal, Neurons, RGC, Immune, Vascular, Uncertain, ...",Jessa 2022 consensus cell type (mouse-correlation based); malignant states are developmental-lineage names,,author tier 1
+author_CellClass (Braun 2023),"Radial glia, Glioblast, Neuroblast, Neuron, Neuronal IPC, Oligo, Vascular, Fibroblast, Immune, Erythrocyte, Placodes, Neural crest",first-trimester hindbrain cell classes; Radial glia / Glioblast have no normal counterpart in the tumour reference,,author (cellxgene)
+author_supercluster_term (Siletti 2023),"Oligodendrocyte, Oligodendrocyte precursor, Committed oligodendrocyte precursor, Astrocyte, Bergmann glia, Ependymal, Microglia, Vascular, Fibroblast, neuronal superclusters, Splatter, ...",adult pons superclusters; OPC has no normal counterpart in the tumour reference,,author (cellxgene)

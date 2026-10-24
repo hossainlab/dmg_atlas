@@ -1,0 +1,58 @@
+field,atlas_column,atlas_value,term_id,term_label,n_cells
+assay_ontology_term_id,chemistry,10x (version not stated),EFO:0030080,10x transcription profiling,181044
+assay_ontology_term_id,chemistry,10x 3' v3,EFO:0009922,10x 3' v3,61519
+assay_ontology_term_id,chemistry,10x Multiome (ARC) NEXT-GEM v1,EFO:0030059,10x multiome,46288
+assay_ontology_term_id,chemistry,10x 3' v2,EFO:0009899,10x 3' v2,22767
+tissue_ontology_term_id,site,pons,UBERON:0000988,pons,224022
+tissue_ontology_term_id,site,thalamus,UBERON:0001897,dorsal plus ventral thalamus,87596
+disease_ontology_term_id,k27m_status,K27-altered (series scope),MONDO:1060171,"diffuse midline glioma, H3 K27-altered",156936
+disease_ontology_term_id,k27m_status,K27M,MONDO:0957196,"diffuse midline glioma, H3 K27M-mutant",154682
+sex_ontology_term_id,sex_atlas,M,PATO:0000384,male,154876
+sex_ontology_term_id,sex_atlas,F,PATO:0000383,female,137884
+sex_ontology_term_id,sex_atlas,unknown,unknown,unknown,18858
+development_stage_ontology_term_id,age_years / age_group,9,HsapDv:0000103,9-year-old stage,47636
+development_stage_ontology_term_id,age_years / age_group,10,HsapDv:0000104,10-year-old stage,37516
+development_stage_ontology_term_id,age_years / age_group,4,HsapDv:0000098,4-year-old stage,33097
+development_stage_ontology_term_id,age_years / age_group,5,HsapDv:0000099,5-year-old stage,23618
+development_stage_ontology_term_id,age_years / age_group,11,HsapDv:0000105,11-year-old stage,19418
+development_stage_ontology_term_id,age_years / age_group,missing,HsapDv:0000258,adult stage,18858
+development_stage_ontology_term_id,age_years / age_group,12,HsapDv:0000106,12-year-old stage,18353
+development_stage_ontology_term_id,age_years / age_group,14.4,HsapDv:0000108,14-year-old stage,17323
+development_stage_ontology_term_id,age_years / age_group,0,HsapDv:0000264,pediatric stage,16635
+development_stage_ontology_term_id,age_years / age_group,16,HsapDv:0000110,16-year-old stage,14674
+development_stage_ontology_term_id,age_years / age_group,6,HsapDv:0000100,6-year-old stage,13024
+development_stage_ontology_term_id,age_years / age_group,8,HsapDv:0000102,8-year-old stage,8915
+development_stage_ontology_term_id,age_years / age_group,5.5,HsapDv:0000099,5-year-old stage,8592
+development_stage_ontology_term_id,age_years / age_group,14,HsapDv:0000108,14-year-old stage,7341
+development_stage_ontology_term_id,age_years / age_group,18,HsapDv:0000112,18-year-old stage,6921
+development_stage_ontology_term_id,age_years / age_group,7,HsapDv:0000101,7-year-old stage,6817
+development_stage_ontology_term_id,age_years / age_group,13,HsapDv:0000107,13-year-old stage,5739
+development_stage_ontology_term_id,age_years / age_group,5.4,HsapDv:0000099,5-year-old stage,2413
+development_stage_ontology_term_id,age_years / age_group,20,HsapDv:0000114,20-year-old stage,1595
+development_stage_ontology_term_id,age_years / age_group,6.1,HsapDv:0000100,6-year-old stage,1275
+development_stage_ontology_term_id,age_years / age_group,7.4,HsapDv:0000101,7-year-old stage,1019
+development_stage_ontology_term_id,age_years / age_group,3.4,HsapDv:0000097,3-year-old stage,839
+cell_type_ontology_term_id,tme_annotation | scanvi_label,malignant,CL:0001064,malignant cell,240603
+cell_type_ontology_term_id,tme_annotation | scanvi_label,mature_oligodendrocyte,CL:0000128,oligodendrocyte,12886
+cell_type_ontology_term_id,tme_annotation | scanvi_label,homeostatic_microglia,CL:0000129,microglial cell,11003
+cell_type_ontology_term_id,tme_annotation | scanvi_label,TGFBI_AOAH_macrophage,CL:0000235,macrophage,8839
+cell_type_ontology_term_id,tme_annotation | scanvi_label,astrocyte,CL:0000127,astrocyte,8206
+cell_type_ontology_term_id,tme_annotation | scanvi_label,hypoxic_glycolytic_TAM,CL:0000235,macrophage,7188
+cell_type_ontology_term_id,tme_annotation | scanvi_label,myeloid,CL:0000766,myeloid leukocyte,6113
+cell_type_ontology_term_id,tme_annotation | scanvi_label,neuron,CL:0000540,neuron,5429
+cell_type_ontology_term_id,tme_annotation | scanvi_label,oligodendrocyte,CL:0000128,oligodendrocyte,2237
+cell_type_ontology_term_id,tme_annotation | scanvi_label,endothelial_capillary,CL:0000115,endothelial cell,2162
+cell_type_ontology_term_id,tme_annotation | scanvi_label,committed_OPC,CL:0002453,oligodendrocyte precursor cell,1667
+cell_type_ontology_term_id,tme_annotation | scanvi_label,proliferating_myeloid,CL:0000766,myeloid leukocyte,1152
+cell_type_ontology_term_id,tme_annotation | scanvi_label,endothelial_tip_angiogenic,CL:0000115,endothelial cell,922
+cell_type_ontology_term_id,tme_annotation | scanvi_label,pericyte,CL:0000669,pericyte,783
+cell_type_ontology_term_id,tme_annotation | scanvi_label,ribosomal_residue_myeloid,CL:0000766,myeloid leukocyte,585
+cell_type_ontology_term_id,tme_annotation | scanvi_label,endothelial_neural_mixed,CL:0000115,endothelial cell,388
+cell_type_ontology_term_id,tme_annotation | scanvi_label,vascular,unknown,unknown,348
+cell_type_ontology_term_id,tme_annotation | scanvi_label,THEMIS_CAMK4_T,CL:0000084,T cell,258
+cell_type_ontology_term_id,tme_annotation | scanvi_label,interferon_TAM,CL:0000235,macrophage,245
+cell_type_ontology_term_id,tme_annotation | scanvi_label,CD4_T,CL:0000624,"CD4-positive, alpha-beta T cell",211
+cell_type_ontology_term_id,tme_annotation | scanvi_label,NK,CL:0000623,natural killer cell,179
+cell_type_ontology_term_id,tme_annotation | scanvi_label,CD8_T,CL:0000625,"CD8-positive, alpha-beta T cell",99
+cell_type_ontology_term_id,tme_annotation | scanvi_label,T_NK,CL:0000542,lymphocyte,70
+cell_type_ontology_term_id,tme_annotation | scanvi_label,IL7R_KLRB1_T,CL:0000084,T cell,45

@@ -1,0 +1,14 @@
+,astrocyte,mal:AC_like,mal:MES_like,mal:OC_like,mal:OPC_like,mal:cycling,mal:hypoxia,mal:novel_MP9,mal:unassigned,myeloid,neuron,oligodendrocyte,vascular
+astrocyte,5,4,4,4,5,3,4,5,2,5,1,5,1
+mal:AC_like,4,8,8,8,8,7,8,8,6,4,0,4,1
+mal:MES_like,4,8,9,9,9,8,9,9,6,5,1,5,1
+mal:OC_like,4,8,9,9,9,8,9,9,6,5,1,5,1
+mal:OPC_like,5,8,9,9,10,8,9,10,6,6,2,6,1
+mal:cycling,3,7,8,8,8,8,8,8,6,4,1,4,1
+mal:hypoxia,4,8,9,9,9,8,9,9,6,5,1,5,1
+mal:novel_MP9,5,8,9,9,10,8,9,10,6,6,2,6,1
+mal:unassigned,2,6,6,6,6,6,6,6,6,2,0,2,1
+myeloid,5,4,5,5,6,4,5,6,2,6,2,6,1
+neuron,1,0,1,1,2,1,1,2,0,2,2,2,0
+oligodendrocyte,5,4,5,5,6,4,5,6,2,6,2,6,1
+vascular,1,1,1,1,1,1,1,1,1,1,0,1,1

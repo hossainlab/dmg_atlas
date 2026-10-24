@@ -1,0 +1,269 @@
+study,reason,pattern,author_state,n_cells,n_author_malignant,n_author_normal,n_eventtrust_malignant
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OPC_like,974,974,0,964
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Immune,542,0,542,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Immune,452,0,452,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,MES_like,356,356,0,341
+collot,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Immune,222,0,222,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Macroglia,220,0,220,0
+collot,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Macroglia,156,0,156,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Vascular,124,0,124,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,MES_like,98,98,0,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,AC_like,94,94,0,94
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OC_like,81,81,0,81
+collot,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,AC_like,54,54,0,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Macroglia,47,0,47,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OPC_like,43,43,0,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,MES_like,34,34,0,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,MES_like,27,27,0,0
+collot,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Vascular,20,0,20,0
+collot,author_vs_cnv_disagree,cnv=normal|marker=normal,MES_like,19,19,0,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Macroglia,19,0,19,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OPC_like,16,16,0,0
+collot,author_vs_cnv_disagree,cnv=normal|marker=normal,OPC_like,14,14,0,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Neuronal,13,0,13,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,AC_like,13,13,0,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Vascular,12,0,12,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,OPC_like,8,8,0,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,AC_like,7,7,0,0
+collot,author_vs_cnv_disagree,cnv=normal|marker=normal,OC_like,3,3,0,0
+collot,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Neuronal,2,0,2,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Immune,2,0,2,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Vascular,2,0,2,0
+collot,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Neuronal,1,0,1,0
+collot,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Neuronal,1,0,1,0
+desisto,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,no_author_label,57,0,0,0
+desisto,marker_vs_cnv_disagree,cnv=malignant|marker=normal,no_author_label,50,0,0,41
+desisto,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,no_author_label,1,0,0,0
+filbin,marker_vs_cnv_disagree,cnv=malignant|marker=normal,no_author_label,591,0,0,590
+filbin,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,no_author_label,76,0,0,0
+filbin,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,no_author_label,26,0,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Oligodendrocytes,2354,2229,125,2227
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Uncertain,1896,1540,356,1504
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OPC,1834,1767,67,1750
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Immune,642,2,640,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Uncertain,372,119,253,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Neurons,335,190,145,183
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Uncertain,302,173,129,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OPC,279,163,116,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Immune,221,16,205,15
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Uncertain,185,185,0,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Uncertain,168,0,168,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Astrocytes,156,156,0,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,OPC,110,0,110,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OPC,109,109,0,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Immune,93,0,93,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,OPC,93,33,60,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,OPC,86,86,0,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Uncertain,85,85,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Neurons,67,10,57,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Astrocytes,64,18,46,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Oligodendrocytes,59,59,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Vascular & other,59,9,50,9
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Astrocytes,48,8,40,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Immune,47,2,45,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Neurons,42,8,34,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Vascular & other,31,3,28,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Astrocytes,26,24,2,21
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Oligodendrocytes,23,11,12,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Immune,22,22,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Neurons,22,22,0,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Neurons,18,0,18,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Vascular & other,16,0,16,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Neurons,16,16,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Oligodendrocytes,14,1,13,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Proliferating OPC,13,13,0,11
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Immune,12,12,0,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Vascular & other,11,11,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Vascular & other,10,1,9,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Astrocytes,8,0,8,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Glial progenitors,7,5,2,5
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Oligodendrocytes,5,0,5,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Neuronal progenitors,5,5,0,5
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Oligodendrocytes,5,5,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Neuronal progenitors,5,0,5,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Proliferating OPC,5,5,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Glial progenitors,4,3,1,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Proliferating OPC,3,3,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Vascular & other,3,3,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Glial progenitors,2,0,2,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Ependymal,2,1,1,1
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Glial progenitors,1,0,1,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Proliferating OPC,1,0,1,0
+jessa_multiome,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,RGC,1,0,1,0
+jessa_multiome,author_vs_cnv_disagree,cnv=normal|marker=normal,Astrocytes,1,1,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Ependymal,1,0,1,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=malignant|marker=normal,RGC,1,1,0,1
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Ependymal,1,1,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Glial progenitors,1,1,0,0
+jessa_multiome,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,RGC,1,0,1,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Oligodendrocytes,3887,3869,18,3415
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OPC,3343,3323,20,2387
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Uncertain,2930,2744,186,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Astrocytes,2337,2310,27,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Uncertain,2219,2072,147,1564
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,OPC,1630,1611,19,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Uncertain,1292,1292,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Immune,1139,47,1092,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Astrocytes,1022,1022,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OPC,862,708,154,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Uncertain,789,702,87,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OPC,511,511,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Immune,437,129,308,125
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Uncertain,316,316,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Oligodendrocytes,313,313,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,OPC,228,228,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Immune,193,193,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Immune,128,2,126,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Astrocytes,119,115,4,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Vascular & other,114,20,94,8
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Uncertain,97,0,97,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Neurons,86,75,11,38
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Ependymal,75,75,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Oligodendrocytes,73,73,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Ependymal,72,65,7,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Astrocytes,60,54,6,33
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Immune,58,0,58,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Oligodendrocytes,56,54,2,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Neurons,53,51,2,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Neurons,50,48,2,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Proliferating OPC,47,47,0,39
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Vascular & other,46,46,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Immune,43,43,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,OPC,38,0,38,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Neurons,38,38,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Vascular & other,37,25,12,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Oligodendrocytes,33,32,1,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Neurons,27,27,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Glial progenitors,25,23,2,21
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Glial progenitors,23,21,2,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Glial progenitors,22,19,3,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Ependymal,20,14,6,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Astrocytes,18,18,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Vascular & other,17,6,11,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Glial progenitors,15,15,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Proliferating OPC,14,14,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Vascular & other,12,12,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Ependymal,11,10,1,9
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Proliferating OPC,7,7,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Astrocytes,6,0,6,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Proliferating OPC,5,5,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,RGC,5,5,0,3
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Vascular & other,4,0,4,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,RGC,4,4,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Proliferating OPC,3,3,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Glial progenitors,2,0,2,0
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Neurons,2,0,2,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Neuronal progenitors,2,2,0,1
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,RGC,2,2,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Oligodendrocytes,1,0,1,0
+jessa_scrna,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,RGC,1,0,1,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Ependymal,1,1,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Glial progenitors,1,1,0,0
+jessa_scrna,author_vs_cnv_disagree,cnv=normal|marker=normal,Neuronal progenitors,1,1,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,RGC,1,1,0,0
+jessa_scrna,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Neuronal progenitors,1,1,0,0
+labelle,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,no_author_label,462,0,0,0
+labelle,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Tcell,379,0,379,0
+labelle,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Myeloid,329,0,329,0
+labelle,marker_vs_cnv_disagree,cnv=malignant|marker=normal,no_author_label,147,0,0,147
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,no_author_label,797,0,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,no_author_label,691,0,0,645
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OPC-like-2,377,377,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,AC-like,321,321,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OPC-like-1,247,247,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OC-like,143,143,0,132
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,AC-like,112,112,0,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,OC-like,104,104,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OPC-like-1,98,98,0,95
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,no_author_label,78,0,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,MES-like,73,73,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,MES-like,69,69,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,S,62,62,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Myeloid,58,0,58,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,MES-like,54,54,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,MES-like,44,44,0,39
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,G2M,44,44,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OPC-like-2,41,41,0,38
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OPC-like-1,41,41,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OPC-like-3,41,41,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Myeloid,40,0,40,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,S,40,40,0,40
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,OPC-like-3,37,37,0,35
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OPC-like-3,35,35,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,OPC-like-3,31,31,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,OC-like,31,31,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Myeloid,29,0,29,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,frozen-OPC-like-b,29,29,0,25
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,OPC-like-1,27,27,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,frozen-OPC-like-b,27,27,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Oligodendrocyte,26,0,26,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OPC-like-2,25,25,0,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,OPC-like-2,24,24,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Endothelia,24,0,24,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,AC-like,22,22,0,21
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,G2M,19,19,0,18
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,OC-like,19,19,0,0
+liu,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Myeloid,16,0,16,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Microglia,16,0,16,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,OPC-like-1,14,14,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,score-too-low,14,0,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,S,14,14,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,frozen-OPC-like-b,14,14,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,T cell,12,0,12,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,AC-like,11,11,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Endothelia,10,0,10,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,G2M,10,10,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,frozen-OPC-like-b,8,8,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=normal,score-too-low,8,0,0,4
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,score-too-low,8,0,0,0
+liu,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Oligodendrocyte,7,0,7,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Endothelia,7,0,7,0
+liu,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Endothelia,4,0,4,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,MES-like,4,4,0,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,OPC-like-3,4,4,0,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,S,4,4,0,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,frozen-OPC-like-b,4,4,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,G2M,4,4,0,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Oligodendrocyte,4,0,4,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,S,4,4,0,0
+liu,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Microglia,3,0,3,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,T cell,3,0,3,0
+liu,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,OC-like,2,2,0,0
+liu,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,T cell,1,0,1,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,AC-like,1,1,0,0
+liu,author_vs_cnv_disagree,cnv=normal|marker=normal,G2M,1,1,0,0
+liu,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Oligodendrocyte,1,0,1,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Tumor,16527,16527,0,12234
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Tumor,7274,7274,0,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Tumor,6297,6297,0,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=astrocyte_like,Tumor,4417,4417,0,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Monocytic,2856,0,2856,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Monocytic,2699,0,2699,0
+okada,author_vs_cnv_disagree,cnv=normal|marker=normal,Tumor,2387,2387,0,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Astrocytes,1738,0,1738,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Oligodendrocytes,1579,0,1579,0
+okada,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Monocytic,1480,0,1480,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Monocytic,861,0,861,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Endothelial-cells,805,0,805,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Neuron,528,0,528,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Astrocytes,424,0,424,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Neuron,348,0,348,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Oligodendrocytes,248,0,248,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,T-cells,243,0,243,0
+okada,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Astrocytes,211,0,211,0
+okada,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Neuron,211,0,211,0
+okada,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,Endothelial-cells,204,0,204,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,T-cells,195,0,195,0
+okada,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Endothelial-cells,151,0,151,0
+okada,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,T-cells,147,0,147,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Neuron,107,0,107,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Endothelial-cells,105,0,105,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,T-cells,94,0,94,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=astrocyte_like,Oligodendrocytes,55,0,55,0
+okada,author_vs_cnv_disagree,cnv=malignant|marker=malignant_candidate,Oligodendrocytes,48,0,48,0
+okada,marker_vs_cnv_disagree,cnv=malignant|marker=normal,Astrocytes,39,0,39,0
+scpca,cnv_unassigned,cnv=unassigned|marker=malignant_candidate,no_author_label,285,0,0,0
+scpca,cnv_unassigned,cnv=unassigned|marker=normal,no_author_label,92,0,0,0
+scpca,cnv_unassigned,cnv=unassigned|marker=astrocyte_like,no_author_label,64,0,0,0
+zang,marker_vs_cnv_disagree,cnv=malignant|marker=normal,no_author_label,1504,0,0,1504
+zang,marker_vs_cnv_disagree,cnv=normal|marker=malignant_candidate,no_author_label,26,0,0,0

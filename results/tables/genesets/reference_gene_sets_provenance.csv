@@ -1,0 +1,4 @@
+source,doi,url,local_path,bytes,sha256,sheet,status,unmapped_symbols
+Liu2022_NatGenet_TableS2a,10.1038/s41588-022-01236-3,https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-022-01236-3/MediaObjects/41588_2022_1236_MOESM3_ESM.xlsx,data/raw/liu/supp/41588_2022_1236_MOESM3_ESM.xlsx,1217975.0,ab4146ed384bff7e07330e65a11fa539672f4dc838e81bd3d7920a5323192554,table_S2a,present,"{""S"": [""MLF1IP""], ""G2M"": [""MLF1IP""], ""OPC-like-3"": [""SNORD3A""], ""OPC-like-1"": [""LINC00643""]}"
+Filbin2018_Science,10.1126/science.aao4750,https://www.science.org/doi/suppl/10.1126/science.aao4750/suppl_file/aao4750_tables1.xlsx,data/raw/filbin/supp/aao4750_tables1.xlsx,,,,HTTP 403 (challenge page),
+Filbin2018_Science,10.1126/science.aao4750,https://pmc.ncbi.nlm.nih.gov/articles/instance/5949869/bin/NIHMS962385-supplement-S3.xlsx,data/raw/filbin/supp/NIHMS962385-supplement-S3.xlsx,,,,"HTTP 200 but HTML challenge page, not the file",

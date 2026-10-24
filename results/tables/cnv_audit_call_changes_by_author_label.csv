@@ -1,0 +1,139 @@
+study,old_cons,new_cons,author_state,n_cells
+collot,ambiguous,normal,Macroglia,153
+collot,normal,ambiguous,Immune,121
+collot,ambiguous,malignant,MES_like,75
+collot,ambiguous,normal,Immune,63
+collot,malignant,ambiguous,MES_like,56
+collot,ambiguous,malignant,OPC_like,44
+collot,normal,ambiguous,Macroglia,33
+collot,malignant,ambiguous,OPC_like,29
+collot,ambiguous,malignant,AC_like,19
+collot,malignant,ambiguous,AC_like,16
+collot,normal,ambiguous,Vascular,14
+collot,ambiguous,normal,Vascular,10
+collot,ambiguous,malignant,OC_like,1
+collot,ambiguous,normal,Neuronal,1
+filbin,malignant,ambiguous,no_author_label,91
+filbin,ambiguous,normal,no_author_label,36
+filbin,malignant,normal,no_author_label,9
+jessa_multiome,ambiguous,malignant,Uncertain,195
+jessa_multiome,ambiguous,normal,Immune,159
+jessa_multiome,malignant,ambiguous,Uncertain,158
+jessa_multiome,ambiguous,malignant,OPC,145
+jessa_multiome,ambiguous,normal,Oligodendrocytes,117
+jessa_multiome,ambiguous,normal,Neurons,107
+jessa_multiome,malignant,ambiguous,OPC,106
+jessa_multiome,ambiguous,normal,Uncertain,75
+jessa_multiome,malignant,ambiguous,Astrocytes,70
+jessa_multiome,normal,ambiguous,Neurons,47
+jessa_multiome,normal,ambiguous,Immune,38
+jessa_multiome,ambiguous,malignant,Astrocytes,36
+jessa_multiome,ambiguous,malignant,Oligodendrocytes,31
+jessa_multiome,normal,ambiguous,Uncertain,25
+jessa_multiome,normal,ambiguous,Oligodendrocytes,18
+jessa_multiome,ambiguous,normal,Vascular & other,17
+jessa_multiome,ambiguous,normal,OPC,9
+jessa_multiome,ambiguous,malignant,Neurons,7
+jessa_multiome,malignant,ambiguous,Neurons,7
+jessa_multiome,ambiguous,normal,Astrocytes,6
+jessa_multiome,normal,ambiguous,Astrocytes,5
+jessa_multiome,malignant,ambiguous,Oligodendrocytes,4
+jessa_multiome,normal,ambiguous,OPC,4
+jessa_multiome,ambiguous,malignant,Proliferating OPC,3
+jessa_multiome,malignant,ambiguous,Proliferating OPC,3
+jessa_multiome,normal,ambiguous,Vascular & other,3
+jessa_multiome,ambiguous,malignant,Immune,2
+jessa_multiome,ambiguous,malignant,Vascular & other,2
+jessa_multiome,malignant,ambiguous,Immune,2
+jessa_multiome,malignant,ambiguous,Vascular & other,2
+jessa_multiome,ambiguous,malignant,RGC,1
+jessa_multiome,ambiguous,normal,Glial progenitors,1
+jessa_multiome,ambiguous,normal,Neuronal progenitors,1
+jessa_scrna,malignant,ambiguous,Uncertain,1801
+jessa_scrna,malignant,ambiguous,OPC,1296
+jessa_scrna,malignant,ambiguous,Astrocytes,874
+jessa_scrna,ambiguous,malignant,Uncertain,463
+jessa_scrna,ambiguous,malignant,Astrocytes,401
+jessa_scrna,ambiguous,normal,Immune,369
+jessa_scrna,ambiguous,malignant,OPC,338
+jessa_scrna,normal,ambiguous,Immune,115
+jessa_scrna,ambiguous,normal,Uncertain,52
+jessa_scrna,malignant,ambiguous,Ependymal,40
+jessa_scrna,malignant,ambiguous,Oligodendrocytes,37
+jessa_scrna,normal,ambiguous,Uncertain,36
+jessa_scrna,ambiguous,malignant,Ependymal,35
+jessa_scrna,malignant,ambiguous,Neurons,30
+jessa_scrna,ambiguous,malignant,Oligodendrocytes,29
+jessa_scrna,normal,ambiguous,Vascular & other,26
+jessa_scrna,ambiguous,normal,Vascular & other,25
+jessa_scrna,ambiguous,normal,OPC,24
+jessa_scrna,malignant,ambiguous,Immune,22
+jessa_scrna,malignant,ambiguous,Glial progenitors,20
+jessa_scrna,ambiguous,malignant,Neurons,19
+jessa_scrna,ambiguous,normal,Oligodendrocytes,17
+jessa_scrna,malignant,ambiguous,Vascular & other,10
+jessa_scrna,ambiguous,malignant,Glial progenitors,9
+jessa_scrna,ambiguous,malignant,Immune,9
+jessa_scrna,malignant,ambiguous,Proliferating OPC,8
+jessa_scrna,normal,ambiguous,Astrocytes,8
+jessa_scrna,ambiguous,normal,Astrocytes,6
+jessa_scrna,normal,ambiguous,Oligodendrocytes,6
+jessa_scrna,ambiguous,malignant,Proliferating OPC,3
+jessa_scrna,normal,ambiguous,OPC,3
+jessa_scrna,malignant,ambiguous,RGC,2
+jessa_scrna,normal,ambiguous,Ependymal,2
+jessa_scrna,ambiguous,malignant,RGC,1
+jessa_scrna,ambiguous,malignant,Vascular & other,1
+jessa_scrna,ambiguous,normal,Glial progenitors,1
+labelle,ambiguous,normal,Myeloid,358
+labelle,malignant,ambiguous,no_author_label,72
+labelle,ambiguous,normal,Tcell,63
+labelle,ambiguous,normal,no_author_label,27
+labelle,malignant,normal,no_author_label,3
+liu,malignant,ambiguous,no_author_label,106
+liu,malignant,ambiguous,OPC-like-1,70
+liu,malignant,ambiguous,AC-like,69
+liu,ambiguous,normal,no_author_label,61
+liu,malignant,normal,no_author_label,54
+liu,ambiguous,malignant,OPC-like-1,42
+liu,ambiguous,malignant,no_author_label,42
+liu,ambiguous,malignant,OPC-like-2,32
+liu,ambiguous,malignant,AC-like,28
+liu,ambiguous,normal,Myeloid,26
+liu,normal,ambiguous,no_author_label,26
+liu,malignant,ambiguous,MES-like,18
+liu,malignant,ambiguous,OPC-like-3,18
+liu,normal,malignant,no_author_label,17
+liu,malignant,ambiguous,G2M,15
+liu,ambiguous,malignant,OPC-like-3,14
+liu,malignant,ambiguous,frozen-OPC-like-b,14
+liu,ambiguous,malignant,MES-like,13
+liu,malignant,ambiguous,OC-like,11
+liu,malignant,ambiguous,S,10
+liu,malignant,normal,score-too-low,9
+liu,ambiguous,malignant,S,8
+liu,malignant,ambiguous,OPC-like-2,8
+liu,ambiguous,malignant,OC-like,5
+liu,ambiguous,malignant,frozen-OPC-like-b,5
+liu,normal,ambiguous,Myeloid,4
+liu,ambiguous,malignant,score-too-low,3
+liu,ambiguous,normal,Oligodendrocyte,3
+liu,malignant,ambiguous,score-too-low,2
+liu,normal,ambiguous,score-too-low,2
+liu,normal,malignant,score-too-low,2
+liu,ambiguous,malignant,G2M,1
+liu,normal,ambiguous,Endothelia,1
+okada,ambiguous,malignant,Tumor,8884
+okada,malignant,ambiguous,Tumor,4809
+okada,normal,ambiguous,Monocytic,954
+okada,normal,ambiguous,Oligodendrocytes,804
+okada,ambiguous,normal,Monocytic,741
+okada,ambiguous,normal,Oligodendrocytes,378
+okada,normal,ambiguous,Astrocytes,342
+okada,ambiguous,normal,Astrocytes,254
+okada,ambiguous,normal,Endothelial-cells,207
+okada,normal,ambiguous,Neuron,163
+okada,ambiguous,normal,Neuron,146
+okada,normal,ambiguous,Endothelial-cells,124
+okada,normal,ambiguous,T-cells,68
+okada,ambiguous,normal,T-cells,56

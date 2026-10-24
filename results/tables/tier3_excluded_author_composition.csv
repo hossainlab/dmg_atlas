@@ -1,0 +1,275 @@
+study,author_state,author_call,cnv_call,marker_call,n_cells,frac_of_labelled_in_study
+collot,AC_like,malignant,malignant,astrocyte_like,1610,0.09070422535211267
+collot,OPC_like,malignant,malignant,astrocyte_like,1516,0.08540845070422536
+collot,MES_like,malignant,malignant,astrocyte_like,1136,0.064
+collot,OPC_like,malignant,malignant,normal,974,0.05487323943661972
+collot,Immune,normal,malignant,normal,542,0.030535211267605635
+collot,Immune,normal,normal,malignant_candidate,452,0.025464788732394366
+collot,MES_like,malignant,malignant,normal,356,0.020056338028169016
+collot,Macroglia,normal,malignant,normal,220,0.012394366197183098
+collot,Vascular,normal,malignant,normal,124,0.006985915492957746
+collot,MES_like,malignant,normal,malignant_candidate,98,0.00552112676056338
+collot,AC_like,malignant,malignant,normal,94,0.005295774647887324
+collot,OC_like,malignant,malignant,normal,81,0.0045633802816901405
+collot,AC_like,malignant,normal,astrocyte_like,54,0.0030422535211267606
+collot,Macroglia,normal,malignant,astrocyte_like,47,0.002647887323943662
+collot,OPC_like,malignant,normal,malignant_candidate,43,0.002422535211267606
+collot,Macroglia,normal,normal,astrocyte_like,42,0.0023661971830985914
+collot,MES_like,malignant,normal,astrocyte_like,34,0.0019154929577464789
+collot,Macroglia,normal,normal,malignant_candidate,19,0.0010704225352112676
+collot,OPC_like,malignant,normal,astrocyte_like,16,0.0009014084507042254
+collot,AC_like,malignant,normal,malignant_candidate,13,0.0007323943661971831
+collot,Neuronal,normal,malignant,normal,13,0.0007323943661971831
+collot,Vascular,normal,normal,malignant_candidate,12,0.000676056338028169
+collot,OC_like,malignant,malignant,astrocyte_like,11,0.0006197183098591549
+collot,Vascular,normal,normal,astrocyte_like,3,0.00016901408450704225
+collot,Immune,normal,malignant,astrocyte_like,2,0.00011267605633802817
+collot,Vascular,normal,malignant,astrocyte_like,2,0.00011267605633802817
+collot,Neuronal,normal,malignant,astrocyte_like,1,5.6338028169014086e-05
+collot,Neuronal,normal,normal,malignant_candidate,1,5.6338028169014086e-05
+jessa_multiome,OPC,malignant,malignant,astrocyte_like,5627,0.12070444892530782
+jessa_multiome,Uncertain,malignant,malignant,astrocyte_like,5036,0.10802694238277061
+jessa_multiome,Oligodendrocytes,malignant,malignant,normal,2229,0.04781414904114291
+jessa_multiome,OPC,malignant,malignant,normal,1767,0.03790381397743361
+jessa_multiome,Astrocytes,malignant,malignant,astrocyte_like,1749,0.03751769702689948
+jessa_multiome,Uncertain,malignant,malignant,normal,1540,0.03303445021236432
+jessa_multiome,Immune,normal,normal,malignant_candidate,640,0.0137286026856579
+jessa_multiome,Astrocytes,normal,normal,astrocyte_like,577,0.01237719335878845
+jessa_multiome,Uncertain,normal,malignant,normal,356,0.007636535243897207
+jessa_multiome,Immune,normal,normal,astrocyte_like,313,0.006714144750954567
+jessa_multiome,Uncertain,normal,malignant,astrocyte_like,253,0.005427088249174139
+jessa_multiome,Immune,normal,malignant,normal,205,0.004397443047749796
+jessa_multiome,Neurons,malignant,malignant,normal,190,0.004075678922304689
+jessa_multiome,Uncertain,malignant,normal,astrocyte_like,185,0.003968424213822987
+jessa_multiome,Uncertain,malignant,normal,malignant_candidate,173,0.003711012913466901
+jessa_multiome,OPC,malignant,normal,malignant_candidate,163,0.0034965034965034965
+jessa_multiome,Astrocytes,malignant,normal,astrocyte_like,156,0.0033463469046291134
+jessa_multiome,Neurons,normal,malignant,normal,145,0.003110386545969368
+jessa_multiome,Uncertain,normal,normal,astrocyte_like,144,0.0030889356042730276
+jessa_multiome,Oligodendrocytes,malignant,malignant,astrocyte_like,135,0.0028958771290059633
+jessa_multiome,Uncertain,normal,normal,malignant_candidate,129,0.0027671714788279206
+jessa_multiome,Oligodendrocytes,normal,malignant,normal,125,0.0026813677120425586
+jessa_multiome,OPC,normal,normal,malignant_candidate,116,0.0024883092367754944
+jessa_multiome,OPC,malignant,normal,astrocyte_like,109,0.0023381526449011113
+jessa_multiome,Neurons,malignant,malignant,astrocyte_like,106,0.0022737998198120897
+jessa_multiome,OPC,normal,malignant,normal,67,0.0014372130936548115
+jessa_multiome,Neurons,normal,normal,astrocyte_like,60,0.0012870565017804282
+jessa_multiome,OPC,normal,malignant,astrocyte_like,60,0.0012870565017804282
+jessa_multiome,Neurons,normal,malignant,astrocyte_like,57,0.0012227036766914068
+jessa_multiome,Ependymal,malignant,malignant,astrocyte_like,56,0.0012012527349950662
+jessa_multiome,Vascular & other,normal,malignant,normal,50,0.0010725470848170235
+jessa_multiome,Astrocytes,normal,normal,malignant_candidate,46,0.0009867433180316615
+jessa_multiome,Immune,normal,malignant,astrocyte_like,45,0.0009652923763353212
+jessa_multiome,Astrocytes,normal,malignant,astrocyte_like,40,0.0008580376678536187
+jessa_multiome,Neurons,normal,normal,malignant_candidate,34,0.0007293320176755759
+jessa_multiome,Oligodendrocytes,normal,normal,astrocyte_like,34,0.0007293320176755759
+jessa_multiome,Vascular & other,normal,normal,malignant_candidate,28,0.0006006263674975331
+jessa_multiome,Glial progenitors,malignant,malignant,astrocyte_like,27,0.0005791754258011927
+jessa_multiome,OPC,normal,normal,astrocyte_like,27,0.0005791754258011927
+jessa_multiome,Astrocytes,malignant,malignant,normal,24,0.0005148226007121713
+jessa_multiome,Neurons,malignant,normal,astrocyte_like,22,0.00047192071731949034
+jessa_multiome,Astrocytes,malignant,normal,malignant_candidate,18,0.00038611695053412845
+jessa_multiome,Immune,malignant,malignant,normal,16,0.0003432150671414475
+jessa_multiome,Oligodendrocytes,normal,malignant,astrocyte_like,13,0.0002788622420524261
+jessa_multiome,Proliferating OPC,malignant,malignant,normal,13,0.0002788622420524261
+jessa_multiome,Vascular & other,normal,normal,astrocyte_like,13,0.0002788622420524261
+jessa_multiome,Immune,malignant,normal,astrocyte_like,12,0.00025741130035608563
+jessa_multiome,Oligodendrocytes,normal,normal,malignant_candidate,12,0.00025741130035608563
+jessa_multiome,Oligodendrocytes,malignant,normal,malignant_candidate,11,0.00023596035865974517
+jessa_multiome,Vascular & other,malignant,malignant,normal,9,0.00019305847526706422
+jessa_multiome,Vascular & other,normal,malignant,astrocyte_like,9,0.00019305847526706422
+jessa_multiome,Neurons,malignant,normal,malignant_candidate,8,0.00017160753357072376
+jessa_multiome,Proliferating OPC,malignant,malignant,astrocyte_like,8,0.00017160753357072376
+jessa_multiome,Vascular & other,malignant,malignant,astrocyte_like,8,0.00017160753357072376
+jessa_multiome,Glial progenitors,malignant,malignant,normal,5,0.00010725470848170234
+jessa_multiome,Neuronal progenitors,malignant,malignant,normal,5,0.00010725470848170234
+jessa_multiome,Neuronal progenitors,normal,normal,malignant_candidate,5,0.00010725470848170234
+jessa_multiome,Oligodendrocytes,malignant,normal,astrocyte_like,5,0.00010725470848170234
+jessa_multiome,Proliferating OPC,malignant,normal,malignant_candidate,5,0.00010725470848170234
+jessa_multiome,Immune,malignant,malignant,astrocyte_like,4,8.580376678536188e-05
+jessa_multiome,RGC,malignant,malignant,astrocyte_like,4,8.580376678536188e-05
+jessa_multiome,Glial progenitors,malignant,normal,malignant_candidate,3,6.435282508902141e-05
+jessa_multiome,Neuronal progenitors,malignant,malignant,astrocyte_like,3,6.435282508902141e-05
+jessa_multiome,Vascular & other,malignant,normal,astrocyte_like,3,6.435282508902141e-05
+jessa_multiome,Vascular & other,malignant,normal,malignant_candidate,3,6.435282508902141e-05
+jessa_multiome,Astrocytes,normal,malignant,normal,2,4.290188339268094e-05
+jessa_multiome,Glial progenitors,normal,malignant,astrocyte_like,2,4.290188339268094e-05
+jessa_multiome,Glial progenitors,normal,malignant,normal,2,4.290188339268094e-05
+jessa_multiome,Immune,malignant,normal,malignant_candidate,2,4.290188339268094e-05
+jessa_multiome,Ependymal,malignant,malignant,normal,1,2.145094169634047e-05
+jessa_multiome,Ependymal,malignant,normal,astrocyte_like,1,2.145094169634047e-05
+jessa_multiome,Ependymal,normal,malignant,astrocyte_like,1,2.145094169634047e-05
+jessa_multiome,Ependymal,normal,malignant,normal,1,2.145094169634047e-05
+jessa_multiome,Ependymal,normal,normal,astrocyte_like,1,2.145094169634047e-05
+jessa_multiome,Glial progenitors,malignant,normal,astrocyte_like,1,2.145094169634047e-05
+jessa_multiome,Glial progenitors,normal,normal,astrocyte_like,1,2.145094169634047e-05
+jessa_multiome,Glial progenitors,normal,normal,malignant_candidate,1,2.145094169634047e-05
+jessa_multiome,RGC,malignant,malignant,normal,1,2.145094169634047e-05
+jessa_multiome,RGC,normal,normal,malignant_candidate,1,2.145094169634047e-05
+jessa_scrna,Uncertain,malignant,malignant,astrocyte_like,9455,0.11230016390716678
+jessa_scrna,Astrocytes,malignant,malignant,astrocyte_like,6318,0.07504097679169537
+jessa_scrna,OPC,malignant,malignant,astrocyte_like,5192,0.06166710216880063
+jessa_scrna,Oligodendrocytes,malignant,malignant,normal,3869,0.045953393353445615
+jessa_scrna,OPC,malignant,malignant,normal,3323,0.039468370667743544
+jessa_scrna,Uncertain,malignant,malignant,normal,2072,0.02460982967907452
+jessa_scrna,Ependymal,malignant,malignant,astrocyte_like,1410,0.016747036605933914
+jessa_scrna,Uncertain,malignant,normal,astrocyte_like,1292,0.015345511556642991
+jessa_scrna,Immune,normal,normal,malignant_candidate,1092,0.012970045371404138
+jessa_scrna,Astrocytes,malignant,normal,astrocyte_like,1022,0.01213863220657054
+jessa_scrna,OPC,malignant,normal,malignant_candidate,708,0.00840915029574554
+jessa_scrna,Uncertain,malignant,normal,malignant_candidate,702,0.008337886310188374
+jessa_scrna,OPC,malignant,normal,astrocyte_like,511,0.00606931610328527
+jessa_scrna,Glial progenitors,malignant,malignant,astrocyte_like,419,0.004976601658075397
+jessa_scrna,Oligodendrocytes,malignant,malignant,astrocyte_like,374,0.004442121766396656
+jessa_scrna,Immune,normal,normal,astrocyte_like,337,0.004002660522127468
+jessa_scrna,Immune,normal,malignant,normal,308,0.0036582179252678338
+jessa_scrna,Uncertain,normal,malignant,astrocyte_like,186,0.0022091835522721334
+jessa_scrna,Uncertain,normal,normal,astrocyte_like,185,0.002197306221345939
+jessa_scrna,Astrocytes,normal,normal,astrocyte_like,154,0.0018291089626339169
+jessa_scrna,OPC,normal,normal,malignant_candidate,154,0.0018291089626339169
+jessa_scrna,Uncertain,normal,malignant,normal,147,0.001745967646150557
+jessa_scrna,Immune,malignant,malignant,normal,129,0.0015321756894790602
+jessa_scrna,Immune,normal,malignant,astrocyte_like,126,0.0014965436967004774
+jessa_scrna,Astrocytes,malignant,normal,malignant_candidate,115,0.0013658930565123406
+jessa_scrna,Vascular & other,normal,malignant,normal,94,0.0011164691070622609
+jessa_scrna,Uncertain,normal,normal,malignant_candidate,87,0.001033327790578901
+jessa_scrna,Neurons,malignant,malignant,astrocyte_like,78,0.0009264318122431527
+jessa_scrna,Ependymal,malignant,normal,astrocyte_like,75,0.0008907998194645699
+jessa_scrna,Neurons,malignant,malignant,normal,75,0.0008907998194645699
+jessa_scrna,Oligodendrocytes,malignant,normal,astrocyte_like,73,0.0008670451576121814
+jessa_scrna,Astrocytes,malignant,malignant,normal,54,0.0006413758700144904
+jessa_scrna,Oligodendrocytes,malignant,normal,malignant_candidate,54,0.0006413758700144904
+jessa_scrna,Immune,malignant,malignant,astrocyte_like,51,0.0006057438772359076
+jessa_scrna,Neurons,malignant,normal,malignant_candidate,48,0.0005701118844573248
+jessa_scrna,Immune,malignant,normal,malignant_candidate,47,0.0005582345535311304
+jessa_scrna,Proliferating OPC,malignant,malignant,normal,47,0.0005582345535311304
+jessa_scrna,Immune,malignant,normal,astrocyte_like,43,0.0005107252298263534
+jessa_scrna,Neurons,malignant,normal,astrocyte_like,38,0.00045133857519538207
+jessa_scrna,RGC,malignant,malignant,astrocyte_like,36,0.00042758391334299356
+jessa_scrna,Proliferating OPC,malignant,malignant,astrocyte_like,32,0.0003800745896382165
+jessa_scrna,Astrocytes,normal,malignant,astrocyte_like,27,0.0003206879350072452
+jessa_scrna,Vascular & other,malignant,normal,malignant_candidate,25,0.00029693327315485663
+jessa_scrna,Vascular & other,malignant,malignant,astrocyte_like,24,0.0002850559422286624
+jessa_scrna,Glial progenitors,malignant,malignant,normal,23,0.0002731786113024681
+jessa_scrna,Glial progenitors,malignant,normal,malignant_candidate,21,0.00024942394945007957
+jessa_scrna,OPC,normal,malignant,normal,20,0.0002375466185238853
+jessa_scrna,Vascular & other,malignant,malignant,normal,20,0.0002375466185238853
+jessa_scrna,OPC,normal,malignant,astrocyte_like,19,0.00022566928759769103
+jessa_scrna,Oligodendrocytes,normal,malignant,normal,18,0.00021379195667149678
+jessa_scrna,Ependymal,normal,normal,astrocyte_like,16,0.00019003729481910825
+jessa_scrna,Glial progenitors,malignant,normal,astrocyte_like,15,0.00017815996389291397
+jessa_scrna,Vascular & other,normal,normal,astrocyte_like,15,0.00017815996389291397
+jessa_scrna,Ependymal,malignant,normal,malignant_candidate,14,0.00016628263296671972
+jessa_scrna,Proliferating OPC,malignant,normal,malignant_candidate,14,0.00016628263296671972
+jessa_scrna,Vascular & other,malignant,normal,astrocyte_like,12,0.0001425279711143312
+jessa_scrna,Vascular & other,normal,normal,malignant_candidate,12,0.0001425279711143312
+jessa_scrna,Neurons,normal,malignant,normal,11,0.0001306506401881369
+jessa_scrna,OPC,normal,normal,astrocyte_like,11,0.0001306506401881369
+jessa_scrna,Vascular & other,normal,malignant,astrocyte_like,11,0.0001306506401881369
+jessa_scrna,Ependymal,malignant,malignant,normal,10,0.00011877330926194266
+jessa_scrna,Ependymal,normal,malignant,astrocyte_like,7,8.314131648335986e-05
+jessa_scrna,Astrocytes,normal,malignant,normal,6,7.12639855571656e-05
+jessa_scrna,Ependymal,normal,normal,malignant_candidate,6,7.12639855571656e-05
+jessa_scrna,RGC,malignant,malignant,normal,5,5.938665463097133e-05
+jessa_scrna,Astrocytes,normal,normal,malignant_candidate,4,4.750932370477706e-05
+jessa_scrna,Neuronal progenitors,malignant,malignant,astrocyte_like,4,4.750932370477706e-05
+jessa_scrna,Oligodendrocytes,normal,normal,astrocyte_like,4,4.750932370477706e-05
+jessa_scrna,RGC,malignant,normal,malignant_candidate,4,4.750932370477706e-05
+jessa_scrna,Glial progenitors,normal,malignant,astrocyte_like,3,3.56319927785828e-05
+jessa_scrna,Proliferating OPC,malignant,normal,astrocyte_like,3,3.56319927785828e-05
+jessa_scrna,Glial progenitors,normal,malignant,normal,2,2.375466185238853e-05
+jessa_scrna,Glial progenitors,normal,normal,malignant_candidate,2,2.375466185238853e-05
+jessa_scrna,Neuronal progenitors,malignant,malignant,normal,2,2.375466185238853e-05
+jessa_scrna,Neurons,normal,malignant,astrocyte_like,2,2.375466185238853e-05
+jessa_scrna,Neurons,normal,normal,astrocyte_like,2,2.375466185238853e-05
+jessa_scrna,Neurons,normal,normal,malignant_candidate,2,2.375466185238853e-05
+jessa_scrna,Oligodendrocytes,normal,normal,malignant_candidate,2,2.375466185238853e-05
+jessa_scrna,RGC,malignant,normal,astrocyte_like,2,2.375466185238853e-05
+jessa_scrna,Ependymal,normal,malignant,normal,1,1.1877330926194266e-05
+jessa_scrna,Glial progenitors,normal,normal,astrocyte_like,1,1.1877330926194266e-05
+jessa_scrna,Neuronal progenitors,malignant,normal,astrocyte_like,1,1.1877330926194266e-05
+jessa_scrna,Oligodendrocytes,normal,malignant,astrocyte_like,1,1.1877330926194266e-05
+labelle,Tcell,normal,normal,malignant_candidate,379,0.05953502984605718
+labelle,Myeloid,normal,normal,malignant_candidate,329,0.051680804272698715
+labelle,Myeloid,normal,normal,astrocyte_like,66,0.010367577756833177
+labelle,Tcell,normal,normal,astrocyte_like,3,0.000471253534401508
+liu,AC-like,malignant,malignant,astrocyte_like,712,0.08179207352096496
+liu,OPC-like-2,malignant,normal,malignant_candidate,377,0.04330844342331993
+liu,AC-like,malignant,normal,astrocyte_like,321,0.03687535898908673
+liu,MES-like,malignant,malignant,astrocyte_like,268,0.030786904078116024
+liu,OPC-like-1,malignant,normal,malignant_candidate,247,0.028374497415278574
+liu,OPC-like-3,malignant,malignant,astrocyte_like,183,0.02102240091901206
+liu,OPC-like-2,malignant,malignant,astrocyte_like,168,0.019299253302699597
+liu,OC-like,malignant,malignant,normal,143,0.01642734060884549
+liu,OPC-like-1,malignant,malignant,astrocyte_like,108,0.012406662837449742
+liu,OPC-like-1,malignant,malignant,normal,98,0.0112578977599081
+liu,S,malignant,malignant,astrocyte_like,72,0.008271108558299827
+liu,MES-like,malignant,normal,astrocyte_like,69,0.007926479035037334
+liu,frozen-OPC-like-b,malignant,malignant,astrocyte_like,65,0.007466973004020678
+liu,S,malignant,normal,malignant_candidate,62,0.007122343480758185
+liu,Myeloid,normal,normal,malignant_candidate,58,0.0066628374497415275
+liu,MES-like,malignant,normal,malignant_candidate,54,0.006203331418724871
+liu,G2M,malignant,normal,malignant_candidate,44,0.005054566341183228
+liu,MES-like,malignant,malignant,normal,44,0.005054566341183228
+liu,OC-like,malignant,malignant,astrocyte_like,44,0.005054566341183228
+liu,Myeloid,normal,normal,astrocyte_like,41,0.004709936817920735
+liu,OPC-like-1,malignant,normal,astrocyte_like,41,0.004709936817920735
+liu,OPC-like-2,malignant,malignant,normal,41,0.004709936817920735
+liu,OPC-like-3,malignant,normal,astrocyte_like,41,0.004709936817920735
+liu,Myeloid,normal,malignant,normal,40,0.004595060310166571
+liu,S,malignant,malignant,normal,40,0.004595060310166571
+liu,G2M,malignant,malignant,astrocyte_like,37,0.004250430786904078
+liu,OPC-like-3,malignant,malignant,normal,37,0.004250430786904078
+liu,OPC-like-3,malignant,normal,malignant_candidate,35,0.00402067777139575
+liu,OC-like,malignant,normal,malignant_candidate,31,0.0035611717403790924
+liu,Myeloid,normal,malignant,astrocyte_like,29,0.0033314187248707637
+liu,frozen-OPC-like-b,malignant,malignant,normal,29,0.0033314187248707637
+liu,frozen-OPC-like-b,malignant,normal,malignant_candidate,27,0.0031016657093624355
+liu,Oligodendrocyte,normal,malignant,normal,26,0.002986789201608271
+liu,OPC-like-2,malignant,normal,astrocyte_like,25,0.002871912693854107
+liu,Endothelia,normal,normal,malignant_candidate,24,0.0027570361860999423
+liu,AC-like,malignant,malignant,normal,22,0.002527283170591614
+liu,Endothelia,normal,normal,astrocyte_like,22,0.002527283170591614
+liu,G2M,malignant,malignant,normal,19,0.0021826536473291214
+liu,OC-like,malignant,normal,astrocyte_like,19,0.0021826536473291214
+liu,Microglia,normal,normal,malignant_candidate,16,0.0018380241240666284
+liu,S,malignant,normal,astrocyte_like,14,0.0016082711085582998
+liu,frozen-OPC-like-b,malignant,normal,astrocyte_like,14,0.0016082711085582998
+liu,T cell,normal,normal,malignant_candidate,12,0.0013785180930499712
+liu,AC-like,malignant,normal,malignant_candidate,11,0.001263641585295807
+liu,Endothelia,normal,malignant,normal,10,0.0011487650775416428
+liu,G2M,malignant,normal,astrocyte_like,10,0.0011487650775416428
+liu,Oligodendrocyte,normal,normal,astrocyte_like,8,0.0009190120620333142
+liu,Endothelia,normal,malignant,astrocyte_like,7,0.0008041355542791499
+liu,T cell,normal,normal,astrocyte_like,7,0.0008041355542791499
+liu,Oligodendrocyte,normal,malignant,astrocyte_like,4,0.0004595060310166571
+liu,T cell,normal,malignant,astrocyte_like,3,0.0003446295232624928
+liu,Oligodendrocyte,normal,normal,malignant_candidate,1,0.00011487650775416428
+okada,Tumor,malignant,malignant,astrocyte_like,36111,0.2242320374061586
+okada,Tumor,malignant,malignant,normal,16527,0.10262476481436635
+okada,Tumor,malignant,normal,malignant_candidate,6297,0.039101358022391536
+okada,Tumor,malignant,normal,astrocyte_like,4417,0.027427457262967032
+okada,Monocytic,normal,normal,malignant_candidate,2856,0.01773439391963637
+okada,Monocytic,normal,malignant,normal,2699,0.016759499015790814
+okada,Astrocytes,normal,malignant,astrocyte_like,1738,0.010792148680787119
+okada,Astrocytes,normal,normal,astrocyte_like,1580,0.009811044255261017
+okada,Oligodendrocytes,normal,malignant,normal,1579,0.009804834733580473
+okada,Monocytic,normal,normal,astrocyte_like,1142,0.00709127375918233
+okada,Monocytic,normal,malignant,astrocyte_like,861,0.0053463981669492
+okada,Endothelial-cells,normal,malignant,normal,805,0.004998664952838683
+okada,Neuron,normal,malignant,normal,528,0.0032786274473277323
+okada,Astrocytes,normal,normal,malignant_candidate,424,0.002632837192551058
+okada,Neuron,normal,normal,malignant_candidate,348,0.002160913544829642
+okada,Oligodendrocytes,normal,normal,malignant_candidate,248,0.001539961376775147
+okada,T-cells,normal,normal,malignant_candidate,243,0.0015089137683724223
+okada,Endothelial-cells,normal,normal,malignant_candidate,204,0.0012667424228311693
+okada,T-cells,normal,malignant,normal,195,0.0012108567277062648
+okada,Neuron,normal,normal,astrocyte_like,157,0.0009748949038455568
+okada,Endothelial-cells,normal,normal,astrocyte_like,144,0.0008941711219984724
+okada,T-cells,normal,normal,astrocyte_like,121,0.0007513521233459387
+okada,Neuron,normal,malignant,astrocyte_like,107,0.0006644188198183094
+okada,Endothelial-cells,normal,malignant,astrocyte_like,105,0.0006519997764572195
+okada,T-cells,normal,malignant,astrocyte_like,94,0.0005836950379712251
+okada,Oligodendrocytes,normal,normal,astrocyte_like,65,0.0004036189092354216
+okada,Oligodendrocytes,normal,malignant,astrocyte_like,55,0.00034152369242997213
+okada,Astrocytes,normal,malignant,normal,39,0.00024217134554125296

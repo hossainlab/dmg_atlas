@@ -1,0 +1,28 @@
+{
+ "n_cells": 59993,
+ "n_genes": 3592,
+ "classes": [
+  "T_NK",
+  "astrocyte",
+  "malignant_AC_like",
+  "malignant_MES_like",
+  "malignant_OC_like",
+  "malignant_OPC_like",
+  "malignant_cycling",
+  "malignant_hypoxia",
+  "malignant_novel_MP15",
+  "myeloid",
+  "neuron",
+  "oligodendrocyte",
+  "vascular"
+ ],
+ "epochs": 250,
+ "train_s": 327.1,
+ "total_s": 346.4,
+ "final_elbo": 122081624.0,
+ "device": "NVIDIA A10G",
+ "max_mem_alloc_gb": 0.685,
+ "peak_rss_gb": 8.77,
+ "cell2location": "0.1.5",
+ "scvi": "1.4.2"
+}

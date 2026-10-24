@@ -1,0 +1,7 @@
+contrast,column,reference,test,n_ref,n_test,n_patients_ref,n_patients_test,sites_ref,sites_test,assay_ref,assay_test,publications_ref,publications_test,publications_with_both,estimable
+site_thalamus_vs_pons,site,pons,thalamus,42,15,38,14,pons:42,thalamus:15,nuclei:39;cells:3,nuclei:11;cells:4,collot;jessa2022;okada;zang,collot;desisto;jessa2022;okada,collot;jessa2022;okada,True
+age_adult_vs_pediatric,age_group,pediatric,adult,50,7,46,6,pons:36;thalamus:14,pons:6;thalamus:1,nuclei:43;cells:7,nuclei:7,collot;desisto;jessa2022;okada;zang,collot;jessa2022;okada,collot;jessa2022;okada,True
+h3_H3.1_vs_H3.3,h3_variant,H3.3,H3.1,23,8,19,7,pons:16;thalamus:7,pons:8,nuclei:19;cells:4,nuclei:8,collot;jessa2022,jessa2022,jessa2022,True
+treatment_ONC201_vs_standard,treatment,"standard care, no imipridone",imipridone (ONC201) + standard care,11,10,11,10,pons:8;thalamus:3,pons:7;thalamus:3,nuclei:11,nuclei:10,okada,okada,okada,True
+timing_autopsy_vs_resection,tissue_timing,resection,autopsy,3,22,3,22,thalamus:2;pons:1,pons:16;thalamus:6,cells:3,nuclei:22,desisto;zang,okada,,False
+assay_nuclei_vs_cells,assay_class,cells,nuclei,7,50,7,47,thalamus:4;pons:3,pons:39;thalamus:11,cells:7,nuclei:50,desisto;jessa2022;zang,collot;jessa2022;okada,jessa2022,True

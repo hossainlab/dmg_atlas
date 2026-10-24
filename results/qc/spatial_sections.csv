@@ -1,0 +1,32 @@
+study,section_id,gsm,region_or_diagnosis,n_spots,n_genes,has_image,has_positions,path,notes,species
+huchede,pDMG_Sample-1,GSM8294434,Diffusion Midline Glioma (DMG); H3.3 K27M; Midline,577,17943,True,True,data/raw/spatial/huchede/GSM8294434,MTX,human
+huchede,pDMG_Sample-2,GSM8294435,Diffusion Midline Glioma (DMG); H3.3 K27M; Midline,856,17943,True,True,data/raw/spatial/huchede/GSM8294435,MTX,human
+huchede,pDMG_Sample-3,GSM8294436,Diffusion Midline Glioma (DMG); H3.3 K27M; Midline,217,17943,True,True,data/raw/spatial/huchede/GSM8294436,MTX,human
+ren,DMG1,GSM5833528,"Diffuse midline glioma, H3K27M-mutant; Recurrent; H3F3A=Yes; HIST1H3B=No; IDH1=No",4337,36601,True,True,data/raw/spatial/ren/GSM5833528,filtered_feature_bc_matrix.h5,human
+ren,DMG2,GSM5833529,"Diffuse midline glioma, H3K27M-mutant; Primary; H3F3A=Yes; HIST1H3B=No; IDH1=No",2305,36601,True,True,data/raw/spatial/ren/GSM5833529,filtered_feature_bc_matrix.h5,human
+ren,DMG3,GSM5833530,"Diffuse midline glioma, H3K27M-mutant; Primary; H3F3A=Yes; HIST1H3B=No; IDH1=No",1063,36601,True,True,data/raw/spatial/ren/GSM5833530,filtered_feature_bc_matrix.h5,human
+ren,DMG4,GSM5833531,"Diffuse midline glioma, H3K27M-mutant; Recurrent; H3F3A=Yes; HIST1H3B=No; IDH1=No",1056,36601,True,True,data/raw/spatial/ren/GSM5833531,filtered_feature_bc_matrix.h5,human
+ren,DMG5,GSM5833532,"Diffuse midline glioma, H3K27M-mutant; Primary; H3F3A=Yes; HIST1H3B=No; IDH1=No",2128,36601,True,True,data/raw/spatial/ren/GSM5833532,filtered_feature_bc_matrix.h5,human
+ren,GBM1,GSM5833533,Secondary glioblastoma; Primary; H3F3A=No; HIST1H3B=No; IDH1=Yes,4764,36601,True,True,data/raw/spatial/ren/GSM5833533,filtered_feature_bc_matrix.h5,human
+ren,GBM2,GSM5833534,"Glioblastoma, IDH-wt; Recurrent; H3F3A=No; HIST1H3B=No; IDH1=No",2891,36601,True,True,data/raw/spatial/ren/GSM5833534,filtered_feature_bc_matrix.h5,human
+ren,GBM3,GSM5833535,"Glioblastoma, IDH-wt; Primary; H3F3A=No; HIST1H3B=No; IDH1=No",1775,36601,True,True,data/raw/spatial/ren/GSM5833535,filtered_feature_bc_matrix.h5,human
+ren,GBM4,GSM5833536,Secondary glioblastoma; Primary; H3F3A=No; HIST1H3B=No; IDH1=Yes,2540,36601,True,True,data/raw/spatial/ren/GSM5833536,filtered_feature_bc_matrix.h5,human
+ren,GBM5_1,GSM5833537,"Glioblastoma, IDH-wt; Primary; H3F3A=No; HIST1H3B=No; IDH1=No",2203,36601,True,True,data/raw/spatial/ren/GSM5833537,filtered_feature_bc_matrix.h5,human
+ren,GBM5_2,GSM5833538,Peritumor tissue; Primary; H3F3A=NA; HIST1H3B=NA; IDH1=NA,2171,36601,True,True,data/raw/spatial/ren/GSM5833538,filtered_feature_bc_matrix.h5,human
+brainstem,Midbrain,GSM8608415,Midbrain; DIPG-infiltrated brainstem (autopsy),3658,18085,True,True,data/raw/spatial/brainstem/GSM8608415,h5,human
+brainstem,Pons_A,GSM8608416,Pons; DIPG-infiltrated brainstem (autopsy),4919,18085,True,True,data/raw/spatial/brainstem/GSM8608416,h5,human
+brainstem,Pons_B,GSM8608417,Pons; DIPG-infiltrated brainstem (autopsy),4235,18085,True,True,data/raw/spatial/brainstem/GSM8608417,h5,human
+brainstem,Pons_C,GSM8608418,Pons; DIPG-infiltrated brainstem (autopsy),4992,18085,True,True,data/raw/spatial/brainstem/GSM8608418,h5,human
+brainstem,Pons_D,GSM8608419,Pons; DIPG-infiltrated brainstem (autopsy),3127,18085,True,True,data/raw/spatial/brainstem/GSM8608419,h5,human
+brainstem,Medulla_A,GSM8608420,Medulla; DIPG-infiltrated brainstem (autopsy),1958,17943,True,True,data/raw/spatial/brainstem/GSM8608420,h5,human
+brainstem,Medulla_B,GSM8608421,Medulla; DIPG-infiltrated brainstem (autopsy),2712,17943,True,True,data/raw/spatial/brainstem/GSM8608421,h5,human
+brainstem,Medulla_C,GSM8608422,Medulla; DIPG-infiltrated brainstem (autopsy),3171,18085,True,True,data/raw/spatial/brainstem/GSM8608422,h5,human
+brainstem,Spinal_Cord_A,GSM8608423,Spinal cord; DIPG-infiltrated brainstem (autopsy),3423,18085,True,True,data/raw/spatial/brainstem/GSM8608423,h5,human
+brainstem,Spinal_Cord_B,GSM8608424,Spinal cord; DIPG-infiltrated brainstem (autopsy),2744,18085,True,True,data/raw/spatial/brainstem/GSM8608424,h5,human
+collot_st,BT01_192_core_HE,,"DMG, primary human; tumour core",1720,36601,True,True,data/raw/spatial/collot_st/ST/ST/Human/BT01_192_core_HE/outs,h5; genome=GRCh38; species=human; group=Human,human
+collot_st,VUMC_11_pons_HE,,"DMG, primary human; pons",1338,36601,True,True,data/raw/spatial/collot_st/ST/ST/Human/VUMC_11_pons_HE/outs,h5; genome=GRCh38; species=human; group=Human,human
+collot_st,VUMC_17_pons_HE,,"DMG, primary human; pons",2238,36601,True,True,data/raw/spatial/collot_st/ST/ST/Human/VUMC_17_pons_HE/outs,h5; genome=GRCh38; species=human; group=Human,human
+collot_st,IUE_CORTEX_TUMOR_B_C1,,"mouse IUE model, cortex tumour (EXCLUDE: non-human)",4144,32290,True,True,data/raw/spatial/collot_st/ST/ST/IUE/IUE_CORTEX_TUMOR_B_C1/outs,h5; genome=custom_refdata-gex-mm10-2020-A; species=mouse; group=IUE,mouse
+collot_st,IUE_CORTEX_TUMOR_B_D1,,"mouse IUE model, cortex tumour (EXCLUDE: non-human)",4056,32290,True,True,data/raw/spatial/collot_st/ST/ST/IUE/IUE_CORTEX_TUMOR_B_D1/outs,h5; genome=custom_refdata-gex-mm10-2020-A; species=mouse; group=IUE,mouse
+collot_st,IUE_CORTEX_TUMOR_C_A1,,"mouse IUE model, cortex tumour (EXCLUDE: non-human)",3967,32290,True,True,data/raw/spatial/collot_st/ST/ST/IUE/IUE_CORTEX_TUMOR_C_A1/outs,h5; genome=custom_refdata-gex-mm10-2020-A; species=mouse; group=IUE,mouse
+collot_st,IUE_CORTEX_TUMOR_C_B1,,"mouse IUE model, cortex tumour (EXCLUDE: non-human)",3215,32290,True,True,data/raw/spatial/collot_st/ST/ST/IUE/IUE_CORTEX_TUMOR_C_B1/outs,h5; genome=custom_refdata-gex-mm10-2020-A; species=mouse; group=IUE,mouse

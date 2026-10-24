@@ -1,0 +1,10 @@
+sample_id,study,assay,qc_assay_class,include_in_atlas,cells_before_qc,cells_after_qc,median_genes_before,median_genes,median_counts,median_pct_mito_before,median_pct_mito,median_pct_ribo,median_pct_hb,max_genes_threshold,n_fail_low_genes,n_fail_high_genes,n_fail_high_mito,scrublet_threshold,scrublet_threshold_source,doublet_rate_fixed025,doublet_rate_flagged,n_doublets_flagged,qc_metric_basis
+labelle__H3K27M_P1,labelle,smartseq2,smartseq2,True,208,205,4190.0,4181.0,8797.2919921875,0.0,0.0,4.6220838062637455,0.0,7550.120000000001,1,2,0,,,,,0,tpm
+labelle__H3K27M_P2,labelle,smartseq2,smartseq2,True,356,351,3399.5,3467.0,7233.57275390625,0.0,0.0,4.751356166207765,0.0,9181.275,3,2,0,,,,,0,tpm
+labelle__H3K27M_P3,labelle,smartseq2,smartseq2,True,458,433,2199.5,2306.0,5266.12353515625,0.0,0.0,6.538782047864193,0.0,7398.7449999999935,22,3,0,,,,,0,tpm
+labelle__H3K27M_P4,labelle,smartseq2,smartseq2,True,299,287,4573.0,4651.0,9526.560546875,0.0,0.0,4.176556005626474,0.0,8483.02,10,2,0,,,,,0,tpm
+labelle__H3K27M_P5,labelle,smartseq2,smartseq2,True,219,217,3645.0,3594.0,7766.6474609375,0.0,0.0,4.804939243701198,0.0,7531.45,0,2,0,,,,,0,tpm
+labelle__H3K27M_P6,labelle,smartseq2,smartseq2,True,192,189,3169.0,3170.0,7202.22509765625,0.0,0.0,4.684661152193747,0.0,7345.954999999983,2,1,0,,,,,0,tpm
+labelle__H3K27M_P7,labelle,smartseq2,smartseq2,True,83,64,2859.0,3133.0,5518.50830078125,0.0,0.0,7.01852940353175,0.0,6129.710000000005,18,1,0,,,,,0,tpm
+labelle__H3K27M_P8,labelle,smartseq2,smartseq2,True,134,128,2516.0,2550.0,4822.966796875,0.0,0.0,8.419470203634088,0.0,8754.770000000008,5,1,0,,,,,0,tpm
+labelle__H3K27M_P9,labelle,scRNA,cells,True,6398,6366,709.0,709.0,3244.4134521484375,0.0,0.0,9.553647120814372,0.0,1721.2850000000062,0,32,0,,,,,0,tpm

@@ -1,0 +1,13 @@
+author_Cell_type_consensus_Jessa2022,T_NK,ambiguous,astrocyte,malignant,myeloid,neuron,oligodendrocyte,vascular
+Astrocytes,0,3357,730,8000,4,0,4,1
+Ependymal,0,176,18,1631,0,0,4,0
+Glial progenitors,0,94,0,1856,0,0,0,0
+Immune,247,3397,601,117,11679,7,293,34
+Neuronal progenitors,0,15,0,36,0,0,1,0
+Neurons,0,805,49,457,3,451,26,2
+OPC,1,8230,33,31411,6,7,21,1
+Oligodendrocytes,0,6952,34,2710,5,1,4404,0
+Proliferating OPC,0,93,0,314,0,0,0,0
+RGC,0,16,0,231,0,0,0,0
+Uncertain,54,9416,305,31007,91,61,236,16
+Vascular & other,1,364,27,160,2,7,3,497

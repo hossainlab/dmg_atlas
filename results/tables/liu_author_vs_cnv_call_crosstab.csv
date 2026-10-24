@@ -1,0 +1,15 @@
+author_label,malignant,normal,n_ambiguous_consensus
+AC-like,790,333,467
+Endothelia,21,109,45
+G2M,361,55,78
+MES-like,741,127,244
+Microglia,3,99,19
+Myeloid,85,605,143
+OC-like,355,154,299
+OPC-like-1,1241,302,427
+OPC-like-2,653,426,467
+OPC-like-3,844,80,148
+Oligodendrocyte,37,339,38
+S,488,80,124
+T cell,4,68,16
+frozen-OPC-like-b,260,45,82

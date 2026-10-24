@@ -1,0 +1,516 @@
+query,tensor,block,shape_ref,shape_query,same_shape,max_abs_diff
+filbin,px_r,px_r,"(3000,)","(3000,)",True,0.0
+filbin,y_prior,y_prior,"(1, 7)","(1, 7)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.0.weight,z_encoder,"(128, 3000)","(128, 3000)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,z_encoder,(),(),True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.0.weight,z_encoder,"(128, 128)","(128, 128)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+filbin,z_encoder.encoder.fc_layers.Layer 1.1.num_batches_tracked,z_encoder,(),(),True,0.0
+filbin,z_encoder.mean_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+filbin,z_encoder.mean_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+filbin,z_encoder.var_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+filbin,z_encoder.var_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.0.weight,l_encoder,"(128, 3000)","(128, 3000)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.0.bias,l_encoder,"(128,)","(128,)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.1.weight,l_encoder,"(128,)","(128,)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.1.bias,l_encoder,"(128,)","(128,)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.1.running_mean,l_encoder,"(128,)","(128,)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.1.running_var,l_encoder,"(128,)","(128,)",True,0.0
+filbin,l_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,l_encoder,(),(),True,0.0
+filbin,l_encoder.mean_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+filbin,l_encoder.mean_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+filbin,l_encoder.var_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+filbin,l_encoder.var_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 0.0.weight,decoder,"(128, 97)","(128, 108)",False,
+filbin,decoder.px_decoder.fc_layers.Layer 0.0.bias,decoder,"(128,)","(128,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 0.1.weight,decoder,"(128,)","(128,)",True,0.42877912521362305
+filbin,decoder.px_decoder.fc_layers.Layer 0.1.bias,decoder,"(128,)","(128,)",True,0.23047417402267456
+filbin,decoder.px_decoder.fc_layers.Layer 0.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 0.1.running_var,decoder,"(128,)","(128,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder,(),(),True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 1.0.weight,decoder,"(128, 194)","(128, 205)",False,
+filbin,decoder.px_decoder.fc_layers.Layer 1.0.bias,decoder,"(128,)","(128,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 1.1.weight,decoder,"(128,)","(128,)",True,0.6735942363739014
+filbin,decoder.px_decoder.fc_layers.Layer 1.1.bias,decoder,"(128,)","(128,)",True,0.27589190006256104
+filbin,decoder.px_decoder.fc_layers.Layer 1.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 1.1.running_var,decoder,"(128,)","(128,)",True,0.0
+filbin,decoder.px_decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder,(),(),True,0.0
+filbin,decoder.px_scale_decoder.0.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+filbin,decoder.px_scale_decoder.0.bias,decoder,"(3000,)","(3000,)",True,0.0
+filbin,decoder.px_r_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+filbin,decoder.px_r_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+filbin,decoder.px_dropout_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+filbin,decoder.px_dropout_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 0.0.weight,classifier,"(128, 30)","(128, 30)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 0.0.bias,classifier,"(128,)","(128,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 0.1.weight,classifier,"(128,)","(128,)",True,0.48054975271224976
+filbin,classifier.classifier.0.fc_layers.Layer 0.1.bias,classifier,"(128,)","(128,)",True,0.31476718187332153
+filbin,classifier.classifier.0.fc_layers.Layer 0.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 0.1.running_var,classifier,"(128,)","(128,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 0.1.num_batches_tracked,classifier,(),(),True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 1.0.weight,classifier,"(128, 128)","(128, 128)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 1.0.bias,classifier,"(128,)","(128,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 1.1.weight,classifier,"(128,)","(128,)",True,0.33850985765457153
+filbin,classifier.classifier.0.fc_layers.Layer 1.1.bias,classifier,"(128,)","(128,)",True,0.23165488243103027
+filbin,classifier.classifier.0.fc_layers.Layer 1.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 1.1.running_var,classifier,"(128,)","(128,)",True,0.0
+filbin,classifier.classifier.0.fc_layers.Layer 1.1.num_batches_tracked,classifier,(),(),True,0.0
+filbin,classifier.classifier.1.weight,classifier,"(7, 128)","(7, 128)",True,0.0
+filbin,classifier.classifier.1.bias,classifier,"(7,)","(7,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.0.weight,encoder_z2_z1,"(128, 37)","(128, 37)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 0.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.0.weight,encoder_z2_z1,"(128, 135)","(128, 135)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+filbin,encoder_z2_z1.encoder.fc_layers.Layer 1.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+filbin,encoder_z2_z1.mean_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+filbin,encoder_z2_z1.mean_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+filbin,encoder_z2_z1.var_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+filbin,encoder_z2_z1.var_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.0.weight,decoder_z1_z2,"(128, 37)","(128, 37)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.41443926095962524
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.1.bias,decoder_z1_z2,"(128,)","(128,)",True,0.6778885126113892
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.0.weight,decoder_z1_z2,"(128, 135)","(128, 135)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.2884112000465393
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.1.bias,decoder_z1_z2,"(128,)","(128,)",True,0.6780921220779419
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+filbin,decoder_z1_z2.decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+filbin,decoder_z1_z2.mean_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+filbin,decoder_z1_z2.mean_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+filbin,decoder_z1_z2.var_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+filbin,decoder_z1_z2.var_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+labelle,px_r,px_r,"(3000,)","(3000,)",True,0.0
+labelle,y_prior,y_prior,"(1, 7)","(1, 7)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.0.weight,z_encoder,"(128, 3000)","(128, 3000)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,z_encoder,(),(),True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.0.weight,z_encoder,"(128, 128)","(128, 128)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+labelle,z_encoder.encoder.fc_layers.Layer 1.1.num_batches_tracked,z_encoder,(),(),True,0.0
+labelle,z_encoder.mean_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+labelle,z_encoder.mean_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+labelle,z_encoder.var_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+labelle,z_encoder.var_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.0.weight,l_encoder,"(128, 3000)","(128, 3000)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.0.bias,l_encoder,"(128,)","(128,)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.1.weight,l_encoder,"(128,)","(128,)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.1.bias,l_encoder,"(128,)","(128,)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.1.running_mean,l_encoder,"(128,)","(128,)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.1.running_var,l_encoder,"(128,)","(128,)",True,0.0
+labelle,l_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,l_encoder,(),(),True,0.0
+labelle,l_encoder.mean_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+labelle,l_encoder.mean_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+labelle,l_encoder.var_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+labelle,l_encoder.var_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 0.0.weight,decoder,"(128, 97)","(128, 108)",False,
+labelle,decoder.px_decoder.fc_layers.Layer 0.0.bias,decoder,"(128,)","(128,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 0.1.weight,decoder,"(128,)","(128,)",True,0.5704248547554016
+labelle,decoder.px_decoder.fc_layers.Layer 0.1.bias,decoder,"(128,)","(128,)",True,0.3414424657821655
+labelle,decoder.px_decoder.fc_layers.Layer 0.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 0.1.running_var,decoder,"(128,)","(128,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder,(),(),True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 1.0.weight,decoder,"(128, 194)","(128, 205)",False,
+labelle,decoder.px_decoder.fc_layers.Layer 1.0.bias,decoder,"(128,)","(128,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 1.1.weight,decoder,"(128,)","(128,)",True,0.9475491046905518
+labelle,decoder.px_decoder.fc_layers.Layer 1.1.bias,decoder,"(128,)","(128,)",True,0.34133827686309814
+labelle,decoder.px_decoder.fc_layers.Layer 1.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 1.1.running_var,decoder,"(128,)","(128,)",True,0.0
+labelle,decoder.px_decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder,(),(),True,0.0
+labelle,decoder.px_scale_decoder.0.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+labelle,decoder.px_scale_decoder.0.bias,decoder,"(3000,)","(3000,)",True,0.0
+labelle,decoder.px_r_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+labelle,decoder.px_r_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+labelle,decoder.px_dropout_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+labelle,decoder.px_dropout_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 0.0.weight,classifier,"(128, 30)","(128, 30)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 0.0.bias,classifier,"(128,)","(128,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 0.1.weight,classifier,"(128,)","(128,)",True,0.5679101943969727
+labelle,classifier.classifier.0.fc_layers.Layer 0.1.bias,classifier,"(128,)","(128,)",True,0.37029939889907837
+labelle,classifier.classifier.0.fc_layers.Layer 0.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 0.1.running_var,classifier,"(128,)","(128,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 0.1.num_batches_tracked,classifier,(),(),True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 1.0.weight,classifier,"(128, 128)","(128, 128)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 1.0.bias,classifier,"(128,)","(128,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 1.1.weight,classifier,"(128,)","(128,)",True,0.3320164680480957
+labelle,classifier.classifier.0.fc_layers.Layer 1.1.bias,classifier,"(128,)","(128,)",True,0.2808998227119446
+labelle,classifier.classifier.0.fc_layers.Layer 1.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 1.1.running_var,classifier,"(128,)","(128,)",True,0.0
+labelle,classifier.classifier.0.fc_layers.Layer 1.1.num_batches_tracked,classifier,(),(),True,0.0
+labelle,classifier.classifier.1.weight,classifier,"(7, 128)","(7, 128)",True,0.0
+labelle,classifier.classifier.1.bias,classifier,"(7,)","(7,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.0.weight,encoder_z2_z1,"(128, 37)","(128, 37)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 0.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.0.weight,encoder_z2_z1,"(128, 135)","(128, 135)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+labelle,encoder_z2_z1.encoder.fc_layers.Layer 1.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+labelle,encoder_z2_z1.mean_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+labelle,encoder_z2_z1.mean_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+labelle,encoder_z2_z1.var_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+labelle,encoder_z2_z1.var_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.0.weight,decoder_z1_z2,"(128, 37)","(128, 37)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.567857027053833
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.1.bias,decoder_z1_z2,"(128,)","(128,)",True,0.8354274034500122
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.0.weight,decoder_z1_z2,"(128, 135)","(128, 135)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.7129310369491577
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.1.bias,decoder_z1_z2,"(128,)","(128,)",True,0.7772311568260193
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+labelle,decoder_z1_z2.decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+labelle,decoder_z1_z2.mean_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+labelle,decoder_z1_z2.mean_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+labelle,decoder_z1_z2.var_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+labelle,decoder_z1_z2.var_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+liu,px_r,px_r,"(3000,)","(3000,)",True,0.0
+liu,y_prior,y_prior,"(1, 7)","(1, 7)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.0.weight,z_encoder,"(128, 3000)","(128, 3000)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,z_encoder,(),(),True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.0.weight,z_encoder,"(128, 128)","(128, 128)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+liu,z_encoder.encoder.fc_layers.Layer 1.1.num_batches_tracked,z_encoder,(),(),True,0.0
+liu,z_encoder.mean_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+liu,z_encoder.mean_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+liu,z_encoder.var_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+liu,z_encoder.var_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.0.weight,l_encoder,"(128, 3000)","(128, 3000)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.0.bias,l_encoder,"(128,)","(128,)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.1.weight,l_encoder,"(128,)","(128,)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.1.bias,l_encoder,"(128,)","(128,)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.1.running_mean,l_encoder,"(128,)","(128,)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.1.running_var,l_encoder,"(128,)","(128,)",True,0.0
+liu,l_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,l_encoder,(),(),True,0.0
+liu,l_encoder.mean_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+liu,l_encoder.mean_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+liu,l_encoder.var_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+liu,l_encoder.var_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 0.0.weight,decoder,"(128, 97)","(128, 141)",False,
+liu,decoder.px_decoder.fc_layers.Layer 0.0.bias,decoder,"(128,)","(128,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 0.1.weight,decoder,"(128,)","(128,)",True,0.4011436402797699
+liu,decoder.px_decoder.fc_layers.Layer 0.1.bias,decoder,"(128,)","(128,)",True,0.3385196328163147
+liu,decoder.px_decoder.fc_layers.Layer 0.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 0.1.running_var,decoder,"(128,)","(128,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder,(),(),True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 1.0.weight,decoder,"(128, 194)","(128, 238)",False,
+liu,decoder.px_decoder.fc_layers.Layer 1.0.bias,decoder,"(128,)","(128,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 1.1.weight,decoder,"(128,)","(128,)",True,0.7779806852340698
+liu,decoder.px_decoder.fc_layers.Layer 1.1.bias,decoder,"(128,)","(128,)",True,0.2085862159729004
+liu,decoder.px_decoder.fc_layers.Layer 1.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 1.1.running_var,decoder,"(128,)","(128,)",True,0.0
+liu,decoder.px_decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder,(),(),True,0.0
+liu,decoder.px_scale_decoder.0.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+liu,decoder.px_scale_decoder.0.bias,decoder,"(3000,)","(3000,)",True,0.0
+liu,decoder.px_r_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+liu,decoder.px_r_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+liu,decoder.px_dropout_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+liu,decoder.px_dropout_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 0.0.weight,classifier,"(128, 30)","(128, 30)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 0.0.bias,classifier,"(128,)","(128,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 0.1.weight,classifier,"(128,)","(128,)",True,0.8226234912872314
+liu,classifier.classifier.0.fc_layers.Layer 0.1.bias,classifier,"(128,)","(128,)",True,0.656877338886261
+liu,classifier.classifier.0.fc_layers.Layer 0.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 0.1.running_var,classifier,"(128,)","(128,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 0.1.num_batches_tracked,classifier,(),(),True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 1.0.weight,classifier,"(128, 128)","(128, 128)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 1.0.bias,classifier,"(128,)","(128,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 1.1.weight,classifier,"(128,)","(128,)",True,0.5527008771896362
+liu,classifier.classifier.0.fc_layers.Layer 1.1.bias,classifier,"(128,)","(128,)",True,0.47792351245880127
+liu,classifier.classifier.0.fc_layers.Layer 1.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 1.1.running_var,classifier,"(128,)","(128,)",True,0.0
+liu,classifier.classifier.0.fc_layers.Layer 1.1.num_batches_tracked,classifier,(),(),True,0.0
+liu,classifier.classifier.1.weight,classifier,"(7, 128)","(7, 128)",True,0.0
+liu,classifier.classifier.1.bias,classifier,"(7,)","(7,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.0.weight,encoder_z2_z1,"(128, 37)","(128, 37)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 0.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.0.weight,encoder_z2_z1,"(128, 135)","(128, 135)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+liu,encoder_z2_z1.encoder.fc_layers.Layer 1.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+liu,encoder_z2_z1.mean_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+liu,encoder_z2_z1.mean_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+liu,encoder_z2_z1.var_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+liu,encoder_z2_z1.var_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.0.weight,decoder_z1_z2,"(128, 37)","(128, 37)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.6531493067741394
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.1.bias,decoder_z1_z2,"(128,)","(128,)",True,1.0915151834487915
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.0.weight,decoder_z1_z2,"(128, 135)","(128, 135)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.3509880304336548
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.1.bias,decoder_z1_z2,"(128,)","(128,)",True,0.9460701942443848
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+liu,decoder_z1_z2.decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+liu,decoder_z1_z2.mean_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+liu,decoder_z1_z2.mean_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+liu,decoder_z1_z2.var_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+liu,decoder_z1_z2.var_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+braun,px_r,px_r,"(3000,)","(3000,)",True,0.0
+braun,y_prior,y_prior,"(1, 7)","(1, 7)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.0.weight,z_encoder,"(128, 3000)","(128, 3000)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,z_encoder,(),(),True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.0.weight,z_encoder,"(128, 128)","(128, 128)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+braun,z_encoder.encoder.fc_layers.Layer 1.1.num_batches_tracked,z_encoder,(),(),True,0.0
+braun,z_encoder.mean_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+braun,z_encoder.mean_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+braun,z_encoder.var_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+braun,z_encoder.var_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.0.weight,l_encoder,"(128, 3000)","(128, 3000)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.0.bias,l_encoder,"(128,)","(128,)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.1.weight,l_encoder,"(128,)","(128,)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.1.bias,l_encoder,"(128,)","(128,)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.1.running_mean,l_encoder,"(128,)","(128,)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.1.running_var,l_encoder,"(128,)","(128,)",True,0.0
+braun,l_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,l_encoder,(),(),True,0.0
+braun,l_encoder.mean_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+braun,l_encoder.mean_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+braun,l_encoder.var_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+braun,l_encoder.var_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 0.0.weight,decoder,"(128, 97)","(128, 115)",False,
+braun,decoder.px_decoder.fc_layers.Layer 0.0.bias,decoder,"(128,)","(128,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 0.1.weight,decoder,"(128,)","(128,)",True,0.7614235877990723
+braun,decoder.px_decoder.fc_layers.Layer 0.1.bias,decoder,"(128,)","(128,)",True,0.376373291015625
+braun,decoder.px_decoder.fc_layers.Layer 0.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 0.1.running_var,decoder,"(128,)","(128,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder,(),(),True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 1.0.weight,decoder,"(128, 194)","(128, 212)",False,
+braun,decoder.px_decoder.fc_layers.Layer 1.0.bias,decoder,"(128,)","(128,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 1.1.weight,decoder,"(128,)","(128,)",True,3.0076820850372314
+braun,decoder.px_decoder.fc_layers.Layer 1.1.bias,decoder,"(128,)","(128,)",True,0.4120519757270813
+braun,decoder.px_decoder.fc_layers.Layer 1.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 1.1.running_var,decoder,"(128,)","(128,)",True,0.0
+braun,decoder.px_decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder,(),(),True,0.0
+braun,decoder.px_scale_decoder.0.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+braun,decoder.px_scale_decoder.0.bias,decoder,"(3000,)","(3000,)",True,0.0
+braun,decoder.px_r_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+braun,decoder.px_r_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+braun,decoder.px_dropout_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+braun,decoder.px_dropout_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 0.0.weight,classifier,"(128, 30)","(128, 30)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 0.0.bias,classifier,"(128,)","(128,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 0.1.weight,classifier,"(128,)","(128,)",True,0.9912557601928711
+braun,classifier.classifier.0.fc_layers.Layer 0.1.bias,classifier,"(128,)","(128,)",True,1.3623733520507812
+braun,classifier.classifier.0.fc_layers.Layer 0.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 0.1.running_var,classifier,"(128,)","(128,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 0.1.num_batches_tracked,classifier,(),(),True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 1.0.weight,classifier,"(128, 128)","(128, 128)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 1.0.bias,classifier,"(128,)","(128,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 1.1.weight,classifier,"(128,)","(128,)",True,1.1373913288116455
+braun,classifier.classifier.0.fc_layers.Layer 1.1.bias,classifier,"(128,)","(128,)",True,1.2143704891204834
+braun,classifier.classifier.0.fc_layers.Layer 1.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 1.1.running_var,classifier,"(128,)","(128,)",True,0.0
+braun,classifier.classifier.0.fc_layers.Layer 1.1.num_batches_tracked,classifier,(),(),True,0.0
+braun,classifier.classifier.1.weight,classifier,"(7, 128)","(7, 128)",True,0.0
+braun,classifier.classifier.1.bias,classifier,"(7,)","(7,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.0.weight,encoder_z2_z1,"(128, 37)","(128, 37)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 0.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.0.weight,encoder_z2_z1,"(128, 135)","(128, 135)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+braun,encoder_z2_z1.encoder.fc_layers.Layer 1.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+braun,encoder_z2_z1.mean_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+braun,encoder_z2_z1.mean_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+braun,encoder_z2_z1.var_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+braun,encoder_z2_z1.var_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.0.weight,decoder_z1_z2,"(128, 37)","(128, 37)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.47663459181785583
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.1.bias,decoder_z1_z2,"(128,)","(128,)",True,1.964361310005188
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.0.weight,decoder_z1_z2,"(128, 135)","(128, 135)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.7905752658843994
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.1.bias,decoder_z1_z2,"(128,)","(128,)",True,1.7799558639526367
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+braun,decoder_z1_z2.decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+braun,decoder_z1_z2.mean_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+braun,decoder_z1_z2.mean_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+braun,decoder_z1_z2.var_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+braun,decoder_z1_z2.var_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+siletti,px_r,px_r,"(3000,)","(3000,)",True,0.0
+siletti,y_prior,y_prior,"(1, 7)","(1, 7)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.0.weight,z_encoder,"(128, 3000)","(128, 3000)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,z_encoder,(),(),True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.0.weight,z_encoder,"(128, 128)","(128, 128)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.0.bias,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.1.weight,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.1.bias,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.1.running_mean,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.1.running_var,z_encoder,"(128,)","(128,)",True,0.0
+siletti,z_encoder.encoder.fc_layers.Layer 1.1.num_batches_tracked,z_encoder,(),(),True,0.0
+siletti,z_encoder.mean_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+siletti,z_encoder.mean_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+siletti,z_encoder.var_encoder.weight,z_encoder,"(30, 128)","(30, 128)",True,0.0
+siletti,z_encoder.var_encoder.bias,z_encoder,"(30,)","(30,)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.0.weight,l_encoder,"(128, 3000)","(128, 3000)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.0.bias,l_encoder,"(128,)","(128,)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.1.weight,l_encoder,"(128,)","(128,)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.1.bias,l_encoder,"(128,)","(128,)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.1.running_mean,l_encoder,"(128,)","(128,)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.1.running_var,l_encoder,"(128,)","(128,)",True,0.0
+siletti,l_encoder.encoder.fc_layers.Layer 0.1.num_batches_tracked,l_encoder,(),(),True,0.0
+siletti,l_encoder.mean_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+siletti,l_encoder.mean_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+siletti,l_encoder.var_encoder.weight,l_encoder,"(1, 128)","(1, 128)",True,0.0
+siletti,l_encoder.var_encoder.bias,l_encoder,"(1,)","(1,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 0.0.weight,decoder,"(128, 97)","(128, 116)",False,
+siletti,decoder.px_decoder.fc_layers.Layer 0.0.bias,decoder,"(128,)","(128,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 0.1.weight,decoder,"(128,)","(128,)",True,0.9456210136413574
+siletti,decoder.px_decoder.fc_layers.Layer 0.1.bias,decoder,"(128,)","(128,)",True,0.36131751537323
+siletti,decoder.px_decoder.fc_layers.Layer 0.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 0.1.running_var,decoder,"(128,)","(128,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder,(),(),True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 1.0.weight,decoder,"(128, 194)","(128, 213)",False,
+siletti,decoder.px_decoder.fc_layers.Layer 1.0.bias,decoder,"(128,)","(128,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 1.1.weight,decoder,"(128,)","(128,)",True,1.2522835731506348
+siletti,decoder.px_decoder.fc_layers.Layer 1.1.bias,decoder,"(128,)","(128,)",True,0.2752319574356079
+siletti,decoder.px_decoder.fc_layers.Layer 1.1.running_mean,decoder,"(128,)","(128,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 1.1.running_var,decoder,"(128,)","(128,)",True,0.0
+siletti,decoder.px_decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder,(),(),True,0.0
+siletti,decoder.px_scale_decoder.0.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+siletti,decoder.px_scale_decoder.0.bias,decoder,"(3000,)","(3000,)",True,0.0
+siletti,decoder.px_r_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+siletti,decoder.px_r_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+siletti,decoder.px_dropout_decoder.weight,decoder,"(3000, 128)","(3000, 128)",True,0.0
+siletti,decoder.px_dropout_decoder.bias,decoder,"(3000,)","(3000,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 0.0.weight,classifier,"(128, 30)","(128, 30)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 0.0.bias,classifier,"(128,)","(128,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 0.1.weight,classifier,"(128,)","(128,)",True,1.0098519325256348
+siletti,classifier.classifier.0.fc_layers.Layer 0.1.bias,classifier,"(128,)","(128,)",True,1.3011008501052856
+siletti,classifier.classifier.0.fc_layers.Layer 0.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 0.1.running_var,classifier,"(128,)","(128,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 0.1.num_batches_tracked,classifier,(),(),True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 1.0.weight,classifier,"(128, 128)","(128, 128)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 1.0.bias,classifier,"(128,)","(128,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 1.1.weight,classifier,"(128,)","(128,)",True,1.5199182033538818
+siletti,classifier.classifier.0.fc_layers.Layer 1.1.bias,classifier,"(128,)","(128,)",True,0.9028083682060242
+siletti,classifier.classifier.0.fc_layers.Layer 1.1.running_mean,classifier,"(128,)","(128,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 1.1.running_var,classifier,"(128,)","(128,)",True,0.0
+siletti,classifier.classifier.0.fc_layers.Layer 1.1.num_batches_tracked,classifier,(),(),True,0.0
+siletti,classifier.classifier.1.weight,classifier,"(7, 128)","(7, 128)",True,0.0
+siletti,classifier.classifier.1.bias,classifier,"(7,)","(7,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.0.weight,encoder_z2_z1,"(128, 37)","(128, 37)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 0.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.0.weight,encoder_z2_z1,"(128, 135)","(128, 135)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.0.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.1.weight,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.1.bias,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_mean,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.1.running_var,encoder_z2_z1,"(128,)","(128,)",True,0.0
+siletti,encoder_z2_z1.encoder.fc_layers.Layer 1.1.num_batches_tracked,encoder_z2_z1,(),(),True,0.0
+siletti,encoder_z2_z1.mean_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+siletti,encoder_z2_z1.mean_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+siletti,encoder_z2_z1.var_encoder.weight,encoder_z2_z1,"(30, 128)","(30, 128)",True,0.0
+siletti,encoder_z2_z1.var_encoder.bias,encoder_z2_z1,"(30,)","(30,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.0.weight,decoder_z1_z2,"(128, 37)","(128, 37)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.7073750495910645
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.1.bias,decoder_z1_z2,"(128,)","(128,)",True,1.5263713598251343
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 0.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.0.weight,decoder_z1_z2,"(128, 135)","(128, 135)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.0.bias,decoder_z1_z2,"(128,)","(128,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.1.weight,decoder_z1_z2,"(128,)","(128,)",True,0.5422863960266113
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.1.bias,decoder_z1_z2,"(128,)","(128,)",True,1.5580546855926514
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_mean,decoder_z1_z2,"(128,)","(128,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.1.running_var,decoder_z1_z2,"(128,)","(128,)",True,0.0
+siletti,decoder_z1_z2.decoder.fc_layers.Layer 1.1.num_batches_tracked,decoder_z1_z2,(),(),True,0.0
+siletti,decoder_z1_z2.mean_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+siletti,decoder_z1_z2.mean_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0
+siletti,decoder_z1_z2.var_decoder.weight,decoder_z1_z2,"(30, 128)","(30, 128)",True,0.0
+siletti,decoder_z1_z2.var_decoder.bias,decoder_z1_z2,"(30,)","(30,)",True,0.0

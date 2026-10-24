@@ -1,0 +1,120 @@
+section,check,level,status,n_bad,detail
+structure,h5ad md5 matches release_manifest.csv,MUST,pass,0,4a39f172e4db0a2b470de7b6ac7b81e3 vs 4a39f172e4db0a2b470de7b6ac7b81e3
+structure,"required groups X, obs, var, obsm, uns present",MUST,pass,0,"X, layers, obs, obsm, obsp, uns, var, varm, varp"
+structure,X encoded as csr_matrix (>= 50% zeros),MUST,pass,0,csr_matrix
+structure,no raw (raw counts already in X),MUST,pass,0,
+structure,no extra layers (all layers must share cells/genes; none expected),SHOULD,pass,0,
+structure,obsp: no zero-size entries,MUST,pass,0,
+structure,varm: no zero-size entries,MUST,pass,0,
+structure,varp: no zero-size entries,MUST,pass,0,
+obs,index unique,MUST,pass,0,
+obs,index is str,MUST,pass,0,
+obs,column names unique,MUST,pass,0,
+obs,no names starting with '__',MUST,pass,0,
+obs,deprecated reserved names absent,MUST,pass,0,
+obs,portal-annotated names absent (curator MUST NOT),MUST,pass,0,
+obs,7.1.0 perturbation fields absent (dataset has no perturbations),SHOULD,pass,0,
+obs,required fields present,MUST,pass,0,
+obs,assay_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,assay_ontology_term_id: no missing values,MUST,pass,0,
+obs,assay_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,cell_type_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,cell_type_ontology_term_id: no missing values,MUST,pass,0,
+obs,cell_type_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,development_stage_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,development_stage_ontology_term_id: no missing values,MUST,pass,0,
+obs,development_stage_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,disease_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,disease_ontology_term_id: no missing values,MUST,pass,0,
+obs,disease_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,donor_id: categorical with str categories,MUST,pass,0,category
+obs,donor_id: no missing values,MUST,pass,0,
+obs,donor_id: no unused categories,SHOULD,pass,0,
+obs,self_reported_ethnicity_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,self_reported_ethnicity_ontology_term_id: no missing values,MUST,pass,0,
+obs,self_reported_ethnicity_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,sex_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,sex_ontology_term_id: no missing values,MUST,pass,0,
+obs,sex_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,suspension_type: categorical with str categories,MUST,pass,0,category
+obs,suspension_type: no missing values,MUST,pass,0,
+obs,suspension_type: no unused categories,SHOULD,pass,0,
+obs,tissue_ontology_term_id: categorical with str categories,MUST,pass,0,category
+obs,tissue_ontology_term_id: no missing values,MUST,pass,0,
+obs,tissue_ontology_term_id: no unused categories,SHOULD,pass,0,
+obs,tissue_type: categorical with str categories,MUST,pass,0,category
+obs,tissue_type: no missing values,MUST,pass,0,
+obs,tissue_type: no unused categories,SHOULD,pass,0,
+obs,is_primary_data: bool,MUST,pass,0,bool
+obs,is_primary_data: value counts,info,info,0,{False: 311618}
+obs,assay_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,cell_type_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,development_stage_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,disease_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,self_reported_ethnicity_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,tissue_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,sex_ontology_term_id: id format / allowed literal,MUST,pass,0,
+obs,sex_ontology_term_id in female/male/hermaphrodite/unknown,MUST,pass,0,
+obs,tissue_type vocabulary,MUST,pass,0,tissue
+obs,cell_type_ontology_term_id: 'na' only (and then required) for cell lines,MUST,pass,0,
+obs,development_stage_ontology_term_id: 'na' only (and then required) for cell lines,MUST,pass,0,
+obs,donor_id: 'na' only (and then required) for cell lines,MUST,pass,0,
+obs,sex_ontology_term_id: 'na' only (and then required) for cell lines,MUST,pass,0,
+obs,self_reported_ethnicity_ontology_term_id: 'na' only (and then required) for cell lines,MUST,pass,0,
+obs,suspension_type vocabulary,MUST,pass,0,"cell, nucleus"
+obs,donor_id non-empty,MUST,pass,0,52 donors
+obs,cell_type_ontology_term_id not a forbidden CL root,MUST,pass,0,
+obs,cell_type_ontology_term_id 'unknown' cells,info,info,624,allowed when no appropriate term exists
+var,index unique,MUST,pass,0,
+var,index = versionless human Ensembl gene IDs,MUST,pass,0,
+var,column names unique,MUST,pass,0,
+var,no names starting with '__',MUST,pass,0,
+var,portal-annotated names absent (curator MUST NOT),MUST,pass,0,
+var,"feature_is_filtered present, bool",MUST,pass,0,bool
+var,feature_is_filtered all False (no raw matrix),MUST,pass,0,
+var,every gene ID is a GENCODE v48 gene_id,MUST,pass,0,
+var,gene_symbol differs from v48 gene_name (portal uses gene_name),info,info,452,"AARS->AARS1, AC005726.1->ENSG00000258472, AC008687.4->SAXO3, AC010325.1->SMIM47, AC013470.2->C7orf78, AC015871.1->ST20, AC025283.2->ENSG00000285329, AC079447.1->ENSG00000241962, AC090360.1->ENSG00000267127, AC092835.1->ZNF892"
+obsm,at least one X_ embedding (non-spatial assay),MUST,pass,0,"X_scanvi, X_scvi, X_scvi_malignant, X_umap"
+obsm,X_scanvi: name X_<suffix> pattern,MUST,pass,0,X_scanvi
+obsm,"X_scanvi: numeric dtype, n_obs rows, >= 2 columns",MUST,pass,0,"float32 (311618, 30)"
+obsm,X_scanvi: no +-inf,MUST,pass,0,
+obsm,X_scanvi: not all NaN,MUST,pass,0,
+obsm,X_scvi: name X_<suffix> pattern,MUST,pass,0,X_scvi
+obsm,"X_scvi: numeric dtype, n_obs rows, >= 2 columns",MUST,pass,0,"float32 (311618, 30)"
+obsm,X_scvi: no +-inf,MUST,pass,0,
+obsm,X_scvi: not all NaN,MUST,pass,0,
+obsm,X_scvi_malignant: name X_<suffix> pattern,MUST,pass,0,X_scvi_malignant
+obsm,"X_scvi_malignant: numeric dtype, n_obs rows, >= 2 columns",MUST,pass,0,"float32 (311618, 30)"
+obsm,X_scvi_malignant: no +-inf,MUST,pass,0,
+obsm,X_scvi_malignant: not all NaN,MUST,pass,0,
+obsm,X_scvi_malignant: no rows with NaN,SHOULD,warn,144223,"the official cellxgene-schema validator warns on these rows (not all NaN, so not a MUST failure)"
+obsm,X_umap: name X_<suffix> pattern,MUST,pass,0,X_umap
+obsm,"X_umap: numeric dtype, n_obs rows, >= 2 columns",MUST,pass,0,"float32 (311618, 2)"
+obsm,X_umap: no +-inf,MUST,pass,0,
+obsm,X_umap: not all NaN,MUST,pass,0,
+uns,deprecated reserved keys absent,MUST,pass,0,
+uns,portal-annotated keys absent (curator MUST NOT),MUST,pass,0,
+uns,no keys starting with '__',MUST,pass,0,
+uns,organism_ontology_term_id == NCBITaxon:9606,MUST,pass,0,NCBITaxon:9606
+uns,title is a non-empty str,MUST,pass,0,Cross-cohort single-cell atlas of H3K27-altered diffuse midline glioma — integra
+uns,batch_condition keys are obs columns,MUST,pass,0,sample_id
+uns,default_embedding is an obsm key,MUST,pass,0,X_umap
+uns,"X_approximate_distribution in {count, normal} if present",MUST,pass,0,None
+uns,no empty values (True / False / None allowed),MUST,pass,0,
+ontology,term exists in OLS4,MUST,pass,0,
+ontology,term not obsolete,MUST,pass,0,
+ontology,term has required ancestor,MUST,pass,0,
+ontology,OLS label matches label hard-coded in step 27,SHOULD,pass,0,
+ontology,suspension_type allowed for assay,MUST,pass,0,
+obs,development stage consistent with age_years (floor years / months),MUST,pass,0,
+X,"shape = (n_obs, n_var)",MUST,pass,0,"(311618, 18865)"
+X,data dtype float32,MUST,pass,0,float32
+X,"indptr monotone, starts at 0, ends at nnz",MUST,pass,0,
+X,density < 50% (sparse encoding required),info,info,0,"nnz 601,857,201, density 0.1024"
+X,values finite,MUST,pass,0,
+X,non-zero values positive,MUST,pass,0,
+X,non-zero values integers (de-duplicated UMI counts),MUST,pass,0,
+X,column indices in range,MUST,pass,0,
+X,column indices strictly increasing within rows (canonical CSR),MUST,pass,0,
+X,every cell has >= 1 non-zero value,MUST,pass,0,
+X,no two cells identical across all features,MUST,pass,0,
