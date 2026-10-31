@@ -100,7 +100,12 @@ def place(src, rel, desc, rows, link=False):
 with log.step("read release obs"):
     assert md5(PROCESSED / "dmg_atlas_v1.h5ad") == RELEASE_MD5, "dmg_atlas_v1.h5ad md5 differs from release_manifest.csv"
     with h5py.File(PROCESSED / "dmg_atlas_v1.h5ad", "r") as f:
-        obs = pd.DataFrame({c: read_elem(f["obs"][c]) for c in ["study", "sample_id", "donor_id", "suspension_type"]})
+        full = read_elem(f["obs"])
+        obs = full[["study", "sample_id", "donor_id", "suspension_type"]].copy()
+        n_obs_cols = full.shape[1]
+        cols = pd.DataFrame([dict(column=c, dtype=str(full[c].dtype), n_unique=int(full[c].nunique()), n_missing=int(full[c].isna().sum()),
+                                  examples="; ".join(map(str, full[c].dropna().unique()[:5]))[:200]) for c in full.columns])
+        del full
         n_genes = f["var"]["_index"].shape[0] if "_index" in f["var"] else len(read_elem(f["var"]))
     g = obs.groupby("study", observed=True)
     per_study = pd.DataFrame({"cells": g.size(), "samples": g.sample_id.nunique(), "donors": g.donor_id.nunique(),
@@ -137,6 +142,9 @@ with log.step("assemble folder"):
         place(p, f"tables/quality/{p.name}", "Phase 9 robustness check (see docs/phase9_quality_notes.md)", rows)
     for p, desc in DOC_FILES.items():
         place(ROOT / p, f"docs/{Path(p).name}", desc, rows)
+    cols.to_csv(OUT / "docs/obs_columns.csv", index=False)
+    rows.append(dict(path="docs/obs_columns.csv", bytes=(OUT / "docs/obs_columns.csv").stat().st_size,
+                     description=f"every obs column of data/dmg_atlas_v1.h5ad ({len(cols)}): dtype, unique values, missing, examples"))
     for sub in ("main", "supp"):
         for p in sorted((RESULTS / "pub_figs" / sub).glob("*.pdf")):
             place(p, f"figures/{sub}/{p.name}", f"{sub} figure", rows)
@@ -192,10 +200,12 @@ sc.pl.embedding(adata, "X_umap", color="cell_type_atlas")
 ```
 
 - `X` holds raw counts; normalise yourself. Gene IDs are Ensembl (GENCODE v48); symbols in `var['gene_symbol']`.
-- Embeddings: `X_scvi`, `X_scanvi`, `X_umap` (current); `*_pre_audit` keys are kept for provenance only.
+- Embeddings: `X_scvi`, `X_scanvi`, `X_umap`; `X_scvi_malignant` (malignant-only scVI, NaN outside the malignant subset).
 - Key labels: `cell_type_atlas` / `cell_type_ontology_term_id` (cell type), `consensus_call` (malignant / normal / ambiguous),
   `scanvi_label` + `scanvi_maxprob` (classifier), `mp_family` (malignant metaprogram family), `tme_subcluster`.
-- All obs fields: `docs/release_v1.md`, `docs/atlas_schema.md`; vocabulary: `docs/label_ontology.csv`.
+- All {n_obs_cols} obs fields of this file, with type and examples: `docs/obs_columns.csv`. CELLxGENE field mapping:
+  `docs/release_v1.md` (written before the deposit clean-up, scripts/27b_clean_release.py, which dropped the `*_pre_audit`
+  and sample-level `author_*` columns it still lists); vocabulary: `docs/label_ontology.csv`.
 - Map new data with scArches: build an AnnData whose `var_names` are the 3,000 gene **symbols** in
   `models/scanvi_reference/var_names.txt` (= `var['gene_symbol']` of the `highly_variable` genes), raw counts in
   `layers['counts']`, and obs columns `sample_id`, `study`, `assay`, `pct_mito` and `lineage_label = "Unknown"`; then
