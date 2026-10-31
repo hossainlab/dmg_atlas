@@ -2,14 +2,14 @@
 """Phase 9 / step 35 — assemble the Zenodo deposit of atlas v1: data and models only (folder + zip, with checksums).
 
 Code, figures, result tables and documentation stay in the GitHub repository, which the deposit links to (README.md and
-.zenodo.json related_identifiers). Builds deposit/dmg_atlas_v1/ from existing outputs (nothing upstream is modified) and zips it
+zenodo_metadata.json related_identifiers). Builds deposit/dmg_atlas_v1/ from existing outputs (nothing upstream is modified) and zips it
 to deposit/dmg_atlas_v1_zenodo.zip:
   data/      dmg_atlas_v1.h5ad (release object), query_mapping.h5ad, malignant_calls.csv.gz, sample_manifest.csv (local
              file_paths column dropped)
   models/    scvi_reference/ + scanvi_reference/ (models/scvi_seed1, models/scanvi): model.pt, run.json, var_names.txt
   metadata/  data dictionary: obs_columns.csv (generated from the release h5ad), label_ontology.csv
   README.md  data card (generated here; counts read from the release h5ad; links to the repository for everything else)
-  LICENSE.md, .zenodo.json (Zenodo deposition metadata), FILES.tsv (path, bytes, md5, description), MD5SUMS
+  LICENSE.md, zenodo_metadata.json (Zenodo deposition metadata), FILES.tsv (path, bytes, md5, description), MD5SUMS
 Large files are hard-linked, not copied. The zip stores already-compressed files (h5ad, gz, pt) without recompression.
 Creator: Md. Jubayer Hossain (ORCID 0000-0001-9323-4997); no affiliation recorded.
 Run: nice -n 10 python scripts/35_zenodo_deposit.py [--force] [--no-zip]
@@ -217,8 +217,8 @@ Cite this record by the DOI shown on its Zenodo page, and cite the source studie
                                + [{"identifier": d, "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "publication-article"}
                                   for d in dict.fromkeys(s[4] for s in SOURCES)]
                                + [{"identifier": "10.5281/zenodo.17922773", "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "dataset"}]}}
-    (OUT / ".zenodo.json").write_text(json.dumps(zen, indent=1) + "\n")
-    for f_, desc in [("README.md", "data card"), ("LICENSE.md", "licenses"), (".zenodo.json", "Zenodo deposition metadata")]:
+    (OUT / "zenodo_metadata.json").write_text(json.dumps(zen, indent=1) + "\n")
+    for f_, desc in [("README.md", "data card"), ("LICENSE.md", "licenses"), ("zenodo_metadata.json", "Zenodo deposition metadata")]:
         rows.append(dict(path=f_, bytes=(OUT / f_).stat().st_size, description=desc))
 
 with log.step("checksums"):
