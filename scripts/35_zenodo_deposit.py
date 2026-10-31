@@ -11,7 +11,7 @@ to deposit/dmg_atlas_v1_zenodo.zip:
   README.md  data card (generated here; counts read from the release h5ad; links to the repository for everything else)
   LICENSE.md, .zenodo.json (Zenodo deposition metadata), FILES.tsv (path, bytes, md5, description), MD5SUMS
 Large files are hard-linked, not copied. The zip stores already-compressed files (h5ad, gz, pt) without recompression.
-Creator affiliation / ORCID are placeholders (FILL_IN) in .zenodo.json — edit before uploading.
+Creator: Md. Jubayer Hossain (ORCID 0000-0001-9323-4997); no affiliation recorded.
 Run: nice -n 10 python scripts/35_zenodo_deposit.py [--force] [--no-zip]
 Log: logs/phase9_deposit.log
 """
@@ -125,6 +125,7 @@ with scVI/scANVI, with query projections, malignant metaprograms and spatial dec
 
 - **Reference:** {len(obs):,} cells / nuclei · {obs.sample_id.nunique()} samples · {obs.donor_id.nunique()} donors · {obs.study.nunique()} studies · {n_genes:,} genes (GENCODE v48)
 - **Queries (projection only):** {q_md}
+- **Author:** Md. Jubayer Hossain ([ORCID 0000-0001-9323-4997](https://orcid.org/0000-0001-9323-4997))
 - **Code, figures, result tables, full documentation:** {GH} (this deposit was built from commit `{sha}` by `scripts/35_zenodo_deposit.py` on {today})
 
 ## Contents
@@ -205,7 +206,7 @@ Cite this record by the DOI shown on its Zenodo page, and cite the source studie
     zen = {"metadata": {
         "upload_type": "dataset", "title": f"DMG Atlas v{VERSION}: a cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma",
         "version": VERSION, "publication_date": today, "access_right": "open", "license": "cc-by-4.0",
-        "creators": [{"name": "Hossain, Jubayer", "affiliation": "FILL_IN", "orcid": "FILL_IN"}],
+        "creators": [{"name": "Hossain, Md. Jubayer", "orcid": "0000-0001-9323-4997"}],
         "description": (f"<p>Cross-cohort reference atlas of human H3K27-altered diffuse midline glioma: {len(obs):,} cells / nuclei from "
                         f"{obs.sample_id.nunique()} samples, {obs.donor_id.nunique()} donors and {obs.study.nunique()} public studies, integrated "
                         "with scVI/scANVI. Includes the release h5ad (raw counts, CELLxGENE 7.1.0 fields), query projections of three tumour "
@@ -215,8 +216,7 @@ Cite this record by the DOI shown on its Zenodo page, and cite the source studie
         "related_identifiers": [{"identifier": "https://github.com/hossainlab/dmg_atlas", "relation": "isSupplementedBy", "resource_type": "software"}]
                                + [{"identifier": d, "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "publication-article"}
                                   for d in dict.fromkeys(s[4] for s in SOURCES)]
-                               + [{"identifier": "10.5281/zenodo.17922773", "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "dataset"}],
-        "notes": "Creator affiliation and ORCID to be completed before publication."}}
+                               + [{"identifier": "10.5281/zenodo.17922773", "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "dataset"}]}}
     (OUT / ".zenodo.json").write_text(json.dumps(zen, indent=1) + "\n")
     for f_, desc in [("README.md", "data card"), ("LICENSE.md", "licenses"), (".zenodo.json", "Zenodo deposition metadata")]:
         rows.append(dict(path=f_, bytes=(OUT / f_).stat().st_size, description=desc))
