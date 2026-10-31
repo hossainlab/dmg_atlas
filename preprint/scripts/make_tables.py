@@ -1,6 +1,6 @@
-"""Generate the preprint's LaTeX tables from results/tables/*.csv (run from the repo root)."""
+"""Generate the preprint's LaTeX tables from results/tables/*.csv (run: python preprint/scripts/make_tables.py)."""
 import pandas as pd, pathlib, re
-R = pathlib.Path(__file__).resolve().parents[1]
+R = pathlib.Path(__file__).resolve().parents[2]
 T = lambda n: pd.read_csv(R / "results" / "tables" / n)
 OUT = R / "preprint" / "tables"; OUT.mkdir(exist_ok=True)
 esc = lambda s: str(s).replace("_", r"\_").replace("&", r"\&").replace("%", r"\%")
@@ -38,12 +38,13 @@ rows = []
 for _, r in ref.sort_values("cells", ascending=False).iterrows():
     rows.append(f'{names.get(r.study, r.study)} & {int(r.samples)} & {int(r.patients)} & {int(r.cells):,} & '
                 f'{esc(r.assay)} & {esc(r.site)} & {esc(r.h3_variants)} & {r.malignant_fraction_consensus:.3f} \\\\')
-tot = ref[["samples", "patients", "cells"]].sum()
+tot = a[a.study == "TOTAL reference"].iloc[0]  # distinct patients (Jessa series share 4), not the per-study sum
 write("table1_cohort.tex", r"""\begin{table}[htbp]
 \centering\footnotesize
 \caption{\textbf{Reference cohort.} Samples, patients and cells per contributing study after quality control, with
 assay, anatomical site and reported H3 variant (sample counts), and the fraction of cells called malignant by the
-consensus rule. Counts are cells for whole-cell and nuclei for single-nucleus and multiome assays.}
+consensus rule. Counts are cells for whole-cell and nuclei for single-nucleus and multiome assays. Patient counts per
+study sum to 56 because the two Jessa et al.\ series share four patients; the total gives distinct patients.}
 \label{tab:cohort}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrrlllr}
@@ -88,7 +89,7 @@ mp = T("metaprograms.csv"); fam = {"OPC_like": "OPC-like", "AC_like": "AC-like",
     "MES_like": "MES-like", "cycling": "cycling", "hypoxia": "hypoxia", "novel_MP9": "ciliated (MP9)"}
 tech = {"technical:ribosomal": "ribosomal", "technical:mitochondrial": "mitochondrial",
         "technical:IEG_dissociation_stress": "IEG / dissociation stress"}
-gcol = [c for c in mp.columns if "gene" in c.lower()][0]
+gcol = "top_genes"
 rows = []
 for _, r in mp.iterrows():
     f = fam.get(r.family) if isinstance(r.family, str) else r"\textit{" + tech.get(r.technical_class, "technical") + "}"
@@ -99,7 +100,7 @@ write("table3_metaprograms.tex", r"""\begin{table}[htbp]
 \centering\footnotesize
 \caption{\textbf{Consensus metaprograms.} Metaprograms at the primary dendrogram cut, their assigned lineage family or
 technical class, the number of samples in which a contributing programme was found, whether they satisfy the
-pre-registered replication rule (at least three studies and both assay classes), and their top genes.}
+pre-specified replication rule (at least three studies and both assay classes), and their top genes.}
 \label{tab:mp}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{llrll}
@@ -136,40 +137,58 @@ Malignant state & Lineage & $\rho$ & 95\% CI & $q$ & Sections $>0$ & $I^2$ \\
 \end{tabular}}
 \end{table}""")
 
-# ---- Supplementary Table 1: deposit inventory ----
-d = pd.read_csv(R / "docs" / "datasets" / "dmg_dataset_selection.csv")
-d = d[d.recommended_role.notna()]
-def wrap(x, n):
-    x = str(x)
-    return esc(x[:n] + ("\\ldots" if len(x) > n else ""))
-# Which screened deposits actually entered the released results (USED, built above from the pipeline outputs).
-ACC_KEYS = [tok for _, acc, _ in USED.values()
-            for tok in re.findall(r"GSE\d+|EGAS\d+|zenodo\.\d+", acc)]
-def used_mark(r):
-    acc = str(r.accession)
-    return "yes" if (any(k in acc for k in ACC_KEYS) or "cellxgene" in str(r.repository).lower()) else "no"
-rows = [f'{wrap(r.dataset, 30)} & {wrap(r.accession, 26)} & {wrap(r.repository, 14)} & {wrap(r.access, 16)} & '
-        f'{wrap(r.n_cells_or_spots, 11)} & {used_mark(r)} & {wrap(r.recommended_role, 22)} \\\\'
-        for _, r in d.iterrows()]
-write("tableS1_deposits.tex", r"""\begin{table}[htbp]
-\centering\scriptsize
-\caption{\textbf{Supplementary Table 1 $\vert$ Public deposits screened and their role in this study.} Accession,
-repository, access status and deposited cell or spot count for every deposit screened, with an explicit column
-for whether it entered the released results. The final column is the role proposed at screening, which is not the
-inclusion record: deposits marked ``no'' were dropped before or during quality control (the mouse developmental
-reference and the adult Paired-Tag reference were never used, and the ScPCA samples failed quality control), and
-the Phase~7 bulk cohort is outside the scope of this paper.}
-\label{tab:deposits}
-\setlength{\tabcolsep}{3pt}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{p{2.6cm}p{2.4cm}p{1.5cm}p{1.5cm}p{1.2cm}p{0.9cm}p{2.1cm}}
+# ---- Supplementary Table 1: data sets screened and their use (curated; included rows checked against pipeline outputs) ----
+ROLE = {"okada": "Reference", "jessa_scrna": "Reference", "jessa_multiome": "Reference", "collot": "Reference", "zang": "Reference",
+        "desisto": "Reference", "filbin": "Query (tumour)", "liu": "Query (tumour)", "labelle": "Query (tumour)",
+        "braun2023": "Query (normal brain)", "siletti2023": "Query (normal brain)", "huchede": "Spatial", "ren": "Spatial",
+        "collot_st": "Spatial", "brainstem": "Spatial"}
+DTYPE = {"okada": "snRNA-seq", "jessa_scrna": "scRNA-seq, snRNA-seq", "jessa_multiome": "Multiome (RNA)", "collot": "snRNA-seq",
+         "zang": "scRNA-seq", "desisto": "scRNA-seq", "filbin": "Smart-seq2 (TPM)", "liu": "Smart-seq2 (TPM)",
+         "labelle": "Smart-seq2, 10x (TPM)", "braun2023": "scRNA-seq", "siletti2023": "snRNA-seq", "huchede": "Visium",
+         "ren": "Visium", "collot_st": "Visium", "brainstem": "Visium"}
+ACC = {"okada": "UCSC Cell Browser (brain-dmg-multiomics); raw data EGAS50000001447", "collot": "10.5281/zenodo.17922773",
+       "collot_st": "10.5281/zenodo.17922773", "braun2023": "CELLxGENE collection 4d8fed08", "siletti2023": "CELLxGENE collection 283d65eb",
+       "labelle": "GSE227983, GSE271936"}
+NOT_USED = [  # (data set, accession, repository, data type, reason)
+    ("Adult human brain Paired-Tag (Xie et al.)", "GSE327101", "GEO", "Paired-Tag", "Not used: normal reference not required"),
+    ("PBTA / OpenPedCan v14", "--", "OpenPedCan", "Bulk RNA-seq", "Not used: bulk data, outside scope"),
+    ("ScPCA SCPCP000021", "SCPCP000021", "ScPCA portal", "snRNA-seq", "Excluded: failed quality control"),
+    ("Mouse developing pons and forebrain (Jessa et al.)", "GSE188625", "GEO", "scRNA-seq (mouse)", "Excluded: non-human"),
+    ("Longitudinal paediatric high-grade glioma", "--", "dbGaP", "snRNA-seq, snATAC-seq", "Not accessed: controlled access"),
+    ("DIPG CAR-T autopsy cohort", "--", "--", "snRNA-seq", "Not available: data not released"),
+    ("DIPG single-cell cohort (2026)", "--", "EGA", "scRNA-seq", "Not available: not deposited"),
+    ("Cell-line and PDX series", "GSE212782 and others", "GEO", "scRNA-seq", "Excluded: models, not primary tumour"),
+    ("CSF and PBMC immune series", "GSE261235, GSE186802, GSE202174", "GEO", "scRNA-seq", "Excluded: not tumour tissue"),
+]
+atlas = T("atlas_v1_summary.csv"); atlas = atlas[atlas.study != "TOTAL reference"]
+spatial = pd.read_csv(R / "results" / "qc" / "spatial_sections_used.csv")
+used_keys = list(atlas.study) + sorted(set(spatial.study))
+missing = [k for k in used_keys if k not in USED]
+assert not missing, f"no accession recorded for: {missing}"
+NAME = {"labelle": "LaBelle et al., DMG immune cohort"}
+clean = lambda k: NAME.get(k, re.sub(r"\s*\([^)]*\)\s*$", "", USED[k][0]))
+rows = [f'{esc(clean(k))} & {esc(ACC.get(k, USED[k][1]))} & {esc(USED[k][2])} & {esc(DTYPE[k])} & {ROLE[k]} \\\\' for k in used_keys]
+rows += [r"\midrule"] + [" & ".join(esc(x) for x in r) + r" \\" for r in NOT_USED]
+print(f"supplementary table 1: {len(used_keys)} data sets used, {len(NOT_USED)} screened and not used")
+write("tableS1_deposits.tex", r"""\begin{landscape}
+\footnotesize
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.05}
+\begin{longtable}{>{\raggedright\arraybackslash}p{6.2cm}>{\raggedright\arraybackslash}p{6.0cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{4.6cm}}
+\caption{\textbf{Public data sets screened and their use in this study.} Data sets used, with their role, followed by data
+sets screened but not used, with the reason.}
+\label{tab:deposits}\\
 \toprule
-Dataset & Accession & Repository & Access & Cells/spots & Used here & Role at screening \\
+Data set & Accession & Repository & Data type & Use in this study \\
 \midrule
+\endfirsthead
+\toprule
+Data set & Accession & Repository & Data type & Use in this study \\
+\midrule
+\endhead
 """ + "\n".join(rows) + r"""
 \bottomrule
-\end{tabular}}
-\end{table}""")
+\end{longtable}
+\end{landscape}""")
 
 # ---- Key resources table (Cell Press STAR Methods requirement) ----
 ver = pd.read_csv(R / "env" / "versions.csv")
@@ -183,33 +202,16 @@ soft_rows = []
 for _, r in ver.iterrows():
     if r["package"] not in SOFT:
         continue
-    v = str(r["local"]) if pd.notna(r["local"]) and str(r["local"]) != "nan" else str(r["modal"])
-    soft_rows.append(f'{esc(r["package"])} v{esc(v)} & {esc(SOFT[r["package"]])} & \\url{{https://pypi.org/project/{r["package"]}/}} \\\\')
-
-atlas = T("atlas_v1_summary.csv"); atlas = atlas[atlas.study != "TOTAL reference"]
-spatial = pd.read_csv(R / "results" / "qc" / "spatial_sections_used.csv")
-used_keys = list(atlas.study) + sorted(set(spatial.study))
-missing = [k for k in used_keys if k not in USED]
-assert not missing, f"no accession recorded for: {missing}"
-dep_rows = [f'{esc(USED[k][0])} & {esc(USED[k][1])} & {esc(USED[k][2])} \\\\' for k in used_keys]
-print(f"key resources: {len(dep_rows)} deposits actually used ({len(atlas)} atlas + {len(set(spatial.study))} spatial)")
+    v = (str(r["local"]) if pd.notna(r["local"]) and str(r["local"]) != "nan" else str(r["modal"])).lstrip("=")
+    soft_rows.append(f'{esc(r["package"])} v{esc(v)} & {esc(SOFT[r["package"]])} & {"python.org" if r["package"] == "python" else "PyPI: " + esc(r["package"])} \\\\')
 
 write("table_key_resources.tex", r"""\begin{table}[htbp]
-\centering\scriptsize
-\caption{\textbf{Key resources table.} Deposited data reused in this study and the software that produced the
-results. Version numbers are those recorded by \texttt{scripts/28\_record\_environment.py}; the full environment
-(557 conda and 167 pip entries for the local environment, plus the GPU image pins) is in \texttt{env/}.}
+\centering\small
+\caption{\textbf{Software and versions.} Main software packages used in the analysis.}
 \label{tab:keyresources}
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{p{5.0cm}p{6.0cm}p{3.6cm}}
+\begin{tabular}{lll}
 \toprule
-\multicolumn{3}{l}{\textbf{Deposited data}} \\
-Dataset & Identifier & Source \\
-\midrule
-""" + "\n".join(dep_rows) + r"""
-\midrule
-\multicolumn{3}{l}{\textbf{Software and algorithms}} \\
-Software & Reference & Identifier \\
+Software & Reference & Source \\
 \midrule
 """ + "\n".join(soft_rows) + r"""
 \bottomrule
