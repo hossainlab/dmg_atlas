@@ -3,7 +3,7 @@
 
 Inputs : the running Python environment (conda env 'multiverse'), `conda list` of that env (if a conda executable is found via
          $CONDA_EXE or PATH), modal/singlecell_gpu_pyro191.py (Modal image pins), modal/built_env.json (image id),
-         docs/phase7_multimodal_notes.md (extra pip packages installed inside Modal sandboxes are listed in EXTRA_MODAL below).
+         docs/phases/phase7_multimodal_notes.md (extra pip packages installed inside Modal sandboxes are listed in EXTRA_MODAL below).
 Outputs (env/, overwritten on every run — they describe the current environment):
   env/local_pip_freeze.txt      every installed distribution of the local env, 'name==version' (importlib.metadata)
   env/local_conda_list.txt      `conda list --explicit`-free `conda list` of the env (channel + build), if conda is available

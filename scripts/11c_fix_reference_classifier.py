@@ -184,7 +184,7 @@ def main():
             "X_scanvi": "zero-shot output of the reference encoder (encode_covariates=False; encoder state identical before/after query training)",
             "scanvi_prob_columns": cols, "script": "scripts/11c_fix_reference_classifier.py", "versions": ver}
         A.uns["phase5"]["knn_lineage"] = ("majority scANVI label (atlas_core scanvi_label) among the 15 nearest reference cells in X_scanvi; "
-                                         "primary label for off-manifold queries (see docs/phase5_mapping_notes.md)")
+                                         "primary label for off-manifold queries (see docs/phases/phase5_mapping_notes.md)")
         A.write_h5ad(QM, compression="gzip")
         LOG.write(f"wrote {QM}: {A.n_obs} cells; obs {A.obs.shape[1]} cols; obsm {list(A.obsm)} | peak RSS {peak_rss_gb():.2f} GB")
         obs_new = A.obs.copy()

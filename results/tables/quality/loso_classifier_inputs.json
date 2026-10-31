@@ -1,0 +1,25 @@
+{
+ "script": "scripts/32_loso_classifier.py",
+ "params": {
+  "min_class": 20,
+  "maxprob": 0.9
+ },
+ "inputs": {
+  "models/loso_scanvi/okada/predictions.csv.gz": "ff83053123e52b9b3eff194ce5615272",
+  "models/loso_scanvi/okada/split.json": "94fa1cd801c064625b018b96d740b1db",
+  "models/loso_scanvi/okada/run.json": "ed0b9c040134d88320805901b4e4fdd7",
+  "models/loso_scanvi/jessa2022/predictions.csv.gz": "f7acfb3dc4a9a72f9fcd34e159394f09",
+  "models/loso_scanvi/jessa2022/split.json": "4bf1e45b9b4dcc45887bd1d336a7947b",
+  "models/loso_scanvi/jessa2022/run.json": "04388349bb7d33da408db6cf8a4094b5",
+  "models/loso_scanvi/collot/predictions.csv.gz": "343c68ac04e3ce17315a297a31d28c65",
+  "models/loso_scanvi/collot/split.json": "1821f445da313f7a14bab296730cb6c0",
+  "models/loso_scanvi/collot/run.json": "bc2b236d1ef7a44c793f7c490349f97d",
+  "models/loso_scanvi/zang/predictions.csv.gz": "e4e42ac607b368f3c90a16e3279cef40",
+  "models/loso_scanvi/zang/split.json": "46fd3be08ed312169a5c076d9a175dd9",
+  "models/loso_scanvi/zang/run.json": "871ffde9786020f30a224277454cbb9e",
+  "models/loso_scanvi/desisto/predictions.csv.gz": "55fb14f9b5b5ff307d076413c89a01e8",
+  "models/loso_scanvi/desisto/split.json": "c28bbe377d7f7ed1193ec401e70c4371",
+  "models/loso_scanvi/desisto/run.json": "b9c98ee3e56be78ba1dd6e45915f517a",
+  "results/tables/reflabels/scanvi_heldout_comparison.csv": "292373ab367d7d11e6e8ed8b1e40c937"
+ }
+}

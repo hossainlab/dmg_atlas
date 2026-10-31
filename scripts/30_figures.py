@@ -7,7 +7,7 @@ axis labels. All statistics, n and the remaining description live in the caption
 (open frame, 8/7/6 pt ladder, 300 dpi, Type-42 fonts); letters, titles and embedding axes from figstyle.letter / figstyle.umap_ax.
 Every number quoted in a caption is computed here from the tables below, never typed by hand.
 
-Inputs (results/tables/ unless stated; all produced by earlier steps, md5 recorded in docs/figures.md):
+Inputs (results/tables/ unless stated; all produced by earlier steps, md5 recorded in docs/figures/figures.md):
   Fig 1 atlas   : atlas_core_obs_labels.csv, atlas_core_umap.csv (09), integration_metrics_summary.csv (08), cnv_event_frequencies.csv (06)
   Fig 2 mapping : mapping_summary.csv, mapping_uncertainty.csv, mapping_liu_author_vs_predicted.csv,
                   mapping_normal_reference_specificity.csv (11 / 11b)
@@ -22,8 +22,8 @@ Inputs (results/tables/ unless stated; all produced by earlier steps, md5 record
                   foundation_model_comparison.csv (26b)
 Outputs (never overwritten if present, unless --force):
   results/pub_figs/main/fig<N>_<name>.png (300 dpi) and .pdf for N = 1..6
-  docs/figures.md   captions (one per figure, panel by panel, numbers from the tables) + input md5 table
-Supplementary figures: scripts/31_supp_figures.py (results/pub_figs/supp/, docs/supp_figures.md).
+  docs/figures/figures.md   captions (one per figure, panel by panel, numbers from the tables) + input md5 table
+Supplementary figures: scripts/31_supp_figures.py (results/pub_figs/supp/, docs/figures/supp_figures.md).
 Run: nice -n 10 python scripts/30_figures.py [--force] [--figs 1 2 3 4 5 6]
 
 Choices fixed before plotting
@@ -50,7 +50,7 @@ from dmg_atlas.figstyle import (apply_figure_style, LINEAGE_COLOURS, QUERY_COLOU
                                 COMPARTMENT_COLOURS, CONTRAST_NAMES, SPATIAL_CLASS, letter, umap_ax, legend_dots, heat)
 
 log = U.StepLogger(LOGS / "phase8_release.log", context="30_figures")
-TAB, FIG, DOC = RESULTS / "tables", RESULTS / "pub_figs/main", ROOT / "docs/figures.md"
+TAB, FIG, DOC = RESULTS / "tables", RESULTS / "pub_figs/main", ROOT / "docs/figures/figures.md"
 used, captions = {}, {}
 
 
@@ -598,7 +598,7 @@ def fig6():
         f"Proportional hazards is violated in {int(s.ph_violated.sum())} of the {len(s)} fits shown at p < 0.05 by a Schoenfeld test with a rank time "
         f"transform ({', '.join(FAMILY_NAMES.get(f, f) for f in s.fam[s.ph_violated]) if int(s.ph_violated.sum()) else 'none'}; audit P7-07), "
         "so the hazard ratios are average effects over follow-up rather than constant ones. "
-        "NNLS deconvolution proportions are not shown: they disagreed with these rank scores (docs/phase7_multimodal_notes.md). "
+        "NNLS deconvolution proportions are not shown: they disagreed with these rank scores (docs/phases/phase7_multimodal_notes.md). "
         f"**d**, Zero-shot foundation-model embeddings vs scVI and PCA on {int(fm.n_cells.iloc[0]):,} confidently assigned malignant cells: "
         f"balanced kNN accuracy for the family label, nuclei → cells label transfer, and the fraction of neighbours from the same assay / sample "
         f"(dotted: expectation under random mixing, {r0.same_assay_expected:.2f} / {r0.same_sample_expected:.3f}). scGPT and Geneformer "

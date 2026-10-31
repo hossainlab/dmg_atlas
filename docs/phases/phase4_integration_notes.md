@@ -167,7 +167,7 @@ as `*_pre_audit` inside `atlas_core.h5ad`.
   reference cells score-only (`cnv_confidence`), `low_confidence_sample = True`. Decision: **kept in the scVI/scANVI reference** (its 8,466 cells are
   already in the chosen `scvi_seed1` latent; removing them would require retraining and re-selecting the reference model) and flagged
   (`obs['low_confidence_sample']`), but **excluded from the malignant-only model** (3,545 corrected-malignant cells) and **to be excluded from
-  Phase 6 malignant analyses** (recorded in `docs/decisions.md`). Its lineage labels after correction: Unknown 4,919, malignant 3,545, 2 normal.
+  Phase 6 malignant analyses** (recorded in `docs/design/decisions.md`). Its lineage labels after correction: Unknown 4,919, malignant 3,545, 2 normal.
 - **scANVI retrain (`modal/phase4b_scanvi_retrain.py`, Modal A10G, job cca289c6; `models/scanvi`, previous `models/scanvi_pre_audit`).** Same
   recipe as §5 (from `scvi_seed1`, `labels_key lineage_label`, unlabeled `Unknown`, all labelled cells, batch 1,024, max 25 epochs, seed 1) with two
   deliberate changes answering IM-03: (i) **patient-grouped validation** — whole patients added in a seeded random order until ≥ 10 % of labelled

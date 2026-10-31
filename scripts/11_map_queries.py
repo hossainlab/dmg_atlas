@@ -212,7 +212,7 @@ def uncertainty(seed: int = 0):
                                          "(results/tables/phase5_umap_reference_fit.csv); coordinates differ from atlas_core X_umap",
                            "per_query_training": {q: json.loads((model_dir(q) / "run.json").read_text()) for q in QUERIES},
                            "counts": "layers['counts'] = X: reference-HVG counts (UMI for Braun/Siletti, round(RSEM) for Liu, "
-                                     "TPM-derived pseudo-counts for Filbin/LaBelle; see docs/phase5_mapping_notes.md)"}
+                                     "TPM-derived pseudo-counts for Filbin/LaBelle; see docs/phases/phase5_mapping_notes.md)"}
         out = ROOT / "data/processed/query_mapping.h5ad"
         M.write_h5ad(out, compression="gzip")
         LOG.write(f"wrote {out}: {M.n_obs} cells x {M.n_vars} genes; obs {M.obs.shape[1]} cols; obsm {list(M.obsm)}")

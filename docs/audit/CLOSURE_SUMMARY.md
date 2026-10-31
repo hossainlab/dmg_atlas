@@ -60,7 +60,7 @@ All 4 critical findings are closed (CNV-01, IM-01, MC-01, P7-01).
 
 ### The spatial track
 
-Nothing was done for the spatial track: of its 20 registered findings, the **12 actionable ones (6 major, 6 minor) are unaddressed**, and the remaining 8 are auditor verification notes that need no closure. The sub-agent assigned to them was refused under content-safety filters rather than failing technically. That is a boundary: the track was not retried, reworded, split into smaller requests, or rerouted through another tool. Consequences recorded elsewhere in the repo: Figure 5 and Supplementary Figure 7 captions are marked *pending spatial corrections*, `docs/release_v1.md` states the spatial layer is pending, and the survival NNLS models (P7-07) could not be re-fitted because `c2l_signatures_mp.csv` is a spatial-track output (SP-06) still carrying the pre-audit families.
+Nothing was done for the spatial track: of its 20 registered findings, the **12 actionable ones (6 major, 6 minor) are unaddressed**, and the remaining 8 are auditor verification notes that need no closure. The sub-agent assigned to them was refused under content-safety filters rather than failing technically. That is a boundary: the track was not retried, reworded, split into smaller requests, or rerouted through another tool. Consequences recorded elsewhere in the repo: Figure 5 and Supplementary Figure 7 captions are marked *pending spatial corrections*, `docs/release/release_v1.md` states the spatial layer is pending, and the survival NNLS models (P7-07) could not be re-fitted because `c2l_signatures_mp.csv` is a spatial-track output (SP-06) still carrying the pre-audit families.
 
 ## Declared open (not_closed)
 

@@ -235,7 +235,7 @@ with log.step("separability (ATAC LSI vs RNA scVI)"):
 with log.step("write + figure"):
     summ.to_csv(OUTS[0], index=False); pd.DataFrame(rows_da).to_csv(OUTS[2], index=False)
     sep.to_csv(TABLES / "atac_separability_per_sample.csv", index=False)
-    apply_figure_style()   # house style: no titles / text inside panels (captions in docs/phase7_multimodal_notes.md), legends outside
+    apply_figure_style()   # house style: no titles / text inside panels (captions in docs/phases/phase7_multimodal_notes.md), legends outside
     fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.6), gridspec_kw={"width_ratios": [1, 0.8, 1.3]}, layout="constrained")
     x = np.arange(len(summ)); w = 0.38
     axes[0].bar(x - w / 2, summ.atac_enrichment, w, color="#2166ac", label="ATAC (LSI)")

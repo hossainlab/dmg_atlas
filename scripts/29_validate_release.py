@@ -14,7 +14,7 @@ Outputs (never overwritten if present, unless --force):
                                                warn / info / skip), n_bad, detail
   results/tables/release_validation_terms.csv  every ontology term used: field, term_id, n_cells, OLS label, step-27 label, obsolete,
                                                required ancestor found, ontology version served by OLS4
-  docs/release_validation.md                   generated summary (input md5, counts by status, failures / warnings, limits)
+  docs/release/release_validation.md                   generated summary (input md5, counts by status, failures / warnings, limits)
 Run: nice -n 10 python scripts/29_validate_release.py [--force] [--offline]
   --offline skips the OLS4 checks (status 'skip'). Exit status 1 if any MUST check fails.
 
@@ -53,7 +53,7 @@ from dmg_atlas import ROOT, RAW, PROCESSED, RESULTS, LOGS  # noqa: E402
 log = U.StepLogger(LOGS / "phase8_release.log", context="29_validate_release")
 H5 = PROCESSED / "dmg_atlas_v1.h5ad"
 TAB = RESULTS / "tables"
-OUT_CSV, OUT_TERMS, OUT_MD = TAB / "release_validation.csv", TAB / "release_validation_terms.csv", ROOT / "docs/release_validation.md"
+OUT_CSV, OUT_TERMS, OUT_MD = TAB / "release_validation.csv", TAB / "release_validation_terms.csv", ROOT / "docs/release/release_validation.md"
 GTF = RAW / "gencode" / "gencode.v48.primary_assembly.annotation.gtf.gz"
 OLS = "https://www.ebi.ac.uk/ols4/api"
 SCHEMA_URL = "https://github.com/chanzuckerberg/single-cell-curation/blob/main/schema/7.1.0/schema.md"

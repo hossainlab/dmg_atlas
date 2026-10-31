@@ -1,0 +1,16 @@
+metaprogram,label,family,technical_class,publications,replicated_primary,recovered_drop,lost_when_dropping,median_best_jaccard_drop,recovered_balanced_frac,replicated_balanced_frac,median_best_jaccard_balanced,recovered_random_frac,replicated_random_frac
+MP1,published:Liu2022_TableS2a_G2M,cycling,,desisto;jessa2022;okada;zang,True,5/5,,0.961,1.0,1.0,0.786,1.0,0.25
+MP2,technical:ribosomal,,technical:ribosomal,jessa2022;okada,False,5/5,,1.0,0.35,0.0,0.0,0.75,0.0
+MP3,curated:OPC_like_markers,OPC_like,,collot;jessa2022;okada,False,4/5,okada,0.818,0.5,0.0,0.443,0.45,0.0
+MP4,curated:Hypoxia,hypoxia,,collot;desisto;jessa2022;okada,True,4/5,jessa2022,0.923,0.5,0.2,0.274,0.6,0.2
+MP5,published:Liu2022_TableS2a_OC-like,OC_like,,jessa2022;okada,False,5/5,,0.852,0.35,0.0,0.344,0.4,0.0
+MP6,published:Liu2022_TableS2a_OPC-like-1,OPC_like,,collot;jessa2022;okada,False,5/5,,0.754,0.35,0.0,0.25,0.5,0.0
+MP7,inhouseDE:Liu2022_DE_author_states_rederived_AC-like,AC_like,,collot;jessa2022;okada,False,4/5,okada,0.887,0.05,0.0,0.135,0.15,0.0
+MP8,curated:MES_like_markers,MES_like,,jessa2022;okada,False,3/5,jessa2022;okada,1.0,0.0,0.0,0.01,0.0,0.0
+MP9,novel:ADGB/CFAP43/DNAH9,novel_MP9,,jessa2022;okada,False,3/5,jessa2022;okada,1.0,0.0,0.0,0.01,0.0,0.0
+MP10,published:Liu2022_TableS2a_AC-like,AC_like,,collot;jessa2022;okada,False,3/5,jessa2022;okada,0.562,0.2,0.0,0.131,0.05,0.0
+MP11,published:Liu2022_TableS2a_S,cycling,,jessa2022;okada,False,3/5,jessa2022;okada,1.0,0.0,0.0,0.036,0.0,0.0
+MP12,technical:mitochondrial,,technical:mitochondrial,jessa2022;okada,False,3/5,jessa2022;okada,1.0,0.0,0.0,0.011,0.05,0.0
+MP13,technical:IEG_dissociation_stress,,technical:IEG_dissociation_stress,desisto;jessa2022;zang,False,2/5,desisto;jessa2022;zang,0.075,0.0,0.0,0.0,0.0,0.0
+MP14,published:Liu2022_TableS2a_AC-like,AC_like,,collot;jessa2022;okada,False,2/5,collot;jessa2022;okada,0.235,0.0,0.0,0.074,0.0,0.0
+MP15,published:Liu2022_TableS2a_AC-like,AC_like,,jessa2022;okada,False,3/5,jessa2022;okada,0.515,0.0,0.0,0.122,0.05,0.0

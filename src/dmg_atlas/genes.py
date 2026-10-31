@@ -1,6 +1,6 @@
 """Gene-space harmonisation to a single symbol set.
 
-Rule (documented in docs/phase2_qc_notes.md):
+Rule (documented in docs/phases/phase2_qc_notes.md):
   1. A reference table is built from the union of the 10x `features.tsv` files present in data/raw
      plus the ScPCA var table. Each row = (ensembl_id without version, symbol, source, priority).
      Sources in priority order (first listed wins; the Zang GRCh38-2020-A table is the most complete 10x annotation among the deposits and therefore ranks first — this is a completeness rule, not a 'newest' rule):

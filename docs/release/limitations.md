@@ -46,6 +46,12 @@ closure in `docs/audit/fixes_*.csv` and `docs/audit/CLOSURE_SUMMARY.md`.
   (train 0.9931 on 197,867 cells / 47 patients). Held-out-patient recall: malignant 0.999, neuron 0.969, myeloid 0.950,
   oligodendrocyte 0.917, T_NK 0.896 (77 cells), vascular 0.883, **astrocyte 0.803** — astrocyte is the weakest class under every
   scheme (`reflabels/scanvi_heldout_comparison.csv`, IM-03).
+- *[added 2026-10-31, Phase 9]* **On a held-out study the classifier is much weaker.** Refitting scVI + scANVI without each
+  publication and mapping it by surgery gives accuracy 0.88–0.99 but balanced accuracy 0.40–0.99 (pooled 0.51). Malignant and
+  myeloid transfer; T/NK, astrocyte, neuron and vascular often do not, and the error is over-calling malignant: with Okada
+  unseen, 98 % of its neurons, 63 % of astrocytes and 51 % of vascular cells are predicted malignant. Normal-lineage and
+  malignant calls on new cohorts need CNV or marker support (`results/tables/quality/loso_classifier_*.csv`,
+  `docs/phases/phase9_quality_notes.md`).
 - TPM cohorts (Filbin, LaBelle) are mapped with pseudo-counts and are **projection-only**; TPM is gene-length normalised and no length
   correction is possible from the deposited tables. Labels are insensitive to the pseudo-count scale *m* over a 16-fold range, but the
   kNN-uncertainty percentile partly measures *m* rather than biology (IM-12).
@@ -85,7 +91,7 @@ assessed by any track and are recorded as `not_assessed`, not as fixed.
 
 ## Per-layer notes
 
-**Reference and query mapping.** Summary (query mapping is a zero-shot projection, the reference classifier is scored on held-out patients, TPM cohorts are projection-only, and normal progenitor classes without a reference counterpart are absorbed by the malignant class) — see also `docs/phase5_mapping_notes.md` §2–6.
+**Reference and query mapping.** Summary (query mapping is a zero-shot projection, the reference classifier is scored on held-out patients, TPM cohorts are projection-only, and normal progenitor classes without a reference counterpart are absorbed by the malignant class) — see also `docs/phases/phase5_mapping_notes.md` §2–6.
 
 **Phase 6 (states, metaprograms, spatial).** Cell- and nucleus-derived programmes and TME clusters separate by assay (only 6 cell samples, 3 publications), and after the corrected malignant selection no cell-derived lineage metaprogram exists at all; spatial state classes come from the metaprogram-family reference for **all four** cohorts since the spatial remediation (the score_genes-argmax fallback reference was dropped, audit SP-06, so `brainstem_*_mp.csv` and `brainstem_mp_vs_fallback.csv` from step 21 are superseded and no figure reads them); the brainstem gradient is one autopsy (10 serial sections) and is descriptive only; autopsy vs resection composition is not estimable (all 22 autopsies are Okada).
 
@@ -97,4 +103,4 @@ still shows the degenerate NNLS variable sets — Figure 6c supersedes it.
 
 > **Scope note (audit P7-16).** Phase 7 (code) / build-plan Phase 8 — multimodal ATAC, bulk survival anchoring and foundation-model
 > embeddings — **was not part of the approved plan**. It is reported as an exploratory methods note, not as an atlas claim, and its
-> figures (Figure 6, Supplementary Figure 8) carry that label. See `docs/release_v1.md`, "Scope of the analytical layers".
+> figures (Figure 6, Supplementary Figure 8) carry that label. See `docs/release/release_v1.md`, "Scope of the analytical layers".

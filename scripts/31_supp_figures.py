@@ -5,7 +5,7 @@ Companion of 30_figures.py: same style and helpers (dmg_atlas.figstyle) - bold U
 descriptive title centred above every panel (Cell Reports house style, venue model 43:114804) - every caption number computed from
 results/tables/. Drawn from tables only; the exploratory per-phase PNGs in results/figures/ are not reused.
 
-Inputs (results/tables/; md5 recorded in docs/supp_figures.md):
+Inputs (results/tables/; md5 recorded in docs/figures/supp_figures.md):
   S1 malignant calls : malignant_call_validation.csv, malignant_calls_per_sample.csv (05 / 06)
   S2 integration     : integration_metrics_summary.csv (08)
   S3 mapping         : mapping_uncertainty.csv (11), malignant_nearest_fetal_class.csv (11b)
@@ -21,7 +21,7 @@ Inputs (results/tables/; md5 recorded in docs/supp_figures.md):
                        survival_rankscore_audit.csv (25b; the corrected rank-score fits)
 Outputs (never overwritten if present, unless --force):
   results/pub_figs/supp/figS<N>_<name>.png (300 dpi) and .pdf for N = 1..8
-  docs/supp_figures.md   captions + input md5 table
+  docs/figures/supp_figures.md   captions + input md5 table
 Run: nice -n 10 python scripts/31_supp_figures.py [--force] [--figs 1 .. 8]
 
 Choices fixed before plotting
@@ -47,7 +47,7 @@ from dmg_atlas.figstyle import (apply_figure_style, QUERY_COLOURS, QUERY_NAMES, 
                                 STUDY_NAMES, STUDY_COLOURS, TME_NAME, COMPARTMENT_COLOURS, SPATIAL_CLASS, letter, legend_dots, heat)
 
 log = U.StepLogger(LOGS / "phase8_release.log", context="31_supp_figures")
-TAB, FIG, DOC = RESULTS / "tables", RESULTS / "pub_figs/supp", ROOT / "docs/supp_figures.md"
+TAB, FIG, DOC = RESULTS / "tables", RESULTS / "pub_figs/supp", ROOT / "docs/figures/supp_figures.md"
 TIER_NAMES = {"tier2_cnv_call": "own CNV call", "tier3_cnv_marker_agree": "CNV + marker agree"}  # consensus uses author labels: not a test
 used, captions = {}, {}
 
@@ -322,7 +322,7 @@ def s6():
         "**Supplementary Figure 6 | Marker genes of the cleaned microenvironment subclusters.** Top 4 genes per subcluster (Wilcoxon "
         f"score within compartment; {len(genes)} genes, {len(subs)} subclusters); dot size = fraction of the subcluster's cells expressing "
         "the gene, colour = log2 fold change against the other subclusters of the compartment (clipped at ±3); left bar: compartment. "
-        "Names follow docs/phase6_notes.md §11.")
+        "Names follow docs/phases/phase6_notes.md §11.")
 
 
 # ---------------------------------------------------------------- S7

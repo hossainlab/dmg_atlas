@@ -180,8 +180,8 @@ KLRD1/F1), THEMIS/CAMK4 nuclei cluster; vascular: capillary EC (FLT1, ABCG2; TSH
 assay structure is not erased entirely.
 
 ## 12. Documentation (`23_package_phase6.py`)
-`docs/phase6_outputs.md` (generated): all 122 Phase-6 files with producing script, size, md5 and structure;
-`results/tables/phase6_output_checksums.csv`; README section 'Phase 6 outputs' appended (existing text untouched). `docs/atlas_schema.md`
+`docs/phases/phase6_outputs.md` (generated): all 122 Phase-6 files with producing script, size, md5 and structure;
+`results/tables/phase6_output_checksums.csv`; README section 'Phase 6 outputs' appended (existing text untouched). `docs/schema/atlas_schema.md`
 is not regenerated because Phase 6 does not modify atlas_core.h5ad / query_mapping.h5ad.
 Infrastructure changes made for the Modal runs (results unaffected): `dmg_atlas.utils` disables pandas-3 Arrow string inference (anndata
 could not write those strings); `13_reference_signatures.py` reads counts with h5py blocks instead of anndata `sparse_dataset` row indexing

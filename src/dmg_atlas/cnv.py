@@ -55,7 +55,7 @@ REF_TYPES = ["myeloid", "T_NK", "oligodendrocyte", "vascular", "neuron"]
 MIN_REF = 30           # minimum reference cells to run a sample
 POOLED_REF_PER_TYPE = 300
 
-# thresholds (log-normalised score_genes units; tuned on jessa_scrna P-6337_S-8821 vs author labels, see docs/phase3_cnv_notes.md;
+# thresholds (log-normalised score_genes units; tuned on jessa_scrna P-6337_S-8821 vs author labels, see docs/phases/phase3_cnv_notes.md;
 # audit correction CNV-06: an earlier comment named P-6251, which is not a Jessa scRNA sample)
 MARKER_THR = dict(normal_min=0.25, margin=0.10, ref_min=0.50, ref_ratio=2.0, astro_min=0.25)
 
@@ -554,7 +554,7 @@ def call_sample(a: ad.AnnData, genepos: pd.DataFrame, ref_col: str = "ref_type",
     cells from OTHER samples of the same study/assay stratum (obs['_pooled'] True): immune anchor (myeloid, T_NK, merged with
     the sample's own immune candidates) and purged lineage categories (oligodendrocyte / vascular / neuron). The sample's own
     non-immune candidates are never used as reference (in near-pure tumours they are tumour cells with glial/neuronal marker
-    scores; see docs/phase3_cnv_notes.md benchmark). Reference is MAD-refined on cnv_score; pooled lineage categories with
+    scores; see docs/phases/phase3_cnv_notes.md benchmark). Reference is MAD-refined on cnv_score; pooled lineage categories with
     < MIN_TYPE_REF cells are dropped. Returns (per_cell, clusters, res, record)."""
     rt = a.obs[ref_col].astype(str)
     own = ~a.obs["_pooled"].values

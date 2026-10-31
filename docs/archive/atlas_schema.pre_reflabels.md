@@ -196,7 +196,7 @@ Notes: `X` is intentionally empty (counts live in `layers['counts']` to keep the
 - var columns: symbol; var index = symbol.
 - uns keys: phase5.
 
-Notes: `X` = `layers['counts']` = reference-HVG count matrix per query (UMI for Braun/Siletti; round(RSEM) for Liu; TPM-derived pseudo-counts for Filbin/LaBelle — see docs/phase5_mapping_notes.md). Query cells never enter the reference model; labels are scANVI predictions.
+Notes: `X` = `layers['counts']` = reference-HVG count matrix per query (UMI for Braun/Siletti; round(RSEM) for Liu; TPM-derived pseudo-counts for Filbin/LaBelle — see docs/phases/phase5_mapping_notes.md). Query cells never enter the reference model; labels are scANVI predictions.
 
 ### obsm
 
@@ -262,7 +262,7 @@ Notes: `X` = `layers['counts']` = reference-HVG count matrix per query (UMI for 
 
 ## 3. Label vocabularies
 
-See `docs/label_ontology.csv` (lineage labels, consensus tiers, marker genes, source tier).
+See `docs/schema/label_ontology.csv` (lineage labels, consensus tiers, marker genes, source tier).
 
 ## 4. Models
 

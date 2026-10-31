@@ -200,7 +200,7 @@ def figure(obs, xy):
     fig.subplots_adjust(wspace=0.9, hspace=0.15)
     fig.savefig(FIG / "phase4_umap_overview.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-    LOG.write("figure results/figures/phase4_umap_overview.png written (caption in docs/phase4_integration_notes.md Audit corrections)")
+    LOG.write("figure results/figures/phase4_umap_overview.png written (caption in docs/phases/phase4_integration_notes.md Audit corrections)")
 
 
 def malignant():

@@ -49,7 +49,7 @@ STUDY_NAMES = {"collot": "Collot 2026", "desisto": "DeSisto", "jessa_multiome": 
                "okada": "Okada 2026", "zang": "Zang"}
 STUDY_COLOURS = {"collot": "#66c2a5", "desisto": "#fc8d62", "jessa_multiome": "#8da0cb", "jessa_scrna": "#e78ac3", "okada": "#a6d854",
                  "zang": "#ffd92f"}
-TME_NAME = {  # cleaned subcluster -> curated name (same mapping as 27_package_release.py; docs/phase6_notes.md section 11)
+TME_NAME = {  # cleaned subcluster -> curated name (same mapping as 27_package_release.py; docs/phases/phase6_notes.md section 11)
     "myeloid_c0": "homeostatic microglia", "myeloid_c1": "TGFBI/AOAH macrophage", "myeloid_c2": "hypoxic/glycolytic TAM",
     "myeloid_c3": "interferon TAM", "myeloid_c4": "ribosomal residue (cells)", "myeloid_c5": "proliferating myeloid",
     "T_NK_c0": "THEMIS/CAMK4 T", "T_NK_c1": "CD8 T", "T_NK_c2": "CD4 T", "T_NK_c3": "NK", "T_NK_c4": "IL7R/KLRB1 T",

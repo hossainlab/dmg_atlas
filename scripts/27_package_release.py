@@ -15,7 +15,7 @@ Outputs (never overwritten if present, unless --force):
   results/tables/release_ontology_map.csv     field, atlas value, ontology term ID, term label, n_cells
   results/tables/release_genes_dropped.csv    atlas genes whose v32 Ensembl ID is absent from GENCODE v48: remapped v48 ID or dropped
   results/tables/release_manifest.csv         every release file: path, role, producing script, size, md5
-  docs/release_v1.md                          generated release notes (field mapping, new obs fields, checksums, validation status)
+  docs/release/release_v1.md                          generated release notes (field mapping, new obs fields, checksums, validation status)
   README.md                                   'Release v1' block appended (existing text untouched)
 Run: nice -n 10 python scripts/27_package_release.py [--force] [--steps h5ad manifest docs]
 
@@ -27,7 +27,7 @@ Method (fixed before running)
   development_stage: age >= 1 y -> HsapDv '<n>-year-old stage' (floor); 0 < age < 1 -> '<n>-month-old stage' (floor of age x 12);
   age 0.0 (two Okada pons samples; recorded as 0 in the deposit, not plausible as newborn) and missing age -> 'pediatric stage' /
   'adult stage' from age_group, else 'unknown'.
-  cell_type: cleaned TME subcluster (step 22, curated names from docs/phase6_notes.md section 11) where available, else scanvi_label;
+  cell_type: cleaned TME subcluster (step 22, curated names from docs/phases/phase6_notes.md section 11) where available, else scanvi_label;
   scANVI 'vascular' without a subcluster (endothelial + pericyte mixture) -> 'unknown'. cell_type_atlas holds the label used.
   Audit P7-05 (2026-10-20): 'malignant' may only stand where consensus_call == 'malignant'. A cell that only scANVI called malignant
   (consensus 'ambiguous' or 'normal') is released as 'unspecified_cell' -> CL:0000000 'cell', flagged in cell_type_downgraded_p7_05,
@@ -83,7 +83,7 @@ CELL_TYPE = {  # atlas label -> CL
     "endothelial_tip_angiogenic": ("CL:0000115", "endothelial cell"), "endothelial_capillary": ("CL:0000115", "endothelial cell"),
     "pericyte": ("CL:0000669", "pericyte"), "mature_oligodendrocyte": ("CL:0000128", "oligodendrocyte"),
     "committed_OPC": ("CL:0002453", "oligodendrocyte precursor cell")}
-TME_NAME = {  # cleaned subcluster -> curated name (docs/phase6_notes.md section 11; top genes in tme_subclusters_clean.csv)
+TME_NAME = {  # cleaned subcluster -> curated name (docs/phases/phase6_notes.md section 11; top genes in tme_subclusters_clean.csv)
     "myeloid_c0": "homeostatic_microglia", "myeloid_c1": "TGFBI_AOAH_macrophage", "myeloid_c2": "hypoxic_glycolytic_TAM",
     "myeloid_c3": "interferon_TAM", "myeloid_c4": "ribosomal_residue_myeloid", "myeloid_c5": "proliferating_myeloid",
     "T_NK_c0": "THEMIS_CAMK4_T", "T_NK_c1": "CD8_T", "T_NK_c2": "CD4_T", "T_NK_c3": "NK", "T_NK_c4": "IL7R_KLRB1_T",
@@ -363,7 +363,7 @@ def write_manifest() -> pd.DataFrame:
                 continue
             for p in sorted(x for x in d.rglob("*") if x.is_file() and x.name != ".DS_Store"):
                 add(p, role, model_script(d.name))
-        for p in ["docs/decisions.md", "docs/build_plan.md", "docs/atlas_schema.md", "docs/label_ontology.csv",
+        for p in ["docs/design/decisions.md", "docs/design/build_plan.md", "docs/schema/atlas_schema.md", "docs/schema/label_ontology.csv",
                   "results/tables/release_ontology_map.csv", "results/tables/release_genes_dropped.csv"]:
             add(ROOT / p, "documentation", "27_package_release.py" if "release_" in p else producing_script(ROOT / p))
         for p in sorted((RESULTS / "tables").rglob("*")):
@@ -378,7 +378,7 @@ def write_manifest() -> pd.DataFrame:
 
 
 def write_docs(m: pd.DataFrame):
-    with log.step("docs/release_v1.md + README block"):
+    with log.step("docs/release/release_v1.md + README block"):
         maps = pd.read_csv(TAB / "release_ontology_map.csv"); dropped = pd.read_csv(TAB / "release_genes_dropped.csv")
         with h5py.File(OUT, "r") as f:
             n_obs, n_var = (int(x) for x in f["X"].attrs["shape"]); obs_cols = [c for c in f["obs"].keys() if c != "_index"]
@@ -431,17 +431,17 @@ def write_docs(m: pd.DataFrame):
                   "from the v48 gene name (the portal re-derives feature_name from the ID).",
                   "- '10x (version not stated)' studies (Okada, Collot, Zang) carry the generic EFO:0030080; refine if the chemistry is confirmed.",
                   "- Okada age 0.0 (two pons samples) is treated as unrecorded (pediatric stage).", ""]
-        (ROOT / "docs/release_v1.md").write_text("\n".join(lines) + "\n")
+        (ROOT / "docs/release/release_v1.md").write_text("\n".join(lines) + "\n")
         txt = (ROOT / "README.md").read_text()
         head = "## Release v1" if "## Release v1" not in txt else f"## Release v1 — update {time.strftime('%Y-%m-%d')}"
         block = ["", head, "",
                  f"`data/processed/dmg_atlas_v1.h5ad` — {n_obs:,} cells x {n_var:,} GENCODE-v48 genes in CELLxGENE schema {SCHEMA} layout (raw "
                  "counts in X; ontology fields, metaprogram families and cleaned TME subclusters added to obs). md5 "
-                 f"`{rel.loc['data/processed/dmg_atlas_v1.h5ad', 'md5']}`. Field mapping and open items: `docs/release_v1.md`; every release "
+                 f"`{rel.loc['data/processed/dmg_atlas_v1.h5ad', 'md5']}`. Field mapping and open items: `docs/release/release_v1.md`; every release "
                  "file with md5: `results/tables/release_manifest.csv`. Produced by `scripts/27_package_release.py`.", ""]
         with open(ROOT / "README.md", "a") as fh:
             fh.write("\n".join(block))
-        log.write(f"docs/release_v1.md written; README block '{head}' appended")
+        log.write(f"docs/release/release_v1.md written; README block '{head}' appended")
 
 
 if __name__ == "__main__":

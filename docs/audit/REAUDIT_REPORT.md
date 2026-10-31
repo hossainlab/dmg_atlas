@@ -45,14 +45,14 @@ statistic) and §4 (composition q-values).
 **MC-06 (major) — REGRESSED.** The remediation added the site-adjusted and pons-restricted H3 models and
 they are present in `results/tables/composition_results.csv`; the substantive conclusion survives (neuron
 is the only effect that holds: q_site_adj 0.0169, q_pons 0.0495, both < 0.05; astrocyte, myeloid, vascular
-and malignant fraction fall to q_site_adj 0.167–0.269 and q_pons 0.279–0.287). But `docs/phase6_notes.md`
+and malignant fraction fall to q_site_adj 0.167–0.269 and q_pons 0.279–0.287). But `docs/phases/phase6_notes.md`
 L196–198 still states "site-adjusted q 0.011; pons-only q 0.032" and "q 0.16–0.24 … or the pons restriction
 (q 0.23–0.26)". None of those four figures matches the table on disk. The section carries no `[superseded]`
 marker and `docs/audit/reporting_consistency.csv` has no row for it (its only H3 row, index 60, covers
-`docs/figures.md` Figure 4c and records the correct current values). The composition table was regenerated
+`docs/figures/figures.md` Figure 4c and records the correct current values). The composition table was regenerated
 on 2026-10-19 22:10, after the numbers in the notes were written.
 
-**IM-09 (minor) — REGRESSED.** `docs/phase5_mapping_notes.md` quotes the reference self 15-NN distance as
+**IM-09 (minor) — REGRESSED.** `docs/phases/phase5_mapping_notes.md` quotes the reference self 15-NN distance as
 1.25 (p90 1.75) at L34, L86 and L191–192, and the Braun distance as 2.25 at L191. Recomputed from the
 current files: `phase5_reference_knn_distances.csv` median 1.566, p90 2.145; `query_mapping.h5ad`
 `knn_mean_dist` for Braun median 2.604. The phase5 track corrected these values against the wave-1 latent;
@@ -63,7 +63,7 @@ pass did not cover these three statements.
 **CNV-04 (major) — PARTIALLY CLOSED.** Tier-3 coverage reproduces exactly (0.520 overall; jessa_scrna 0.514,
 multiome 0.505, collot 0.577, okada 0.505, liu 0.554) and so does the excluded-cell count (42,314). The
 author composition does not: recomputed 33,934 author-malignant (80.2%), against 34,596 (82%) stated both in
-`fixes_cnv.csv` and in `docs/phase3_cnv_notes.md` L53. L60 of the same document states 33,934 for the
+`fixes_cnv.csv` and in `docs/phases/phase3_cnv_notes.md` L53. L60 of the same document states 33,934 for the
 45,305-cell superset, so the document contradicts itself, and the recomputation agrees with L60.
 
 **CNV-05 (major) — PARTIALLY CLOSED (as the record itself declares).** Every subset count reproduces:
@@ -83,7 +83,7 @@ asserts "uns read back with h5py"; for Filbin that read cannot have been against
 **SP-03 (major) — PARTIALLY CLOSED.** The epoch counts are exact and the histories are genuinely harvested.
 The convergence statistic is not reproducible: the last 5% of logged epochs contribute 0.0686% (huchede),
 0.0576% (collot_st), 0.0124% (brainstem) and 0.0235% (ren) of the total ELBO reduction — range 0.012–0.069%,
-not "0.020% (huchede) to 0.022% (Ren)" as stated in `fixes_spatial.csv` and in `docs/phase6_notes.md` L355.
+not "0.020% (huchede) to 0.022% (Ren)" as stated in `fixes_spatial.csv` and in `docs/phases/phase6_notes.md` L355.
 The value is also misattributed: huchede is the largest of the four, not the smallest. The conclusion that
 all four traces have plateaued is unaffected and remains conservative (every cohort is below 0.07%).
 
@@ -97,7 +97,7 @@ that disagree with its source (`phase6_brainstem_gradient.png` peak 0.799 at Pon
 Spinal_Cord_A match `brainstem_section_means.csv` exactly; Figure 3c, 4c, 5d caption values recompute to
 `metaprogram_cell_vs_nucleus.csv` 0.075→0.125, `composition_results.csv` 396 fitted / 278 estimable / 275
 with q, and I² 0.952–0.997 over the 42 pairs), and no `.pre_*` backup was found to contradict what the
-notes claim was changed. All 30 input md5s in `docs/figures.md` and all 21 in `docs/supp_figures.md` match
+notes claim was changed. All 30 input md5s in `docs/figures/figures.md` and all 21 in `docs/figures/supp_figures.md` match
 the files on disk. The release checksum `885e8dfd070c01f7c492aba8c1b77ca3` and the README checksums for
 `atlas_core.h5ad` (`f14dd67c81ec90395c447c358f87c832`) and `query_mapping.h5ad`
 (`9b585728cc8dcb81c0566362ced87eec`) all verify.
@@ -174,7 +174,7 @@ documented pipeline step would no longer exclude the family it was written to ex
    all 42 pairs: between-patient heterogeneity dominates. The Ren DMG-vs-GBM comparison has n=5 vs 5 and
    nothing survives BH correction.
 7. **The Ren deconvolution stopped at 12,940 of 20,000 epochs** when its wall-clock budget expired.
-8. **Phase 7 is exploratory and outside the approved build plan** (so labelled in `docs/release_v1.md`).
+8. **Phase 7 is exploratory and outside the approved build plan** (so labelled in `docs/release/release_v1.md`).
    Within it: the ATAC differential-accessibility counts are an uncorrected sign test over 5–9 samples;
    14 of 35 label-correlation pairs are masked at n<3; one of ten multiome samples is at chance for ATAC
    separability; the survival layer's NNLS fit was never refitted (P7-07 open) and
@@ -206,13 +206,13 @@ zero violations), and all 51 recorded figure-input checksums and all three headl
 The defects that block release as written are documentation defects, and all five are in documents a reader
 will use as the authority for a number:
 
-1. `docs/phase6_notes.md` L196–198 — four H3 composition q-values that contradict
+1. `docs/phases/phase6_notes.md` L196–198 — four H3 composition q-values that contradict
    `composition_results.csv` (MC-06).
-2. `docs/phase5_mapping_notes.md` L34, L86, L191–192 — reference self 15-NN distance 1.25/1.75 and Braun
+2. `docs/phases/phase5_mapping_notes.md` L34, L86, L191–192 — reference self 15-NN distance 1.25/1.75 and Braun
    2.25, superseded by 1.566/2.145 and 2.604 (IM-09).
-3. `docs/phase3_cnv_notes.md` L53 — 34,596 (82%) author-malignant, contradicted by L60 of the same
+3. `docs/phases/phase3_cnv_notes.md` L53 — 34,596 (82%) author-malignant, contradicted by L60 of the same
    document and by recomputation (33,934, 80.2%) (CNV-04).
-4. `docs/phase6_notes.md` L355 — the ELBO plateau range 0.020–0.022%, recomputed as 0.012–0.069% and
+4. `docs/phases/phase6_notes.md` L355 — the ELBO plateau range 0.020–0.022%, recomputed as 0.012–0.069% and
    misattributed between cohorts (SP-03).
 5. `data/interim/filbin.qc.h5ad` — either regenerate it so `uns['value_scale']` is present as the closure
    record asserts, or correct the DQ-01 record to say the Filbin change is code-only (DQ-01).
@@ -229,10 +229,10 @@ distinguish work that was done from work that was skipped.
 All five release-blocking documentation defects are corrected; per-item disposition, recomputed values and the
 evidence string for each are in `docs/audit/reaudit_response.csv`.
 
-1. **MC-06** — the H3.1-vs-H3.3 paragraph in `docs/phase6_notes.md` now quotes `composition_results.csv`: neuron
+1. **MC-06** — the H3.1-vs-H3.3 paragraph in `docs/phases/phase6_notes.md` now quotes `composition_results.csv`: neuron
    q 0.004, site-adjusted 0.017, pons-only 0.050; the non-surviving effects 0.038 / 0.038 / 0.051 / 0.068 with
    site-adjusted 0.17–0.27 and pons-only 0.28–0.29. The conclusion (neuron is the only surviving effect) is unchanged.
-2. **IM-09** — all five stale kNN distances in `docs/phase5_mapping_notes.md` replaced by the post-re-encoding values
+2. **IM-09** — all five stale kNN distances in `docs/phases/phase5_mapping_notes.md` replaced by the post-re-encoding values
    (reference self 1.566, p90 2.145; Braun 2.604; malignant → Braun 3.279), and the fetal-class fractions and
    enrichments restated from the current `malignant_nearest_fetal_class.csv`. The wave-1 record is marked superseded.
 3. **CNV-04** — this was a table defect, not only a document contradiction. `06_cnv_aggregate.py` grouped tier-3

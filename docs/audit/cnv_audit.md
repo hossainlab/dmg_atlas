@@ -1,12 +1,12 @@
 # Independent audit — Phase 3 (malignant vs normal calling, inferCNV) — DMG atlas
 
-Auditor: independent adversarial review, 2026-10-19. Scope as briefed: `scripts/05_cnv_calls.py`, `scripts/06_cnv_aggregate.py`, `src/dmg_atlas/cnv.py`, `src/dmg_atlas/states.py`, `data/processed/malignant_calls.csv`, `results/tables/{malignant_calls_per_sample, malignant_call_validation, cnv_event_frequencies, jessa_author_celltype_vs_consensus_coarse, liu_author_vs_consensus_crosstab}.csv`, `results/tables/phase3_summary.json`, `results/qc/cnv/*` (6 heatmaps + 1 scatter), `docs/phase3_cnv_notes.md`. Nothing outside `docs/audit/` was modified. Findings table: `docs/audit/cnv_findings.csv` (23 rows: 1 critical, 7 major, 7 minor, 8 notes).
+Auditor: independent adversarial review, 2026-10-19. Scope as briefed: `scripts/05_cnv_calls.py`, `scripts/06_cnv_aggregate.py`, `src/dmg_atlas/cnv.py`, `src/dmg_atlas/states.py`, `data/processed/malignant_calls.csv`, `results/tables/{malignant_calls_per_sample, malignant_call_validation, cnv_event_frequencies, jessa_author_celltype_vs_consensus_coarse, liu_author_vs_consensus_crosstab}.csv`, `results/tables/phase3_summary.json`, `results/qc/cnv/*` (6 heatmaps + 1 scatter), `docs/phases/phase3_cnv_notes.md`. Nothing outside `docs/audit/` was modified. Findings table: `docs/audit/cnv_findings.csv` (23 rows: 1 critical, 7 major, 7 minor, 8 notes).
 
 ## 1. Files examined
 
 | file | how |
 |---|---|
-| docs/phase3_cnv_notes.md | read in full; every number cross-checked against tables |
+| docs/phases/phase3_cnv_notes.md | read in full; every number cross-checked against tables |
 | scripts/05_cnv_calls.py, scripts/06_cnv_aggregate.py | read line by line; 05 re-executed for two studies |
 | src/dmg_atlas/cnv.py | read line by line; compared with infercnvpy 0.6.1 `tl/_infercnv.py` (installed source) |
 | src/dmg_atlas/states.py | read; not used by Phase 3 code |
