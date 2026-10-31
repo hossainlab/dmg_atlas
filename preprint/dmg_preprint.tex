@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage[section]{placeins}
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage[super,comma,sort&compress]{natbib}
@@ -391,34 +392,57 @@ labelling, with a black edge when significant under scANVI labels.}
 \section{Discussion}
 
 We present a reference of H3 K27-altered DMG built from 52 patients, with harmonised labels, calibrated malignant calls
-and reference models whose performance on new patients and on new studies has been measured. Because individual DMG
-cohorts contain few patients, this reference allows patient-level questions that no single public dataset can address.
+and reference models whose performance on new patients and on new studies has been measured, and we used it to ask which
+published findings hold across cohorts. Three conclusions emerge: few malignant programmes are reproducible across
+studies and platforms; several reported clinical and spatial associations are not reproduced or are weak at the patient
+level; and a tumour reference transfers malignant identity to new studies far better than normal-cell identity.
 
-Most of our findings define the limits of what public DMG data can establish. Only cycling and hypoxia replicated under a
-rule specified in advance, and of these only cycling was recovered in every robustness scenario. Lineage-like programmes were
-detected only in nuclei, and this did not change when 22 whole-cell Smart-seq2 samples were added: whole-cell cohorts
-yielded their own astrocyte-like programme, with different gene content. Lineage programmes therefore depend on platform
-and cohort as well as on assay, and matched whole-cell and nucleus data from the same tumours are needed to resolve
-them. By contrast, the ciliated programme carries the tumour's copy-number profile, which identifies it as a tumour state;
-in the data of Jessa et al.\ \citep{jessa2022km}, 10\% of the cells with this programme had been annotated as ependymal by
-the original authors.
-This mirrors pan-cancer evidence that recurrent programmes are identified reliably only across many tumours
-\citep{gavish2023hallmarks}, and adds that recurrence across cohorts is insufficient when cohorts differ systematically
-in sample preparation. Similarly, the H3.1--H3.3 difference in neuron abundance and the differences between cells and
-nuclei are confounded with study by design.
+\paragraph{Malignant programmes.} Single-cell studies of DMG described a hierarchy dominated by proliferative OPC-like
+cells with smaller AC-like and OC-like fractions \citep{filbin2018developmental}, refined into lineage-specific and
+location-dependent states \citep{jessa2022km,liu2022landscape}. In the integrated data, only cycling and hypoxia
+programmes recurred across three studies and in both cells and nuclei, and only cycling was recovered in every robustness
+scenario. Lineage-like programmes were detected in nuclei but did not recur in whole cells, even after adding the 22
+whole-cell Smart-seq2 samples in which these states were first defined; whole-cell cohorts instead produced their own
+astrocyte-like programme with different gene content. This agrees with the pan-cancer observation that generic programmes
+such as the cell cycle and stress recur across tumours whereas lineage programmes vary \citep{gavish2023hallmarks}, and
+with the plasticity of glioblastoma states \citep{neftel2019integrative}. It does not imply that OPC-like, AC-like and
+OC-like cells are absent; rather, the gene sets that define them depend on platform and cohort, so state proportions
+compared across studies should be interpreted with caution. We also identified a ciliated programme that carries the
+tumour's copy-number profile and is therefore a malignant state; in the data of Jessa et al.\ \citep{jessa2022km}, a
+minority of these cells had been annotated as ependymal.
 
-The leave-one-study-out analysis has a practical implication for tumour reference atlases. Accuracy on held-out patients,
-a commonly reported measure, overstated performance on a new study
-(balanced accuracy 0.917 versus 0.506). A reference composed mainly of tumour tissue transferred malignant and myeloid
-identities reliably but classified unfamiliar normal cells as malignant, with high confidence. We therefore recommend
+\paragraph{Clinical associations.} Liu et al.\ reported that mesenchymal cancer-cell states are related to age
+\citep{liu2022landscape}. Within the reference, the MES-like family did not differ between adult and paediatric tumours,
+whereas the AC-like family was more abundant in adults; with five adult patients from two publications, and with the
+Liu et al.\ cohort used only for projection, this comparison is underpowered rather than contradictory. Okada et al.\
+reported that imipridone treatment was associated with regression of mesenchymal transition \citep{okada2026singlenucleus};
+in our composition models, restricted to the same post-mortem series (eight treated and nine untreated samples), no
+metaprogram family differed between treatment groups, which may reflect the different definition of cell states. The
+neuron enrichment in H3.1 tumours is consistent with the distinct cellular contexts of H3.1 and H3.3 tumours described by
+Jessa et al.\ \citep{jessa2022km}, but all H3.1 samples here are pontine nuclei from one study, so it cannot be separated
+from site or study.
+
+\paragraph{Spatial organisation.} Collot et al.\ described mesenchymal regions containing blood-derived immune cells and
+regions enriched for AC-like, OC-like and OPC-like tumour cells with homeostatic microglia \citep{collot2026igsfvista}.
+The co-localisation of MES-like tumour cells with myeloid and vascular cells, and of AC-like tumour cells with normal
+glia, is directionally consistent with this organisation and with the hypoxia-associated mesenchymal compartment of
+glioblastoma \citep{neftel2019integrative,ruizmoreno2025gbmap}. At the patient level, however, these associations were
+heterogeneous between patients, did not survive small-sample correction across all pairs, and in two cases may be
+inflated by similar deconvolution signatures. The brainstem gradient extends the analysis of the same autopsy by Kordowski
+et al.\ \citep{kordowski2025spatial} but remains a single patient, and DMG and glioblastoma sections from one study did
+not differ significantly \citep{ren2023spatial}. Spatial claims about DMG states will require more patients and
+deconvolution references that resolve AC-like tumour cells from normal astrocytes.
+
+\paragraph{Reference mapping.} Large reference atlases such as those of the lung \citep{sikkema2023integrated} and of
+glioblastoma \citep{ruizmoreno2025gbmap} are increasingly used to annotate new data. Our leave-one-study-out analysis
+shows that held-out-patient accuracy can overstate performance on a new study (balanced accuracy 0.917 versus 0.506):
+malignant and myeloid identities transferred reliably, but normal neurons, astrocytes and vascular cells from an unseen
+cohort were confidently classified as malignant, and T and natural killer cells were absorbed into the myeloid class,
+which matters for immune-focused work such as that of LaBelle et al.\ \citep{labelle2025dissecting}. We recommend
 leave-one-study-out evaluation for tumour references, and copy-number or marker evidence to support normal-lineage calls
-in new data.
-
-The weak co-localisation of MES-like tumour cells with myeloid and vascular cells is consistent with the hypoxia-associated
-mesenchymal compartment described in glioblastoma \citep{neftel2019integrative} and with bone morphogenetic protein
-(BMP)-driven invasive phenotypes in DMG \citep{huchede2024bmp}. The brainstem gradient is consistent with an infiltrative
-tumour front but rests on a single autopsy. Engineered brainstem organoid models of H3.3K27M DMG \citep{bessler2026de}
-provide a means to test these associations experimentally.
+in new data. Matched whole-cell and nucleus profiles from the same tumours, additional patients with spatial data, and
+experimental models such as engineered brainstem organoids \citep{bessler2026de} will be needed to resolve which
+lineage states and spatial associations are intrinsic to DMG.
 
 \subsection{Limitations}
 
