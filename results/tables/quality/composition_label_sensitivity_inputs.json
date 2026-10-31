@@ -1,0 +1,13 @@
+{
+ "script": "scripts/34_composition_label_sensitivity.py",
+ "params": {
+  "min_n": 200,
+  "maxprob": 0.9
+ },
+ "inputs": {
+  "results/tables/reflabels/reference_labels_corrected.csv.gz": "06b05a00ac53e7a5fd297d6dcc08f56f",
+  "results/tables/composition_per_sample.csv": "40af15c7be319f57a1bfc7abb5bfdc9c",
+  "results/tables/composition_results.csv": "42399b11730bb6e2d7717c73857860ed",
+  "data/processed/atlas_core.h5ad": "obs only; md5 not recomputed (5.3 GB); see results/tables/release_manifest.csv"
+ }
+}

@@ -1,0 +1,47 @@
+scenario,kind,n_samples,n_programmes,n_metaprograms,n_replicated,samples_per_publication,replicated_matches
+all,all,50,400,15,2,"{""jessa2022"": 25, ""okada"": 18, ""collot"": 5, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+drop_collot,drop,45,365,13,2,"{""jessa2022"": 25, ""okada"": 18, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+drop_desisto,drop,49,391,14,2,"{""jessa2022"": 25, ""okada"": 18, ""collot"": 5, ""zang"": 1}",MP1;MP4
+drop_jessa2022,drop,25,199,6,1,"{""okada"": 18, ""collot"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+drop_okada,drop,32,254,7,2,"{""jessa2022"": 25, ""collot"": 5, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+drop_zang,drop,49,391,14,2,"{""jessa2022"": 25, ""okada"": 18, ""collot"": 5, ""desisto"": 1}",MP1;MP4
+balanced_s0,balanced,17,137,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s1,balanced,17,135,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s2,balanced,17,138,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s3,balanced,17,136,5,2,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+balanced_s4,balanced,17,137,3,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s5,balanced,17,134,2,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s6,balanced,17,135,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s7,balanced,17,131,3,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s8,balanced,17,132,3,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s9,balanced,17,133,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s10,balanced,17,133,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s11,balanced,17,136,5,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s12,balanced,17,135,5,2,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+balanced_s13,balanced,17,136,3,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s14,balanced,17,132,3,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s15,balanced,17,138,2,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s16,balanced,17,122,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+balanced_s17,balanced,17,136,5,2,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+balanced_s18,balanced,17,133,4,2,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1;MP4
+balanced_s19,balanced,17,136,4,1,"{""collot"": 5, ""jessa2022"": 5, ""okada"": 5, ""desisto"": 1, ""zang"": 1}",MP1
+random_s0,random,17,143,3,0,"{""jessa2022"": 9, ""okada"": 8}",
+random_s1,random,17,136,5,0,"{""okada"": 7, ""jessa2022"": 7, ""collot"": 3}",
+random_s2,random,17,139,4,2,"{""jessa2022"": 9, ""okada"": 6, ""collot"": 1, ""desisto"": 1}",MP1;MP4
+random_s3,random,17,138,3,0,"{""jessa2022"": 10, ""okada"": 7}",
+random_s4,random,17,142,4,1,"{""jessa2022"": 9, ""okada"": 5, ""collot"": 2, ""desisto"": 1}",MP1
+random_s5,random,17,139,4,1,"{""jessa2022"": 8, ""okada"": 6, ""collot"": 1, ""zang"": 1, ""desisto"": 1}",MP1
+random_s6,random,17,131,6,0,"{""jessa2022"": 11, ""okada"": 5, ""collot"": 1}",
+random_s7,random,17,136,3,0,"{""jessa2022"": 8, ""okada"": 5, ""collot"": 4}",
+random_s8,random,17,135,3,2,"{""jessa2022"": 10, ""okada"": 4, ""collot"": 2, ""desisto"": 1}",MP1;MP4
+random_s9,random,17,130,4,0,"{""jessa2022"": 10, ""okada"": 6, ""collot"": 1}",
+random_s10,random,17,135,5,0,"{""okada"": 8, ""jessa2022"": 6, ""collot"": 3}",
+random_s11,random,17,136,5,0,"{""jessa2022"": 10, ""okada"": 4, ""collot"": 3}",
+random_s12,random,17,137,5,1,"{""jessa2022"": 9, ""okada"": 7, ""collot"": 1}",MP4
+random_s13,random,17,131,5,0,"{""jessa2022"": 9, ""okada"": 6, ""collot"": 2}",
+random_s14,random,17,142,5,0,"{""okada"": 10, ""jessa2022"": 7}",
+random_s15,random,17,134,6,0,"{""jessa2022"": 11, ""collot"": 3, ""okada"": 3}",
+random_s16,random,17,140,5,0,"{""jessa2022"": 9, ""okada"": 6, ""collot"": 2}",
+random_s17,random,17,139,4,1,"{""jessa2022"": 9, ""okada"": 6, ""collot"": 2}",MP4
+random_s18,random,17,133,4,0,"{""okada"": 9, ""jessa2022"": 7, ""collot"": 1}",
+random_s19,random,17,139,6,1,"{""jessa2022"": 8, ""okada"": 5, ""collot"": 2, ""desisto"": 1, ""zang"": 1}",MP1
