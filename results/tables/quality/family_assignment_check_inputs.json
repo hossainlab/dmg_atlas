@@ -1,0 +1,11 @@
+{
+ "script": "scripts/40_family_assignment_check.py",
+ "params": {
+  "min_frac": 0.05
+ },
+ "inputs": {
+  "data/processed/metaprogram_scores.parquet": "0c89994b5e13aa1e7acb85b59ce21506",
+  "results/tables/metaprogram_members.csv": "73919bac352c08276e132dee51a7df03",
+  "results/tables/metaprograms.csv": "234ee013edaa1fa25502833790dd62f7"
+ }
+}

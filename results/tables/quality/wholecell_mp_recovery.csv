@@ -1,0 +1,16 @@
+metaprogram,family,technical_class,replicated_primary,best_jaccard,matched,n_samples_cells,cell_publications,replicated_extended,replicated_strict_extended
+MP1,cycling,,True,0.724,xMP1,27,desisto;filbin;jessa2022;liu;zang,True,True
+MP10,AC_like,,False,1.0,xMP13,0,,False,False
+MP11,cycling,,False,1.0,xMP14,0,,False,False
+MP12,,technical:mitochondrial,False,1.0,xMP17,0,,False,False
+MP13,,technical:IEG_dissociation_stress,False,0.696,xMP9,8,filbin;jessa2022;liu;zang,False,False
+MP14,AC_like,,False,1.0,xMP15,0,,False,False
+MP15,AC_like,,False,1.0,xMP16,0,,False,False
+MP2,,technical:ribosomal,False,1.0,xMP3,1,jessa2022,False,False
+MP3,OPC_like,,False,1.0,xMP4,0,,False,False
+MP4,hypoxia,,True,0.941,xMP2,6,desisto;jessa2022;liu,True,True
+MP5,OC_like,,False,1.0,xMP5,0,,False,False
+MP6,OPC_like,,False,1.0,xMP6,0,,False,False
+MP7,AC_like,,False,1.0,xMP8,0,,False,False
+MP8,MES_like,,False,1.0,xMP11,0,,False,False
+MP9,novel_MP9,,False,1.0,xMP12,0,,False,False

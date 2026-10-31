@@ -1,0 +1,18 @@
+source,author_label,n_mp9_high_cells,fraction
+author_Cell_type_consensus_Jessa2022,Uncertain,1458,0.41338247802665157
+author_Cell_type_consensus_Jessa2022,OPC,1094,0.3101786220584066
+author_Cell_type_consensus_Jessa2022,Astrocytes,483,0.13694357811170968
+author_Cell_type_consensus_Jessa2022,Ependymal,365,0.1034873830450808
+author_Cell_type_consensus_Jessa2022,Glial progenitors,58,0.016444570456478593
+author_Cell_type_consensus_Jessa2022,Oligodendrocytes,32,0.00907286645874681
+author_Cell_type_consensus_Jessa2022,Neurons,16,0.004536433229373405
+author_Cell_type_consensus_Jessa2022,Vascular & other,8,0.0022682166146867026
+author_Cell_type_consensus_Jessa2022,Proliferating OPC,7,0.001984689537850865
+author_Cell_type_consensus_Jessa2022,Immune,3,0.0008505812305075135
+author_Cell_type_consensus_Jessa2022,RGC,2,0.0005670541536716756
+author_Cell_type_consensus_Jessa2022,Neuronal progenitors,1,0.0002835270768358378
+author_cellType,Tumor,3245,1.0
+author_celltype,AC_like,249,0.564625850340136
+author_celltype,MES_like,113,0.2562358276643991
+author_celltype,OPC_like,78,0.17687074829931973
+author_celltype,OC_like,1,0.0022675736961451248

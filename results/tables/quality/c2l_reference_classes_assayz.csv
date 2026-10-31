@@ -1,0 +1,14 @@
+c2l_class,n_cells,n_samples,n_patients,n_studies
+T_NK,737,39,36,6
+astrocyte,4287,49,45,6
+malignant_AC_like,5200,50,46,6
+malignant_MES_like,5200,50,45,6
+malignant_OC_like,5200,48,44,6
+malignant_OPC_like,5200,52,47,6
+malignant_cycling,5200,53,48,6
+malignant_hypoxia,5200,42,39,6
+malignant_novel_MP9,5200,43,39,6
+myeloid,5200,51,47,6
+neuron,4290,36,35,4
+oligodendrocyte,5200,47,43,6
+vascular,3194,48,44,5

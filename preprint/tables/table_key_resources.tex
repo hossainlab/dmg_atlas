@@ -1,51 +1,28 @@
 \begin{table}[htbp]
-\centering\scriptsize
-\caption{\textbf{Key resources table.} Deposited data reused in this study and the software that produced the
-results. Version numbers are those recorded by \texttt{scripts/28\_record\_environment.py}; the full environment
-(557 conda and 167 pip entries for the local environment, plus the GPU image pins) is in \texttt{env/}.}
+\centering\small
+\caption{\textbf{Software and versions.} Main software packages used in the analysis.}
 \label{tab:keyresources}
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{p{5.0cm}p{6.0cm}p{3.6cm}}
+\begin{tabular}{lll}
 \toprule
-\multicolumn{3}{l}{\textbf{Deposited data}} \\
-Dataset & Identifier & Source \\
+Software & Reference & Source \\
 \midrule
-Collot et al., DMG (snRNA) & Zenodo: 10.5281/zenodo.17922773 (scRNA.tar.gz) & Zenodo \\
-DeSisto et al., paediatric HGG (scRNA) & GSE231859 & GEO \\
-Jessa et al., DMG (multiome RNA) & GSE210566 & GEO \\
-Jessa et al., DMG (sc/snRNA) & GSE210567 & GEO \\
-Okada et al., post-mortem DMG (snRNA) & EGAS50000001447 (raw, controlled); processed matrix from the study's UCSC Cell Browser instance & EGA / UCSC Cell Browser \\
-Zang et al., DMG (scRNA) & GSE245674 (GSM7846769) & GEO \\
-Braun et al., first-trimester human brain & CZ CELLxGENE Discover (collection 4d8fed08-2d6d-4692-b5ea-464f1d072077) & CZ CELLxGENE \\
-Filbin et al., H3K27M glioma (Smart-seq2, TPM) & GSE102130 & GEO \\
-DMG immune cohort (SS2 + 10x, TPM) & GSE227983 & GEO \\
-Liu et al., H3-K27M DMG (Smart-seq2, TPM) & GSE184357 & GEO \\
-Siletti et al., adult human brain (pons dissections) & CZ CELLxGENE Discover (collection 283d65eb-dd53-496d-adb7-7570c7caa443) & CZ CELLxGENE \\
-Whole-brainstem DIPG autopsy Visium & GSE280990 & GEO \\
-Collot et al., DMG Visium & Zenodo: 10.5281/zenodo.17922773 (ST.tar.gz) & Zenodo \\
-Huchede et al., DMG Visium & GSE268577 & GEO \\
-Ren et al., DMG and glioblastoma Visium & GSE194329 & GEO \\
-\midrule
-\multicolumn{3}{l}{\textbf{Software and algorithms}} \\
-Software & Reference & Identifier \\
-\midrule
-python v3.11.16 & Python Software Foundation & \url{https://pypi.org/project/python/} \\
-numpy v2.4.6 & Harris et al. & \url{https://pypi.org/project/numpy/} \\
-scipy v1.17.1 & Virtanen et al. & \url{https://pypi.org/project/scipy/} \\
-pandas v2.3.3 & McKinney & \url{https://pypi.org/project/pandas/} \\
-anndata v0.12.19 & Virshup et al. & \url{https://pypi.org/project/anndata/} \\
-scanpy v1.11.5 & Wolf et al. & \url{https://pypi.org/project/scanpy/} \\
-scikit-learn v1.7.2 & Pedregosa et al. & \url{https://pypi.org/project/scikit-learn/} \\
-statsmodels v0.15.0 & Seabold and Perktold & \url{https://pypi.org/project/statsmodels/} \\
-matplotlib v3.11.2 & Hunter & \url{https://pypi.org/project/matplotlib/} \\
-infercnvpy v0.6.1 & Sturm et al. (inferCNV port) & \url{https://pypi.org/project/infercnvpy/} \\
-leidenalg v0.12.0 & Traag et al. & \url{https://pypi.org/project/leidenalg/} \\
-umap-learn v0.5.12 & McInnes et al. & \url{https://pypi.org/project/umap-learn/} \\
-scvi-tools v1.4.2 & Lopez et al.; Xu et al. & \url{https://pypi.org/project/scvi-tools/} \\
-torch v2.14.1 & Paszke et al. & \url{https://pypi.org/project/torch/} \\
-cell2location v==0.1.5 & Kleshchevnikov et al. & \url{https://pypi.org/project/cell2location/} \\
-pyro-ppl v1.9.1+ab0491a & Bingham et al. & \url{https://pypi.org/project/pyro-ppl/} \\
-lifelines v0.30.3 & Davidson-Pilon & \url{https://pypi.org/project/lifelines/} \\
+python v3.11.16 & Python Software Foundation & python.org \\
+numpy v2.4.6 & Harris et al. & PyPI: numpy \\
+scipy v1.17.1 & Virtanen et al. & PyPI: scipy \\
+pandas v2.3.3 & McKinney & PyPI: pandas \\
+anndata v0.12.19 & Virshup et al. & PyPI: anndata \\
+scanpy v1.11.5 & Wolf et al. & PyPI: scanpy \\
+scikit-learn v1.7.2 & Pedregosa et al. & PyPI: scikit-learn \\
+statsmodels v0.15.0 & Seabold and Perktold & PyPI: statsmodels \\
+matplotlib v3.11.2 & Hunter & PyPI: matplotlib \\
+infercnvpy v0.6.1 & Sturm et al. (inferCNV port) & PyPI: infercnvpy \\
+leidenalg v0.12.0 & Traag et al. & PyPI: leidenalg \\
+umap-learn v0.5.12 & McInnes et al. & PyPI: umap-learn \\
+scvi-tools v1.4.2 & Lopez et al.; Xu et al. & PyPI: scvi-tools \\
+torch v2.14.1 & Paszke et al. & PyPI: torch \\
+cell2location v0.1.5 & Kleshchevnikov et al. & PyPI: cell2location \\
+pyro-ppl v1.9.1+ab0491a & Bingham et al. & PyPI: pyro-ppl \\
+lifelines v0.30.3 & Davidson-Pilon & PyPI: lifelines \\
 \bottomrule
 \end{tabular}
 \end{table}

@@ -42,7 +42,7 @@ FAMILIES = ["OPC_like", "AC_like", "OC_like", "MES_like", "cycling", "hypoxia", 
 FAMILY_COLOURS = {"OPC_like": "#4575b4", "AC_like": "#e08214", "OC_like": "#1b7837", "MES_like": "#b2182b", "cycling": "#762a83",
                   "hypoxia": "#8c510a", "novel_MP9": "#35978f", "novel_MP15": "#35978f", "unassigned": "#bdbdbd"}
 FAMILY_NAMES = {"OPC_like": "OPC-like", "AC_like": "AC-like", "OC_like": "OC-like", "MES_like": "MES-like", "cycling": "cycling",
-                "hypoxia": "hypoxia", "novel_MP9": "cilia (MP9)", "novel_MP15": "cilia (MP15, pre-audit)", "unassigned": "unassigned"}
+                "hypoxia": "hypoxia", "novel_MP9": "ciliated (MP9)", "novel_MP15": "cilia (MP15, pre-audit)", "unassigned": "unassigned"}
 ASSAY_COLOURS = {"scRNA": "#d95f02", "snRNA": "#1b9e77", "multiome_RNA": "#7570b3"}
 ASSAY_NAMES = {"scRNA": "cells (scRNA)", "snRNA": "nuclei (snRNA)", "multiome_RNA": "nuclei (multiome)"}
 STUDY_NAMES = {"collot": "Collot 2026", "desisto": "DeSisto", "jessa_multiome": "Jessa 2022 multiome", "jessa_scrna": "Jessa 2022",
@@ -63,7 +63,7 @@ CONTRAST_NAMES = {"assay_nuclei_vs_cells": "nuclei vs cells", "h3_H3.1_vs_H3.3":
                   "site_thalamus_vs_pons": "thalamus vs pons", "treatment_ONC201_vs_standard": "ONC201 vs standard"}
 SPATIAL_CLASS = {"malignant_OPC_like": "OPC-like", "malignant_AC_like": "AC-like", "malignant_OC_like": "OC-like",
                  "malignant_MES_like": "MES-like", "malignant_cycling": "cycling", "malignant_hypoxia": "hypoxia",
-                 "malignant_novel_MP9": "cilia (MP9)", "malignant_novel_MP15": "cilia (MP15, pre-audit)", "T_NK": "T/NK"}
+                 "malignant_novel_MP9": "ciliated (MP9)", "malignant_novel_MP15": "cilia (MP15, pre-audit)", "T_NK": "T/NK"}
 
 
 def letter(ax, s, dx=-0.02, dy=1.02, title=None, tpad=3.0):
@@ -120,3 +120,18 @@ def heat(ax, m, cmap="Greys", vmin=0, vmax=None, fmt=None, norm=None, cbar_label
     if cbar_label and fig is not None:
         cb = fig.colorbar(im, ax=ax, fraction=0.04, pad=0.02); cb.set_label(cbar_label); cb.outline.set_visible(False)
     return im
+
+
+# Display names for publication figures (no software-internal identifiers on axes)
+EMBED_NAMES = {"scvi_seed0": "scVI seed 0", "scvi_seed1": "scVI seed 1", "scvi_seed2": "scVI seed 2",
+               "scvi_seed0_e60": "scVI seed 0, 60 epochs", "harmony": "Harmony", "pca": "PCA"}
+_METRIC = {"asw_batch": "batch ASW", "asw_label": "label ASW", "ilisi": "iLISI", "clisi": "cLISI", "kbet": "kBET", "pcr": "PCR",
+           "ari": "ARI", "nmi": "NMI", "graph_connectivity": "graph connectivity", "batch_score": "batch score",
+           "bio_score": "biology score", "fine_bio_score": "fine biology score", "total_score": "overall score"}
+_KEY = {"assay": "assay", "sample_id": "sample", "study": "study", "fine": "fine labels"}
+
+
+def metric_name(m: str) -> str:
+    """scIB column name -> readable label, e.g. 'ilisi__sample_id' -> 'iLISI (sample)'."""
+    base, _, key = m.partition("__")
+    return _METRIC.get(base, base.replace("_", " ")) + (f" ({_KEY.get(key, key)})" if key else "")

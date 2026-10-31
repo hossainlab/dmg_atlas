@@ -1,0 +1,2 @@
+sample_id,n_cells,k_primary,k_new,sil_k10,sil_k11,sil_k12,full_k10,full_k11,full_k12
+jessa_multiome__P-6774_S-10146,1274,9,11,0.9817,0.9046,0.8826,True,True,False

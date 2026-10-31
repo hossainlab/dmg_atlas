@@ -264,3 +264,4 @@ results/tables/spatial_abundance_long.pre_audit.csv
 
 # Zenodo deposit build (scripts/35_zenodo_deposit.py)
 deposit/
+results/tables/spatial_abundance_long_assayz.csv

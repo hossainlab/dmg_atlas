@@ -1,43 +1,43 @@
-\begin{table}[htbp]
-\centering\scriptsize
-\caption{\textbf{Supplementary Table 1 $\vert$ Public deposits screened and their role in this study.} Accession,
-repository, access status and deposited cell or spot count for every deposit screened, with an explicit column
-for whether it entered the released results. The final column is the role proposed at screening, which is not the
-inclusion record: deposits marked ``no'' were dropped before or during quality control (the mouse developmental
-reference and the adult Paired-Tag reference were never used, and the ScPCA samples failed quality control), and
-the Phase~7 bulk cohort is outside the scope of this paper.}
-\label{tab:deposits}
-\setlength{\tabcolsep}{3pt}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{p{2.6cm}p{2.4cm}p{1.5cm}p{1.5cm}p{1.2cm}p{0.9cm}p{2.1cm}}
+\begin{landscape}
+\footnotesize
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.05}
+\begin{longtable}{>{\raggedright\arraybackslash}p{6.2cm}>{\raggedright\arraybackslash}p{6.0cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{4.6cm}}
+\caption{\textbf{Public data sets screened and their use in this study.} Data sets used, with their role, followed by data
+sets screened but not used, with the reason.}
+\label{tab:deposits}\\
 \toprule
-Dataset & Accession & Repository & Access & Cells/spots & Used here & Role at screening \\
+Data set & Accession & Repository & Data type & Use in this study \\
 \midrule
-Jessa\_2022\_scRNA\_snRNA & GSE210567 & GEO & open & 176,912 QC-\ldots & yes & CORE integrated (scVI/\ldots \\
-Jessa\_2022\_multiome & GSE210566 & GEO & open & not stated \ldots & yes & CORE integrated + chro\ldots \\
-Collot\_2026\_scRNA\_snRNA & 10.5281/zenodo.17922773 (s\ldots & Zenodo & open & 73,579 & yes & CORE integrated \\
-DeSisto\_2024 & GSE231859 & GEO & open & 15,617 & yes & CORE integrated (after\ldots \\
-Filbin\_2018 & GSE102130 & GEO & open & 4,039 cells & yes & PROJECTION (scANVI que\ldots \\
-Liu\_2022 & GSE184357 & GEO & open & 9,248 post-\ldots & yes & PROJECTION (or integra\ldots \\
-LaBelle\_2025 & GSE227983 (+GSE271936, 4 e\ldots & GEO & open (processed \ldots & 30,892 & yes & PROJECTION (TPM only, \ldots \\
-Huchede\_2024 & GSE268577 & GEO & open & 1,618 spots & yes & SPATIAL validation \\
-Ren\_2023\_DMG\_Visium & GSE194329 (5 DMG + 5 GBM +\ldots & GEO & open & not stated \ldots & yes & SPATIAL validation \\
-Collot\_2026\_Visium & 10.5281/zenodo.17922773 (S\ldots & Zenodo & open & not stated & yes & SPATIAL validation \\
-Xie\_2026\_adult\_brain\_PairedTag & GSE327101 & GEO & open & 36,646 pons\ldots & no & NORMAL reference (adul\ldots \\
-Siletti\_2023\_adult\_human\_brain & 10.1126/science.add7046; C\ldots & cellxgene & open & pons subset\ldots & yes & NORMAL reference (adul\ldots \\
-Braun\_2023\_first\_trimester\_bra\ldots & 10.1126/science.adf1226; C\ldots & cellxgene / Li\ldots & open & hindbrain s\ldots & yes & NORMAL reference (deve\ldots \\
-OpenPedCan\_PBTA\_v14\_DMG & PBTA/OpenPedCan v14 & D3b open-acces\ldots & open & nan & no & BULK survival validati\ldots \\
-Zang\_2024\_DMG\_sample & GSE245674 (GSM7846769 only\ldots & GEO & open & ~half of 10\ldots & yes & CORE integrated (minor\ldots \\
-ScPCA\_SCPCP000021\_DMG & SCPCP000021 (SCPCS000636, \ldots & ScPCA portal (\ldots & open (accept por\ldots & 3,985 (1,05\ldots & no & CORE integrated (minor\ldots \\
-Okada\_2026\_postmortem\_DMG & EGAS50000001447 (raw); UCS\ldots & EGA (controlle\ldots & raw controlled; \ldots & not stated & yes & CONDITIONAL integrated\ldots \\
-Whole\_brainstem\_DIPG\_2025 & GSE280990 & GEO & open & not stated & yes & SPATIAL validation (in\ldots \\
-Jessa\_mouse\_developing\_pons\_fo\ldots & GSE188625 (superseries; mo\ldots & GEO & open & not stated & no & NORMAL reference (mous\ldots \\
-ScPCA\_SCPCP000001\_midline\_pHGG & SCPCP000001 (8 midline-loc\ldots & ScPCA portal & open (accept por\ldots & ~12,000 acr\ldots & no & CONDITIONAL integrated \\
-Sussman\_2026\_longitudinal\_pHGG & dbGaP phs002371 (HTAN) [UN\ldots & dbGaP & controlled & nan & no & WATCH (controlled acce\ldots \\
-Stanford\_DIPG\_CAR-T\_autopsy\_sn\ldots & abstract DMG-48, Neuro-Onc\ldots & none yet & not released & ~320,000 & no & WATCH (unreleased) \\
-Acta\_Neuropathol\_2026\_DIPG\_scR\ldots & EGA 'upon request' (not ye\ldots & EGA & on request & nan & no & EXCLUDE \\
-Cell-line\_PDX\_series & GSE212782, GSE268775/6, GS\ldots & GEO & open & nan & no & EXCLUDE (models / in v\ldots \\
-CSF\_and\_PBMC\_immune\_series & GSE261235, GSE186802, GSE2\ldots & GEO & open & nan & no & EXCLUDE (not tumour ti\ldots \\
+\endfirsthead
+\toprule
+Data set & Accession & Repository & Data type & Use in this study \\
+\midrule
+\endhead
+Collot et al., DMG & 10.5281/zenodo.17922773 & Zenodo & snRNA-seq & Reference \\
+DeSisto et al., paediatric HGG & GSE231859 & GEO & scRNA-seq & Reference \\
+Jessa et al., DMG & GSE210566 & GEO & Multiome (RNA) & Reference \\
+Jessa et al., DMG & GSE210567 & GEO & scRNA-seq, snRNA-seq & Reference \\
+Okada et al., post-mortem DMG & UCSC Cell Browser (brain-dmg-multiomics); raw data EGAS50000001447 & EGA / UCSC Cell Browser & snRNA-seq & Reference \\
+Zang et al., DMG & GSE245674 (GSM7846769) & GEO & scRNA-seq & Reference \\
+Braun et al., first-trimester human brain & CELLxGENE collection 4d8fed08 & CZ CELLxGENE & scRNA-seq & Query (normal brain) \\
+Filbin et al., H3K27M glioma & GSE102130 & GEO & Smart-seq2 (TPM) & Query (tumour) \\
+LaBelle et al., DMG immune cohort & GSE227983, GSE271936 & GEO & Smart-seq2, 10x (TPM) & Query (tumour) \\
+Liu et al., H3-K27M DMG & GSE184357 & GEO & Smart-seq2 (TPM) & Query (tumour) \\
+Siletti et al., adult human brain & CELLxGENE collection 283d65eb & CZ CELLxGENE & snRNA-seq & Query (normal brain) \\
+Whole-brainstem DIPG autopsy Visium & GSE280990 & GEO & Visium & Spatial \\
+Collot et al., DMG Visium & 10.5281/zenodo.17922773 & Zenodo & Visium & Spatial \\
+Huchede et al., DMG Visium & GSE268577 & GEO & Visium & Spatial \\
+Ren et al., DMG and glioblastoma Visium & GSE194329 & GEO & Visium & Spatial \\
+\midrule
+Adult human brain Paired-Tag (Xie et al.) & GSE327101 & GEO & Paired-Tag & Not used: normal reference not required \\
+PBTA / OpenPedCan v14 & -- & OpenPedCan & Bulk RNA-seq & Not used: bulk data, outside scope \\
+ScPCA SCPCP000021 & SCPCP000021 & ScPCA portal & snRNA-seq & Excluded: failed quality control \\
+Mouse developing pons and forebrain (Jessa et al.) & GSE188625 & GEO & scRNA-seq (mouse) & Excluded: non-human \\
+Longitudinal paediatric high-grade glioma & -- & dbGaP & snRNA-seq, snATAC-seq & Not accessed: controlled access \\
+DIPG CAR-T autopsy cohort & -- & -- & snRNA-seq & Not available: data not released \\
+DIPG single-cell cohort (2026) & -- & EGA & scRNA-seq & Not available: not deposited \\
+Cell-line and PDX series & GSE212782 and others & GEO & scRNA-seq & Excluded: models, not primary tumour \\
+CSF and PBMC immune series & GSE261235, GSE186802, GSE202174 & GEO & scRNA-seq & Excluded: not tumour tissue \\
 \bottomrule
-\end{tabular}}
-\end{table}
+\end{longtable}
+\end{landscape}

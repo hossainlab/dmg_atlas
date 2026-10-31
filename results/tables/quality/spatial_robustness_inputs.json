@@ -1,0 +1,12 @@
+{
+ "script": "scripts/39_spatial_robustness.py",
+ "spearman_cosine_vs_rho": {
+  "rho": 0.52791507981525,
+  "p": 0.0003268630349868139
+ },
+ "inputs": {
+  "results/tables/spatial_colocalisation_per_section.csv": "6def70d5d7db3c2911deb2fa4e3f9e22",
+  "results/tables/spatial_colocalisation.csv": "85cda0395eaa6090cfd28dcbea0be251",
+  "results/tables/c2l_signatures.csv": "f06a414f918222fbabce05ba4db9be7d"
+ }
+}

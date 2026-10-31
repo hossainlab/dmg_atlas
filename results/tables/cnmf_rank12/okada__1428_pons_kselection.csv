@@ -1,0 +1,2 @@
+sample_id,n_cells,k_primary,k_new,sil_k10,sil_k11,sil_k12,full_k10,full_k11,full_k12
+okada__1428_pons,1013,9,10,0.9166,0.9105,0.8816,True,False,False

@@ -1,0 +1,14 @@
+{
+ "script": "scripts/42_cnmf_rank_extension.py",
+ "ks_ext": [
+  10,
+  11,
+  12
+ ],
+ "n_samples": 21,
+ "n_replaced": 14,
+ "inputs": {
+  "results/tables/cnmf/k_selection.csv": "1622e0f29b26713104f1e52af8893cdc",
+  "results/tables/metaprograms.csv": "234ee013edaa1fa25502833790dd62f7"
+ }
+}

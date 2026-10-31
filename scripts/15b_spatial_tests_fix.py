@@ -38,6 +38,13 @@ import numpy as np, pandas as pd, scipy.stats as ss, anndata as ad, scanpy as sc
 
 LOG = StepLogger(ROOT / "logs/fix_spatial.log", context="15b_spatial_tests_fix")
 TABLES = ROOT / "results/tables"
+# Phase 9 (step 44): optional --tag suffixes every input/output table (e.g. --tag _assayz reads
+# spatial_abundance_long_assayz.csv and writes spatial_colocalisation_assayz.csv ...); without it the behaviour is unchanged.
+TAG = sys.argv[sys.argv.index("--tag") + 1] if "--tag" in sys.argv else ""
+
+
+def TT(name: str):
+    return TABLES / name.replace(".csv", f"{TAG}.csv")
 FAMILIES = ["OPC_like", "AC_like", "OC_like", "MES_like", "cycling", "hypoxia", "novel_MP9"]
 STATES = [f"malignant_{f}" for f in FAMILIES]
 TME = ["myeloid", "T_NK", "oligodendrocyte", "astrocyte", "neuron", "vascular"]
@@ -60,7 +67,7 @@ def patient_of(section_id: str, cohort: str) -> str:
 
 
 def load():
-    long = pd.read_csv(TABLES / "spatial_abundance_long.csv")
+    long = pd.read_csv(TT("spatial_abundance_long.csv"))
     q = long.pivot_table(index="spot", columns="class", values="q05")[CLASSES]
     meta = (long.drop_duplicates("spot").set_index("spot")
             [["cohort", "section_id", "region_or_diagnosis", "array_row", "array_col"]].loc[q.index])
@@ -157,10 +164,10 @@ def colocalisation(q, P, C, meta):
     per_r = per_section_rhos(q, meta, "raw_q05")
     per_c = per_section_rhos(C, meta, "clr")
     per = pd.concat([per_p, per_r, per_c], ignore_index=True)
-    per.to_csv(TABLES / "spatial_colocalisation_per_section.csv", index=False)
+    per.to_csv(TT("spatial_colocalisation_per_section.csv"), index=False)
     main = pd.concat([pool(per_p, "proportion"), pool(per_c, "clr")], ignore_index=True)
-    main.to_csv(TABLES / "spatial_colocalisation.csv", index=False)
-    pool(per_r, "raw_q05").to_csv(TABLES / "spatial_colocalisation_raw.csv", index=False)
+    main.to_csv(TT("spatial_colocalisation.csv"), index=False)
+    pool(per_r, "raw_q05").to_csv(TT("spatial_colocalisation_raw.csv"), index=False)
     # SP-11 leave-one-cohort-out and leave-brainstem-out, proportion metric, DMG only
     sens = []
     dmg_sections = sorted(meta.loc[meta.group == "DMG", "section_id"].unique())
@@ -190,8 +197,8 @@ def niches(P, meta):
     comp.insert(3, "n_sections_present", [lab.index[lab == k].map(meta.section_id).nunique() for k in sizes.index])
     comp.insert(4, "n_patients_present", [lab.index[lab == k].map(meta.patient_id).nunique() for k in sizes.index])
     comp.index.name = "niche"
-    comp.to_csv(TABLES / "spatial_niches.csv")
-    pd.crosstab(meta.loc[dmg, "section_id"], lab.values, normalize="index").to_csv(TABLES / "spatial_niches_by_section.csv")
+    comp.to_csv(TT("spatial_niches.csv"))
+    pd.crosstab(meta.loc[dmg, "section_id"], lab.values, normalize="index").to_csv(TT("spatial_niches_by_section.csv"))
     labels = meta.loc[dmg, ["cohort", "section_id", "patient_id"]].assign(niche=lab.values)
     labels.to_csv(ROOT / "data/processed/spatial/spatial_niche_labels.csv.gz")
     return comp
@@ -209,7 +216,7 @@ def brainstem(q, P, meta):
     sec_tab.insert(1, "n_spots", mb.section_id.value_counts().loc[BRAINSTEM_ORDER].values)
     sec_tab.insert(2, "tumour_fraction_mean", tf.groupby(mb.section_id).mean().loc[BRAINSTEM_ORDER].values)
     sec_tab.insert(3, "tumour_fraction_median", tf.groupby(mb.section_id).median().loc[BRAINSTEM_ORDER].values)
-    sec_tab.to_csv(TABLES / "brainstem_section_means.csv")
+    sec_tab.to_csv(TT("brainstem_section_means.csv"))
     x = np.array([rank[s] for s in BRAINSTEM_ORDER])
     rows = []
     for c in CLASSES + ["tumour_fraction"]:
@@ -255,7 +262,7 @@ def brainstem(q, P, meta):
     for t in ("within_section_tumour_fraction_vs_state_share_RE", "within_section_tumour_fraction_vs_TME_abundance_RE"):
         m = grad.test == t
         grad.loc[m, "q_bh_re"] = ss.false_discovery_control(grad.loc[m, "p_re"].values, method="bh")
-    grad.to_csv(TABLES / "brainstem_gradient.csv", index=False)
+    grad.to_csv(TT("brainstem_gradient.csv"), index=False)
     return grad, sec_tab, means_prop
 
 
@@ -273,7 +280,7 @@ def ren_outgroup(q, meta):
             d[f"frac_{c}"] = sub[c].sum() / sub.sum().sum()
         rows.append(d)
     sec = pd.DataFrame(rows).sort_values(["group", "section_id"])
-    sec.to_csv(TABLES / "ren_section_composition.csv", index=False)
+    sec.to_csv(TT("ren_section_composition.csv"), index=False)
     out = []
     for col in [f"share_{s}" for s in STATES] + ["tumour_fraction"] + [f"frac_{c}" for c in TME]:
         a = sec.loc[sec.group == "DMG", col].values; b = sec.loc[sec.group == "GBM", col].values
@@ -283,7 +290,7 @@ def ren_outgroup(q, meta):
                         U=u, p_mwu=p, peritumour_GBM5_2=sec.loc[sec.section_id == "GBM5_2", col].iloc[0]))
     out = pd.DataFrame(out)
     out["q_bh"] = ss.false_discovery_control(out.p_mwu.values, method="bh")  # SP-12
-    out.to_csv(TABLES / "ren_dmg_vs_gbm_composition.csv", index=False)
+    out.to_csv(TT("ren_dmg_vs_gbm_composition.csv"), index=False)
     return out, sec
 
 
@@ -292,12 +299,12 @@ def main():
               "spatial_niches_by_section.csv", "brainstem_gradient.csv", "brainstem_section_means.csv",
               "ren_dmg_vs_gbm_composition.csv", "ren_section_composition.csv"):
         p = TABLES / f; pre = TABLES / f.replace(".csv", ".pre_audit.csv")
-        if p.exists() and not pre.exists():
+        if not TAG and p.exists() and not pre.exists():
             shutil.copy(p, pre)
     with LOG.step("load"):
         q, P, C, meta = load()
         meta[["cohort", "section_id", "patient_id", "group"]].drop_duplicates("section_id") \
-            .to_csv(TABLES / "spatial_patient_map.csv", index=False)
+            .to_csv(TT("spatial_patient_map.csv"), index=False)
         LOG.write(f"spots {len(q)}, sections {meta.section_id.nunique()}, patients {meta.patient_id.nunique()}, "
                   f"groups {meta.group.value_counts().to_dict()}; DMG patients "
                   f"{meta.loc[meta.group=='DMG','patient_id'].nunique()}")
@@ -308,7 +315,7 @@ def main():
             pq = per_section_rhos(P.loc[keep], meta.loc[keep], "proportion_min500umi")
             sens = pd.concat([sens, pool(pq, "proportion_min500umi", subset_label="min500umi")], ignore_index=True)
             LOG.write(f"SP-07 sensitivity: {len(meta)-len(keep)} spots (<{MIN_UMI} UMI) dropped")
-        sens.to_csv(TABLES / "spatial_colocalisation_sensitivity.csv", index=False)
+        sens.to_csv(TT("spatial_colocalisation_sensitivity.csv"), index=False)
         k = coloc[(coloc.group == "DMG") & (coloc.metric == "proportion") & (coloc.pair_type == "state_vs_TME")]
         LOG.write("DMG proportion-based state x TME (sorted):\n" + k.sort_values("rho_re", ascending=False)
                   [["class_a", "class_b", "n_sections", "n_patients", "rho_re", "rho_re_lo", "rho_re_hi",

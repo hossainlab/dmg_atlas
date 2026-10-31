@@ -1,0 +1,2 @@
+sample_id,n_cells,k_primary,k_new,sil_k10,sil_k11,sil_k12,full_k10,full_k11,full_k12
+desisto__1196,719,9,12,0.9076,0.8753,0.9446,False,False,True

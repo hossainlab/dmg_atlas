@@ -1,0 +1,2 @@
+sample_id,n_cells,k_primary,k_new,sil_k10,sil_k11,sil_k12,full_k10,full_k11,full_k12
+jessa_scrna__P-6337_S-8821,3720,9,10,0.9407,0.8895,0.8658,True,True,False
