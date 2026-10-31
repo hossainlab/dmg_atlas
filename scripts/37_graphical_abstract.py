@@ -36,10 +36,10 @@ samp = val[(val.level == "sample") & (val.tier == "tier2_cnv_call") & (val.subse
 
 cut = T("metaprogram_cut_sensitivity.csv")
 
-sp = T("spatial_colocalisation.csv")
+sp = T("spatial_colocalisation_assayz.csv")  # within-assay-class reference (scripts/43-44)
 sp = sp[(sp.metric == "proportion") & (sp.subset == "all") & (sp.pair_type == "state_vs_TME")].copy()
 sp = sp.sort_values("q_bh_state_vs_TME").head(6).iloc[::-1]
-nm = lambda c: (c.replace("malignant_", "").replace("novel_MP9", "cilia").replace("_like", "-like").replace("T_NK", "T/NK"))
+nm = lambda c: (c.replace("malignant_", "").replace("novel_MP9", "ciliated").replace("_like", "-like").replace("T_NK", "T/NK"))
 
 # ---------------------------------------------------------------- canvas
 FS.apply_figure_style(sizes=(8, 7, 6))
