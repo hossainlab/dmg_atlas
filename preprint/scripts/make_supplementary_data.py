@@ -28,7 +28,12 @@ BOOKS = {
     5: ("Robustness analyses", {"loso_summary": Q / "loso_classifier_summary.csv", "loso_per_class": Q / "loso_classifier_per_class.csv",
                                 "loso_per_patient": Q / "loso_classifier_per_patient.csv", "loso_confusion": Q / "loso_classifier_confusion.csv",
                                 "mp_recovery_summary": Q / "metaprogram_lopo_summary.csv", "mp_scenarios": Q / "metaprogram_lopo_scenarios.csv",
-                                "composition_compare": Q / "composition_label_sensitivity_compare.csv"}),
+                                "composition_compare": Q / "composition_label_sensitivity_compare.csv",
+                                "mp9_tumour_index": Q / "mp9_tumour_index_per_sample.csv", "mp9_author_labels": Q / "mp9_author_labels.csv",
+                                "spatial_hksj": Q / "spatial_hksj.csv", "spatial_signature_overlap": Q / "spatial_signature_overlap.csv",
+                                "family_assignment": Q / "family_assignment_check.csv",
+                                "wholecell_metaprograms": Q / "wholecell_metaprograms.csv", "wholecell_mp_recovery": Q / "wholecell_mp_recovery.csv",
+                                "cnmf_rank_extension": Q / "cnmf_rank_extension.csv", "cnmf_rank_recovery": Q / "cnmf_rank_extension_recovery.csv"}),
     6: ("Composition models", {"results": T / "composition_results.csv", "estimability": T / "composition_estimability.csv",
                                "per_sample": T / "composition_per_sample.csv"}),
 }

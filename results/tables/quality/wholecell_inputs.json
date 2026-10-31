@@ -1,0 +1,14 @@
+{
+ "script": "scripts/41_wholecell_metaprograms.py",
+ "params": {
+  "min_cells": 100,
+  "cut": 0.85,
+  "recover_j": 0.5
+ },
+ "inputs": {
+  "data/interim/liu.qc.h5ad": "22ff8018f29ff8af56916a4d9d562585",
+  "data/interim/filbin.qc.h5ad": "ff78c278c9a9842cfe91f3642532db14",
+  "data/processed/malignant_calls.csv": "894cfd569f2944bc2df3f6bfcc2a5de3",
+  "results/tables/metaprograms.csv": "234ee013edaa1fa25502833790dd62f7"
+ }
+}

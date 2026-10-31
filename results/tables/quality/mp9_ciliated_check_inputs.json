@@ -1,0 +1,21 @@
+{
+ "script": "scripts/38_mp9_ciliated_check.py",
+ "params": {
+  "z_high": 2.0,
+  "min_high": 20,
+  "min_ref": 30,
+  "arms": [
+   "arm_1q",
+   "arm_2",
+   "arm_7",
+   "arm_13q",
+   "arm_14q",
+   "arm_10q",
+   "arm_17p"
+  ]
+ },
+ "inputs": {
+  "data/processed/metaprogram_scores.parquet": "0c89994b5e13aa1e7acb85b59ce21506",
+  "data/processed/malignant_calls.csv": "894cfd569f2944bc2df3f6bfcc2a5de3"
+ }
+}

@@ -1,0 +1,16 @@
+metaprogram,family,replicated_primary,best_jaccard,recovered,replicated_extended
+MP1,cycling,True,0.961,True,True
+MP10,AC_like,False,0.587,True,False
+MP11,cycling,False,0.724,True,False
+MP12,,False,0.492,False,False
+MP13,,False,0.044,False,False
+MP14,AC_like,False,1.0,True,False
+MP15,AC_like,False,0.562,True,False
+MP2,,False,0.887,True,False
+MP3,OPC_like,False,0.923,True,False
+MP4,hypoxia,True,0.961,True,True
+MP5,OC_like,False,0.818,True,False
+MP6,OPC_like,False,0.695,True,False
+MP7,AC_like,False,0.724,True,False
+MP8,MES_like,False,0.923,True,False
+MP9,novel_MP9,False,0.852,True,False

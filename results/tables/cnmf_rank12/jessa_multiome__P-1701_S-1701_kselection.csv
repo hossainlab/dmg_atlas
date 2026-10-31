@@ -1,0 +1,2 @@
+sample_id,n_cells,k_primary,k_new,sil_k10,sil_k11,sil_k12,full_k10,full_k11,full_k12
+jessa_multiome__P-1701_S-1701,4823,9,11,0.8845,0.9874,0.8043,False,True,False

@@ -57,10 +57,11 @@ spread across small cohorts that differ in assay, anatomical site and clinical c
 DMG datasets into a reference of 311,618 cells and nuclei from 57 samples and 52 patients. Copy-number-based malignant
 calls agreed with the original annotations in a median 0.898 of cells per sample, and lineage labels transferred to
 held-out patients with 0.975 accuracy. Under a replication rule specified before analysis, 2 of 15 malignant expression
-metaprograms, cycling and hypoxia, recurred across three studies and in both cells and nuclei; every lineage-like
-programme was detected only in nuclei, but only six whole-cell samples were available. In 21 spatial transcriptomics
-sections from 12 patients, a pre-specified association between mesenchymal-like tumour cells and myeloid cells was
-supported and an oligodendroglial association was not. Refitting the reference without each study showed that malignant
+metaprograms, cycling and hypoxia, recurred across three studies and in both cells and nuclei. Lineage-like programmes
+were detected only in nuclei, and adding 22 whole-cell Smart-seq2 samples did not change this: lineage programme gene
+content differed between platforms and cohorts. A ciliated programme carried the tumour's copy-number profile and is
+therefore a tumour state. In 21 spatial transcriptomics sections from 12 patients, a pre-specified association between
+mesenchymal-like tumour cells and myeloid cells was weak and an oligodendroglial association was absent. Refitting the reference without each study showed that malignant
 and myeloid labels transfer to unseen studies, whereas rare normal lineages are frequently misclassified as malignant
 (balanced accuracy 0.40--0.99 per held-out study), and that cycling is the only metaprogram recovered in every
 scenario. The atlas defines which DMG cell states are reproducible across cohorts and provides openly available data,
@@ -214,15 +215,27 @@ class. This count was stable across dendrogram cuts from
 0.84 to 0.90 (Supplementary Fig.~\ref{sfig:4}c).
 
 Every lineage-like metaprogram was detected only in nuclei, and the only programme restricted to whole cells reflected
-dissociation stress. This result is limited by sample size, because only six whole-cell samples from three publications
-contributed to programme discovery. Masking 6,013 genes that differ between paired cells and nuclei yielded 12
+dissociation stress. Only six whole-cell samples from three publications contributed to programme discovery, so we
+tested whether more whole-cell data would change this. We factorised the malignant cells of the Smart-seq2 cohorts of
+Filbin et al.\ and Liu et al., in which the OPC-like, AC-like and OC-like states were first described (31 samples with at
+least 100 malignant cells: 22 whole-cell and 9 nucleus samples), and re-clustered their programmes together with the 400
+primary programmes using the unchanged rule. Cycling and hypoxia again replicated, now with 27 and 6 whole-cell samples,
+but none of the primary lineage-like metaprograms acquired a whole-cell member. Instead, a whole-cell astrocyte-like
+metaprogram emerged (\textit{AQP4}, \textit{SPARCL1}, \textit{CLU}, \textit{GFAP}, \textit{APOE}; 7 whole-cell samples
+from three publications), which did not match the nucleus-derived AC-like metaprograms and did not replicate under the
+stricter rule because it contained a single nucleus sample. Smart-seq2 nucleus programmes also rarely resembled the 10x
+nucleus metaprograms (2 of 47 with Jaccard similarity of at least 0.15). The gene content of lineage-like programmes
+therefore differs between platforms and cohorts, and not only between cells and nuclei. Masking 6,013 genes that differ between paired cells and nuclei yielded 12
 metaprograms, 3 of which replicated: cycling, hypoxia and an OPC-like metaprogram derived mainly from MP3. The OPC-like
 metaprogram included a single whole-cell sample and did not replicate under a stricter rule requiring at least two samples
 per assay class, under which 2 metaprograms replicated. Random masks of the same size left a median of 2.5 metaprograms,
 1 of which replicated; because random masks removed far more programme structure, this control does not isolate the
 effect of assay-biased genes (Fig.~\ref{fig:mp}b, Supplementary Fig.~\ref{sfig:5}). The ciliated metaprogram (MP9; \textit{ADGB},
-\textit{CFAP43}, \textit{DNAH9}) consists of motile-cilia genes that are also expressed by normal ependymal cells, which
-the reference lacks; it may therefore reflect ependymal contamination rather than a tumour state.
+\textit{CFAP43}, \textit{DNAH9}) consists of motile-cilia genes that are also expressed by normal ependymal cells. Cells
+scoring highly for MP9, however, carried the copy-number profile of the tumour: in all 33 samples with enough such cells,
+their arm-level profile matched that of the other malignant cells of the sample (median tumour index 0.97, with 1 for the
+other malignant cells and 0.03 for normal reference cells), and a median of 92\% lay above the 95th percentile of normal
+reference cells. MP9 is therefore a ciliated tumour state rather than ependymal contamination.
 
 \begin{figure}[htbp]
 \centering
@@ -278,8 +291,16 @@ with myeloid cells ($\rho = 0.238$, 95\% confidence interval (CI) 0.071--0.392, 
 cells and oligodendrocytes were not associated ($\rho = 0.178$, 95\% CI $-0.028$ to 0.370, $q = 0.210$). These associations were
 not consistent across sections: the correlation was positive in 13, 14 and 11 of 21 sections for the three pairs, the
 mean per-section correlations (0.130, 0.171 and 0.079) were smaller than the pooled estimates, and heterogeneity between
-patients was high for every pair ($I^2$ 0.952--0.997). With 12 patients, the random-effects confidence intervals are
-likely to be too narrow, and these associations should be regarded as tentative (Supplementary Fig.~\ref{sfig:7}). With
+patients was high for every pair ($I^2$ 0.952--0.997). Because DerSimonian--Laird intervals are too narrow with few
+patients, we recomputed them with the Hartung--Knapp--Sidik--Jonkman method. Three pairs remained significant across the
+42 pairs (ciliated--astrocyte, ciliated--neuron and AC-like--astrocyte; $q = 0.027$--$0.039$). The MES-like--myeloid
+interval was 0.047--0.412 ($P = 0.020$), significant as one of two pre-specified hypotheses (Bonferroni-adjusted
+$P = 0.039$) but not after correction across all 42 pairs ($q = 0.118$); these associations should therefore be regarded
+as tentative (Supplementary Fig.~\ref{sfig:7}). Deconvolution can also create correlations between classes with similar
+reference signatures: across the 42 pairs, the pooled correlation increased with the similarity of the two classes'
+signatures (Spearman 0.53, $P < 0.001$). The MES-like and myeloid signatures (cosine similarity $-0.38$) and the AC-like and
+astrocyte signatures ($-0.05$) were dissimilar, whereas the ciliated and astrocyte signatures were the most similar of all
+pairs (0.17), so the ciliated--astrocyte association may partly reflect signature overlap. With
 centred log-ratio-transformed proportions, the MES-like--myeloid ($\rho = 0.238$, $q = 0.012$) and AC-like--astrocyte
 ($\rho = 0.230$, $q = 0.001$) associations persisted, the AC-like--oligodendrocyte association weakened ($\rho = 0.129$,
 $q = 0.048$), and the OPC-like--oligodendrocyte association was absent ($\rho = 0.007$, $q = 0.937$).
@@ -332,6 +353,20 @@ For composition, we relabelled the ambiguous cells (28.9\% of the reference) in 
 separate category, and confident scANVI labels only. All four significant effects remained significant and retained
 their sign under every labelling (Fig.~\ref{fig:robust}e).
 
+Finally, we asked whether per-cell metaprogram-family assignments measure composition, by testing whether a sample's
+fraction of a family was higher when the sample's own factorisation had found a programme of that family. Assignment by
+scores standardised within each sample, used for Fig.~\ref{fig:mp}d and for the spatial reference, did not (area under
+the curve 0.34--0.58 for all families except cycling, 0.92). Assignment by scores standardised within assay class did for
+cycling, hypoxia, AC-like, OC-like and ciliated cells (0.76--0.94) but not for OPC-like (0.35) or MES-like cells (0.46).
+Per-cell family labels, and the spatial classes built from them, should therefore be interpreted as relative programme
+activity within a sample rather than as cell-state abundance.
+
+Because 21 of 50 samples had selected the largest rank tested ($k = 9$), we repeated the factorisation of these samples
+for $k = 10$--$12$ with the unchanged selection rule. Fourteen samples qualified for a larger rank (four at $k = 10$, seven
+at 11 and three at 12). After re-clustering, 14 metaprograms were identified, cycling and hypoxia were again the only
+replicated ones, and 13 of the 15 primary metaprograms were recovered; the two that were not were the technical
+mitochondrial and dissociation-stress programmes.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{fig7_robustness.pdf}
@@ -355,8 +390,12 @@ cohorts contain few patients, this reference allows patient-level questions that
 
 Most of our findings define the limits of what public DMG data can establish. Only cycling and hypoxia replicated under a
 rule specified in advance, and of these only cycling was recovered in every robustness scenario. Lineage-like programmes were
-detected only in nuclei, but with six whole-cell samples available for programme discovery we cannot distinguish an
-effect of assay from limited statistical power; matched whole-cell and nucleus data from the same tumours are needed.
+detected only in nuclei, and this did not change when 22 whole-cell Smart-seq2 samples were added: whole-cell cohorts
+yielded their own astrocyte-like programme, with different gene content. Lineage programmes therefore depend on platform
+and cohort as well as on assay, and matched whole-cell and nucleus data from the same tumours are needed to resolve
+them. By contrast, the ciliated programme carries the tumour's copy-number profile, which identifies it as a tumour state;
+in the data of Jessa et al.\ \citep{jessa2022km}, 10\% of the cells with this programme had been annotated as ependymal by
+the original authors.
 This mirrors pan-cancer evidence that recurrent programmes are identified reliably only across many tumours
 \citep{gavish2023hallmarks}, and adds that recurrence across cohorts is insufficient when cohorts differ systematically
 in sample preparation. Similarly, the H3.1--H3.3 difference in neuron abundance and the differences between cells and
@@ -369,7 +408,7 @@ identities reliably but classified unfamiliar normal cells as malignant, with hi
 leave-one-study-out evaluation for tumour references, and copy-number or marker evidence to support normal-lineage calls
 in new data.
 
-The co-localisation of MES-like tumour cells with myeloid and vascular cells is consistent with the hypoxia-associated
+The weak co-localisation of MES-like tumour cells with myeloid and vascular cells is consistent with the hypoxia-associated
 mesenchymal compartment described in glioblastoma \citep{neftel2019integrative} and with bone morphogenetic protein
 (BMP)-driven invasive phenotypes in DMG \citep{huchede2024bmp}. The brainstem gradient is consistent with an infiltrative
 tumour front but rests on a single autopsy. Engineered brainstem organoid models of H3.3K27M DMG \citep{bessler2026de}
@@ -379,11 +418,14 @@ provide a means to test these associations experimentally.
 
 This study has several limitations. One post-mortem series contributes half of the cells and every autopsy sample, so
 autopsy and resection cannot be compared. All H3.1 samples are pontine nuclei, and the H3 variant is unreported for 25
-of 57 samples. The whole-cell arm of every assay comparison rests on six samples. The reference lacks normal progenitor
+of 57 samples. Whole-cell data for programme discovery come from few cohorts and two platforms. Per-cell
+metaprogram-family labels, and the spatial reference built from them, reflect relative programme activity within a sample
+rather than abundance. The reference lacks normal progenitor
 and ependymal classes, and on unseen studies the classifier often misclassifies rare normal lineages as malignant.
 Copy-number thresholds were tuned on 22 samples, and 11.2\% of consensus-malignant reference cells rely on the
 aggregate copy-number score without a supporting arm-level event. In 21 of 50 samples the selected NMF rank was the
-largest tested ($k = 9$), so some samples may contain more programmes than were resolved. The spatial conclusions are based on 12 patients with high between-patient
+largest tested ($k = 9$); extending the range to $k = 12$ changed the rank of 14 samples but not the conclusions (see
+Results). The spatial conclusions are based on 12 patients with high between-patient
 heterogeneity. Finally, two query cohorts were deposited without raw counts.
 
 % ================= METHODS =================
@@ -559,6 +601,21 @@ of equal size; a primary metaprogram was recovered when a metaprogram in the sce
 least 0.5 with it. Re-clustering of all samples reproduced the primary result exactly. Composition models were refitted
 under four labellings of ambiguous cells, after confirming that the original labelling reproduced the published
 coefficients.
+
+For the whole-cell extension, malignant cells (consensus call malignant, passing quality control) of Liu et al.\ (RSEM
+expected counts, rounded) and Filbin et al.\ (TPM, rounded) were factorised per sample with the procedure above, using a
+minimum of 100 malignant cells per sample because Smart-seq2 detects more genes per cell than droplet methods; Liu et al.\
+samples prepared from frozen nuclei were classed as nuclei. Their programmes were clustered with the primary programmes
+using the unchanged rule. For the MP9 analysis, cells with a within-sample standardised MP9 score of at least 2 were
+compared with the sample's other malignant cells and its normal reference cells on the seven arm-level copy-number values:
+the tumour index projected each cell onto the axis from the normal-reference mean to the mean of the other malignant cells
+(0, normal; 1, other malignant), in samples with at least 20 MP9-high and 30 reference cells. Spatial correlations were
+re-pooled with Hartung--Knapp--Sidik--Jonkman intervals ($t$ distribution with $k - 1$ degrees of freedom across patients),
+and signature similarity was the cosine similarity of gene-centred log-transformed cell2location signatures. For the rank extension, samples that had selected $k = 9$ were re-factorised
+for $k = 10$--$12$ with the same restarts and selection rule, and their programmes were replaced when a larger rank
+qualified. The
+composition test of family assignments used the area under the receiver operating characteristic curve of the per-sample
+family fraction for samples with versus without a programme of that family.
 
 \subsection{Statistics and reproducibility}
 Patients were the unit of inference for tumour-level claims. Multiple testing was controlled by the Benjamini--Hochberg method within each family of tests, as described above.
