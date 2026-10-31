@@ -359,7 +359,7 @@ def main():
                              precision_malignant_vs_author=tp / npos if npos else np.nan, recall_malignant_vs_author=tp / (tp + fn_) if (tp + fn_) else np.nan))
     pd.DataFrame(sens).to_csv(RESULTS / "tables" / "cnv_score_floor_sensitivity.csv", index=False)
 
-    # ---- figures (house style: no titles in panels, legends outside, 300 dpi; captions in docs/phase3_cnv_notes.md)
+    # ---- figures (house style: no titles in panels, legends outside, 300 dpi; captions in docs/phases/phase3_cnv_notes.md)
     figdir = RESULTS / "qc" / "cnv"; figdir.mkdir(parents=True, exist_ok=True)
     apply_figure_style()
     cmap = {"reference": "#1b9e77", "pooled-ref": "#66c2a5", "normal": "#7570b3", "malignant": "#d95f02"}

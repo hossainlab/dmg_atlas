@@ -13,7 +13,7 @@ Scripts: scripts/01_fetch_tumour_geo.py, 02_build_sample_manifest.py (also re-ex
 Modules: src/dmg_atlas/__init__.py, ingest.py, genes.py (GeneMapper instantiated from the cached tables for alias spot checks), qc.py, utils.py. Config: configs/qc.yaml.
 Data: data/raw/MANIFEST_tumour.csv (90 rows), MANIFEST_spatial_refs.csv (25 rows) with size check of all 115 files and sha256 of 9; data/processed/sample_manifest.csv (216 rows); data/interim/labels/ (jessa_sample_labels, desisto_sample_labels, liu_rawfile_to_sample, labelle_geo_metadata_sample_summary; others read via the manifest script); data/interim/gene_reference.csv, gene_universe.csv; obs + var of all 12 data/interim/*.qc.h5ad files (collot, desisto, desisto.outgroup, filbin, jessa_multiome, jessa_scrna, jessa_scrna.outgroup, labelle, liu, okada, scpca, zang) read with h5py; targeted count blocks of okada.qc.h5ad (586_pons), jessa_multiome (P-6253, P-1709), jessa_scrna (P-6251), scpca (SCPCS000637) and the full data array of liu.qc.h5ad (NaN scan); data/interim/collot_this_study_counts.h5ad (obs); raw deposits: Okada brain-dmg-snRNA-Homo-sapiens.h5ad (obs + raw.X block), Liu postFilter metadata and raw-count file row counts, LaBelle three TPM tables (first 6 columns each), Collot scRNA_metadata.csv.gz; data/external/REFERENCES.md, braun2023_hindbrain_pons_medulla.h5ad (obs, X attrs, first 2e6 values), six siletti2023 h5ads (obs).
 Results: results/qc/qc_report.md, qc_per_sample.csv, qc_per_sample_<study>.csv (10), qc_per_study.csv, gene_harmonisation.csv, genes_shared_all_umi_studies.csv, sanity_jessa_malignant_qc.csv, spatial_sections.csv, spatial_sections_used.csv, all 10 qc_violin_*.png (viewed); results/tables/atlas_input_cells_per_sample.csv.
-Docs: README.md, CLAUDE.md, docs/decisions.md, build_plan.md, phase1_tumour_notes.md, phase1_spatial_refs_notes.md, phase2_qc_notes.md; logs/phase1_tumour.log, phase1_spatial_refs.log, phase2_qc.log, phase2_driver.log.
+Docs: README.md, CLAUDE.md, docs/design/decisions.md, build_plan.md, phase1_tumour_notes.md, phase1_spatial_refs_notes.md, phase2_qc_notes.md; logs/phase1_tumour.log, phase1_spatial_refs.log, phase2_qc.log, phase2_driver.log.
 
 ## 3. Method of verification
 
@@ -70,7 +70,7 @@ Compute: local env `multiverse`, 8 threads, sparse/h5py only, peak RSS 3.0 GB, n
 _none_
 
 ### Major
-**DQ-01 (correctness; src/dmg_atlas/ingest.py (iter_labelle); data/interim/labelle.qc.h5ad; docs/phase2_qc_notes.md §Decisions 7)** — LaBelle values stored as layers['tpm'] and described as TPM; note claims 'P9 is a 10x library distributed as per-cell CPM (nCount_RNA = 1e6)'
+**DQ-01 (correctness; src/dmg_atlas/ingest.py (iter_labelle); data/interim/labelle.qc.h5ad; docs/phases/phase2_qc_notes.md §Decisions 7)** — LaBelle values stored as layers['tpm'] and described as TPM; note claims 'P9 is a 10x library distributed as per-cell CPM (nCount_RNA = 1e6)'
 
 *Evidence.* All three GSE227983 tables are log2(TPM/10+1), not linear TPM: first 6 columns of tumor_ss2 have column sums 8,257-12,624, max 8.0-8.65, 100% fractional non-zeros; immune_ss2 sums 4,183-5,391; immune_tenx (P9 source) sums 3,661-6,177, max 7.6-9.0. Inverting (2^x-1)*10 gives 2.0e5-3.0e5 per cell (TPM over a gene-filtered table). qc_per_sample.csv median_counts for LaBelle SS2 samples = 4,823-9,527 and for P9 = 3,244, versus exactly 1e6 for every Filbin sample.
 
@@ -94,7 +94,7 @@ _none_
 
 *Recommendation.* Add a sample-level QC gate (e.g. median genes of passing cells >= 500 or MAD-based per-sample adaptive min_genes) and flag 1734_pons explicitly; report the sample in qc_report.md. (re-derived: yes)
 
-**DQ-04 (validity; src/dmg_atlas/ingest.py iter_liu; data/interim/liu.qc.h5ad; docs/phase2_qc_notes.md §Decisions 3, 6, 7)** — Notes: Liu has 'two annotations in the deposit' (32,617 / 23,686 genes) and only 'Filbin / LaBelle TPM tables contain no MT- genes'; Liu frozen nuclei are QC'd with the smartseq2 class (mito < 20%)
+**DQ-04 (validity; src/dmg_atlas/ingest.py iter_liu; data/interim/liu.qc.h5ad; docs/phases/phase2_qc_notes.md §Decisions 3, 6, 7)** — Notes: Liu has 'two annotations in the deposit' (32,617 / 23,686 genes) and only 'Filbin / LaBelle TPM tables contain no MT- genes'; Liu frozen nuclei are QC'd with the smartseq2 class (mito < 20%)
 
 *Evidence.* gene_harmonisation.csv: Liu raw files come in three annotations: 23,686 genes (16 samples, 4,007 unmapped), 32,617 (20 samples, 1,749 unmapped) and 55,765 (6 samples, 22,216 unmapped). All 16 samples on the 23,686-gene annotation (5,375 cells, all author_prep = frozen_nuclei) have pct_mito identically 0 for every cell (max 0.0), i.e. the annotation lacks MT- genes and the mito filter is inoperative (visible as flat markers in qc_violin_liu.png). Among frozen nuclei that do carry MT genes, 138 of 680 passing nuclei (20.3%) have 5-20% mito and would fail the project's own nuclei rule.
 
@@ -111,7 +111,7 @@ _none_
 
 *Recommendation.* Encode the G34 -> k27m_status='WT' rule in jessa_excl()/common and regenerate the manifest from the script. (re-derived: yes)
 
-**DQ-06 (statistics; configs/qc.yaml (scrublet); docs/phase2_qc_notes.md §Decisions 2)** — 'per-study medians 0.19 ScPCA to 0.63 Zang'; 'called 0 doublets in most samples'; predicted_doublet_fixed (score > 0.25) 'gives 0.1-2.6% per study'
+**DQ-06 (statistics; configs/qc.yaml (scrublet); docs/phases/phase2_qc_notes.md §Decisions 2)** — 'per-study medians 0.19 ScPCA to 0.63 Zang'; 'called 0 doublets in most samples'; predicted_doublet_fixed (score > 0.25) 'gives 0.1-2.6% per study'
 
 *Evidence.* qc_per_sample.csv (95 UMI samples with a threshold): per-study median auto-thresholds are ScPCA 0.19, DeSisto 0.28, multiome 0.38, Zang 0.38, scRNA 0.39, Okada 0.42, Collot 0.51 (no study at 0.63); 36/96 samples (37.5%) have 0 auto-called doublets (median per-sample rate 0.0003). Fixed-threshold pooled rates: DeSisto 0.08%, Zang 0.50%, Collot 1.06%, Okada 2.55% (claim verified). These are 3-10x below the expected 10x multiplet rate (~0.8% per 1,000 loaded cells; e.g. 586_pons has 23.7k nuclei). expected_doublet_rate is fixed at 0.06 regardless of cells loaded and the 0.25 cut-off is arbitrary.
 
@@ -135,7 +135,7 @@ _none_
 
 *Recommendation.* Strip the '.N' suffix before symbol mapping (or map Okada via the 2020-A feature order) so duplicates are summed as elsewhere. (re-derived: yes)
 
-**DQ-09 (correctness; src/dmg_atlas/ingest.py iter_labelle (ad.concat join='inner'); docs/phase2_qc_notes.md §Decisions 7)** — 'LaBelle SS2 cells come from two tables (tumour, immune) with different gene lists (14,642 vs 19,357) -> zero-filled union'
+**DQ-09 (correctness; src/dmg_atlas/ingest.py iter_labelle (ad.concat join='inner'); docs/phases/phase2_qc_notes.md §Decisions 7)** — 'LaBelle SS2 cells come from two tables (tumour, immune) with different gene lists (14,642 vs 19,357) -> zero-filled union'
 
 *Evidence.* Within each of samples P1-P8 the tumour and immune SS2 tables are concatenated with join='inner' (gene_harmonisation.csv: n_input_genes 14,621 for P1-P8, 19,357 for P9); the immune cells therefore lose 4,736 measured genes before the across-sample outer join. var: 14,487 genes measured in all samples, 4,625 measured only in P9.
 
@@ -159,7 +159,7 @@ _none_
 
 *Recommendation.* Replace with a doublet-informed or MAD-based upper bound, or document that 0.5% is intentional. (re-derived: yes)
 
-**DQ-12 (reporting; docs/phase2_qc_notes.md §Sanity (b))** — 'Our pct_mito equals the authors' percent.mito to 2 decimals'; 'The author Technology column confirms the nuclear protocol'
+**DQ-12 (reporting; docs/phases/phase2_qc_notes.md §Sanity (b))** — 'Our pct_mito equals the authors' percent.mito to 2 decimals'; 'The author Technology column confirms the nuclear protocol'
 
 *Evidence.* max |pct_mito - author_percent.mito| = 0.32 percentage points over 86,525 jessa_scrna cells (0.21 pp out-group); exact (0.0) only for multiome. author_Technology is 'sc/snRNAseq' for every GSE210567 sample and 'scMultiome' for GSE210566 — it does not distinguish cells from nuclei; the nuclear label comes from Table S1 column scRNAseq.
 
@@ -183,7 +183,7 @@ _none_
 
 *Recommendation.* Derive ROOT from Path(__file__).resolve().parents[1] as in src/dmg_atlas/__init__.py. (re-derived: no)
 
-**DQ-15 (reporting; docs/phase1_spatial_refs_notes.md header vs data/raw/MANIFEST_spatial_refs.csv)** — 'Manifest: 24 rows, 20,982,985,300 bytes (20.98 GB)'
+**DQ-15 (reporting; docs/phases/phase1_spatial_refs_notes.md header vs data/raw/MANIFEST_spatial_refs.csv)** — 'Manifest: 24 rows, 20,982,985,300 bytes (20.98 GB)'
 
 *Evidence.* File has 25 rows totalling 22,666,049,311 bytes; the extra row is the anticipated re-download of collot_st/ST.tar.gz (1,683,064,011 bytes, identical size to ST.verified.tar.gz) appended at 08:22Z.
 
@@ -199,7 +199,7 @@ _none_
 
 *Recommendation.* Read the genome attribute of the h5 / first feature IDs (ENSG vs ENSMUSG) for every section. (re-derived: no)
 
-**DQ-17 (reporting; data/processed/sample_manifest.csv column n_cells_deposited; docs/phase1_tumour_notes.md ('334,439 deposited cells/nuclei'))** — n_cells_deposited = cells in the deposit
+**DQ-17 (reporting; data/processed/sample_manifest.csv column n_cells_deposited; docs/phases/phase1_tumour_notes.md ('334,439 deposited cells/nuclei'))** — n_cells_deposited = cells in the deposit
 
 *Evidence.* Column semantics differ by study: Jessa = author-QC cells (86,525 / 47,326 for included samples) while the GEO matrices hold 104,735 / 86,978 barcodes; DeSisto/Zang/Collot/Okada/Filbin/LaBelle = matrix barcodes (verified equal); ScPCA = portal estimate; Liu = postFilter metadata (9,190) vs 16,676 raw cells. The headline '334,439 deposited' is therefore a mixed count.
 
@@ -223,7 +223,7 @@ _none_
 
 *Recommendation.* Mark as 'resection (assumed, surgical cohort)' or 'unknown'. (re-derived: no)
 
-**DQ-20 (reporting; src/dmg_atlas/genes.py docstring vs docs/phase2_qc_notes.md §Decisions 3)** — Note: 'canonical symbol per Ensembl ID from the newest source'
+**DQ-20 (reporting; src/dmg_atlas/genes.py docstring vs docs/phases/phase2_qc_notes.md §Decisions 3)** — Note: 'canonical symbol per Ensembl ID from the newest source'
 
 *Evidence.* genes.py docstring states the opposite: zang GRCh38-2020-A (Ensembl 98) ranks first 'as a completeness rule, not a newest rule'; ScPCA Ensembl 104 (newer) ranks third. The code follows the docstring (ref priority 1 = zang).
 
@@ -232,7 +232,7 @@ _none_
 *Recommendation.* Align the note with the docstring. (re-derived: yes)
 
 ### Confirmed sound (notes)
-**DQ-21 (reporting; docs/phase2_qc_notes.md §Sanity (b) decision vs results/tables/atlas_input_cells_per_sample.csv)** — Phase 2 recommendation: for high-mito nuclei samples 'treat author_qc_pass as the QC gate (or relax mito to 10 %)'
+**DQ-21 (reporting; docs/phases/phase2_qc_notes.md §Sanity (b) decision vs results/tables/atlas_input_cells_per_sample.csv)** — Phase 2 recommendation: for high-mito nuclei samples 'treat author_qc_pass as the QC gate (or relax mito to 10 %)'
 
 *Evidence.* Recomputed from obs: atlas input equals qc_pass & author_qc_pass & ~predicted_doublet_fixed for 54/57 samples; P-6254_S-8499 (631) corresponds to author & ~doublet & n_genes>=300 & pct_mito<20 (not 10%: that gives 356); P-1779_S-1781 (3,022) and P-6253_S-8498 multiome (2,132) equal author & ~doublet with no mito filter at all. These are Phase 4 choices, recorded here because they depart from the Phase 2 text.
 
@@ -280,7 +280,7 @@ _none_
 
 *Recommendation.* None. (re-derived: yes)
 
-**DQ-27 (data_integrity; docs/phase1_tumour_notes.md; results/qc/sanity_jessa_malignant_qc.csv; data/processed/sample_manifest.csv)** — Jessa: 143,611 author-malignant cells; 4 patients in both series; Filbin and Liu share 7 patients; 59 integrated samples / 334,439 author-QC cells
+**DQ-27 (data_integrity; docs/phases/phase1_tumour_notes.md; results/qc/sanity_jessa_malignant_qc.csv; data/processed/sample_manifest.csv)** — Jessa: 143,611 author-malignant cells; 4 patients in both series; Filbin and Liu share 7 patients; 59 integrated samples / 334,439 author-QC cells
 
 *Evidence.* obs: 71,899 + 71,712 = 143,611 Malignant (176,912 - 143,611 = 33,301 Normal, matching decisions.md); malignant pass fractions 0.968 / 0.873 / 0.967, normal 0.967 / 0.963 / 0.852, non-author barcodes passing 0.377 / 0.394 / 0.270 all re-derived. Manifest: patient overlap GSE210567/GSE210566 = {P-1764, P-6253, P-6337, P-6640}; filbin∩liu = 7 patients (BCH1126, BCH836, BCH869, MGH66, MUV1, MUV10, MUV5); 59 included integrated rows = 54 patients, 334,439 cells; Filbin included 3,057 cells over 9 patients, culture/PDX/Oligo columns excluded.
 
@@ -320,7 +320,7 @@ _none_
 
 *Recommendation.* None. (re-derived: yes)
 
-**DQ-32 (validity; configs/qc.yaml; scripts/03_ingest_qc.py; docs/phase2_qc_notes.md)** — No circularity: thresholds fixed a priori; author labels descriptive only; scrublet seeded
+**DQ-32 (validity; configs/qc.yaml; scripts/03_ingest_qc.py; docs/phases/phase2_qc_notes.md)** — No circularity: thresholds fixed a priori; author labels descriptive only; scrublet seeded
 
 *Evidence.* Thresholds live in qc.yaml and are identical across samples within a class (65 nuclei / 32 cells / 59 smartseq2 samples); author labels are used only in sanity tables, not to set thresholds; scrublet random_state 0; the config snapshot is stored in uns['phase2']; results tables are produced by 03/04 scripts whose log (logs/phase2_qc.log, 617 lines) records wall time and peak RSS per step.
 

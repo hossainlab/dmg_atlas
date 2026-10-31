@@ -3,7 +3,7 @@
 Auditor role: adversarial, independent of the authors. Date: 2026-10-19. Scope as briefed: `scripts/13_reference_signatures.py`,
 `14_cell2location.py`, `15_spatial_tests.py`, `21_brainstem_gradient_mp.py`, `modal/phase6_c2l.py`, `models/c2l_regression*`,
 `data/processed/spatial/*`, `data/processed/spatial_mp/*`, `results/tables/c2l_*`, `spatial_*`, `brainstem_*`, `ren_*`,
-`results/qc/spatial_sections.csv`, the four Phase 6 spatial figures, and `docs/phase6_notes.md` §3, §4, §7, §10.
+`results/qc/spatial_sections.csv`, the four Phase 6 spatial figures, and `docs/phases/phase6_notes.md` §3, §4, §7, §10.
 Companion table: `docs/audit/spatial_findings.csv` (20 findings: 0 critical, 6 major, 6 minor, 8 notes).
 
 **Overall verdict for this scope: sound with corrections.** The deconvolution pipeline, tables and arithmetic reproduce exactly from
@@ -33,8 +33,8 @@ Data: `data/processed/spatial/<cohort>/*_abundance.csv` (27 files), `data/proces
 obs and uns of `modal/inputs/c2l_reference.h5ad`, `models/c2l_regression/{signatures_history.csv,signatures_run.json}`,
 `models/c2l_regression_mp/model.pt` (presence only). Figures (viewed): `phase6_spatial_abundance_maps.png`,
 `phase6_colocalisation_matrix.png`, `phase6_brainstem_gradient.png`, `phase6_brainstem_gradient_mp.png`.
-Docs/logs: `docs/phase6_notes.md`, `docs/build_plan.md` (Phase 7), `docs/decisions.md` (grep), `docs/figures.md` (Fig. 5 caption and
-checksums), `docs/supp_figures.md` (Supp. Fig. 7), `docs/phase6_outputs.md` (md5), `logs/phase6_spatial.log` (295 lines),
+Docs/logs: `docs/phases/phase6_notes.md`, `docs/design/build_plan.md` (Phase 7), `docs/design/decisions.md` (grep), `docs/figures/figures.md` (Fig. 5 caption and
+checksums), `docs/figures/supp_figures.md` (Supp. Fig. 7), `docs/phases/phase6_outputs.md` (md5), `logs/phase6_spatial.log` (295 lines),
 `data/processed/sample_manifest.csv` (Collot patient IDs).
 
 ## 2. Method of verification

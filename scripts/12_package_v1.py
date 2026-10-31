@@ -2,9 +2,9 @@
 """Phase 5 / step 12 — atlas v1 packaging.
 
 Writes
-  docs/atlas_schema.md                      every obs / obsm / var / layers / uns field of atlas_core.h5ad and
+  docs/schema/atlas_schema.md                      every obs / obsm / var / layers / uns field of atlas_core.h5ad and
                                             query_mapping.h5ad: type, allowed values, source (generated from the files)
-  docs/label_ontology.csv                   label, definition, marker genes, source tier
+  docs/schema/label_ontology.csv                   label, definition, marker genes, source tier
   results/tables/atlas_v1_summary.csv       per study: samples, patients, cells, assay, site, H3 variants, malignant fraction
   README.md                                 section 'Atlas v1 contents' appended (existing text untouched)
   results/figures/phase5_query_mapping.png  reference UMAP (grey) + query cells per query, coloured by predicted lineage
@@ -169,7 +169,7 @@ def write_schema():
               "", "## 2. `data/processed/query_mapping.h5ad` (projected queries)", ""]
     lines += ["- " + s for s in describe_other(QMAP)]
     lines += ["", "Notes: `X` = `layers['counts']` = reference-HVG count matrix per query (UMI for Braun/Siletti; round(RSEM) for Liu; TPM-derived pseudo-counts "
-              "for Filbin/LaBelle — see docs/phase5_mapping_notes.md). Query cells never enter the reference model; labels are scANVI predictions.", ""]
+              "for Filbin/LaBelle — see docs/phases/phase5_mapping_notes.md). Query cells never enter the reference model; labels are scANVI predictions.", ""]
     lines += ["### obsm", "", "| key | type | meaning |", "|---|---|---|"]
     with h5py.File(QMAP) as f:
         for k in f["obsm"]:
@@ -178,7 +178,7 @@ def write_schema():
     lines += ["", "### obs", "", "| field | type | allowed values / range | missing | source |", "|---|---|---|---|---|"]
     for r in q_obs.itertuples():
         lines.append(f"| {r.field} | {r.type} | {r.allowed_values} | {r.n_missing} | {r.source} |")
-    lines += ["", "## 3. Label vocabularies", "", "See `docs/label_ontology.csv` (lineage labels, consensus tiers, marker genes, source tier).", "",
+    lines += ["", "## 3. Label vocabularies", "", "See `docs/schema/label_ontology.csv` (lineage labels, consensus tiers, marker genes, source tier).", "",
               "## 4. Models", "", "| directory | content |", "|---|---|",
               "| models/scvi_seed1 | chosen scVI reference (26 epochs; seeds 0/2 kept as scvi_seed0 / scvi_seed2) |",
               "| models/scanvi | scANVI reference (from scvi_seed1; labels_key lineage_label; all labelled cells) |",
@@ -186,8 +186,8 @@ def write_schema():
               "| models/scanvi_query_<filbin,labelle,liu,braun,siletti> | per-query load_query_data models (Phase 5; provenance only — classifier BatchNorm drifted, see audit IM-01; labels in query_mapping.h5ad come from models/scanvi) |",
               "| models/scvi_seed0_e60, scvi_malignant_seed0, scanvi_nspl100_rejected, pca, harmony | sensitivity / rejected / control runs |",
               "", "Each model directory holds model.pt (save_anndata=False), latent_f16.npy, obs_names.txt, history.json, run.json."]
-    (ROOT / "docs/atlas_schema.md").write_text("\n".join(lines) + "\n")
-    LOG.write(f"docs/atlas_schema.md: {len(core_obs)} atlas_core obs fields, {len(q_obs)} query_mapping obs fields")
+    (ROOT / "docs/schema/atlas_schema.md").write_text("\n".join(lines) + "\n")
+    LOG.write(f"docs/schema/atlas_schema.md: {len(core_obs)} atlas_core obs fields, {len(q_obs)} query_mapping obs fields")
 
 
 def write_ontology():
@@ -223,8 +223,8 @@ def write_ontology():
          "adult pons superclusters; OPC has no normal counterpart in the tumour reference", "", "author (cellxgene)"),
     ]
     df = pd.DataFrame(rows, columns=["field", "label", "definition", "marker_genes", "source_tier"])
-    df.to_csv(ROOT / "docs/label_ontology.csv", index=False)
-    LOG.write(f"docs/label_ontology.csv: {len(df)} rows")
+    df.to_csv(ROOT / "docs/schema/label_ontology.csv", index=False)
+    LOG.write(f"docs/schema/label_ontology.csv: {len(df)} rows")
 
 
 def write_summary():
@@ -296,11 +296,11 @@ def append_readme(summary: pd.DataFrame):
              "| `results/figures/` | phase4_umap_overview.png, phase5_query_mapping.png, phase5_mapping_uncertainty.png |",
              "| `docs/` | decisions.md, atlas_schema.md, label_ontology.csv, phase2_qc_notes.md, phase3_cnv_notes.md, phase4_integration_notes.md, phase5_mapping_notes.md |",
              "| `logs/` | phase2_qc.log, phase3_cnv.log, phase4_integration.log, phase4_modal_runs_*.jsonl, phase5_mapping.log (wall time + peak RSS per step) |",
-             "", "Label vocabulary and obs schema: `docs/label_ontology.csv`, `docs/atlas_schema.md`. Per-study summary: `results/tables/atlas_v1_summary.csv`.",
+             "", "Label vocabulary and obs schema: `docs/schema/label_ontology.csv`, `docs/schema/atlas_schema.md`. Per-study summary: `results/tables/atlas_v1_summary.csv`.",
              f"Checksums: atlas_core.h5ad md5 `{md5(CORE)}`; query_mapping.h5ad md5 `{md5(QMAP)}`.",
              "", "Known limitations of v1: T_NK is under-resolved (764 reference cells, scANVI recall 0.47; query T cells are absorbed by myeloid); "
              "TPM cohorts are mapped with pseudo-counts and are projection-only; normal progenitor classes (fetal radial glia / glioblast, adult OPC) have no "
-             "normal counterpart in the reference and are predicted 'malignant' — see docs/phase5_mapping_notes.md.", ""]
+             "normal counterpart in the reference and are predicted 'malignant' — see docs/phases/phase5_mapping_notes.md.", ""]
     with open(readme, "a") as fh:
         fh.write("\n".join(lines))
     LOG.write("README.md: appended 'Atlas v1 contents'")
@@ -309,7 +309,7 @@ def append_readme(summary: pd.DataFrame):
 # ----------------------------------------------------------------------------------------------------- figures
 def figures():
     """Audit revision 2026-10-19 (IM-13/IM-14): no text inside panels (panel letters outside; all identification in the captions in
-    docs/phase5_mapping_notes.md §7); colours encode the reference-classifier labels; the flat '1 - max probability' row is replaced by the
+    docs/phases/phase5_mapping_notes.md §7); colours encode the reference-classifier labels; the flat '1 - max probability' row is replaced by the
     per-sample classifier-vs-kNN agreement. Previous versions kept as *.pre_audit.png."""
     import shutil
     apply_figure_style()

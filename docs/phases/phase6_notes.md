@@ -1,4 +1,4 @@
-# Phase 6 — malignant metaprograms (cNMF) and Visium deconvolution / spatial tests (2026-10-17; audit corrections to §1, 2, 6, 8, 9 on 2026-10-19 — see `docs/audit/fixes_metaprograms.csv`; pre-audit text in `docs/phase6_notes.pre_audit.md`)
+# Phase 6 — malignant metaprograms (cNMF) and Visium deconvolution / spatial tests (2026-10-17; audit corrections to §1, 2, 6, 8, 9 on 2026-10-19 — see `docs/audit/fixes_metaprograms.csv`; pre-audit text in `docs/archive/phase6_notes.pre_audit.md`)
 
 Code: `scripts/13a_malignant_selection.py` (scripted malignant selection, audit), `scripts/13_cnmf_per_sample.py` (per-sample consensus NMF), `scripts/16a_curated_gene_sets.py`, `scripts/16_metaprograms.py` (metaprogram clustering + replication test),
 `scripts/13_reference_signatures.py prepare|collect` and `scripts/14_cell2location.py prepare|collect` (cell2location inputs / harvest),
@@ -303,8 +303,8 @@ KLRD1/F1), THEMIS/CAMK4 nuclei cluster; vascular: capillary EC (FLT1, ABCG2; TSH
 assay structure is not erased entirely.
 
 ## 12. Documentation (`23_package_phase6.py`)
-`docs/phase6_outputs.md` (generated): all 122 Phase-6 files with producing script, size, md5 and structure;
-`results/tables/phase6_output_checksums.csv`; README section 'Phase 6 outputs' appended (existing text untouched). `docs/atlas_schema.md`
+`docs/phases/phase6_outputs.md` (generated): all 122 Phase-6 files with producing script, size, md5 and structure;
+`results/tables/phase6_output_checksums.csv`; README section 'Phase 6 outputs' appended (existing text untouched). `docs/schema/atlas_schema.md`
 is not regenerated because Phase 6 does not modify atlas_core.h5ad / query_mapping.h5ad.
 Infrastructure changes made for the Modal runs (results unaffected): `dmg_atlas.utils` disables pandas-3 Arrow string inference (anndata
 could not write those strings); `13_reference_signatures.py` reads counts with h5py blocks instead of anndata `sparse_dataset` row indexing

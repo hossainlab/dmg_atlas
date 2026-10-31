@@ -5,7 +5,7 @@ rebuilt from the corrected (metaprogram-family, 20,000-epoch) deconvolution.
   phase6_spatial_abundance_maps.png   SP-05: spots plotted at full-resolution PIXEL coordinates (pxl_col, pxl_row)
                                       instead of (array_col, -array_row), equal aspect, per-panel 1 mm scale bar
                                       derived from spot_diameter_fullres (Visium spot = 55 um), no in-panel text;
-                                      panel identities are given in the caption written to docs/phase6_notes.md.
+                                      panel identities are given in the caption written to docs/phases/phase6_notes.md.
   phase6_brainstem_gradient.png       SP-04: one shared legend OUTSIDE both panels (below), both y-axes labelled,
                                       OC-like drawn in a dark green (#1b7837) instead of #fddbc7.
   phase6_colocalisation_matrix.png    SP-01/SP-18: the PROPORTION-based random-effects matrix (7 families x 6 TME),

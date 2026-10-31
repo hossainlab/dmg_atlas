@@ -157,8 +157,8 @@ off-manifold (median query–reference distance 2.7 vs 1.5 within the reference)
 fractions are not calibrated.
 
 ## 7. Packaging (`scripts/12_package_v1.py`)
-`docs/atlas_schema.md` (145 atlas_core obs fields + obsm/var/layers/uns; 43 query_mapping obs fields; generated from the files),
-`docs/label_ontology.csv` (20 rows: lineage labels with marker genes and source tier, consensus tiers, query author vocabularies),
+`docs/schema/atlas_schema.md` (145 atlas_core obs fields + obsm/var/layers/uns; 43 query_mapping obs fields; generated from the files),
+`docs/schema/label_ontology.csv` (20 rows: lineage labels with marker genes and source tier, consensus tiers, query author vocabularies),
 `results/tables/atlas_v1_summary.csv` (6 reference studies + 5 queries + total: reference 311,618 cells, 57 samples, 52 patients;
 consensus-malignant fraction 0.544, scANVI-malignant 0.772), README section "Atlas v1 contents" appended (md5 of both h5ad files included),
 figures `results/figures/phase5_query_mapping.png` (reference UMAP refit in grey, query cells coloured by predicted lineage; the Braun panel

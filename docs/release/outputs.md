@@ -1,7 +1,7 @@
 # Output inventory
 
-Moved from `README.md`. Per-file md5s: `results/tables/phase6_output_checksums.csv` (Phase 6, also `docs/phase6_outputs.md`)
-and `results/tables/release_manifest.csv` (release). Phase numbers follow the scripts/logs, not `docs/build_plan.md`.
+Moved from `README.md`. Per-file md5s: `results/tables/phase6_output_checksums.csv` (Phase 6, also `docs/phases/phase6_outputs.md`)
+and `results/tables/release_manifest.csv` (release). Phase numbers follow the scripts/logs, not `docs/design/build_plan.md`.
 
 ## Atlas v1 (Phase 5, `12_package_v1.py`)
 
@@ -15,16 +15,16 @@ Reference: **311,618 cells / nuclei, 57 samples, 52 patients, 6 studies** (snRNA
 | `data/processed/malignant_calls.csv` | per-cell three-tier malignant calls (author / own CNV / consensus) with hallmark arm flags |
 | `models/` | scvi_seed{0,1,2}, scanvi, scvi_malignant, scanvi_query_<query>; sensitivity and control runs |
 | `results/tables/` | atlas_v1_summary.csv, integration_metrics.csv, malignant_call_validation.csv, mapping_summary.csv, mapping_uncertainty.csv, mapping_<query>_author_vs_predicted.csv, mapping_normal_reference_specificity.csv, malignant_nearest_fetal_class.csv, query_preparation.csv |
-| `results/figures/` | phase4_umap_overview.png, phase5_query_mapping.png, phase5_mapping_uncertainty.png; the publication set is `results/pub_figs/main` (Figures 1–6) and `results/pub_figs/supp` (Supplementary Figures 1–8) with captions and input md5s in `docs/figures.md` / `docs/supp_figures.md` |
+| `results/figures/` | phase4_umap_overview.png, phase5_query_mapping.png, phase5_mapping_uncertainty.png; the publication set is `results/pub_figs/main` (Figures 1–6) and `results/pub_figs/supp` (Supplementary Figures 1–8) with captions and input md5s in `docs/figures/figures.md` / `docs/figures/supp_figures.md` |
 | `docs/` | decisions.md, atlas_schema.md, label_ontology.csv, phase2_qc_notes.md, phase3_cnv_notes.md, phase4_integration_notes.md, phase5_mapping_notes.md |
 | `logs/` | phase2_qc.log, phase3_cnv.log, phase4_integration.log, phase4_modal_runs_*.jsonl, phase5_mapping.log (wall time + peak RSS per step) |
 
-Label vocabulary and obs schema: `docs/label_ontology.csv`, `docs/atlas_schema.md`. Per-study summary: `results/tables/atlas_v1_summary.csv`.
+Label vocabulary and obs schema: `docs/schema/label_ontology.csv`, `docs/schema/atlas_schema.md`. Per-study summary: `results/tables/atlas_v1_summary.csv`.
 Checksums: atlas_core.h5ad md5 `f14dd67c81ec90395c447c358f87c832` (regenerated 2026-10-19, reference-label remediation wave 2; previous md5 `ded17c5f9f9d5cfa2dab16c02bb64b92`, file kept as atlas_core.pre_audit.h5ad); query_mapping.h5ad md5 `9b585728cc8dcb81c0566362ced87eec` (regenerated 2026-10-19 wave 2 against the retrained reference; wave-1 md5 `7b2e0fa74b48a567bc43f717e0bb90b8` kept as query_mapping.pre_audit.h5ad; original md5 `914eb0996f43853c681c1220b2398194`).
 
 ## Phase 6 — states, metaprograms, spatial
 
-Malignant metaprograms (per-sample cNMF on 50 samples / 46 patients → 15 metaprograms, 2 of them replicated under the pre-registered rule), per-cell metaprogram scores and families, assay-masked re-analysis, microenvironment subclusters (raw and cleaned scVI), composition models, and cell2location deconvolution of 27 Visium sections (4 cohorts) with spatial tests. Results and caveats: `docs/phase6_notes.md`; every file with md5 and structure: `docs/phase6_outputs.md` (`results/tables/phase6_output_checksums.csv`).
+Malignant metaprograms (per-sample cNMF on 50 samples / 46 patients → 15 metaprograms, 2 of them replicated under the pre-registered rule), per-cell metaprogram scores and families, assay-masked re-analysis, microenvironment subclusters (raw and cleaned scVI), composition models, and cell2location deconvolution of 27 Visium sections (4 cohorts) with spatial tests. Results and caveats: `docs/phases/phase6_notes.md`; every file with md5 and structure: `docs/phases/phase6_outputs.md` (`results/tables/phase6_output_checksums.csv`).
 
 | script | key outputs |
 |---|---|
@@ -44,7 +44,7 @@ Malignant metaprograms (per-sample cNMF on 50 samples / 46 patients → 15 metap
 
 Jessa 2022 multiome ATAC per label / metaprogram family (`24_atac_multiome.py`), OpenPedCan v15 DMG bulk deconvolution and Cox models
 (`25_openpedcan_survival.py`, corrected rank-score fits in `25b_survival_rankscore_audit.py`), scGPT / Geneformer vs scVI / PCA embeddings (`26_foundation_embeddings.py`, rebuilt on a common evaluation set by `26b_foundation_comparison_rebuild.py`). All ran on Modal. Results and
-caveats: `docs/phase7_multimodal_notes.md`; log: `logs/phase7_multimodal.log`.
+caveats: `docs/phases/phase7_multimodal_notes.md`; log: `logs/phase7_multimodal.log`.
 
 | script | key outputs |
 |---|---|
@@ -55,7 +55,7 @@ caveats: `docs/phase7_multimodal_notes.md`; log: `logs/phase7_multimodal.log`.
 
 ## Release v1 (`27_package_release.py`)
 
-`data/processed/dmg_atlas_v1.h5ad` — 311,618 cells x 18,865 GENCODE-v48 genes in CELLxGENE schema 7.1.0 layout (raw counts in X; ontology fields, metaprogram families and cleaned TME subclusters added to obs). md5 `4a39f172e4db0a2b470de7b6ac7b81e3`. Field mapping and open items: `docs/release_v1.md`; every release file with md5: `results/tables/release_manifest.csv`. Produced by `scripts/27_package_release.py`.
+`data/processed/dmg_atlas_v1.h5ad` — 311,618 cells x 18,865 GENCODE-v48 genes in CELLxGENE schema 7.1.0 layout (raw counts in X; ontology fields, metaprogram families and cleaned TME subclusters added to obs). md5 `4a39f172e4db0a2b470de7b6ac7b81e3`. Field mapping and open items: `docs/release/release_v1.md`; every release file with md5: `results/tables/release_manifest.csv`. Produced by `scripts/27_package_release.py`.
 
 ## Provenance conventions
 

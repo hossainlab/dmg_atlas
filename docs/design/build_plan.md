@@ -69,7 +69,7 @@ Inputs: dmg_dataset_selection.csv (v3). Compute: MacBook (14 cores, 24 GiB; scVI
 ## Phase 8 — Multimodal and bulk anchoring (optional, Modal GPU useful)
 > **Not part of the approved plan (audit P7-16).** This phase was listed as optional and was never approved as a deliverable; it was
 > nevertheless executed as code Phase 7 (`scripts/24`–`26b`). Everything it produced is an exploratory methods note, not an atlas
-> claim — see `README.md`, `docs/release_v1.md` ("Scope of the analytical layers") and `docs/phase7_multimodal_notes.md`. Nothing in
+> claim — see `README.md`, `docs/release/release_v1.md` ("Scope of the analytical layers") and `docs/phases/phase7_multimodal_notes.md`. Nothing in
 > Phases 1–6 depends on it.
 
 1. Jessa multiome ATAC (12 GB): peak accessibility per scANVI label; check that transcriptional metaprograms have distinct chromatin states (Okada snATAC as second cohort if available).

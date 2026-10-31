@@ -224,11 +224,13 @@ __marimo__/
 .DS_Store
 
 # Claude / AI assistant files
-CLAUDE.md
-CLAUDE.local.md
-.claude/
-.claude-science/
+**/CLAUDE.md
+**/CLAUDE.local.md
 **/.claude/
+**/.claude-science/
+.claudeignore
+.mcp.json
+*.claude.json
 
 # Large data and models (not for GitHub; regenerate via scripts/ or fetch from source)
 data/

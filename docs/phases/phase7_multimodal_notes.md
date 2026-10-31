@@ -2,7 +2,7 @@
 
 > **Scope (audit P7-16).** This phase was **not part of the approved plan**: build-plan Phase 8 is listed as optional, and nothing in
 > Phases 1-6 depends on it. Everything below is an **exploratory methods note**, not an atlas claim. The same statement appears in
-> `README.md` and in `docs/release_v1.md` ('Scope of the analytical layers'), and the two figures drawn from this phase (Figure 6,
+> `README.md` and in `docs/release/release_v1.md` ('Scope of the analytical layers'), and the two figures drawn from this phase (Figure 6,
 > Supplementary Figure 8) carry it in their captions.
 
 Code: `scripts/24_atac_multiome.py` (Jessa multiome ATAC), `scripts/25_openpedcan_survival.py` (OpenPedCan bulk deconvolution + Cox),

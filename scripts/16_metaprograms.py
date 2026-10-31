@@ -25,7 +25,7 @@ Method (fixed before looking at the clustering; unchanged by the audit except wh
      from >= MIN_SAMPLES distinct samples; everything else is 'unassigned'.
   2. MP gene set: genes ranked by the number of member programmes listing them (ties: mean spectra score), restricted
      to genes in >= MIN_GENE_FRAC of members, top 50.
-  3. Replication (docs/decisions.md #9, pre-registered): replicated if the MP has member programmes from >= 3 publications
+  3. Replication (docs/design/decisions.md #9, pre-registered): replicated if the MP has member programmes from >= 3 publications
      AND from both cells (scRNA) and nuclei (snRNA, multiome_RNA). jessa_scrna and jessa_multiome are both Jessa 2022 and
      count once. Audit additions: replicated_strict additionally requires >= 2 samples per assay class (MC-05); n_patients
      counts distinct tumours (MC-17); the cut-sensitivity curve runs 0.75-0.92 in 0.01 steps (MC-02).
