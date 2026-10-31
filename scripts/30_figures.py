@@ -45,7 +45,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.colors import TwoSlopeNorm  # noqa: E402
 from dmg_atlas import ROOT, RESULTS, LOGS  # noqa: E402
-from dmg_atlas.figstyle import (apply_figure_style, LINEAGE_COLOURS, QUERY_COLOURS, QUERY_NAMES, W, LINEAGES, FAMILIES,  # noqa: E402
+from dmg_atlas.figstyle import (EMBED_NAMES, apply_figure_style, LINEAGE_COLOURS, QUERY_COLOURS, QUERY_NAMES, W, LINEAGES, FAMILIES,  # noqa: E402
                                 FAMILY_COLOURS, FAMILY_NAMES, ASSAY_COLOURS, ASSAY_NAMES, STUDY_NAMES, STUDY_COLOURS, TME_NAME,
                                 COMPARTMENT_COLOURS, CONTRAST_NAMES, SPATIAL_CLASS, letter, umap_ax, legend_dots, heat)
 
@@ -108,7 +108,7 @@ def fig1():
     x = np.arange(len(im)); wd = 0.27
     for i, (c, col) in enumerate([("batch_score", "#9e9ac8"), ("bio_score", "#74c476"), ("total_score", "#525252")]):
         ax.bar(x + (i - 1) * wd, im[c], wd, color=col, label=c.replace("_score", "").replace("bio", "biology").replace("total", "overall"))
-    ax.set_xticks(x); ax.set_xticklabels([e + (" *" if ch else "") for e, ch in zip(im.embedding, im.chosen)], rotation=45, ha="right")
+    ax.set_xticks(x); ax.set_xticklabels([EMBED_NAMES.get(e, e) + (" *" if ch else "") for e, ch in zip(im.embedding, im.chosen)], rotation=45, ha="right")
     ax.set_ylabel("scIB score"); ax.set_ylim(0, 1)
     ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, fontsize=5, columnspacing=0.6, handlelength=1)
     letter(ax, "e", dx=-0.2, title="scIB integration scores", tpad=11)
@@ -266,7 +266,7 @@ def fig3():
     ax.axvline(0.85, color="#bdbdbd", lw=0.6, ls="--", zorder=0)
     ax.set_xlabel("dendrogram cut (1 − mean Jaccard)"); ax.set_ylabel("replicated metaprograms")
     ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, fontsize=5, columnspacing=0.6, handlelength=1)  # audit P7-17: legend outside the axes
-    letter(ax, "b", dx=-0.25, title="Replicated metaprograms per cut", tpad=11)
+    letter(ax, "b", dx=-0.25, title="Replication across cuts", tpad=20)
     # c cell vs nucleus Jaccard before / after masking
     ax = fig.add_subplot(gs[0, 2])
     # audit (reporting pass 2026-10-21): the old substring mapper matched 'oc' inside 'technical:IEG_dissociation_stress' and
@@ -281,7 +281,7 @@ def fig3():
     legend_dots(ax, {f: FAMILY_COLOURS[f] for f in sorted({fl(m) for m in cvn.nucleus_mp}, key=FAMILIES.index)},
                 {**FAMILY_NAMES, "unassigned": "technical (no family)"},
                 loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, fontsize=5, columnspacing=0.6)  # audit P7-17: legend outside the axes
-    letter(ax, "c", dx=-0.3, title="Cell vs nucleus Jaccard", tpad=34)
+    letter(ax, "c", dx=-0.3, title="Cell–nucleus overlap", tpad=40)
     # d per-sample family composition
     ax = fig.add_subplot(gs[1, :])
     aorder = {"scRNA": 0, "multiome_RNA": 1, "snRNA": 2}
@@ -295,7 +295,7 @@ def fig3():
     ax.set_xlabel("samples", labelpad=12)
     # audit P7-17: build the legend from FAMILIES (current families) - FAMILY_COLOURS also holds the pre-audit novel_MP15 key
     legend_dots(ax, {f: FAMILY_COLOURS[f] for f in FAMILIES}, FAMILY_NAMES, loc="upper left", bbox_to_anchor=(1.0, 1.0))
-    letter(ax, "d", dx=-0.05, title="Family composition per sample")
+    letter(ax, "d", dx=-0.05, title="Within-sample family ranking")
     save(fig, "fig3_metaprograms")
     prim = mk[mk.cut == 0.85].set_index("genes")
     rep_names = ", ".join(f"{i} {FAMILY_NAMES.get(fam.loc[i, 'family'], i)}" for i in mp.index[mp.replicated])
@@ -424,7 +424,7 @@ def fig5():
     co = T("spatial_colocalisation.csv"); rs = T("ren_section_composition.csv"); rt = T("ren_dmg_vs_gbm_composition.csv").set_index("variable")
     bm = T("brainstem_section_means.csv").sort_values("anatomical_rank"); bg = T("brainstem_gradient.csv")
     fig = plt.figure(figsize=(W, 6.6))
-    gs = fig.add_gridspec(2, 3, height_ratios=[1, 1.15], hspace=0.45, wspace=0.45)
+    gs = fig.add_gridspec(2, 3, height_ratios=[1, 1.15], hspace=0.5, wspace=0.75)
     x, y = w.pxl_col.values, -w.pxl_row.values
     # Scale bar on the same convention as scripts/15c_spatial_figures_fix.py (audit SP-05): px per mm from the section's
     # recorded spot_diameter_fullres and the 55 um Visium spot. NOTE (reporting pass 2026-10-21): for the brainstem sections
@@ -434,7 +434,7 @@ def fig5():
     used["results/qc/spatial_sections_used.csv"] = ROOT / "results/qc/spatial_sections_used.csv"
     px_per_mm = float(sec_used.loc["Pons_A", "spot_diameter_fullres"]) / 55.0 * 1000.0
     for k, (col, cmap, lab, cb, ttl) in enumerate([("tumour", "Reds", "a", "tumour fraction", "Tumour fraction"),
-                                                   ("mes", "Purples", "b", "MES-like share of tumour", "MES-like share of tumour"),
+                                                   ("mes", "Purples", "b", "MES-like share of tumour", "MES-like share"),
                                                    ("myeloid_p", "Blues", "c", "myeloid fraction", "Myeloid fraction")]):
         ax = fig.add_subplot(gs[0, k])
         s = ax.scatter(x, y, c=w[col], cmap=cmap, s=1.6, marker="h", linewidths=0, rasterized=True, vmin=0, vmax=np.nanpercentile(w[col], 99))
@@ -442,7 +442,7 @@ def fig5():
         x0, y0 = x.min(), y.min()
         ax.plot([x0, x0 + px_per_mm], [y0 - 0.04 * (y.max() - y0)] * 2, color="black", lw=1.4, solid_capstyle="butt", clip_on=False)
         cbar = fig.colorbar(s, ax=ax, fraction=0.04, pad=0.01, orientation="horizontal"); cbar.set_label(cb); cbar.outline.set_visible(False)
-        letter(ax, lab, dx=0.02, title=ttl)
+        letter(ax, lab, dx=-0.06, title=ttl)
     # d co-localisation forest
     ax = fig.add_subplot(gs[1, 0])
     d = co[(co.metric == "proportion") & (co.group == "DMG") & (co.pair_type == "state_vs_TME")].copy()
@@ -455,8 +455,8 @@ def fig5():
     ax.errorbar(d.rho_re, yy, xerr=[d.rho_re - d.rho_re_lo, d.rho_re_hi - d.rho_re], fmt="none", ecolor="#525252", elinewidth=0.6)
     ax.scatter(d.rho_re, yy, c=np.where(sig, "black", "white"), edgecolors="black", s=12, linewidths=0.6, zorder=3)
     ax.axvline(0, color="#bdbdbd", lw=0.6, zorder=0); ax.set_yticks(yy); ax.set_yticklabels(d.name)
-    ax.set_xlabel(f"pooled spot-level Spearman ρ\n({int(d.n_patients.max())} DMG patients, {int(d.n_sections.max())} sections, random effects)")
-    letter(ax, "d", dx=-0.6, title="State\u2013microenvironment co-localisation")
+    ax.set_xlabel(f"pooled Spearman ρ ({int(d.n_patients.max())} patients)")
+    letter(ax, "d", dx=-0.6, title="Co-localisation")
     # e brainstem gradient
     ax = fig.add_subplot(gs[1, 1])
     for col, c, lbl in [("tumour_fraction_mean", "black", "tumour fraction"), ("prop_oligodendrocyte", LINEAGE_COLOURS["oligodendrocyte"], "oligodendrocyte"),
@@ -465,7 +465,7 @@ def fig5():
     ax.set_xticks(bm.anatomical_rank); ax.set_xticklabels([s.replace("Spinal_Cord", "SC").replace("_", " ") for s in bm.section_id], rotation=60, ha="right")
     ax.set_ylabel("mean spot proportion")
     ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, fontsize=5, columnspacing=0.6, handlelength=1)  # audit P7-17
-    letter(ax, "e", dx=-0.25, title="Rostral-to-caudal section means", tpad=26)
+    letter(ax, "e", dx=-0.25, title="Brainstem levels", tpad=26)
     # f Ren DMG vs GBM
     ax = fig.add_subplot(gs[1, 2])
     rs = rs[rs.group.isin(["DMG", "GBM"])]
@@ -507,7 +507,7 @@ def fig5():
         f"({pair('malignant_MES_like', 'myeloid')}) and OPC-like – oligodendrocyte is not "
         f"({pair('malignant_OPC_like', 'oligodendrocyte')}); between-section heterogeneity is high for every pair "
         f"(I² {dall.I2.min():.3f}–{dall.I2.max():.3f}), so the pooled estimates are not section-generalisable. "
-        "**e**, Rostral-to-caudal section means in the whole-brainstem autopsy (metaprogram-family reference; one patient, 10 serial "
+        "**e**, Rostral-to-caudal section means in the whole-brainstem autopsy (metaprogram-family reference; one patient, 10 "
         "sections, descriptive only — no inference is drawn from this panel): "
         f"tumour fraction peaks in pons (max {bm.tumour_fraction_mean.max():.2f}) and falls toward the spinal cord; oligodendrocyte proportion "
         f"rises (ρ = {tr.loc['oligodendrocyte', 'rho_prop']:.2f}, p = {tr.loc['oligodendrocyte', 'p_prop']:.3f}) and cycling falls "

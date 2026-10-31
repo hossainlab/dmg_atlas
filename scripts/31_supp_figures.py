@@ -43,7 +43,7 @@ import matplotlib  # noqa: E402
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 from dmg_atlas import ROOT, RESULTS, LOGS  # noqa: E402
-from dmg_atlas.figstyle import (apply_figure_style, QUERY_COLOURS, QUERY_NAMES, W, FAMILY_COLOURS, FAMILY_NAMES,  # noqa: E402
+from dmg_atlas.figstyle import (apply_figure_style, EMBED_NAMES, metric_name, QUERY_COLOURS, QUERY_NAMES, W, FAMILY_COLOURS, FAMILY_NAMES,  # noqa: E402
                                 STUDY_NAMES, STUDY_COLOURS, TME_NAME, COMPARTMENT_COLOURS, SPATIAL_CLASS, letter, legend_dots, heat)
 
 log = U.StepLogger(LOGS / "phase8_release.log", context="31_supp_figures")
@@ -137,11 +137,13 @@ def s2():
                                                 "bio_score_raw_mean") and im[c].dtype.kind == "f"]
     m = im.set_index("embedding")[cols].T
     m = m.loc[sorted(m.index, key=lambda c: (not c.endswith("_score"), c))]
+    chosen = EMBED_NAMES.get(im.loc[im.chosen, "embedding"].iloc[0])
+    m.index = [metric_name(c) for c in m.index]; m.columns = [EMBED_NAMES.get(c, c) for c in m.columns]
     fig, ax = plt.subplots(figsize=(W * 0.6, 5.6))
     heat(ax, m, cmap="viridis", vmax=1, fmt=lambda v: f"{v:.2f}", cbar_label="metric value (scaled 0–1 by scIB)", fig=fig)
     ax.set_title("scIB metrics per embedding", loc="center", fontsize=7.5, pad=3)  # single-panel figure: title, no panel letter
     for t in ax.get_xticklabels():
-        if t.get_text() == im.loc[im.chosen, "embedding"].iloc[0]:
+        if t.get_text() == chosen:
             t.set_fontweight("bold")
     save(fig, "figS2_integration_metrics")
     ch = im[im.chosen].iloc[0]
