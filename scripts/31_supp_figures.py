@@ -131,6 +131,8 @@ def s1():
 
 
 # ---------------------------------------------------------------- S2
+SP = "_assayz"  # spatial tables from the within-assay-class reference (scripts/43-44); "" for the published run
+
 def s2():
     im = T("integration_metrics_summary.csv")
     cols = [c for c in im.columns if c not in ("embedding", "chosen", "rank_total", "elbo_validation_best", "batch_score_raw_mean",
@@ -329,9 +331,9 @@ def s6():
 
 # ---------------------------------------------------------------- S7
 def s7():
-    ni = T("spatial_niches.csv"); ps = T("spatial_colocalisation_per_section.csv")
-    co = T("spatial_colocalisation.csv"); sens = T("spatial_colocalisation_sensitivity.csv")
-    pmap = T("spatial_patient_map.csv")
+    ni = T(f"spatial_niches{SP}.csv"); ps = T(f"spatial_colocalisation_per_section{SP}.csv")
+    co = T(f"spatial_colocalisation{SP}.csv"); sens = T(f"spatial_colocalisation_sensitivity{SP}.csv")
+    pmap = T(f"spatial_patient_map{SP}.csv")
     n_bs = int((pmap.cohort == "brainstem").sum())
     fig = plt.figure(figsize=(W, 6.0))
     gs = fig.add_gridspec(2, 2, width_ratios=[1.4, 1], hspace=0.55, wspace=0.5)
@@ -341,7 +343,7 @@ def s7():
     m.index = [f"{n} ({f:.0%})" for n, f in zip(m.index, ni.sort_values("frac_spots", ascending=False).frac_spots)]
     m.columns = [SPATIAL_CLASS.get(c, c) for c in cls]
     heat(ax, m.T, cmap="Reds", vmax=m.values.max(), fmt=lambda v: f"{v:.2f}" if v >= 0.15 else "", cbar_label="mean spot proportion", fig=fig)
-    ax.set_xticklabels(m.index, rotation=0, ha="center"); ax.set_xlabel("niche (share of DMG spots)")
+    ax.set_xticklabels(m.index, rotation=45, ha="right"); ax.set_xlabel("niche (share of DMG spots)")
     letter(ax, "a", dx=-0.08, title="Spot niche composition")
     ax = fig.add_subplot(gs[1, 0])
     # audit SP-01: spatial_colocalisation.csv carries both the primary proportion metric and the CLR sensitivity; select the primary.

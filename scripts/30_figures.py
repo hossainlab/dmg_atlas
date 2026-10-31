@@ -12,7 +12,7 @@ Inputs (results/tables/ unless stated; all produced by earlier steps, md5 record
   Fig 2 mapping : mapping_summary.csv, mapping_uncertainty.csv, mapping_liu_author_vs_predicted.csv,
                   mapping_normal_reference_specificity.csv (11 / 11b)
   Fig 3 states  : metaprograms.csv, replication_matrix.csv, metaprogram_families.csv, metaprogram_masking_summary.csv,
-                  metaprogram_cell_vs_nucleus.csv, metaprogram_family_composition.csv (16 / 19 / 20)
+                  metaprogram_cell_vs_nucleus.csv, metaprogram_family_composition_assayz.csv (16 / 19 / 20)
   Fig 4 TME     : tme_subclusters_clean.csv, tme_assay_purity.csv (22), composition_results.csv (18)
   Fig 5 spatial : spatial_abundance_long.csv (14 / 14c), spatial_colocalisation.csv, ren_section_composition.csv,
                   ren_dmg_vs_gbm_composition.csv, brainstem_section_means.csv, brainstem_gradient.csv (15b, audit SP-01…SP-12;
@@ -230,7 +230,7 @@ def fig2():
 # ---------------------------------------------------------------- Fig 3
 def fig3():
     mp = T("metaprograms.csv"); rep = T("replication_matrix.csv", index_col=0); fam = T("metaprogram_families.csv").set_index("metaprogram")
-    mk = T("metaprogram_masking_summary.csv"); cvn = T("metaprogram_cell_vs_nucleus.csv"); comp = T("metaprogram_family_composition.csv")
+    mk = T("metaprogram_masking_summary.csv"); cvn = T("metaprogram_cell_vs_nucleus.csv"); comp = T("metaprogram_family_composition_assayz.csv")  # within-assay-class assignment (40_family_assignment_check.py)
     ab = T("assay_biased_genes.csv")  # audit P7-12: the masked-gene count in the caption is computed, not hard-coded
     fig = plt.figure(figsize=(W, 6.6))
     gs = fig.add_gridspec(2, 3, width_ratios=[1.25, 0.8, 0.8], height_ratios=[1.35, 1], hspace=0.6, wspace=0.6)
@@ -295,7 +295,7 @@ def fig3():
     ax.set_xlabel("samples", labelpad=12)
     # audit P7-17: build the legend from FAMILIES (current families) - FAMILY_COLOURS also holds the pre-audit novel_MP15 key
     legend_dots(ax, {f: FAMILY_COLOURS[f] for f in FAMILIES}, FAMILY_NAMES, loc="upper left", bbox_to_anchor=(1.0, 1.0))
-    letter(ax, "d", dx=-0.05, title="Within-sample family ranking")
+    letter(ax, "d", dx=-0.05, title="Metaprogram-family composition per sample")
     save(fig, "fig3_metaprograms")
     prim = mk[mk.cut == 0.85].set_index("genes")
     rep_names = ", ".join(f"{i} {FAMILY_NAMES.get(fam.loc[i, 'family'], i)}" for i in mp.index[mp.replicated])
@@ -408,21 +408,25 @@ def fig4():
 
 
 # ---------------------------------------------------------------- Fig 5
+SP = "_assayz"  # spatial tables from the within-assay-class reference (scripts/43-44); "" for the published run
+
+
 def fig5():
+
     # audit (reporting pass 2026-10-21), spatial track SP-01 … SP-12:
     #   * spatial_colocalisation.csv now holds a 'metric' column (proportion = primary, clr = sensitivity) and pools over
     #     PATIENTS by DerSimonian-Laird, so the panel-d filter selects the proportion rows and quotes n_patients.
     #   * the brainstem tables written by step 21 (brainstem_*_mp.csv) are superseded: they predate the audit and still carry
     #     the pre-audit novel_MP15 family. Panel e now reads the regenerated brainstem_section_means.csv / brainstem_gradient.csv.
     #   * panels a-c use pixel coordinates with a scale bar (SP-05); array_row/array_col stretched the section ~1.6x.
-    sp = T("spatial_abundance_long.csv", usecols=["section_id", "spot", "class", "q05", "pxl_row", "pxl_col"])
+    sp = T(f"spatial_abundance_long{SP}.csv", usecols=["section_id", "spot", "class", "q05", "pxl_row", "pxl_col"])
     sp = sp[sp.section_id == "Pons_A"]
     w = sp.pivot_table(index=["spot", "pxl_row", "pxl_col"], columns="class", values="q05").reset_index()
     mal = [c for c in w.columns if str(c).startswith("malignant_")]
     tot = w[[c for c in w.columns if c not in ("spot", "pxl_row", "pxl_col")]].sum(1)
     w["tumour"] = w[mal].sum(1) / tot; w["mes"] = w["malignant_MES_like"] / w[mal].sum(1); w["myeloid_p"] = w["myeloid"] / tot
-    co = T("spatial_colocalisation.csv"); rs = T("ren_section_composition.csv"); rt = T("ren_dmg_vs_gbm_composition.csv").set_index("variable")
-    bm = T("brainstem_section_means.csv").sort_values("anatomical_rank"); bg = T("brainstem_gradient.csv")
+    co = T(f"spatial_colocalisation{SP}.csv"); rs = T(f"ren_section_composition{SP}.csv"); rt = T(f"ren_dmg_vs_gbm_composition{SP}.csv").set_index("variable")
+    bm = T(f"brainstem_section_means{SP}.csv").sort_values("anatomical_rank"); bg = T(f"brainstem_gradient{SP}.csv")
     fig = plt.figure(figsize=(W, 6.6))
     gs = fig.add_gridspec(2, 3, height_ratios=[1, 1.15], hspace=0.5, wspace=0.75)
     x, y = w.pxl_col.values, -w.pxl_row.values

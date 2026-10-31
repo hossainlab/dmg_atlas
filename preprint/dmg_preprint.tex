@@ -244,9 +244,9 @@ reference cells. MP9 is therefore a ciliated tumour state rather than ependymal 
 replicated metaprograms are marked and technical programmes are labelled. \textbf{b}, Replicated metaprograms across
 dendrogram cuts, with and without masking the 6,013 assay-biased genes; the dashed line marks the primary cut.
 \textbf{c}, Jaccard similarity of matched cell- and nucleus-derived metaprograms before and after masking. \textbf{d},
-Per-sample distribution of malignant cells across metaprogram families. Families are assigned from scores standardised
-within each sample, so this panel shows the relative ranking of programmes within samples, not absolute family
-abundance.}
+Per-sample metaprogram-family composition of malignant cells, with families assigned from scores standardised within
+assay class (cells or nuclei); this assignment tracks programme detection for cycling, hypoxia, AC-like, OC-like and
+ciliated cells but not for OPC-like or MES-like cells (see Robustness).}
 \label{fig:mp}
 \end{figure}
 
@@ -283,33 +283,38 @@ asterisks mark Benjamini--Hochberg significance \citep{benjamini1995controlling}
 \subsection{Spatial co-localisation of malignant states}
 
 We deconvolved 27 Visium spatial transcriptomics sections from four cohorts with cell2location
-\citep{kleshchevnikov2022celllocation}, using a 13-class reference, and tested co-localisation on spot proportions with
-patients as the unit of inference (21 DMG sections from 12 patients; Table~\ref{tab:spatial}, Fig.~\ref{fig:spatial}).
-AC-like tumour cells co-localised with normal astrocytes ($\rho = 0.393$, $q < 0.001$) and oligodendrocytes
-($\rho = 0.308$, $q = 0.005$). Of the two pre-specified hypotheses, mesenchymal-like (MES-like) tumour cells co-localised
-with myeloid cells ($\rho = 0.238$, 95\% confidence interval (CI) 0.071--0.392, $q = 0.034$), whereas OPC-like tumour
-cells and oligodendrocytes were not associated ($\rho = 0.178$, 95\% CI $-0.028$ to 0.370, $q = 0.210$). These associations were
-not consistent across sections: the correlation was positive in 13, 14 and 11 of 21 sections for the three pairs, the
-mean per-section correlations (0.130, 0.171 and 0.079) were smaller than the pooled estimates, and heterogeneity between
-patients was high for every pair ($I^2$ 0.952--0.997). Because DerSimonian--Laird intervals are too narrow with few
-patients, we recomputed them with the Hartung--Knapp--Sidik--Jonkman method. Three pairs remained significant across the
-42 pairs (ciliated--astrocyte, ciliated--neuron and AC-like--astrocyte; $q = 0.027$--$0.039$). The MES-like--myeloid
-interval was 0.047--0.412 ($P = 0.020$), significant as one of two pre-specified hypotheses (Bonferroni-adjusted
-$P = 0.039$) but not after correction across all 42 pairs ($q = 0.118$); these associations should therefore be regarded
-as tentative (Supplementary Fig.~\ref{sfig:7}). Deconvolution can also create correlations between classes with similar
-reference signatures: across the 42 pairs, the pooled correlation increased with the similarity of the two classes'
-signatures (Spearman 0.53, $P < 0.001$). The MES-like and myeloid signatures (cosine similarity $-0.38$) and the AC-like and
-astrocyte signatures ($-0.05$) were dissimilar, whereas the ciliated and astrocyte signatures were the most similar of all
-pairs (0.17), so the ciliated--astrocyte association may partly reflect signature overlap. With
-centred log-ratio-transformed proportions, the MES-like--myeloid ($\rho = 0.238$, $q = 0.012$) and AC-like--astrocyte
-($\rho = 0.230$, $q = 0.001$) associations persisted, the AC-like--oligodendrocyte association weakened ($\rho = 0.129$,
-$q = 0.048$), and the OPC-like--oligodendrocyte association was absent ($\rho = 0.007$, $q = 0.937$).
+\citep{kleshchevnikov2022celllocation}, using a 13-class reference whose malignant classes were assigned by metaprogram
+scores standardised within assay class (see Robustness), and tested co-localisation on spot proportions with patients as
+the unit of inference (21 DMG sections from 12 patients; Table~\ref{tab:spatial}, Fig.~\ref{fig:spatial}). AC-like tumour
+cells co-localised with normal astrocytes ($\rho = 0.376$, $q < 0.001$) and oligodendrocytes ($\rho = 0.301$,
+$q = 0.007$), and ciliated tumour cells with astrocytes ($\rho = 0.310$, $q < 0.001$). Of the two pre-specified hypotheses,
+mesenchymal-like (MES-like) tumour cells co-localised with myeloid cells ($\rho = 0.247$, 95\% confidence interval (CI)
+0.096--0.388, $q = 0.016$), whereas OPC-like tumour cells and oligodendrocytes were not associated ($\rho = 0.149$, 95\% CI
+$-0.084$ to 0.367, $q = 0.402$).
+
+These associations were not consistent across sections. For the AC-like--astrocyte, MES-like--myeloid and
+AC-like--oligodendrocyte pairs, the correlation was positive in 11, 14 and 10 of 21 sections, the mean per-section
+correlations (0.096, 0.184 and 0.076) were smaller than the pooled estimates, and heterogeneity between patients was high
+for every pair ($I^2$ 0.970--0.997). Because DerSimonian--Laird intervals are too narrow with few patients, we recomputed
+them with the Hartung--Knapp--Sidik--Jonkman method. Across the 42 pairs, only the ciliated--astrocyte association remained
+significant ($q = 0.012$). The MES-like--myeloid interval was 0.066--0.412 ($P = 0.012$), significant as one of two
+pre-specified hypotheses (Bonferroni-adjusted $P = 0.025$) but not after correction across all 42 pairs ($q = 0.104$).
+Deconvolution can also create correlations between classes with similar reference signatures: across the 42 pairs, the
+pooled correlation increased with the cosine similarity of the two classes' signatures (Spearman 0.50, $P < 0.001$). The
+MES-like and myeloid signatures were dissimilar ($-0.32$), whereas the ciliated and astrocyte signatures were the most
+similar of all pairs (0.15) and the AC-like and astrocyte signatures the third most similar (0.09), so these two
+associations may partly reflect signature overlap. With centred log-ratio-transformed proportions, the MES-like--myeloid
+($\rho = 0.224$, $q = 0.015$) and AC-like--astrocyte ($\rho = 0.199$, $q = 0.027$) associations persisted, the
+AC-like--oligodendrocyte association weakened ($\rho = 0.127$, $q = 0.067$), and the OPC-like--oligodendrocyte association
+was absent ($\rho = 0.002$, $q = 0.985$). Taken together, the spatial associations are tentative (Supplementary
+Fig.~\ref{sfig:7}).
 
 In ten sections from different levels of one brainstem autopsy (medulla, pons, midbrain and spinal cord)
-\citep{kordowski2025spatial}, tumour fraction increased with the AC-like and OPC-like shares and
-decreased with the normal glial, vascular and neuronal shares; with a single patient, this observation is descriptive.
-Five DMG and five glioblastoma sections from one study \citep{ren2023spatial} differed in tumour fraction (0.528 versus
-0.460) and cycling share (0.112 versus 0.214), but neither difference was significant after correction ($q = 0.667$).
+\citep{kordowski2025spatial}, tumour fraction within sections increased with the AC-like, OPC-like and OC-like shares of
+tumour and decreased with the MES-like and hypoxia shares and with the abundance of normal astrocytes, oligodendrocytes,
+vascular cells and neurons; with a single patient, this observation is descriptive. Five DMG and five glioblastoma sections
+from one study \citep{ren2023spatial} differed in tumour fraction (median 0.550 versus 0.452) and cycling share (0.115
+versus 0.194), but neither difference was significant after correction ($q = 0.111$ and 0.389).
 
 \begin{figure}[htbp]
 \centering
@@ -355,11 +360,12 @@ their sign under every labelling (Fig.~\ref{fig:robust}e).
 
 Finally, we asked whether per-cell metaprogram-family assignments measure composition, by testing whether a sample's
 fraction of a family was higher when the sample's own factorisation had found a programme of that family. Assignment by
-scores standardised within each sample, used for Fig.~\ref{fig:mp}d and for the spatial reference, did not (area under
+scores standardised within each sample, which we had initially used for the spatial reference, did not (area under
 the curve 0.34--0.58 for all families except cycling, 0.92). Assignment by scores standardised within assay class did for
 cycling, hypoxia, AC-like, OC-like and ciliated cells (0.76--0.94) but not for OPC-like (0.35) or MES-like cells (0.46).
-Per-cell family labels, and the spatial classes built from them, should therefore be interpreted as relative programme
-activity within a sample rather than as cell-state abundance.
+We therefore used the within-assay-class assignment for
+Fig.~\ref{fig:mp}d and to rebuild the spatial reference; OPC-like and MES-like labels remain uncertain under either
+assignment.
 
 Because 21 of 50 samples had selected the largest rank tested ($k = 9$), we repeated the factorisation of these samples
 for $k = 10$--$12$ with the unchanged selection rule. Fourteen samples qualified for a larger rank (four at $k = 10$, seven
@@ -418,9 +424,8 @@ provide a means to test these associations experimentally.
 
 This study has several limitations. One post-mortem series contributes half of the cells and every autopsy sample, so
 autopsy and resection cannot be compared. All H3.1 samples are pontine nuclei, and the H3 variant is unreported for 25
-of 57 samples. Whole-cell data for programme discovery come from few cohorts and two platforms. Per-cell
-metaprogram-family labels, and the spatial reference built from them, reflect relative programme activity within a sample
-rather than abundance. The reference lacks normal progenitor
+of 57 samples. Whole-cell data for programme discovery come from few cohorts and two platforms. Per-cell OPC-like and
+MES-like family labels, including the corresponding spatial classes, do not track programme detection. The reference lacks normal progenitor
 and ependymal classes, and on unseen studies the classifier often misclassifies rare normal lineages as malignant.
 Copy-number thresholds were tuned on 22 samples, and 11.2\% of consensus-malignant reference cells rely on the
 aggregate copy-number score without a supporting arm-level event. In 21 of 50 samples the selected NMF rank was the
@@ -545,10 +550,11 @@ removed from each programme before re-clustering, and the result was compared wi
 number of genes from each programme.
 
 Per-cell metaprogram families were assigned by scoring each metaprogram with UCell \citep{andreatta2021ucell} (maximum rank 1,500), standardising
-scores within sample, averaging the standardised scores of the metaprograms in each family, and taking the family with the
-highest positive score. Technical metaprograms, and metaprograms whose median UCell score in normal myeloid or vascular cells
-was at least twice that in malignant cells, were excluded from the families. Cells with a highest family score of at least
-1 were used to build the spatial reference.
+scores within assay class (cells or nuclei), averaging the standardised scores of the metaprograms in each family, and
+taking the family with the highest positive score; an alternative assignment standardised scores within each sample.
+Technical metaprograms, and metaprograms whose median UCell score in normal myeloid or vascular cells was at least twice that
+in malignant cells, were excluded from the families. Cells with a highest family score of at least 1 under the
+within-assay-class assignment were used to build the spatial reference.
 
 \subsection{Microenvironment subclustering}
 Cells passing quality control and not called malignant were assigned to a compartment (myeloid, T and natural killer,
@@ -579,10 +585,11 @@ $P$ values were corrected by the Benjamini--Hochberg method \citep{benjamini1995
 \subsection{Spatial deconvolution and statistics}
 In-tissue spots from Space Ranger filtered matrices were used, with genes restricted per cohort to those present in every
 section and in the reference. Reference signatures for cell2location \citep{kleshchevnikov2022celllocation} were estimated
-from 59,993 cells in 13 classes (seven malignant metaprogram families and six normal lineages; at most 8,000 cells per class,
-sampled within class by sample) with a negative binomial regression model (250 epochs, sample as batch). Each cohort was
-deconvolved with an expected 5 cells per spot and a detection alpha of 20, for between 2,000 and 20,000 epochs set by a fixed
-GPU time budget; the realised number of epochs was recorded. Spot proportions were the 5\% posterior quantile of each class
+from 59,308 cells in 13 classes (seven malignant metaprogram families and six normal lineages; at most 5,200 cells per
+class so that the reference did not exceed 60,000 cells, sampled within class by sample) with a negative binomial
+regression model (250 epochs, sample as batch). Each cohort was deconvolved with an expected 5 cells per spot and a
+detection alpha of 20, for up to 20,000 epochs within a fixed GPU time budget (realised: 10,917 to 20,000 epochs per
+cohort). Spot proportions were the 5\% posterior quantile of each class
 divided by their sum over classes. Co-localisation between each of 7 malignant families and 6 normal lineages (42 pairs) was
 measured as the Spearman correlation of spot proportions per section, Fisher $z$-transformed, averaged within patient,
 pooled across patients by DerSimonian--Laird random effects \citep{dersimonian1986meta}, and corrected by the
@@ -692,8 +699,8 @@ the subcluster's cells expressing the gene; colour, log fold change against the 
 compartment.}\label{sfig:6}\end{figure}
 
 \begin{figure}[htbp]\centering\includegraphics[width=0.95\textwidth]{figS7_spatial_detail.pdf}
-\caption{\textbf{Spatial niches and sensitivity analyses.} \textbf{a}, Mean class proportions of the 16 spot niches.
-\textbf{b}, Per-section correlations for the six strongest pairs of Fig.~\ref{fig:spatial}d, computed with three
+\caption{\textbf{Spatial niches and sensitivity analyses.} \textbf{a}, Mean class proportions of the 17 spot niches.
+\textbf{b}, Per-section correlations for the pairs significant in Fig.~\ref{fig:spatial}d, computed with three
 metrics (proportion, centred log-ratio and abundance); each point is one section and metric, and ten sections come from one
 autopsy. \textbf{c}, Pooled correlations with and without that autopsy.}\label{sfig:7}\end{figure}
 

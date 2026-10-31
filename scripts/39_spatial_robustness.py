@@ -23,13 +23,15 @@ import numpy as np, pandas as pd  # noqa: E402
 import scipy.stats as ss  # noqa: E402
 from dmg_atlas import RESULTS, LOGS  # noqa: E402
 
-ap = argparse.ArgumentParser(); ap.add_argument("--force", action="store_true"); args = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("--force", action="store_true"); ap.add_argument("--tag", default="")
+args = ap.parse_args(); TAG = args.tag  # "_assayz": tables from 44_spatial_assayz.py
 log = U.StepLogger(LOGS / "phase9_quality.log", context="39_spatial_robustness")
 T = RESULTS / "tables"; OUT = T / "quality"; OUT.mkdir(parents=True, exist_ok=True)
-OUTS = [OUT / f for f in ("spatial_hksj.csv", "spatial_signature_overlap.csv", "spatial_robustness_inputs.json")]
+OUTS = [OUT / f.replace(".", f"{TAG}.", 1) for f in ("spatial_hksj.csv", "spatial_signature_overlap.csv", "spatial_robustness_inputs.json")]
 if all(p.exists() for p in OUTS) and not args.force:
     log.write("all outputs exist; skip (use --force)"); sys.exit(0)
-INPUTS = [T / "spatial_colocalisation_per_section.csv", T / "spatial_colocalisation.csv", T / "c2l_signatures.csv"]
+INPUTS = [T / f"spatial_colocalisation_per_section{TAG}.csv", T / f"spatial_colocalisation{TAG}.csv",
+          (RESULTS.parent / "models/c2l_assayz/signatures/signatures.csv") if TAG == "_assayz" else T / "c2l_signatures.csv"]
 
 
 def md5(p):

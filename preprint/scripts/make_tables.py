@@ -113,7 +113,9 @@ Metaprogram & Family & Samples & Replicated & Top genes \\
 \end{table}""")
 
 # ---- Table 4: spatial co-localisation ----
-s = T("spatial_colocalisation.csv")
+SP = "_assayz"  # spatial tables from the within-assay-class reference (scripts/43-44); "" for the published run
+
+s = T(f"spatial_colocalisation{SP}.csv")
 h = s[(s.metric == "proportion") & (s.subset == "all") & (s.pair_type == "state_vs_TME")].sort_values("q_bh_state_vs_TME")
 nm = lambda c: (c.replace("malignant_", "").replace("novel_MP9", "ciliated (MP9)").replace("_like", "-like")
                  .replace("_", " ").replace("T NK", "T/NK"))
