@@ -9,9 +9,9 @@ to deposit/dmg_atlas_v1_zenodo.zip:
   models/    scvi_reference/ + scanvi_reference/ (models/scvi_seed1, models/scanvi): model.pt, run.json, var_names.txt
   metadata/  data dictionary: obs_columns.csv (generated from the release h5ad), label_ontology.csv
   README.md  data card (generated here; counts read from the release h5ad; links to the repository for everything else)
-  CITATION.cff, LICENSE.md, .zenodo.json (Zenodo deposition metadata), FILES.tsv (path, bytes, md5, description), MD5SUMS
+  LICENSE.md, .zenodo.json (Zenodo deposition metadata), FILES.tsv (path, bytes, md5, description), MD5SUMS
 Large files are hard-linked, not copied. The zip stores already-compressed files (h5ad, gz, pt) without recompression.
-Creator affiliation / ORCID are placeholders (FILL_IN) in CITATION.cff and .zenodo.json — edit before uploading.
+Creator affiliation / ORCID are placeholders (FILL_IN) in .zenodo.json — edit before uploading.
 Run: nice -n 10 python scripts/35_zenodo_deposit.py [--force] [--no-zip]
 Log: logs/phase9_deposit.log
 """
@@ -193,7 +193,7 @@ Data and models: CC BY 4.0 (see `LICENSE.md`). The pipeline code in the reposito
 
 ## Citation
 
-See `CITATION.cff`. Please also cite the source studies above.
+Cite this record by the DOI shown on its Zenodo page, and cite the source studies above.
 """
     (OUT / "README.md").write_text(readme)
     (OUT / "LICENSE.md").write_text(
@@ -202,22 +202,6 @@ See `CITATION.cff`. Please also cite the source studies above.
         f"The pipeline code ({GH}) is released under the MIT license.\n\n"
         "The atlas is derived from the public data sets listed in README.md. Attribution to those studies is required, and their "
         "original data terms continue to apply to the underlying data.\n")
-    cff = f"""cff-version: 1.2.0
-message: "If you use this atlas, please cite it as below and cite the source studies listed in README.md."
-type: dataset
-title: "DMG Atlas: a cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma"
-version: "{VERSION}"
-date-released: "{today}"
-license: CC-BY-4.0
-repository-code: "https://github.com/hossainlab/dmg_atlas"
-authors:
-  - family-names: Hossain
-    given-names: Jubayer
-    affiliation: "FILL_IN"
-    orcid: "https://orcid.org/FILL_IN"
-keywords: [diffuse midline glioma, DIPG, H3K27M, single-cell RNA-seq, single-nucleus RNA-seq, reference atlas, scVI, scANVI]
-"""
-    (OUT / "CITATION.cff").write_text(cff)
     zen = {"metadata": {
         "upload_type": "dataset", "title": f"DMG Atlas v{VERSION}: a cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma",
         "version": VERSION, "publication_date": today, "access_right": "open", "license": "cc-by-4.0",
@@ -234,8 +218,7 @@ keywords: [diffuse midline glioma, DIPG, H3K27M, single-cell RNA-seq, single-nuc
                                + [{"identifier": "10.5281/zenodo.17922773", "relation": "isDerivedFrom", "scheme": "doi", "resource_type": "dataset"}],
         "notes": "Creator affiliation and ORCID to be completed before publication."}}
     (OUT / ".zenodo.json").write_text(json.dumps(zen, indent=1) + "\n")
-    for f_, desc in [("README.md", "data card"), ("LICENSE.md", "licenses"), ("CITATION.cff", "citation metadata"),
-                     (".zenodo.json", "Zenodo deposition metadata")]:
+    for f_, desc in [("README.md", "data card"), ("LICENSE.md", "licenses"), (".zenodo.json", "Zenodo deposition metadata")]:
         rows.append(dict(path=f_, bytes=(OUT / f_).stat().st_size, description=desc))
 
 with log.step("checksums"):
