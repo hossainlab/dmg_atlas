@@ -1,5 +1,5 @@
 
-# DMG Atlas: A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma**
+# DMG Atlas: A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma
 
 
 </div>
