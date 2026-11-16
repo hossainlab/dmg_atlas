@@ -1,7 +1,7 @@
 # DMG Atlas: A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma
 
 <div align="center">
-<img src="results/pub_figs/readme_atlas_umap.png" width="620" alt="UMAP of the DMG reference atlas coloured by cell lineage">
+<img src="results/pub_figs/graphical_abstract.png" width="900" alt="Graphical abstract: six cohorts integrated into one reference, malignant-call agreement, metaprogram replication and spatial co-localisation">
 </div>
 
 **The reference.** 311,618 cells and nuclei from 57 samples and 52 patients across six public cohorts, integrated with
@@ -35,16 +35,6 @@ onto the reference to get lineage predictions in a shared latent space, without 
 | **Spatial** | 27 Visium sections from 4 cohorts |
 | **Release** | `dmg_atlas_v1.h5ad` · 18,865 GENCODE v48 genes · CELLxGENE schema 7.1.0 layout |
 
-## Key figures
-
-<div align="center">
-<img src="results/pub_figs/graphical_abstract.png" width="900" alt="Graphical abstract: six cohorts integrated into one reference, malignant-call agreement, metaprogram replication and spatial co-localisation">
-</div>
-
-**Overview.** Six cohorts (88 % nuclei) are integrated into one scVI/scANVI reference (centre). Right, top to bottom:
-consensus malignant calls agree with published labels (median 0.898 over 97 samples); of 15 metaprograms, 2 replicate
-under the pre-registered rule at the chosen dendrogram cut; tumour states co-localise with normal glia and myeloid cells
-in Visium sections.
 
 <table>
 <tr>
