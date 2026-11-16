@@ -7,7 +7,6 @@
 **The reference.** 311,618 cells and nuclei from 57 samples and 52 patients across six public cohorts, integrated with
 scVI/scANVI and coloured by scANVI lineage label. Lineage compartments separate and studies intermix within them, but
 mixing across assays remains incomplete (assay iLISI 0.029).
-Source: [`scripts/45_readme_hero.py`](scripts/45_readme_hero.py).
 
 Public single-cell, single-nucleus and multiome RNA-seq cohorts of human DMG are integrated into a **scVI/scANVI
 reference**. Smart-seq2/TPM tumour cohorts and normal brain references are projected onto it as queries, Visium
@@ -45,7 +44,7 @@ onto the reference to get lineage predictions in a shared latent space, without 
 **Overview.** Six cohorts (88 % nuclei) are integrated into one scVI/scANVI reference (centre). Right, top to bottom:
 consensus malignant calls agree with published labels (median 0.898 over 97 samples); of 15 metaprograms, 2 replicate
 under the pre-registered rule at the chosen dendrogram cut; tumour states co-localise with normal glia and myeloid cells
-in Visium sections. Source: [`scripts/37_graphical_abstract.py`](scripts/37_graphical_abstract.py).
+in Visium sections.
 
 <table>
 <tr>
