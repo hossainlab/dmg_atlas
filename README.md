@@ -36,34 +36,6 @@ onto the reference to get lineage predictions in a shared latent space, without 
 | **Release** | `dmg_atlas_v1.h5ad` · 18,865 GENCODE v48 genes · CELLxGENE schema 7.1.0 layout |
 
 
-<table>
-<tr>
-<td width="50%"><img src="results/pub_figs/main/fig1_atlas.png" alt="Figure 1: integrated reference"></td>
-<td width="50%"><img src="results/pub_figs/main/fig3_metaprograms.png" alt="Figure 3: malignant metaprograms"></td>
-</tr>
-<tr>
-<td><b>Fig. 1 · Integrated reference.</b> Cells per study and assay (A); UMAP by scANVI lineage, assay and study (B–D);
-scIB benchmark of scVI seeds against Harmony and PCA (E); hallmark copy-number events per cohort (F).</td>
-<td><b>Fig. 3 · Malignant metaprograms.</b> Samples contributing to each of 15 metaprograms, split by cells and nuclei
-(A; * = replicated); replication across dendrogram cuts with and without assay-biased genes (B); cell–nucleus overlap
-(C); metaprogram-family composition of malignant cells per sample (D).</td>
-</tr>
-<tr>
-<td><img src="results/pub_figs/main/fig5_spatial.png" alt="Figure 5: spatial organisation"></td>
-<td><img src="results/pub_figs/main/fig7_robustness.png" alt="Figure 7: robustness checks"></td>
-</tr>
-<tr>
-<td><b>Fig. 5 · Spatial organisation.</b> cell2location maps of tumour fraction, MES-like share and myeloid fraction on
-one Visium section (A–C); pooled co-localisation over 12 patients (D, filled = q &lt; 0.05); brainstem levels (E); DMG
-vs GBM sections (F).</td>
-<td><b>Fig. 7 · Robustness.</b> Reference classifier on held-out studies, metaprogram recovery without each publication,
-and sensitivity of composition effects to label choice.</td>
-</tr>
-</table>
-
-All main (1–7) and supplementary (S1–S8) figures: [`results/pub_figs/`](results/pub_figs); list in
-[Main results](#main-results).
-
 ## Cohorts
 
 | Study | Role | Samples | Patients | Cells | Assay | Data URL |
@@ -85,33 +57,6 @@ and `data/raw/MANIFEST_spatial_refs.csv` (local, not tracked).
 Per-study summary (site, H3 variant, age group, malignant fractions): `results/tables/atlas_v1_summary.csv`.
 Per-sample metadata: `data/processed/sample_manifest.csv`.
 
-## Main results
-
-| Finding | Result |
-|---|---|
-| **Metaprograms** | Per-sample cNMF on 50 samples (46 patients) gives 15 metaprograms; **2 replicate** under the pre-registered rule (≥ 3 studies, cells and nuclei): MP1 cycling and MP4 hypoxia |
-| **Spatial** | MES-like × myeloid co-localisation supported (ρ = 0.247, 95 % CI 0.096–0.388, q = 0.016); OPC-like × oligodendrocyte not (ρ = 0.149, q = 0.402); associations vary between sections and are tentative |
-| **Malignant calling** | Consensus calls agree with author labels at a per-sample median of 0.898 over 97 labelled samples |
-| **Reference classifier** | 0.975 accuracy, 0.917 balanced accuracy on held-out patients; on a held-out *study*, balanced accuracy falls to 0.40–0.99 ([quality checks](#quality-checks)) |
-
-<details>
-<summary><b>Figures</b> (generated from tables by <code>scripts/30_figures.py</code> and <code>scripts/31_supp_figures.py</code>)</summary>
-
-| Figure | Content |
-|---|---|
-| 1 | Integrated reference: composition, scANVI lineage labels, scIB benchmark, hallmark CNV events |
-| 2 | Zero-shot projection of query cohorts and label transfer |
-| 3 | Malignant metaprograms and the pre-registered replication test |
-| 4 | Microenvironment subclusters and sample-level composition models |
-| 5 | Spatial organisation of malignant states (cell2location) |
-| 6 | ATAC, bulk survival and foundation-model anchoring (*exploratory*) |
-| 7 | Robustness: classifier on held-out studies, metaprogram recovery, composition label sensitivity (`scripts/36_fig_robustness.py`; Figure 6 of the preprint) |
-| S1–S8 | Malignant calls, integration benchmark, mapping confidence, metaprogram robustness, assay masking, TME markers, spatial niches, survival models |
-
-Output: `results/pub_figs/main`, `results/pub_figs/supp`. Captions with input md5s: `docs/figures/figures.md`,
-`docs/figures/supp_figures.md`.
-
-</details>
 
 ## Quality checks
 
