@@ -355,8 +355,19 @@ Full list with audit references: [`docs/release/limitations.md`](docs/release/li
 If you use the atlas, cite the Zenodo release and the original studies whose data it integrates ([Cohorts](#cohorts);
 publication DOIs are listed in the deposit's `README.md` and `zenodo_metadata.json`):
 
-> Hossain MJ. DMG Atlas v1.0.0: a cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma.
-> Zenodo (2026). https://doi.org/10.5281/zenodo.23623335
+> Hossain, M. J., & Mahmud, I. (2026). *A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline
+> glioma* [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23623335
+
+```bibtex
+@dataset{hossain_mahmud_2026_dmg_atlas,
+  author    = {Hossain, M. J. and Mahmud, I.},
+  title     = {A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23623335},
+  url       = {https://doi.org/10.5281/zenodo.23623335}
+}
+```
 
 The preprint is in [`preprint/`](preprint); this entry will be updated when it is posted.
 
