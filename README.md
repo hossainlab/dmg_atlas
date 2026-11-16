@@ -1,25 +1,4 @@
-<div align="center">
-
-# DMG Atlas
-
-**A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma**
-
-[![Python](https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white)](env/versions.csv)
-[![scvi-tools](https://img.shields.io/badge/scvi--tools-1.4.2-5A2D82)](https://scvi-tools.org)
-[![scanpy](https://img.shields.io/badge/scanpy-1.11.5-1F6FB2)](https://scanpy.readthedocs.io)
-[![cell2location](https://img.shields.io/badge/cell2location-0.1.5-2E8B57)](https://cell2location.readthedocs.io)
-[![CELLxGENE schema](https://img.shields.io/badge/CELLxGENE%20schema-7.1.0-0A7BBB)](docs/release/release_validation.md)
-[![GPU: Modal](https://img.shields.io/badge/GPU-Modal%20A10G-7FEE64)](modal/)
-<br>
-[![Cells](https://img.shields.io/badge/cells-311%2C618-informational)](#at-a-glance)
-[![Patients](https://img.shields.io/badge/patients-52-informational)](#cohorts)
-[![Studies](https://img.shields.io/badge/studies-6%20%2B%205%20queries-informational)](#cohorts)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23623335.svg)](https://doi.org/10.5281/zenodo.23623335)
-[![Release](https://img.shields.io/badge/release-v1-success)](docs/release/release_v1.md)
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
-[![Last commit](https://img.shields.io/github/last-commit/hossainlab/dmg_atlas)](https://github.com/hossainlab/dmg_atlas/commits/main)
-
-</div>
+# DMG Atlas: A cross-cohort single-cell reference atlas of H3K27-altered diffuse midline glioma
 
 <div align="center">
 <img src="results/pub_figs/readme_atlas_umap.png" width="620" alt="UMAP of the DMG reference atlas coloured by cell lineage">
